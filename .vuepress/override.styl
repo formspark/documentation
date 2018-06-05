@@ -1,0 +1,54 @@
+$accentColor = #6473f5
+$textColor = rgba(0,0,0,.87)
+$borderColor = #f5f5fa
+$codeBgColor = #f5f5fa
+
+.content pre code, .content pre[class*="language-"] code {
+    color: rgba(0,0,0,.87)!important;
+}
+
+div[class*="language-"]::before { 
+    color: rgba(0,0,0,.47)!important;
+}
+
+/**
+ * Prism theme
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: rgba(0,0,0,.87);
+}
+
+.token.tag {
+    color: rgba(0,0,0,.87);
+}
+
+.token.tag .punctuation {
+    color: #6473f5;
+}
+
+.token.attr-name {
+    color: #6473f5;
+}
+
+.token.attr-value .punctuation {
+    color: #6473f5;
+}
+
+.token.property,
+.token.attr-value,{
+	color: #ca212f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
