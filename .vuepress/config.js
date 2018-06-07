@@ -6,6 +6,6 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Formspark', link: 'https://formspark.io' }
     ],
-    sidebar: ['/', 'advanced-features', 'special-input-types']
+    sidebar: ['/', 'advanced-features', 'special-input-types', 'form-validation']
   }
 };
