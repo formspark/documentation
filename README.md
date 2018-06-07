@@ -16,13 +16,13 @@ Formspark is perfect for static sites and works anywhere you can put an HTML for
 
 # Basic setup
 
-[Create a new Formspark account](https://formspark.io/register) if you haven't already. Once you have created an account.
+## Create a Formspark account
+
+[Create a new Formspark account](https://formspark.io/register) if you haven't already.
 
 ## Create a new destination
 
 [Create a new destination](https://formspark.io/new-destination)
-
-![](https://formspark.io/new-destination.png?74ae43bff54ec1244139b3f3eaa8e117)
 
 ## Adapt your form
 
