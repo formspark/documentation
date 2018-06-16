@@ -23,6 +23,19 @@ You can override this default behavior by specifying a custom redirect URL.
 </form>
 ```
 
+## Direct replies
+
+When email notifications are enabled, Formspark enables you to directly "Reply" to the person who originally submitted the form.
+
+The form must contain an input with a "_replyto" or "email" name.
+
+``` html
+<input type="email" name="email" placeholder="Your email" />
+```
+``` html
+<input type="text" name="_replyto" placeholder="Your email" />
+```
+
 ## Honeypot
 
 Every form falls victim to spambots at some point. How you handle them can affect your customers, most solutions tending to discourage people from filling out your forms.
