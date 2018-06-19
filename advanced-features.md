@@ -51,3 +51,14 @@ To enable this feature, add a field with the name "_honeypot" to your form and h
   <button type="submit">Subscribe</button>
 </form>
 ```
+
+## Submitting the form in a different tab
+
+When setting the "target" attribute to "_blank", the form will be submitted in a new tab.
+
+``` html
+<form action="https://submit-form.com/<your-destination-id>" target="_blank">
+  <input type="email" name="email">
+  <button type="submit">Subscribe</button>
+</form>
+```
