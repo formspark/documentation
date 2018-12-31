@@ -16,7 +16,7 @@ You can override this default behavior by specifying a custom redirect URL.
 3. Set the value to the URL you want to redirect users to.
 
 ``` html
-<form action="https://submit-form.com/<your-destination-id>">
+<form action="https://submit-form.com/<your-form-id>">
   <input type="hidden" name="_redirect" value="https://site.io/thanks.html" />
   <input type="email" name="email">
   <button type="submit">Subscribe</button>
@@ -45,7 +45,7 @@ The honeypot technique allows us to ignore spambots without forcing your users t
 To enable this feature, add a field with the name "_honeypot" to your form and hide it with CSS (see example below). The submission will be silently ignored when a spambot enters a value.
 
 ``` html
-<form action="https://submit-form.com/<your-destination-id>">
+<form action="https://submit-form.com/<your-form-id>">
   <input type="checkbox" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
   <input type="email" name="email">
   <button type="submit">Subscribe</button>
@@ -57,7 +57,7 @@ To enable this feature, add a field with the name "_honeypot" to your form and h
 When setting the "target" attribute to "_blank", the form will be submitted in a new tab.
 
 ``` html
-<form action="https://submit-form.com/<your-destination-id>" target="_blank">
+<form action="https://submit-form.com/<your-form-id>" target="_blank">
   <input type="email" name="email">
   <button type="submit">Subscribe</button>
 </form>
