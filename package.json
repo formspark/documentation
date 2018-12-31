@@ -1,7 +1,9 @@
 {
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build"
+    "build": "vuepress build",
+    "deploy": "aws s3 sync .vuepress/dist s3://documentation.formspark.io --delete --acl public-read",
+    "cloudfront": "aws cloudfront create-invalidation --distribution-id E3BPJDLRBQPFHK --paths /*"
   },
   "devDependencies": {
     "vuepress": "^0.10.2"
