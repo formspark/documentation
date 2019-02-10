@@ -11,7 +11,8 @@ module.exports = {
       '/',
       'advanced-features',
       'special-input-types',
-      'form-validation'
+      'form-validation',
+      'ajax-submissions'
     ]
   }
 };
