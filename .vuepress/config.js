@@ -9,6 +9,7 @@ module.exports = {
     ],
     sidebar: [
       '/',
+      'anti-spam',
       'advanced-features',
       'special-input-types',
       'form-validation',

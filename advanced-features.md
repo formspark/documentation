@@ -36,22 +36,6 @@ The form must contain an input with a "_replyto" or "email" name.
 <input type="text" name="_replyto" placeholder="Your email" />
 ```
 
-## Honeypot
-
-Every form falls victim to spambots at some point. How you handle them can affect your customers, most solutions tending to discourage people from filling out your forms.
-
-The honeypot technique allows us to ignore spambots without forcing your users to fill out a captcha or jump through other hoops.
-
-To enable this feature, add a field with the name "_honeypot" to your form and hide it with CSS (see example below). The submission will be silently ignored when a spambot enters a value.
-
-``` html
-<form action="https://submit-form.com/<your-form-id>">
-  <input type="checkbox" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
-  <input type="email" name="email">
-  <button type="submit">Subscribe</button>
-</form>
-```
-
 ## Submitting the form in a different tab
 
 When setting the "target" attribute to "_blank", the form will be submitted in a new tab.
