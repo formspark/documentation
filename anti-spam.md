@@ -11,7 +11,7 @@ Every form falls victim to spambots at some point. How you handle them can affec
 
 Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 
-1. Go to: https://www.google.com/recaptcha/
+1. Open [https://www.google.com/recaptcha/](https://www.google.com/recaptcha/)
 2. Navigate to the admin console.
 3. Create a new site.
 4. Make sure you select reCAPTCHA v2.
@@ -32,7 +32,7 @@ The honeypot technique allows us to ignore spambots without forcing your users t
 To enable this feature, add a field with the name "\_honeypot" (or "\_gotcha") to your form and hide it with CSS (see example below). The submission will be silently ignored when a spambot enters a value.
 
 ```html
-<form action="https://submit-form.com/<your-form-id>">
+<form action="https://submit-form.com/your-form-id">
   <input
     type="checkbox"
     name="_honeypot"
@@ -54,7 +54,7 @@ Example of an "abracadabra" custom honeypot attribute:
 ![Custom honeypot](./.vuepress/public/custom-honeypot.png)
 
 ```html
-<form action="https://submit-form.com/<your-form-id>">
+<form action="https://submit-form.com/your-form-id">
   <input
     type="checkbox"
     name="abracadabra"

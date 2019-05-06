@@ -28,7 +28,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
   <body>
     <script>
       axios
-        .post("https://submit-form.com/<your-form-id>", {
+        .post("https://submit-form.com/your-form-id", {
           message: "Hello, World"
         })
         .then(function(response) {
@@ -56,7 +56,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
   </head>
   <body>
     <script>
-      fetch("https://submit-form.com/<your-form-id>", {
+      fetch("https://submit-form.com/your-form-id", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
   <body>
     <script>
       $.post(
-        "https://submit-form.com/<your-form-id>",
+        "https://submit-form.com/your-form-id",
         {
           message: "Hello, World"
         },
@@ -126,7 +126,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
       const xhr = new XMLHttpRequest();
       xhr.open(
         "POST",
-        "https://submit-form.com/<your-form-id>"
+        "https://submit-form.com/your-form-id"
       );
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.send(

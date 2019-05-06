@@ -16,7 +16,7 @@ You can override this default behavior by specifying a custom redirect URL.
 3. Set the value to the URL you want to redirect users to.
 
 ``` html
-<form action="https://submit-form.com/<your-form-id>">
+<form action="https://submit-form.com/your-form-id">
   <input type="hidden" name="_redirect" value="https://site.io/thanks.html" />
   <input type="email" name="email">
   <button type="submit">Subscribe</button>
@@ -41,7 +41,7 @@ The form must contain an input with a "_replyto" or "email" name.
 When setting the "target" attribute to "_blank", the form will be submitted in a new tab.
 
 ``` html
-<form action="https://submit-form.com/<your-form-id>" target="_blank">
+<form action="https://submit-form.com/your-form-id" target="_blank">
   <input type="email" name="email">
   <button type="submit">Subscribe</button>
 </form>

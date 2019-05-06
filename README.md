@@ -21,7 +21,7 @@ Formspark is perfect for static sites and works anywhere you can put an HTML for
 Set your HTML form's action attribute to the Formspark form's action URL
 
 ``` html
-<form action="https://submit-form.com/<your-form-id>">
+<form action="https://submit-form.com/your-form-id">
   <input type="email" name="email">
   <button type="submit">Subscribe</button>
 </form>
