@@ -9,6 +9,6 @@
     "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
-    "lyticus": "^1.0.3"
+    "lyticus": "^1.0.5"
   }
 }
