@@ -1,14 +1,32 @@
 {
-  "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build",
-    "deploy": "aws s3 sync .vuepress/dist s3://documentation.formspark.io --delete --acl public-read",
-    "cloudfront": "aws cloudfront create-invalidation --distribution-id E3BPJDLRBQPFHK --paths /*"
+  "name": "formspark-documentation",
+  "version": "1.0.0",
+  "description": "Formspark documentation",
+  "author": "Bjorn Krols (https://byteboomers.com)",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "forms",
+    "formspark"
+  ],
+  "homepage": "https://github.com/byteboomers/formspark-documentation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteboomers/formspark-documentation.git"
   },
-  "devDependencies": {
-    "vuepress": "^1.0.0-alpha.47"
+  "bugs": {
+    "url": "https://github.com/byteboomers/formspark-documentation/issues"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "aws s3 sync docs/.vuepress/dist s3://documentation.formspark.io --delete --acl public-read",
+    "cloudfront": "aws cloudfront create-invalidation --distribution-id E3BPJDLRBQPFHK --paths /*"
   },
   "dependencies": {
     "lyticus": "^1.0.7"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.47"
   }
 }
