@@ -21,7 +21,7 @@ Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 
 Formspark will now use your secret key to verify the reCAPTCHA response.
 
-![reCAPTCHA](./.vuepress/public/recaptcha.png)
+![reCAPTCHA](../.vuepress/public/recaptcha.png)
 
 To stop using reCAPTCHA, clear the "reCAPTCHA v2 secret key" field found in your form's settings.
 
@@ -51,7 +51,7 @@ Instead of using "\_honeypot" (or "\_gotcha"), you can specify your own honeypot
 
 Example of an "abracadabra" custom honeypot attribute:
 
-![Custom honeypot](./.vuepress/public/custom-honeypot.png)
+![Custom honeypot](../.vuepress/public/custom-honeypot.png)
 
 ```html
 <form action="https://submit-form.com/your-form-id">
