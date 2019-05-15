@@ -60,7 +60,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json"
         },
         body: JSON.stringify({
           message: "Hello, World"
@@ -124,10 +124,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
   <body>
     <script>
       const xhr = new XMLHttpRequest();
-      xhr.open(
-        "POST",
-        "https://submit-form.com/your-form-id"
-      );
+      xhr.open("POST", "https://submit-form.com/your-form-id");
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.send(
         JSON.stringify({

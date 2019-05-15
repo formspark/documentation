@@ -1,9 +1,9 @@
 ---
-title: Anti-spam
+title: Spam protection
 lang: en-US
 ---
 
-# Anti-spam
+# Spam protection
 
 Every form falls victim to spambots at some point. How you handle them can affect your customers, Formspark integrates with Google's reCAPTCHA v2 and also implements the honeypot technique.
 

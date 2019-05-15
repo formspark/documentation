@@ -1,31 +1,18 @@
 ---
-title: Basic setup
+title: About
 lang: en-US
 ---
 
+<img src="https://cdn.byteboomers.com/img/logo/svg/formspark.svg" style="width: 5rem">
+
 # About
+
+Welcome to the documentation website for [Formspark](https://www.formspark.io?ref=documentation).
 
 Formspark is a simple way to save information from your website via forms without having to set up a server.
 
-- No servers to manage
-- No databases to handle
-- No APIs or frameworks to learn
-- Keep full control over the look and feel of your forms
-
 Formspark is perfect for static sites and works anywhere you can put an HTML form
 
-# Basic setup
+This website is open-source.
 
-## Adapt your form
-
-Set your HTML form's action attribute to the Formspark form's action URL
-
-``` html
-<form action="https://submit-form.com/your-form-id">
-  <input type="email" name="email">
-  <button type="submit">Subscribe</button>
-</form>
-```
-
-* Ensure all input, select and textarea elements inside your form have a name attribute, otherwise you will not receive the data filled in these fields.
-* Make sure your form contains a button element of type submit.
+Your suggestions and pull requests are welcome via [github](https://github.com/byteboomers/formspark-documentation).

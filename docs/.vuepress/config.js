@@ -13,7 +13,8 @@ module.exports = {
       "meta",
       {
         property: "og:image",
-        content: "https://cdn.byteboomers.com/img/logo/png/formspark--512x512.png"
+        content:
+          "https://cdn.byteboomers.com/img/logo/png/formspark--512x512.png"
       }
     ]
   ],
@@ -23,13 +24,41 @@ module.exports = {
       { text: "Formspark", link: "https://formspark.io" }
     ],
     sidebar: [
-      "/",
-      "setup",
-      "anti-spam",
-      "advanced-features",
-      "special-input-types",
-      "form-validation",
-      "ajax-submissions"
+      {
+        title: "Introduction",
+        collapsable: false,
+        children: [["/", "About"]]
+      },
+      {
+        title: "Setup",
+        collapsable: false,
+        children: [
+          ["/setup/", "Installation"],
+          ["/setup/spam-protection", "Spam protection"]
+        ]
+      },
+      {
+        title: "Customization",
+        collapsable: false,
+        children: [
+          ["/customization/custom-redirect", "Custom redirect"],
+          ["/customization/direct-replies", "Direct replies"]
+        ]
+      },
+      {
+        title: "HTML form",
+        collapsable: false,
+        children: [
+          ["/html-form/form-validation", "Form validation"],
+          ["/html-form/special-input-types", "Special input types"],
+          ["/html-form/submit-in-different-tab", "Submit in different tab"]
+        ]
+      },
+      {
+        title: "Javascript",
+        collapsable: false,
+        children: [["/javascript/ajax-submissions", "AJAX submissions"]]
+      }
     ]
   }
 };
