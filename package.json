@@ -6,9 +6,11 @@
   "license": "MIT",
   "keywords": [
     "documentation",
+    "form",
     "forms",
     "formspark"
   ],
+  "private": true,
   "homepage": "https://github.com/byteboomers/formspark-documentation#readme",
   "repository": {
     "type": "git",
