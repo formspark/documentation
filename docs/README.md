@@ -7,7 +7,7 @@ lang: en-US
 
 # About
 
-Welcome to the documentation website for [Formspark](https://www.formspark.io?ref=documentation).
+Welcome to the documentation website for [Formspark](https://formspark.io?ref=documentation).
 
 Formspark is a simple way to save information from your website via forms without having to set up a server.
 
