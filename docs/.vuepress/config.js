@@ -12,9 +12,44 @@ module.exports = {
     [
       "meta",
       {
+        property: "og:title",
+        content: "Formspark Documentation"
+      }
+    ],
+    [
+      "meta",
+      {
+        property: "og:url",
+        content: "https://documentation.formspark.io"
+      }
+    ],
+    [
+      "meta",
+      {
         property: "og:image",
         content:
-          "https://cdn.byteboomers.com/img/logo/png/formspark--512x512.png"
+          "https://cdn.byteboomers.com/img/logo/png/formspark--1200x630.png"
+      }
+    ],
+    [
+      "meta",
+      {
+        property: "og:image:type",
+        content: "image/png"
+      }
+    ],
+    [
+      "meta",
+      {
+        property: "og:image:width",
+        content: "1200"
+      }
+    ],
+    [
+      "meta",
+      {
+        property: "og:image:height",
+        content: "630"
       }
     ]
   ],
