@@ -54,6 +54,10 @@ module.exports = {
     ]
   ],
   themeConfig: {
+    logo: "https://cdn.byteboomers.com/img/logo/svg/formspark.svg",
+    repo: "byteboomers/formspark-documentation",
+    docsDir: "docs",
+    editLinks: true,
     nav: [
       { text: "Home", link: "/" },
       { text: "Formspark", link: "https://formspark.io" }

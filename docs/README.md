@@ -3,8 +3,6 @@ title: About
 lang: en-US
 ---
 
-<img src="https://cdn.byteboomers.com/img/logo/svg/formspark.svg" style="width: 5rem">
-
 # About
 
 Welcome to the documentation website for [Formspark](https://formspark.io?ref=documentation).
