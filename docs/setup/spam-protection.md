@@ -5,7 +5,7 @@ lang: en-US
 
 # Spam protection
 
-Every form falls victim to spambots at some point. How you handle them can affect your customers, Formspark integrates with Google's reCAPTCHA v2 and also implements the honeypot technique.
+Every form falls victim to spam bots at some point. How you handle them can affect your customers, Formspark integrates with Google's reCAPTCHA v2 and also implements the honeypot technique.
 
 ## reCAPTCHA
 
@@ -29,7 +29,7 @@ To stop using reCAPTCHA, clear the "reCAPTCHA v2 secret key" field found in your
 
 The honeypot technique allows us to ignore spambots without forcing your users to fill out a captcha or jump through other hoops.
 
-To enable this feature, add a field with the name "\_honeypot" (or "\_gotcha") to your form and hide it with CSS (see example below). The submission will be silently ignored when a spambot enters a value.
+To enable this feature, add a field with the name `_honeypot` or `_gotcha` to your form and hide it with CSS (see example below). The submission will be silently ignored when a spambot enters a value.
 
 ```html
 <form action="https://submit-form.com/your-form-id">
@@ -47,9 +47,7 @@ To enable this feature, add a field with the name "\_honeypot" (or "\_gotcha") t
 
 ## Custom honeypot attribute
 
-Instead of using "\_honeypot" (or "\_gotcha"), you can specify your own honeypot attribute in your form's settings.
-
-Example of an "abracadabra" custom honeypot attribute:
+Instead of using `_honeypot` or `_gotcha`, you can specify your own honeypot name in your form's settings.
 
 ![Custom honeypot](../.vuepress/public/custom-honeypot.png)
 
@@ -57,7 +55,7 @@ Example of an "abracadabra" custom honeypot attribute:
 <form action="https://submit-form.com/your-form-id">
   <input
     type="checkbox"
-    name="abracadabra"
+    name="Paste your custom honeypot here"
     style="display:none"
     tabindex="-1"
     autocomplete="off"

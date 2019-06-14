@@ -5,7 +5,13 @@ lang: en-US
 
 # Installation
 
-Set your HTML form's action attribute to the Formspark form's action URL
+Set your HTML form's action attribute to your form's action URL.
+
+Your form's action URL is `https://submit-form.com/your-form-id`
+
+::: warning
+Make sure you replace the placeholder form id with your own form id.
+:::
 
 ```html
 <form action="https://submit-form.com/your-form-id">

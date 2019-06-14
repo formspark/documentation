@@ -80,8 +80,9 @@ module.exports = {
         title: "Customization",
         collapsable: false,
         children: [
-          ["/customization/custom-redirect", "Custom redirect"],
-          ["/customization/direct-replies", "Direct replies"]
+          ["/customization/redirection", "Redirection"],
+          ["/customization/direct-replies", "Direct replies"],
+          ["/customization/email", "Email"]
         ]
       },
       {

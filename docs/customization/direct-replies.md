@@ -5,9 +5,18 @@ lang: en-US
 
 # Direct replies
 
-When email notifications are enabled, Formspark enables you to directly "Reply" to the person who originally submitted the form.
+When email notifications are active, Formspark enables you to directly reply to the person who originally submitted the form.
 
-The form must contain an input with a "\_replyto" or "email" name.
+To activate this behavior, create an input with any of the following names:
+
+- `mail`
+- `email`
+- `_replyto`
+- `_email.replyto`
+
+```html
+<input type="email" name="mail" placeholder="Your email" />
+```
 
 ```html
 <input type="email" name="email" placeholder="Your email" />
@@ -15,4 +24,8 @@ The form must contain an input with a "\_replyto" or "email" name.
 
 ```html
 <input type="text" name="_replyto" placeholder="Your email" />
+```
+
+```html
+<input type="text" name="_email.replyto" placeholder="Your email" />
 ```
