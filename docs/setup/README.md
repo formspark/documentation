@@ -5,13 +5,9 @@ lang: en-US
 
 # Installation
 
-Set your HTML form's action attribute to your form's action URL.
+Set your HTML form's `action` attribute to your form's action URL.
 
 Your form's action URL is `https://submit-form.com/your-form-id`
-
-::: warning
-Make sure you replace the placeholder form id with your own form id.
-:::
 
 ```html
 <form action="https://submit-form.com/your-form-id">
@@ -20,5 +16,12 @@ Make sure you replace the placeholder form id with your own form id.
 </form>
 ```
 
-- Ensure all input, select and textarea elements inside your form have a name attribute, otherwise you will not receive the data filled in these fields.
-- Make sure your form contains a button element of type submit.
+Ensure all input, select and textarea elements inside your form have a `name` attribute, otherwise you will not receive the data filled in these fields.
+
+Make sure your form contains a button element of `type` "submit".
+
+::: warning
+Make sure you replace the placeholder form id with your own form id.
+
+You can create own form id [here](https://dashboard.formspark.io).
+:::

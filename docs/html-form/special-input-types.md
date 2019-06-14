@@ -11,7 +11,7 @@ Radio buttons let a user select ONLY ONE of a limited number of choices.
 
 Only the value of the checked choice will be forwarded.
 
-All choices should share the same "name" attribute.
+All choices should share the same `name` attribute.
 
 ```html
 <form action="https://submit-form.com/your-form-id">
@@ -30,7 +30,7 @@ The value of each checked choice will forwarded.
 
 When unchecked, the browser does not send the input in the request, so a checkbox value will either be true, or the key will not exist at all.
 
-All choices should have a unique "name" attribute.
+All choices should have a unique `name` attribute.
 
 ```html
 <form action="https://submit-form.com/your-form-id">
