@@ -28,9 +28,9 @@
   "dependencies": {
     "@sentry/browser": "^5.4.0",
     "@sentry/integrations": "^5.4.1",
-    "lyticus": "^1.0.25"
+    "lyticus": "^1.0.27"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.47"
+    "vuepress": "^1.0.1"
   }
 }
