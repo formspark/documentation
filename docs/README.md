@@ -16,5 +16,3 @@ Formspark is a simple way to save information from your website via forms withou
 Formspark is perfect for static sites and works anywhere you can put an HTML form
 
 Don't have an account yet? [Sign up for free!](https://dashboard.formspark.io).
-
-This website is open-source.
