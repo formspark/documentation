@@ -30,7 +30,7 @@
   "dependencies": {
     "@sentry/browser": "^5.4.3",
     "@sentry/integrations": "^5.4.2",
-    "lyticus": "^1.0.27"
+    "lyticus": "^1.0.28"
   },
   "devDependencies": {
     "vuepress": "^1.0.2"
