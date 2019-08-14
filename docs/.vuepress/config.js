@@ -86,6 +86,11 @@ module.exports = {
         ]
       },
       {
+        title: "Integration",
+        collapsable: false,
+        children: [["/integration/webhooks", "Webhooks"]]
+      },
+      {
         title: "HTML form",
         collapsable: false,
         children: [
