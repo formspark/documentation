@@ -1,0 +1,22 @@
+---
+title: Additional workspaces
+lang: en-US
+---
+
+# Additional workspaces
+
+A workspace is a group of forms and can have one or several team members.
+
+Workspaces enable you to create isolated environments for your customers, companies, departements, products, etc...
+
+User-created workspaces start with 0 submissions.
+
+## Steps
+
+1. In the workspace section, press `Create new workspace`
+
+   ![Workspace section](../.vuepress/public/workspace-section.png)
+
+2. Fill the form and press `Create`
+
+   ![New workspace](../.vuepress/public/new-workspace.png)

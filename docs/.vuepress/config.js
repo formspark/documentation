@@ -86,9 +86,23 @@ module.exports = {
         ]
       },
       {
+        title: "Dashboard",
+        collapsable: false,
+        children: [
+          ["/dashboard/inviting-team-members", "Inviting team members"],
+          ["/dashboard/additional-workspaces", "Additional workspaces"],
+          ["/dashboard/exporting-submissions", "Exporting submissions"]
+        ]
+      },
+      {
         title: "Integration",
         collapsable: false,
         children: [["/integration/webhooks", "Webhooks"]]
+      },
+      {
+        title: "Javascript",
+        collapsable: false,
+        children: [["/javascript/ajax-submissions", "AJAX submissions"]]
       },
       {
         title: "HTML form",
@@ -98,11 +112,6 @@ module.exports = {
           ["/html-form/special-input-types", "Special input types"],
           ["/html-form/submit-in-different-tab", "Submit in different tab"]
         ]
-      },
-      {
-        title: "Javascript",
-        collapsable: false,
-        children: [["/javascript/ajax-submissions", "AJAX submissions"]]
       }
     ]
   }
