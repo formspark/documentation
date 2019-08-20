@@ -1,5 +1,5 @@
 ---
-title: email customizations
+title: Email customizations
 lang: en-US
 ---
 
