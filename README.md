@@ -6,16 +6,32 @@ Source of the Formspark documentation website.
 
 ## Scripts
 
-```bash
-# Build and start with hot-reload for development
-npm run dev
+**Start with hot-reload for development**
 
-# Build for production
-npm run build
+```
+yarn dev
+```
 
-# Deploy build to S3
-npm run deploy
+**Build for production**
 
-# Invalidate CloudFront cache
-npm run cloudfront
+```
+yarn build
+```
+
+**Deploy to S3**
+
+```
+yarn deploy
+```
+
+**Invalidate CloudFront cache**
+
+```
+yarn cloudfront
+```
+
+**Re-format files with Prettier**
+
+```
+yarn prettier
 ```
