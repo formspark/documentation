@@ -17,5 +17,3 @@ To manage your form's email notification settings, navigate to its `Settings` se
 You can customize the notification email template of a form.
 
 Formspark custom email templates use the [Handlebars](https://handlebarsjs.com/) templating language.
-
-Handlebars provides a [number of built-in helpers](https://handlebarsjs.com/builtin_helpers.html).
