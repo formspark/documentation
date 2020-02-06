@@ -17,6 +17,6 @@ Formspark will retry calling your webhook up to 10 times, every 15 minutes, unti
 
 We only send submissions that are not spam to your webhook.
 
-Your endpoint's length should not 512 characters.
+Your endpoint's length should not exceed 512 characters.
 
 To stop using webhooks, clear the `Webhook URL` field found in your form's settings.
