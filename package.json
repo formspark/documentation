@@ -28,7 +28,7 @@
   "husky": {},
   "dependencies": {
     "@sentry/browser": "^5.14.1",
-    "@sentry/integrations": "^5.14.0",
+    "@sentry/integrations": "^5.14.1",
     "lyticus": "^1.0.33"
   },
   "devDependencies": {
