@@ -32,7 +32,7 @@
     "lyticus": "^1.0.33"
   },
   "devDependencies": {
-    "prettier": "^2.0.1",
+    "prettier": "^2.0.2",
     "vuepress": "^1.4.0"
   },
   "peerDependencies": {}
