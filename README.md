@@ -4,6 +4,10 @@ Source of the Formspark documentation website.
 
 [https://documentation.formspark.io](https://documentation.formspark.io)
 
+## Git hooks
+
+- pre-commit: re-format staged files with Prettier
+
 ## Scripts
 
 **Start with hot-reload for development**
@@ -18,20 +22,8 @@ yarn dev
 yarn build
 ```
 
-**Deploy to S3**
+**Deploy build**
 
 ```
-yarn deploy
-```
-
-**Invalidate CloudFront cache**
-
-```
-yarn cloudfront
-```
-
-**Re-format files with Prettier**
-
-```
-yarn prettier
+npm run deploy
 ```
