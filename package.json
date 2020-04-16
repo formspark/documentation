@@ -22,17 +22,22 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "aws s3 sync docs/.vuepress/dist s3://documentation.formspark.io --delete --acl public-read",
-    "cloudfront": "aws cloudfront create-invalidation --distribution-id E3BPJDLRBQPFHK --paths /*"
+    "deploy": "aws s3 sync docs/.vuepress/dist s3://documentation.formspark.io --delete --acl public-read && aws cloudfront create-invalidation --distribution-id E3BPJDLRBQPFHK --paths \"/*\""
   },
-  "husky": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "dependencies": {
     "@sentry/browser": "^5.15.4",
     "@sentry/integrations": "^5.15.4",
     "lyticus": "^1.0.33"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
     "prettier": "^2.0.4",
+    "pretty-quick": "^2.0.1",
     "vuepress": "^1.4.1"
   },
   "peerDependencies": {}
