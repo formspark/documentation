@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^5.20.0",
-    "@sentry/integrations": "^5.20.0",
+    "@sentry/integrations": "^5.20.1",
     "lyticus": "^1.0.33"
   },
   "devDependencies": {
