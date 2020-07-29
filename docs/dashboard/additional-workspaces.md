@@ -7,7 +7,7 @@ lang: en-US
 
 A workspace is a group of forms and can have one or several team members.
 
-Workspaces enable you to create isolated environments for your customers, companies, departements, products, etc...
+Workspaces enable you to create isolated environments for your customers, companies, departments, products, etc...
 
 User-created workspaces start with 0 submissions.
 

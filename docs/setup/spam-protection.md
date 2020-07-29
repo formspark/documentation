@@ -7,7 +7,7 @@ lang: en-US
 
 Every form falls victim to spam bots at some point. How you handle them can affect your customers, Formspark integrates with Google's reCAPTCHA v2 and also implements the honeypot technique.
 
-Formspark will not not save submissions, send notifications or decrement your submission counter if any of the following conditions is true:
+Formspark will not save submissions, send notifications or decrement your submission counter if any of the following conditions is true:
 
 - The submission is empty
 - The submission contains a honeypot

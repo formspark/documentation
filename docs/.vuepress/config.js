@@ -6,75 +6,75 @@ module.exports = {
       "link",
       {
         rel: "icon",
-        href: "https://cdn.byteboomers.com/img/logo/ico/formspark.ico"
-      }
+        href: "https://cdn.byteboomers.com/img/logo/ico/formspark.ico",
+      },
     ],
     [
       "meta",
       {
         property: "og:title",
-        content: "Formspark Documentation"
-      }
+        content: "Formspark Documentation",
+      },
     ],
     [
       "meta",
       {
         property: "og:url",
-        content: "https://documentation.formspark.io"
-      }
+        content: "https://documentation.formspark.io",
+      },
     ],
     [
       "meta",
       {
         property: "og:image",
         content:
-          "https://cdn.byteboomers.com/img/logo/png/formspark--1200x630.png"
-      }
+          "https://cdn.byteboomers.com/img/logo/png/formspark--1200x630.png",
+      },
     ],
     [
       "meta",
       {
         property: "og:image:type",
-        content: "image/png"
-      }
+        content: "image/png",
+      },
     ],
     [
       "meta",
       {
         property: "og:image:width",
-        content: "1200"
-      }
+        content: "1200",
+      },
     ],
     [
       "meta",
       {
         property: "og:image:height",
-        content: "630"
-      }
-    ]
+        content: "630",
+      },
+    ],
   ],
   themeConfig: {
     logo: "https://cdn.byteboomers.com/img/logo/svg/formspark.svg",
-    repo: "byteboomers/formspark-documentation",
+    repo: "formspark/documentation",
     docsDir: "docs",
     editLinks: true,
     nav: [
       { text: "Home", link: "/" },
-      { text: "Formspark", link: "https://formspark.io" }
+      { text: "Formspark", link: "https://formspark.io" },
     ],
     sidebar: [
       {
         title: "Introduction",
         collapsable: false,
-        children: [["/", "About"]]
+        children: [["/", "About"]],
       },
       {
         title: "Setup",
         collapsable: false,
         children: [
           ["/setup/", "Installation"],
-          ["/setup/spam-protection", "Spam protection"]
-        ]
+          ["/setup/spam-protection", "Spam protection"],
+        ],
       },
       {
         title: "Customization",
@@ -82,8 +82,8 @@ module.exports = {
         children: [
           ["/customization/redirection", "Redirection"],
           ["/customization/direct-replies", "Direct replies"],
-          ["/customization/email", "Email"]
-        ]
+          ["/customization/email", "Email"],
+        ],
       },
       {
         title: "Dashboard",
@@ -91,22 +91,22 @@ module.exports = {
         children: [
           [
             "/dashboard/email-notification-settings",
-            "Email notification settings"
+            "Email notification settings",
           ],
           ["/dashboard/inviting-team-members", "Inviting team members"],
           ["/dashboard/additional-workspaces", "Additional workspaces"],
-          ["/dashboard/exporting-submissions", "Exporting submissions"]
-        ]
+          ["/dashboard/exporting-submissions", "Exporting submissions"],
+        ],
       },
       {
         title: "Integration",
         collapsable: false,
-        children: [["/integration/webhooks", "Webhooks"]]
+        children: [["/integration/webhooks", "Webhooks"]],
       },
       {
         title: "Javascript",
         collapsable: false,
-        children: [["/javascript/ajax-submissions", "AJAX submissions"]]
+        children: [["/javascript/ajax-submissions", "AJAX submissions"]],
       },
       {
         title: "HTML form",
@@ -114,9 +114,9 @@ module.exports = {
         children: [
           ["/html-form/form-validation", "Form validation"],
           ["/html-form/special-input-types", "Special input types"],
-          ["/html-form/submit-in-different-tab", "Submit in different tab"]
-        ]
-      }
-    ]
-  }
+          ["/html-form/submit-in-different-tab", "Submit in different tab"],
+        ],
+      },
+    ],
+  },
 };

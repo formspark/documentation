@@ -29,12 +29,12 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
     <script>
       axios
         .post("https://submit-form.com/your-form-id", {
-          message: "Hello, World"
+          message: "Hello, World",
         })
-        .then(function(response) {
+        .then(function (response) {
           console.log(response);
         })
-        .catch(function(response) {
+        .catch(function (response) {
           console.error(response);
         });
     </script>
@@ -60,16 +60,16 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          message: "Hello, World"
-        })
+          message: "Hello, World",
+        }),
       })
-        .then(function(response) {
+        .then(function (response) {
           console.log(response);
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.error(error);
         });
     </script>
@@ -94,15 +94,15 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
       $.post(
         "https://submit-form.com/your-form-id",
         {
-          message: "Hello, World"
+          message: "Hello, World",
         },
         null,
         "json" // dataType must be set to json
       )
-        .then(function(response) {
+        .then(function (response) {
           console.log(response);
         })
-        .catch(function(response) {
+        .catch(function (response) {
           console.error(response);
         });
     </script>
@@ -128,7 +128,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.send(
         JSON.stringify({
-          message: "Hello, World!"
+          message: "Hello, World!",
         })
       );
     </script>

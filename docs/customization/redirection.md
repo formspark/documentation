@@ -9,7 +9,7 @@ After submitting a form the user will be redirected to a generic feedback page h
 
 ![Feedback OK](../.vuepress/public/feedback-ok.png)
 
-This default behavior can be overriden in multiple ways.
+This default behavior can be overridden in multiple ways.
 
 ## Specifying a custom redirect URL
 

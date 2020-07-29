@@ -10,13 +10,13 @@
     "forms",
     "formspark"
   ],
-  "homepage": "https://github.com/byteboomers/formspark-documentation#readme",
+  "homepage": "https://github.com/formspark/documentation#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/byteboomers/formspark-documentation.git"
+    "url": "git+https://github.com/formspark/documentation.git"
   },
   "bugs": {
-    "url": "https://github.com/byteboomers/formspark-documentation/issues"
+    "url": "https://github.com/formspark/documentation/issues"
   },
   "main": "",
   "scripts": {
