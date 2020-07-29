@@ -1,4 +1,4 @@
-# formspark-documentation
+# documentation.formspark.io
 
 Source of the Formspark documentation website.
 
@@ -13,13 +13,13 @@ Source of the Formspark documentation website.
 **Start with hot-reload for development**
 
 ```
-yarn dev
+npm run dev
 ```
 
 **Build for production**
 
 ```
-yarn build
+npm run build
 ```
 
 **Deploy build**
