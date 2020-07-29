@@ -1,4 +1,4 @@
-# documentation.formspark.io
+# Formspark documentation
 
 Source of the Formspark documentation website.
 
