@@ -30,15 +30,15 @@
     }
   },
   "dependencies": {
-    "@sentry/browser": "^5.20.1",
-    "@sentry/integrations": "^5.20.1",
+    "@sentry/browser": "^5.21.1",
+    "@sentry/integrations": "^5.21.1",
     "lyticus": "^1.0.33"
   },
   "devDependencies": {
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.5.3"
   },
   "peerDependencies": {}
 }
