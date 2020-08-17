@@ -42,6 +42,43 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
+## Axios with reCAPTCHA v2 example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AJAX Axios + reCAPTCHA v2</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+    <button id="send-button" type="button">Send</button>
+    <script>
+      document
+        .getElementById("send-button")
+        .addEventListener("click", function () {
+          axios
+            .post("https://submit-form.com/your-form-id", {
+              message: "Hello, World",
+              "g-recaptcha-response": grecaptcha.getResponse(),
+            })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (response) {
+              console.error(response);
+            });
+        });
+    </script>
+  </body>
+</html>
+```
+
 ## Fetch example
 
 ```html
