@@ -1,6 +1,7 @@
 import Lyticus from "lyticus";
 import * as Sentry from "@sentry/browser";
-import * as Integrations from "@sentry/integrations";
+import { Vue as VueIntegration } from "@sentry/integrations";
+import { Integrations } from "@sentry/tracing";
 
 export default ({ Vue, router }) => {
   if (typeof window !== "undefined") {
@@ -15,8 +16,16 @@ export default ({ Vue, router }) => {
     // Sentry
     if (process.env.NODE_ENV !== "development") {
       Sentry.init({
-        dsn: "https://144d42ce810d469f8b62b024ecc79e45@sentry.io/1475734",
-        integrations: [new Integrations.Vue({ Vue, attachProps: true })],
+        dsn:
+          "https://d0d1620e3b0e46d2b84cb7a1ce25011a@o456819.ingest.sentry.io/5450322",
+        integrations: [
+          new VueIntegration({
+            Vue,
+            tracing: true,
+          }),
+          new Integrations.BrowserTracing(),
+        ],
+        tracesSampleRate: 1.0,
       });
     }
   }
