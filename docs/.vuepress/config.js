@@ -1,6 +1,8 @@
+const { description } = require("../../package");
+
 module.exports = {
   title: "Formspark Documentation",
-  description: "Documentation for Formspark",
+  description: description,
   head: [
     [
       "link",
@@ -51,6 +53,12 @@ module.exports = {
         property: "og:image:height",
         content: "630",
       },
+    ],
+    ["meta", { name: "theme-color", content: "#707ee7" }],
+    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    [
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
   ],
   themeConfig: {
@@ -119,4 +127,5 @@ module.exports = {
       },
     ],
   },
+  plugins: ["@vuepress/plugin-back-to-top"],
 };
