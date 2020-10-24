@@ -13,9 +13,9 @@ To set up an endpoint:
 2. Paste the endpoint into the `Webhook URL` field found in your form's settings.
 3. Submit to your form and verify your endpoint is receiving submissions successfully.
 
-Formspark will retry calling your webhook up to 10 times, every 15 minutes, until your webhook returns a `200` status code.
-
-We only send submissions that are not spam to your webhook.
+:::tip
+You can use a service such as [requestcatcher.com](https://requestcatcher.com) to test the integration with your form.
+:::
 
 Your endpoint's length should not exceed 512 characters.
 
