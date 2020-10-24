@@ -3,7 +3,7 @@
   "description": "Formspark documentation",
   "private": true,
   "version": "1.0.0",
-  "author": "Bjorn Krols (https://byteboomers.com)",
+  "author": "Bjorn Krols (https://formspark.io)",
   "license": "UNLICENSED",
   "keywords": [
     "documentation",
@@ -23,9 +23,10 @@
     "url": "https://github.com/formspark/documentation/issues"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "aws s3 sync docs/.vuepress/dist s3://documentation.formspark.io --delete --acl public-read && aws cloudfront create-invalidation --distribution-id E3BPJDLRBQPFHK --paths \"/*\""
+    "deploy": "aws s3 sync docs/.vuepress/dist s3://formspark-production-documentation-website --delete --acl public-read && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\"",
+    "dev": "vuepress dev docs",
+    "format": "prettier --write --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|css|scss|json|md|yml)\""
   },
   "husky": {
     "hooks": {
@@ -33,16 +34,16 @@
     }
   },
   "dependencies": {
-    "@sentry/browser": "^5.24.2",
-    "@sentry/integrations": "^5.24.2",
-    "@sentry/tracing": "^5.24.2",
+    "@sentry/browser": "^5.27.1",
+    "@sentry/integrations": "^5.27.1",
+    "@sentry/tracing": "^5.27.1",
     "lyticus": "^1.0.33"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-back-to-top": "^1.7.1",
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^2.0.2",
-    "vuepress": "^1.6.0"
+    "vuepress": "^1.7.1"
   }
 }
