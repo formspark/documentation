@@ -15,10 +15,7 @@ You can send invitations to users who still need to create a Formspark account o
 
 ## Steps
 
-1. In the workspace section, press `Invite team member`
-
-   ![Workspace section](../.vuepress/public/workspace-section.png)
-
+1. Open the `Members` screen
 2. Fill the form and press `Send`
 
-   ![Invite team member](../.vuepress/public/invite-team-member.png)
+![Workspace section](../.vuepress/public/invite-team-member.png)

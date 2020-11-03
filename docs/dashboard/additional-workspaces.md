@@ -13,10 +13,7 @@ User-created workspaces start with 0 submissions.
 
 ## Steps
 
-1. In the workspace section, press `Create new workspace`
-
-   ![Workspace section](../.vuepress/public/workspace-section.png)
-
+1. Press the `+` button to rhe right of your workspace
 2. Fill the form and press `Create`
 
-   ![New workspace](../.vuepress/public/new-workspace.png)
+![New workspace](../.vuepress/public/new-workspace.png)

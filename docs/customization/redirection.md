@@ -17,7 +17,7 @@ This default behavior can be overridden in multiple ways.
 2. Set the input's name to `_redirect`.
 3. Set the value to the URL you want to redirect users to.
 
-```html
+````html
 <form action="https://submit-form.com/your-form-id">
   <input
     type="hidden"
@@ -27,21 +27,14 @@ This default behavior can be overridden in multiple ways.
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
 </form>
-```
-
-## Preventing the redirect
-
-1. Add an input of type `hidden`.
-2. Set the input's name to `_redirect`.
-3. Set the value to `false`.
-
-```html
+```pp ## Preventing the redirect 1. Add an input of type `hidden`. 2. Set the
+input's name to `_redirect`. 3. Set the value to `false`. ```html
 <form action="https://submit-form.com/your-form-id">
   <input type="hidden" name="_redirect" value="false" />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
 </form>
-```
+````
 
 ## Customizing the default feedback page
 
