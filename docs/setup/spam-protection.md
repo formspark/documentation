@@ -10,7 +10,7 @@ Every form falls victim to spam bots at some point. How you handle them can affe
 Formspark implements the following opt-in solutions to fight spam:
 
 - Captcha integrations:
-  - Google's reCAPTCHA V2
+  - Google's reCAPTCHA v2
   - hCaptcha
 - Honeypot technique
 
@@ -22,16 +22,16 @@ Formspark will not save submissions, send notifications or decrement your submis
 
 ## reCAPTCHA
 
-Formspark integrates with Google's reCAPTCHA V2 "I'm not a robot" checkbox.
+Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 
 1. Open [https://www.google.com/recaptcha/](https://www.google.com/recaptcha/)
 2. Navigate to the admin console.
 3. Create a new site.
-4. Make sure you select `reCAPTCHA V2`.
+4. Make sure you select `reCAPTCHA v2`.
 5. Make sure your whitelist your website's domain.
 6. Integrate the `site key` on your client ([instructions](https://developers.google.com/recaptcha/docs/display)).
-7. Select `Google reCAPTCHA V2` as your `Captcha provider` in your form's settings.
-8. Copy the `secret key`, paste it into the `reCAPTCHA V2 secret key` field.
+7. Select `Google reCAPTCHA v2` as your `Captcha provider` in your form's settings.
+8. Copy the `secret key`, paste it into the `reCAPTCHA v2 secret key` field.
 
 Formspark will now use your secret key to verify the reCAPTCHA response.
 

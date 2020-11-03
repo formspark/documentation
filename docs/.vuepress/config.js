@@ -107,16 +107,6 @@ module.exports = {
         ],
       },
       {
-        title: "Integration",
-        collapsable: false,
-        children: [["/integration/webhooks", "Webhooks"]],
-      },
-      {
-        title: "Javascript",
-        collapsable: false,
-        children: [["/javascript/ajax-submissions", "AJAX submissions"]],
-      },
-      {
         title: "HTML form",
         collapsable: false,
         children: [
@@ -124,6 +114,20 @@ module.exports = {
           ["/html-form/special-input-types", "Special input types"],
           ["/html-form/submit-in-different-tab", "Submit in different tab"],
         ],
+      },
+      {
+        title: "Examples",
+        collapsable: false,
+        children: [
+          ["/examples/ajax", "AJAX submissions"],
+          ["/examples/react", "React"],
+          ["/examples/gatsby", "Gatsby"],
+        ],
+      },
+      {
+        title: "Integration",
+        collapsable: false,
+        children: [["/integration/webhooks", "Webhooks"]],
       },
     ],
   },

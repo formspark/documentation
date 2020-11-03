@@ -13,16 +13,14 @@ Ensure that both the `Content-Type` and `Accept` headers are set to `application
 
 We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 
-## Axios example
+## Axios
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>AJAX Axios</title>
+    <title>Formspark | AJAX with Axios</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -42,16 +40,14 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
-## Axios with reCAPTCHA v2 example
+## Axios with reCAPTCHA v2
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>AJAX Axios + reCAPTCHA v2</title>
+    <title>Formspark | AJAX with Axios and reCAPTCHA v2</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
@@ -79,16 +75,14 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
-## Fetch example
+## Fetch
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>AJAX Fetch</title>
+    <title>Formspark | AJAX with Fetch</title>
   </head>
   <body>
     <script>
@@ -113,16 +107,14 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
-## Fetch with reCAPTCHA v2 example
+## Fetch with reCAPTCHA v2
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>AJAX Fetch + reCAPTCHA v2</title>
+    <title>Formspark | AJAX with Fetch and reCAPTCHA v2</title>
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
@@ -155,16 +147,38 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
-## jQuery example
+## JavaScript XHR
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>AJAX jQuery</title>
+    <title>Formspark | AJAX with Javascript XHR</title>
+  </head>
+  <body>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://submit-form.com/your-form-id");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(
+        JSON.stringify({
+          message: "Hello, World!",
+        })
+      );
+    </script>
+  </body>
+</html>
+```
+
+## jQuery
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formspark | AJAX with jQuery</title>
     <script src="https://unpkg.com/jquery/dist/jquery.js"></script>
   </head>
   <body>
@@ -183,32 +197,6 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
         .catch(function (response) {
           console.error(response);
         });
-    </script>
-  </body>
-</html>
-```
-
-## JavaScript XHR example
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>AJAX XHR</title>
-  </head>
-  <body>
-    <script>
-      const xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://submit-form.com/your-form-id");
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.send(
-        JSON.stringify({
-          message: "Hello, World!",
-        })
-      );
     </script>
   </body>
 </html>
