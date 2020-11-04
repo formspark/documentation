@@ -127,7 +127,10 @@ module.exports = {
       {
         title: "Integration",
         collapsable: false,
-        children: [["/integration/webhooks", "Webhooks"]],
+        children: [
+          ["/integration/slack", "Slack"],
+          ["/integration/webhooks", "Webhooks"],
+        ],
       },
     ],
   },
