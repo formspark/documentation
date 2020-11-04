@@ -122,6 +122,7 @@ module.exports = {
           ["/examples/ajax", "AJAX submissions"],
           ["/examples/react", "React"],
           ["/examples/gatsby", "Gatsby"],
+          ["/examples/nextjs", "Next.js"],
         ],
       },
       {
