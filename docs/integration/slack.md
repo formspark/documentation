@@ -20,3 +20,15 @@ Connecting Formspark and Slack takes only seconds and is the easiest way to post
    ![Connect with Slack](../.vuepress/public/update-slack-channel.png)
 
 4. Save your changes.
+
+## Private channels
+
+Connecting Formspark to a private channel requires 2 extra steps.
+
+1. Click the `Connect an app` link found in your private channel.
+
+   ![Connect slack app to private channel](../.vuepress/public/connect-slack-app-to-private-channel.png)
+
+2. Search for `Formspark` and press add.
+
+   ![Add Slack app to private channel](../.vuepress/public/add-slack-app-to-private-channel.png)
