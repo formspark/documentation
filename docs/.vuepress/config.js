@@ -123,6 +123,7 @@ module.exports = {
           ["/examples/react", "React"],
           ["/examples/gatsby", "Gatsby"],
           ["/examples/nextjs", "Next.js"],
+          ["/examples/vue", "Vue"],
           ["/examples/nuxtjs", "Nuxt.js"],
         ],
       },
