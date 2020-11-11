@@ -39,6 +39,10 @@ Formspark will now use your secret key to verify the reCAPTCHA response.
 
 To stop using reCAPTCHA, change your `Captcha provider` to `None`.
 
+### Recommended libraries
+
+- React: [react-google-recaptcha](https://github.com/dozoisch/react-google-recaptcha)
+
 ## hCaptcha
 
 Formspark integrates with hCaptcha, an independent alternative to Google's reCAPTCHA.
@@ -52,6 +56,10 @@ Formspark will now use your secret key to verify the hCaptcha response.
 ![hCaptcha](../.vuepress/public/hcaptcha.png)
 
 To stop using hCaptcha, change your `Captcha provider` to `None`.
+
+### Recommended libraries
+
+- React: [react-hcaptcha](https://github.com/hCaptcha/react-hcaptcha)
 
 ## Honeypot
 
