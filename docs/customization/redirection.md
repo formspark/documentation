@@ -44,9 +44,17 @@ You can customize the content of the default feedback page with the following re
 
 Customizes the language of the feedback page.
 
-Default value: en
+Default value: "en"
 
-Supported values: en, es, fr, nl
+Supported values:
+
+| Value | Language   |
+| ----- | ---------- |
+| "en"  | English    |
+| "es"  | Spanish    |
+| "pt"  | Portuguese |
+| "fr"  | French     |
+| "nl"  | Dutch      |
 
 ### `_feedback.success.title`
 
