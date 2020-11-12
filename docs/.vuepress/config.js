@@ -120,6 +120,7 @@ module.exports = {
         collapsable: false,
         children: [
           ["/examples/ajax", "AJAX submissions"],
+          ["/examples/webflow", "Webflow"],
           ["/examples/react", "React"],
           ["/examples/gatsby", "Gatsby"],
           ["/examples/nextjs", "Next.js"],
