@@ -161,6 +161,7 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "https://submit-form.com/your-form-id");
       xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Accept", "application/json");
       xhr.send(
         JSON.stringify({
           message: "Hello, World!",
