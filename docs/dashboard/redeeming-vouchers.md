@@ -1,9 +1,9 @@
 ---
-title: Redeeming a voucher
+title: Redeeming vouchers
 lang: en-US
 ---
 
-# Redeeming a voucher
+# Redeeming vouchers
 
 ## Steps
 

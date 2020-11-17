@@ -104,6 +104,7 @@ module.exports = {
           ["/dashboard/inviting-team-members", "Inviting team members"],
           ["/dashboard/additional-workspaces", "Additional workspaces"],
           ["/dashboard/exporting-submissions", "Exporting submissions"],
+          ["/dashboard/redeeming-vouchers", "Redeeming vouchers"],
         ],
       },
       {
