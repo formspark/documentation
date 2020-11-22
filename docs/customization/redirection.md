@@ -31,6 +31,8 @@ This default behavior can be overridden in multiple ways.
 
 ## Specifying a custom error redirect URL
 
+Note: If you don't specify a custom error redirect URL then the configuration from `_redirect` (if present) will automatically be inherited.
+
 1. Add an input of type `hidden`.
 2. Set the input's name to `_error`.
 3. Set the value to the URL you want to redirect users to.
