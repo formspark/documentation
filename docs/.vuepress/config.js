@@ -8,7 +8,7 @@ module.exports = {
       "link",
       {
         rel: "icon",
-        href: "https://cdn.byteboomers.com/img/logo/ico/formspark.ico",
+        href: "https://cdn.formspark.io/images/formspark/logos/formspark.ico",
       },
     ],
     [
@@ -30,7 +30,7 @@ module.exports = {
       {
         property: "og:image",
         content:
-          "https://cdn.byteboomers.com/img/logo/png/formspark--1200x630.png",
+          "https://cdn.formspark.io/images/formspark/logos/formspark--1200x630.png",
       },
     ],
     [
@@ -62,7 +62,7 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    logo: "https://cdn.byteboomers.com/img/logo/svg/formspark.svg",
+    logo: "https://cdn.formspark.io/images/formspark/logos/svg/formspark.svg",
     repo: "formspark/documentation",
     docsDir: "docs",
     editLinks: true,
