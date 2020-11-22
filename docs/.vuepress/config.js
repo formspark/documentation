@@ -62,7 +62,7 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    logo: "https://cdn.formspark.io/images/formspark/logos/svg/formspark.svg",
+    logo: "https://cdn.formspark.io/images/formspark/logos/formspark.svg",
     repo: "formspark/documentation",
     docsDir: "docs",
     editLinks: true,
