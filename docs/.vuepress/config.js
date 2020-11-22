@@ -127,7 +127,9 @@ module.exports = {
           ["/examples/nextjs", "Next.js"],
           ["/examples/vue", "Vue"],
           ["/examples/nuxtjs", "Nuxt.js"],
+          ["/examples/gridsome", "Gridsome"],
           ["/examples/hugo", "Hugo"],
+          ["/examples/jekyll", "Jekyll"],
         ],
       },
       {
