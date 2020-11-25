@@ -121,15 +121,16 @@ module.exports = {
         collapsable: false,
         children: [
           ["/examples/ajax", "AJAX submissions"],
-          ["/examples/webflow", "Webflow"],
-          ["/examples/react", "React"],
           ["/examples/gatsby", "Gatsby"],
-          ["/examples/nextjs", "Next.js"],
-          ["/examples/vue", "Vue"],
-          ["/examples/nuxtjs", "Nuxt.js"],
           ["/examples/gridsome", "Gridsome"],
           ["/examples/hugo", "Hugo"],
           ["/examples/jekyll", "Jekyll"],
+          ["/examples/nextjs", "Next.js"],
+          ["/examples/nuxtjs", "Nuxt.js"],
+          ["/examples/react", "React"],
+          ["/examples/vue", "Vue"],
+          ["/examples/webflow", "Webflow"],
+          ["/examples/wordpress", "Wordpress"],
         ],
       },
       {
@@ -142,5 +143,27 @@ module.exports = {
       },
     ],
   },
-  plugins: ["@vuepress/plugin-back-to-top"],
+  plugins: [
+    ["@vuepress/plugin-back-to-top"],
+    [
+      "sitemap",
+      {
+        hostname: "https://documentation.formspark.io",
+        exclude: ["/404.html", "/debug.html"],
+      },
+    ],
+    [
+      "robots",
+      {
+        host: "https://documentation.formspark.io",
+        policies: [
+          {
+            userAgent: "*",
+            allow: ["/"],
+            disallow: ["/404.html", "/debug.html"],
+          },
+        ],
+      },
+    ],
+  ],
 };
