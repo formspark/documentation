@@ -81,6 +81,8 @@ Supported values:
 | "es"  | Spanish    |
 | "pt"  | Portuguese |
 | "fr"  | French     |
+| "it"  | Italian    |
+| "de"  | German     |
 | "nl"  | Dutch      |
 
 ### `_feedback.success.title`
