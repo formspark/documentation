@@ -34,16 +34,16 @@
     }
   },
   "dependencies": {
-    "@sentry/browser": "^5.27.6",
-    "@sentry/integrations": "^5.27.6",
-    "@sentry/tracing": "^5.27.6",
+    "@sentry/browser": "^5.29.2",
+    "@sentry/integrations": "^5.29.2",
+    "@sentry/tracing": "^5.29.2",
     "lyticus": "^1.0.39",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.7.1",
-    "husky": "^4.3.0",
+    "husky": "^4.3.6",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "vuepress": "^1.7.1"
