@@ -22,11 +22,22 @@ This default behavior can be overridden in multiple ways.
   <input
     type="hidden"
     name="_redirect"
-    value="https://your-website.com/thanks.html"
+    value="https://your-website.com/thanks"
   />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
 </form>
+```
+
+By default, Formspark appends the submission's entries to the custom redirect URL (to its search string).
+This enables you to personalize your page with user-submitted data.
+
+The above form's submissions would redirect to `https://your-website.com/thanks?email=example%40email.com`.
+
+You can toggle off this behaviour by adding a hidden input with the name `_append` and the value `false`.
+
+```html
+<input type="hidden" name="_append" value="false" />
 ```
 
 ## Specifying a custom error redirect URL
@@ -39,11 +50,7 @@ Note: If you don't specify a custom error redirect URL then the configuration fr
 
 ```html
 <form action="https://submit-form.com/your-form-id">
-  <input
-    type="hidden"
-    name="_error"
-    value="https://your-website.com/error.html"
-  />
+  <input type="hidden" name="_error" value="https://your-website.com/error" />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
 </form>
