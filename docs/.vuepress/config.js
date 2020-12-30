@@ -140,6 +140,7 @@ module.exports = {
           ["/integration/slack", "Slack"],
           ["/integration/webhooks", "Webhooks"],
           ["/integration/utm-parameters", "UTM parameters"],
+          ["/integration/zapier", "Zapier"],
         ],
       },
     ],
