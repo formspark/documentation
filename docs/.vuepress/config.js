@@ -139,6 +139,7 @@ module.exports = {
         children: [
           ["/integration/slack", "Slack"],
           ["/integration/webhooks", "Webhooks"],
+          ["/integration/utm-parameters", "UTM parameters"],
         ],
       },
     ],
