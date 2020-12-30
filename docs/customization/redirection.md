@@ -72,7 +72,23 @@ Note: If you don't specify a custom error redirect URL then the configuration fr
 
 ## Customizing the default feedback page
 
-You can customize the content of the default feedback page with the following reserved input names:
+You can customize the look-and-feel and content of the default feedback page with the following reserved input names:
+
+### `_feedback.dark`
+
+Toggles dark mode.
+
+```html
+<form action="https://submit-form.com/your-form-id">
+  <input type="hidden" name="_feedback.dark" value="true" />
+  <input type="email" name="email" />
+  <button type="submit">Subscribe</button>
+</form>
+```
+
+![Feedback dark mode](../.vuepress/public/feedback-dark-mode.png)
+
+Default value: false
 
 ### `_feedback.language`
 
@@ -96,7 +112,7 @@ Supported values:
 
 Customizes the title of the success feedback page.
 
-Default value: Your form has been submitted.
+Default value: "Your form has been submitted."
 
 ### `_feedback.success.message`
 
@@ -108,13 +124,13 @@ Default value: _none_
 
 Customizes the title of the error feedback page.
 
-Default value: An error has occurred.
+Default value: "An error has occurred."
 
 ### `_feedback.error.message`
 
 Customizes the message of the error feedback page.
 
-Default value: Please try again.
+Default value: "Please try again."
 
 ### Example
 

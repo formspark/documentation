@@ -14,27 +14,27 @@ lang: en-US
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
 <script type="text/javascript">
-    $('form[action^="https://submit-form.com"]').each(function (i, el) {
-        form = $(el);
-        form.submit(function (e) {
-            e.preventDefault();
-            form = $(e.target);
-            action = form.attr("action");
-            $.ajax({
-                url: action,
-                method: "POST",
-                data: form.serialize(),
-                dataType: "json",
-                success: function () {
-                    parent = $(form.parent());
-                    parent.children("form").css("display", "none");
-                    parent.children(".w-form-done").css("display", "block");
-                },
-                error: function () {
-                    parent.find(".w-form-fail").css("display", "block");
-                },
-            });
-        });
+  $('form[action^="https://submit-form.com"]').each(function (i, el) {
+    form = $(el);
+    form.submit(function (e) {
+      e.preventDefault();
+      form = $(e.target);
+      action = form.attr("action");
+      $.ajax({
+        url: action,
+        method: "POST",
+        data: form.serialize(),
+        dataType: "json",
+        success: function () {
+          parent = $(form.parent());
+          parent.children("form").css("display", "none");
+          parent.children(".w-form-done").css("display", "block");
+        },
+        error: function () {
+          parent.find(".w-form-fail").css("display", "block");
+        },
+      });
     });
+  });
 </script>
 ```

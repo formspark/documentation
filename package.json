@@ -26,7 +26,7 @@
     "build": "vuepress build docs",
     "deploy": "aws s3 sync docs/.vuepress/dist s3://formspark-production-documentation-website --delete --acl public-read && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\"",
     "dev": "vuepress dev docs",
-    "format": "prettier --write --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|css|scss|json|md|yml)\""
+    "format": "prettier --write . --ignore-path .gitignore"
   },
   "husky": {
     "hooks": {
