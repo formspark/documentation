@@ -8,7 +8,7 @@ lang: en-US
 Marketers use UTM parameters to track the effectiveness of online campaigns across traffic sources and publishing media.
 The parameters identify the campaign that refers traffic to a specific website, and can be parsed by analytics tools and used to populate reports.
 
-Copying these parameters and injecting them into your form submissions manually is tedious and error-prone, we built Formtrack to help you automate this integration.
+Copying these parameters and injecting them into your form submissions manually is tedious and error-prone, we built Formtrack to automate this integration.
 
 Formtrack is an open-source project hosted [here](https://github.com/formspark/formtrack).
 
