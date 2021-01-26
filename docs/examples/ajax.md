@@ -40,6 +40,40 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
+## Axios with Botpoison
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formspark | AJAX with Axios and Botpoison</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@botpoison/browser"></script>
+  </head>
+  <body>
+    <script>
+      const botpoison = new Botpoison({
+        publicKey: "your-public-key",
+      });
+      botpoison.challenge().then(({ solution }) => {
+        axios
+          .post("https://submit-form.com/your-form-id", {
+            message: "Hello, World",
+            _botpoison: solution,
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (response) {
+            console.error(response);
+          });
+      });
+    </script>
+  </body>
+</html>
+```
+
 ## Axios with reCAPTCHA v2
 
 ```html
