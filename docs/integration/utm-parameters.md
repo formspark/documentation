@@ -35,7 +35,7 @@ Formtrack will now automatically inject the supported parameters into your HTML 
 
 | Parameter    | Purpose                                                                                                                                                                | Example                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| utm_source   | Identifies which site sent the traffic, not an official parameter.                                                                                                     | referrer=producthunt                         |
+| referrer     | Identifies which site sent the traffic, not an official parameter.                                                                                                     | referrer=producthunt                         |
 | utm_source   | Identifies which site sent the traffic, and is a required parameter.                                                                                                   | utm_source=google                            |
 | utm_medium   | Identifies what type of link was used, such as cost per click or email.                                                                                                | utm_medium=cpc                               |
 | utm_campaign | Identifies a specific product promotion or strategic campaign.                                                                                                         | utm_campaign=spring_sale                     |
