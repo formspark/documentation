@@ -34,9 +34,9 @@
     }
   },
   "dependencies": {
-    "@sentry/browser": "^6.0.2",
-    "@sentry/integrations": "^6.0.2",
-    "@sentry/tracing": "^6.0.2",
+    "@sentry/browser": "^6.0.3",
+    "@sentry/integrations": "^6.0.3",
+    "@sentry/tracing": "^6.0.3",
     "lyticus": "^1.0.39",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
