@@ -15,8 +15,10 @@ We recommend using HTML5 validation that is built into the browser. HTML5 valida
 
 ## Example
 
+The `required` attribute is a boolean attribute.
+When present, it specifies that an input field must be filled out before submitting the form.
+
 ```html
-<!-- Note the `required` attributes in inputs -->
 <form action="https://submit-form.com/your-form-id">
   <input type="email" name="email" required />
   <textarea name="message" required></textarea>

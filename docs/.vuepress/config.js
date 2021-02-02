@@ -112,7 +112,9 @@ module.exports = {
         collapsable: false,
         children: [
           ["/html-form/form-validation", "Form validation"],
+          ["/html-form/form-styling", "Form styling"],
           ["/html-form/special-input-types", "Special input types"],
+          ["/html-form/drop-down-list", "Drop-down list"],
           ["/html-form/submit-in-different-tab", "Submit in different tab"],
         ],
       },
