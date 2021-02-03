@@ -27,7 +27,7 @@ On this page you'll find tips, tricks and links to help you style your forms.
     </style>
   </head>
   <body>
-    <form class="vertical-form">
+    <form class="vertical-form" action="https://submit-form.com/your-form-id">
       <label for="first-name">First name</label>
       <input id="first-name" name="first-name" type="text" />
       <label for="last-name">Last name</label>
