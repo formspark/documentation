@@ -11,7 +11,7 @@ On this page you'll find tips, tricks and links to help you style your forms.
 
 ## Simple vertical layout
 
-![Simple vartical layout](../.vuepress/public/simple-vertical-layout.png)
+![Simple vertical layout](../.vuepress/public/simple-vertical-layout.png)
 
 ```html
 <!DOCTYPE html>

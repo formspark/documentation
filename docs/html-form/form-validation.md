@@ -5,7 +5,7 @@ lang: en-US
 
 # Form validation
 
-We recommend using HTML5 validation that is built into the browser. HTML5 validation is very rich these days, and has good browser support.
+We recommend using HTML5's built-in validation. It is very rich these days, and has good browser support.
 
 ## Resources
 
