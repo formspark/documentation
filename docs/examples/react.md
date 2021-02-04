@@ -22,18 +22,20 @@ const Application = () => {
   const [submit, submitting] = useFormspark({
     formId: FORMSPARK_FORM_ID,
   });
+
   const [message, setMessage] = useState("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    await submit({ message });
+    alert("Form submitted");
+  };
+
   return (
-    <form
-      onSubmit={async (e) => {
-        e.preventDefault();
-        await submit({ message });
-        alert("Form submitted");
-      }}
-    >
+    <form onSubmit={onSubmit}>
       <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
       <button type="submit" disabled={submitting}>
-        >Send
+        Send
       </button>
     </form>
   );
@@ -64,19 +66,13 @@ const Application = () => {
       body: JSON.stringify({
         message,
       }),
-    }).then(() => {
-      alert("Form submitted");
     });
+    alert("Form submitted");
   };
 
   return (
     <form onSubmit={onSubmit}>
-      <textarea
-        name="message"
-        placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
+      <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
       <button type="submit">Send</button>
     </form>
   );
