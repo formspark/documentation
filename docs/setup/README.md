@@ -25,3 +25,7 @@ Make sure you replace the placeholder form id with your own form id.
 
 You can create own form id [here](https://dashboard.formspark.io).
 :::
+
+::: warning
+Input names starting with an underscore will be hidden from the dashboard and notification emails.
+:::

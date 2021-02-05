@@ -5,9 +5,11 @@ lang: en-US
 
 # Direct replies
 
-When email notifications are active, Formspark enables you to directly reply to the person who originally submitted the form.
+From your email inbox, you can directly reply to the person who submitted the form.
 
-To activate this behavior, create an input with any of the following names:
+![Direct replies](../.vuepress/public/direct-replies.png)
+
+To activate this feature, create an input with any of the following names:
 
 - `mail`
 - `email`
@@ -29,3 +31,7 @@ To activate this behavior, create an input with any of the following names:
 ```html
 <input type="text" name="_email.replyto" placeholder="Your email" />
 ```
+
+::: warning
+Input names starting with an underscore will be hidden from the dashboard and notification emails.
+:::
