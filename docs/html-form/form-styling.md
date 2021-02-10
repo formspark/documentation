@@ -40,6 +40,33 @@ On this page you'll find tips, tricks and links to help you style your forms.
 </html>
 ```
 
+## Add an asterisk to required field labels
+
+![Required field label asterisk](../.vuepress/public/required-field-label-asterisk.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      label.required:after {
+        content: "*";
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://submit-form.com/your-form-id">
+      <label for="first-name" class="required">First name</label>
+      <input id="first-name" name="first-name" type="text" required />
+      <label for="last-name">Last name</label>
+      <input id="last-name" name="last-name" type="text" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+```
+
 ## CSS frameworks
 
 - [Bootstrap](https://getbootstrap.com/)
