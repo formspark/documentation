@@ -42,10 +42,10 @@
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.0",
+    "@vuepress/plugin-back-to-top": "^1.8.1",
     "husky": "^5.0.9",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "vuepress": "^1.8.0"
+    "vuepress": "^1.8.1"
   }
 }
