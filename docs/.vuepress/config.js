@@ -131,6 +131,8 @@ module.exports = {
           ["/examples/nuxtjs", "Nuxt.js"],
           ["/examples/react", "React"],
           ["/examples/react-native", "React Native"],
+          ["/examples/sapper", "Sapper"],
+          ["/examples/svelte", "Svelte"],
           ["/examples/vue", "Vue"],
           ["/examples/webflow", "Webflow"],
           ["/examples/wordpress", "Wordpress"],
