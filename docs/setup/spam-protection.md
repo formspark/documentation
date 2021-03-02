@@ -12,6 +12,7 @@ Formspark offers the following solutions to prevent spam:
 - [Botpoison](https://botpoison.com/) integration
 - [reCAPTCHA](https://www.google.com/recaptcha/about/) integration
 - [hCaptcha](https://www.hcaptcha.com/) integration
+- [Akismet](https://akismet.com/) integration
 - Honeypot technique
 
 Formspark will not save submissions, send notifications or decrement your submission counter if any of the following
@@ -105,6 +106,12 @@ To stop using hCaptcha, change your `Spam Protection` to `None`.
 ### Recommended libraries
 
 - React: [react-hcaptcha](https://github.com/hCaptcha/react-hcaptcha)
+
+## Akismet
+
+Formspark integrates with Akismet, a spam filtering service.
+
+This integration requires no additional setup, it is pre-activated for all accounts.
 
 ## Honeypot
 
