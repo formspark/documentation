@@ -18,6 +18,18 @@ You can customize the notification email template of a form.
 
 Formspark custom email templates use the [Handlebars](https://handlebarsjs.com/) templating language.
 
+### How to specify the order of the fields
+
+```handlebars
+<div style="text-align: left;">
+  <strong>New submission:</strong>
+  <div style="margin: 16px 0;">
+    <strong>First name</strong>: {{data.firstName}}</div>
+    <strong>Last name</strong>: {{data.lastName}}</div>
+  </div>
+</div>
+```
+
 ### Custom Handlebars helpers
 
 The following custom Handlebars helpers have been registered for you:
