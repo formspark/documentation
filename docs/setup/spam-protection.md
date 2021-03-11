@@ -15,6 +15,8 @@ Formspark offers the following solutions to prevent spam:
 - [Akismet](https://akismet.com/) integration
 - Honeypot technique
 
+![Spam protection](../.vuepress/public/spam-protection.png)
+
 Formspark will not save submissions, send notifications or decrement your submission counter if any of the following
 conditions are true:
 
