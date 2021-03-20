@@ -34,7 +34,7 @@ This enables you to personalize your page with user-submitted data.
 
 The above form's submissions would redirect to `https://your-website.com/thanks?email=example%40email.com`.
 
-You can toggle off this behaviour by adding a hidden input with the name `_append` and the value `false`.
+You can toggle off this behavior by adding a hidden input with the name `_append` and the value `false`.
 
 ```html
 <input type="hidden" name="_append" value="false" />
