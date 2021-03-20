@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "vuepress build docs",
-    "deploy": "aws s3 sync docs/.vuepress/dist s3://formspark-production-documentation-website --delete --acl public-read && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\"",
+    "deploy": "aws s3 sync docs/.vuepress/dist s3://formspark-production-documentation-website --delete --acl public-read --region eu-west-1 && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\" --region eu-west-1",
     "dev": "vuepress dev docs",
     "format": "prettier --write . --ignore-path .gitignore"
   },
