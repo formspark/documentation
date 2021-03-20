@@ -79,6 +79,8 @@ You can customize the look-and-feel and content of the default feedback page wit
 Removes all Formspark branding from the feedback page.
 You need an upgraded workspace to unlock this feature.
 
+Default value: false
+
 ```html
 <form action="https://submit-form.com/your-form-id">
   <input type="hidden" name="_feedback.whitelabel" value="true" />
@@ -91,6 +93,8 @@ You need an upgraded workspace to unlock this feature.
 
 Toggles dark mode.
 
+Default value: false
+
 ```html
 <form action="https://submit-form.com/your-form-id">
   <input type="hidden" name="_feedback.dark" value="true" />
@@ -100,8 +104,6 @@ Toggles dark mode.
 ```
 
 ![Feedback dark mode](../.vuepress/public/feedback-dark-mode.png)
-
-Default value: false
 
 ### `_feedback.language`
 
