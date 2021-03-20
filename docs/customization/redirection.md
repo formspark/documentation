@@ -74,6 +74,19 @@ Note: If you don't specify a custom error redirect URL then the configuration fr
 
 You can customize the look-and-feel and content of the default feedback page with the following reserved input names:
 
+### `_feedback.whitelabel`
+
+Removes all Formspark branding from the feedback page.
+You need an upgraded workspace to unlock this feature.
+
+```html
+<form action="https://submit-form.com/your-form-id">
+  <input type="hidden" name="_feedback.whitelabel" value="true" />
+  <input type="email" name="email" />
+  <button type="submit">Subscribe</button>
+</form>
+```
+
 ### `_feedback.dark`
 
 Toggles dark mode.
@@ -101,6 +114,7 @@ Supported values:
 | Value | Language   |
 | ----- | ---------- |
 | "en"  | English    |
+| "ru"  | Russian    |
 | "es"  | Spanish    |
 | "pt"  | Portuguese |
 | "fr"  | French     |
