@@ -63,7 +63,7 @@ lang: en-US
         .challenge()
         .then(function (result) {
           var data = form.serialize();
-          data._botpoison = result.solution;
+          data += "&_botpoison=" + result.solution;
           $.ajax({
             url: action,
             method: "POST",
