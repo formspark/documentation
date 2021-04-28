@@ -13,27 +13,76 @@ lang: en-US
 
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
+
 <script type="text/javascript">
   $('form[action^="https://submit-form.com"]').each(function (i, el) {
-    form = $(el);
+    var form = $(el);
     form.submit(function (e) {
       e.preventDefault();
       form = $(e.target);
-      action = form.attr("action");
+      var action = form.attr("action");
+      var data = form.serialize();
       $.ajax({
         url: action,
         method: "POST",
-        data: form.serialize(),
+        data: data,
         dataType: "json",
         success: function () {
-          parent = $(form.parent());
+          var parent = $(form.parent());
           parent.children("form").css("display", "none");
           parent.children(".w-form-done").css("display", "block");
         },
         error: function () {
+          var parent = $(form.parent());
           parent.find(".w-form-fail").css("display", "block");
         },
       });
+    });
+  });
+</script>
+```
+
+## With Botpoison
+
+```html
+<!-- Project Settings > Custom Code > Footer Code -->
+
+<script src="https://unpkg.com/@botpoison/browser"></script>
+
+<script type="text/javascript">
+  $('form[action^="https://submit-form.com"]').each(function (i, el) {
+    var form = $(el);
+    form.submit(function (e) {
+      e.preventDefault();
+      form = $(e.target);
+      var action = form.attr("action");
+      var botpoison = new Botpoison({
+        publicKey: "your-public-key",
+      });
+      botpoison.challenge()
+        .then(function (result) {
+          var data = form.serialize();
+          data._botpoison = result.solution;
+          $.ajax({
+            url: action,
+            method: "POST",
+            data: data,
+            dataType: "json",
+            success: function () {
+              var parent = $(form.parent());
+              parent.children("form").css("display", "none");
+              parent.children(".w-form-done").css("display", "block");
+            },
+            error: function () {
+              var parent = $(form.parent());
+              parent.find(".w-form-fail").css("display", "block");
+            },
+          });
+        })
+        .catch(function () {
+          var parent = $(form.parent());
+          parent.find(".w-form-fail").css("display", "block");
+        });
     });
   });
 </script>
