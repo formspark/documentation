@@ -59,7 +59,8 @@ lang: en-US
       var botpoison = new Botpoison({
         publicKey: "your-public-key",
       });
-      botpoison.challenge()
+      botpoison
+        .challenge()
         .then(function (result) {
           var data = form.serialize();
           data._botpoison = result.solution;
