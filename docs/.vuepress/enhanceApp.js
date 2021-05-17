@@ -16,8 +16,7 @@ export default ({ Vue, router }) => {
     // Sentry
     if (process.env.NODE_ENV !== "development") {
       Sentry.init({
-        dsn:
-          "https://d0d1620e3b0e46d2b84cb7a1ce25011a@o456819.ingest.sentry.io/5450322",
+        dsn: "https://d0d1620e3b0e46d2b84cb7a1ce25011a@o456819.ingest.sentry.io/5450322",
         integrations: [
           new VueIntegration({
             Vue,
