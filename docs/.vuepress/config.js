@@ -82,6 +82,7 @@ module.exports = {
         children: [
           ["/setup/", "Installation"],
           ["/setup/spam-protection", "Spam protection"],
+          ["/setup/file-uploads", "File uploads"],
         ],
       },
       {
