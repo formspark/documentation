@@ -24,3 +24,29 @@ Create a hidden input with the name `_email.from`.
 ```html
 <input type="hidden" name="_email.from" value="John Doe" />
 ```
+
+## Template title
+
+You can change title of the email template.
+
+Create a hidden input with the name `_email.template.title`.
+
+```html
+<input type="hidden" name="_email.template.title" value="My Custom Title" />
+```
+
+You can remove the title be setting the value to `false`.
+
+```html
+<input type="hidden" name="_email.template.title" value="false" />
+```
+
+## Template footer
+
+You can remove the footer from the template.
+
+Create a hidden input with the name `_email.template.footer` and the value `false`.
+
+```html
+<input type="hidden" name="_email.template.footer" value="false" />
+```
