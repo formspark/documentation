@@ -90,6 +90,10 @@ To stop using reCAPTCHA, change your `Captcha provider` to `None`.
 
 - React: [react-google-recaptcha](https://github.com/dozoisch/react-google-recaptcha)
 
+### Articles
+
+- [How to enable your submit button based on reCAPTCHA results](https://technotrampoline.com/articles/how-to-enable-your-submit-button-based-on-recaptcha-results/)
+
 ## hCaptcha
 
 Formspark integrates with hCaptcha, an independent alternative to Google's reCAPTCHA.
