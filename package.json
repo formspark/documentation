@@ -34,9 +34,9 @@
     }
   },
   "dependencies": {
-    "@sentry/browser": "^6.5.0",
-    "@sentry/integrations": "^6.5.0",
-    "@sentry/tracing": "^6.5.0",
+    "@sentry/browser": "^6.8.0",
+    "@sentry/integrations": "^6.8.0",
+    "@sentry/tracing": "^6.8.0",
     "lyticus": "^1.0.39",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
@@ -44,8 +44,8 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "husky": "^6.0.0",
-    "prettier": "^2.3.0",
-    "pretty-quick": "^3.1.0",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
     "vuepress": "^1.8.2"
   }
 }
