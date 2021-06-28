@@ -42,6 +42,10 @@ lang: en-US
 </script>
 ```
 
+:::tip
+Check out this ["How to submit Webflow forms to your own backend"](https://technotrampoline.com/articles/how-to-submit-webflow-forms-to-your-own-backend/) article for more tips and tricks.
+:::
+
 ## With Botpoison
 
 ```html
