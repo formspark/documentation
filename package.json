@@ -26,24 +26,20 @@
     "build": "vuepress build docs",
     "deploy": "aws s3 sync docs/.vuepress/dist s3://formspark-production-documentation-website --delete --acl public-read --region eu-west-1 && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\" --region eu-west-1",
     "dev": "vuepress dev docs",
-    "format": "prettier --write . --ignore-path .gitignore"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "format": "prettier --write . --ignore-path .gitignore",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@sentry/browser": "^6.9.0",
-    "@sentry/integrations": "^6.9.0",
-    "@sentry/tracing": "^6.9.0",
-    "lyticus": "^1.0.39",
+    "@sentry/browser": "^6.10.0",
+    "@sentry/integrations": "^6.10.0",
+    "@sentry/tracing": "^6.10.0",
+    "lyticus": "^1.0.40",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "vuepress": "^1.8.2"
