@@ -63,10 +63,6 @@ To stop using Botpoison, change your `Spam Protection` to `None`.
 </html>
 ```
 
-### Recommended libraries
-
-- JavaScript: [@botpoison/browser](https://www.npmjs.com/package/@botpoison/browser)
-
 ### AJAX
 
 If you're using AJAX, add the Botpoison response to your submission body via the `_botpoison` property.
@@ -78,6 +74,10 @@ const body = {
   _botpoison: "...",
 };
 ```
+
+### Recommended libraries
+
+- JavaScript: [@botpoison/browser](https://www.npmjs.com/package/@botpoison/browser)
 
 ## reCAPTCHA
 
