@@ -67,6 +67,18 @@ To stop using Botpoison, change your `Spam Protection` to `None`.
 
 - JavaScript: [@botpoison/browser](https://www.npmjs.com/package/@botpoison/browser)
 
+### AJAX
+
+If you're using AJAX, add the Botpoison response to your submission body via the `_botpoison` property.
+
+```javascript
+const body = {
+  email: "john.doe@example.com",
+  message: "Hello, World!",
+  _botpoison: "...",
+};
+```
+
 ## reCAPTCHA
 
 Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
@@ -85,6 +97,18 @@ Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 Your form is now protected by reCAPTCHA ✔.
 
 To stop using reCAPTCHA, change your `Captcha provider` to `None`.
+
+### AJAX
+
+If you're using AJAX, add the reCAPTCHA response to your submission body via the `g-recaptcha-response` property.
+
+```javascript
+const body = {
+  email: "john.doe@example.com",
+  message: "Hello, World!",
+  "g-recaptcha-response": "...",
+};
+```
 
 ### Recommended libraries
 
@@ -108,6 +132,18 @@ Formspark integrates with hCaptcha, an independent alternative to Google's reCAP
 Your form is now protected by hCaptcha ✔.
 
 To stop using hCaptcha, change your `Spam Protection` to `None`.
+
+### AJAX
+
+If you're using AJAX, add the hCAPTCHA response to your submission body via the `h-captcha-response` property.
+
+```javascript
+const body = {
+  email: "john.doe@example.com",
+  message: "Hello, World!",
+  "h-captcha-response": "...",
+};
+```
 
 ### Recommended libraries
 
