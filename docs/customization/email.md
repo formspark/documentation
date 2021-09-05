@@ -17,7 +17,7 @@ Create a hidden input with the name `_email.subject`.
 
 ## Sender name
 
-You can change the name (not the email address) of the notification email's sender.
+You can change the name of the sender of the notification email.
 
 Create a hidden input with the name `_email.from`.
 
@@ -25,9 +25,11 @@ Create a hidden input with the name `_email.from`.
 <input type="hidden" name="_email.from" value="John Doe" />
 ```
 
+Note: you can't change the actual address.
+
 ## Template title
 
-You can change title of the email template.
+You can change the title of the notification email template.
 
 Create a hidden input with the name `_email.template.title`.
 
@@ -43,7 +45,7 @@ You can remove the title be setting the value to `false`.
 
 ## Template footer
 
-You can remove the footer from the template.
+You can remove the footer from the notification email template.
 
 Create a hidden input with the name `_email.template.footer` and the value `false`.
 
