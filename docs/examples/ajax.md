@@ -40,6 +40,27 @@ We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 </html>
 ```
 
+If you wish to include customizations, which require hidden fields such as `_email.subject` and `_email.from`, include them as a nested object in the payload:
+
+```javascript
+...
+      axios
+        .post("https://submit-form.com/your-form-id", {
+          message: "Hello, World",
+          "_email": {
+            from: "A Human Being",
+            subject: "A message awaits.",
+            template: {
+              title: false,
+              footer: false,
+            }
+          },
+        })
+...
+```
+
+This also works for the redirection customizations, which require fields nested under `_feedback`.
+
 ## Axios with Botpoison
 
 ```html
