@@ -136,7 +136,7 @@ module.exports = {
           ["/examples/svelte", "Svelte"],
           ["/examples/vue", "Vue"],
           ["/examples/webflow", "Webflow"],
-          ["/examples/wordpress", "Wordpress"],
+          ["/examples/wordpress", "WordPress"],
         ],
       },
       {
