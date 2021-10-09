@@ -19,3 +19,13 @@ You can send invitations to users who still need to create a Formspark account o
 2. Fill the form and press `Send`
 
 ![Workspace section](../.vuepress/public/invite-team-member.png)
+
+## Roles
+
+A workspace member is either an _admin_ or a _member_.
+
+Workspace _admins_ are superusers who can:
+
+- Change the role of a workspace member.
+- Remove a member from the workspace.
+- Delete the workspace.
