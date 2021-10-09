@@ -149,6 +149,11 @@ module.exports = {
           ["/integration/zapier", "Zapier"],
         ],
       },
+      {
+        title: "Troubleshooting",
+        collapsable: false,
+        children: [["/troubleshooting/email-reception", "Email reception"]],
+      },
     ],
   },
   plugins: [
