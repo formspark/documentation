@@ -86,7 +86,7 @@ This method is based on illusion. Technically, you are not preventing the redire
 
 ### JSON response
 
-You can request a JSON response instead of a redirection:
+You can request a JSON response instead of a redirection.
 
 1. Add an input of type `hidden`.
 2. Set the input's name to `_redirect`.
@@ -102,7 +102,7 @@ You can request a JSON response instead of a redirection:
 
 ## Customizing the default feedback page
 
-You can customize the look-and-feel and content of the default feedback page with the following reserved input names:
+You can customize the look-and-feel and content of the default feedback page with the following reserved input names.
 
 ### `_feedback.whitelabel`
 
