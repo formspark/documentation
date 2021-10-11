@@ -82,7 +82,7 @@ Formspark has excellent AJAX support, [learn more about it here](/examples/ajax)
 </form>
 ```
 
-This method is illusory. Technically, you are not preventing the redirection.
+This method is based on illusion. Technically, you are not preventing the redirection.
 
 ### JSON response
 
