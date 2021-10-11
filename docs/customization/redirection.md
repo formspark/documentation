@@ -58,6 +58,36 @@ Note: If you don't specify a custom error redirect URL then the configuration fr
 
 ## Preventing the redirect
 
+### Staying on the same page (without leaving it)
+
+This is only possible with JavaScript/AJAX.
+
+Formspark has excellent AJAX support, [learn more about it here](/examples/ajax).
+
+### Returning to the same page (after leaving it)
+
+```html
+<!--
+1. If your form is hosted at "https:/my-website.com/newsletter.html"
+-->
+<form action="https://submit-form.com/your-form-id">
+  <!-- 2. Then you would set the "_redirect" to "https:/my-website.com/newsletter.html" -->
+  <input
+    type="hidden"
+    name="_redirect"
+    value="https:/my-website.com/newsletter.html"
+  />
+  <input type="email" name="email" />
+  <button type="submit">Subscribe</button>
+</form>
+```
+
+This method is illusory. Technically, you are not preventing the redirection.
+
+### JSON response
+
+You can request a JSON response instead of a redirection:
+
 1. Add an input of type `hidden`.
 2. Set the input's name to `_redirect`.
 3. Set the value to `false`.
