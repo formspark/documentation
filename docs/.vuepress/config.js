@@ -83,6 +83,7 @@ module.exports = {
           ["/setup/", "Installation"],
           ["/setup/spam-protection", "Spam protection"],
           ["/setup/file-uploads", "File uploads"],
+          ["/setup/arrays-and-objects", "Arrays and objects"],
         ],
       },
       {
