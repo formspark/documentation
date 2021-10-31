@@ -125,6 +125,7 @@ module.exports = {
         collapsable: false,
         children: [
           ["/examples/ajax", "AJAX submissions"],
+          ["/examples/alpinejs", "Alpine.js"],
           ["/examples/gatsby", "Gatsby"],
           ["/examples/gridsome", "Gridsome"],
           ["/examples/hugo", "Hugo"],
