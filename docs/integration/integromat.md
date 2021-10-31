@@ -18,3 +18,5 @@ Connecting Formspark and Integromat takes only seconds.
 9. Send a test submission to your form.
 
 [Check this page](/integration/webhooks) to learn more about webhooks.
+
+![Formspark with Integromat](../.vuepress/public/formspark-integromat-example.png)
