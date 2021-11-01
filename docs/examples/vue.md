@@ -91,3 +91,62 @@ export default {
 };
 </script>
 ```
+
+## petite-vue and Fetch
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formspark | Vue with petite-vue and Fetch</title>
+    <script src="https://unpkg.com/petite-vue" defer init></script>
+  </head>
+  <body>
+    <form v-scope="ContactForm()" @submit.prevent="submit">
+      <label>
+        <span>Message</span>
+        <textarea name="message" v-model="data.message"></textarea>
+      </label>
+      <button type="submit" :disabled="loading">{{ buttonText }}</button>
+    </form>
+
+    <script>
+      const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
+
+      function ContactForm() {
+        return {
+          data: {
+            message: "",
+          },
+          buttonText: "Submit",
+          loading: false,
+          submit() {
+            this.buttonText = "Submitting...";
+            this.loading = true;
+            fetch(FORMSPARK_ACTION_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(this.data),
+            })
+              .then(() => {
+                alert("Form submitted");
+              })
+              .catch(() => {
+                alert("Something went wrong");
+              })
+              .finally(() => {
+                this.data.message = "";
+                this.buttonText = "Submit";
+                this.loading = false;
+              });
+          },
+        };
+      }
+    </script>
+  </body>
+</html>
+```
