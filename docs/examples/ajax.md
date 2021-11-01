@@ -204,7 +204,7 @@ axios.post("https://submit-form.com/your-form-id", {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Formspark | AJAX with Javascript XHR</title>
+    <title>Formspark | AJAX with JavaScript XHR</title>
   </head>
   <body>
     <script>
