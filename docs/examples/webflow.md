@@ -43,8 +43,11 @@ lang: en-US
 ```
 
 :::tip
-Check out this ["How to submit Webflow forms to your own backend"](https://technotrampoline.com/articles/how-to-submit-webflow-forms-to-your-own-backend/) article for more tips and tricks.
-:::
+**Webflow tips and tricks**
+
+- [How to submit Webflow forms to your own backend](https://technotrampoline.com/articles/how-to-submit-webflow-forms-to-your-own-backend/)
+- [How to disable the submit button while a form is submitting in Webflow](https://technotrampoline.com/articles/how-to-disable-the-submit-button-while-a-form-is-submitting-in-webflow/)
+  :::
 
 ## With Botpoison
 
