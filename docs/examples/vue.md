@@ -94,6 +94,8 @@ export default {
 
 ## petite-vue and Fetch
 
+Featured article: [Building an AJAX form with petite-vue](https://technotrampoline.com/articles/building-an-ajax-form-with-petite-vue/)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
