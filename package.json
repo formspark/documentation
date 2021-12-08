@@ -30,9 +30,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sentry/browser": "^6.15.0",
-    "@sentry/integrations": "^6.15.0",
-    "@sentry/tracing": "^6.15.0",
+    "@sentry/browser": "^6.16.0",
+    "@sentry/integrations": "^6.16.0",
+    "@sentry/tracing": "^6.16.0",
     "lyticus": "^1.0.45",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "husky": "^7.0.4",
-    "prettier": "^2.5.0",
+    "prettier": "^2.5.1",
     "pretty-quick": "^3.1.2",
     "vuepress": "^1.8.2"
   }
