@@ -29,3 +29,16 @@ You can create own form id [here](https://dashboard.formspark.io).
 ::: warning
 Input names starting with an underscore will be hidden from the dashboard and notification emails.
 :::
+
+## Testing
+
+You can rapidly test your form payloads by submitting to https://submit-form.com/echo.
+
+```html
+<form action="https://submit-form.com/echo">
+  <input type="text" name="message" />
+  <button type="submit">Send</button>
+</form>
+```
+
+![Echo](../.vuepress/public/submit-echo.png)
