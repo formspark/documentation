@@ -49,6 +49,7 @@ lang: en-US
 - [How to disable the submit button while a form is submitting in Webflow](https://technotrampoline.com/articles/how-to-disable-the-submit-button-while-a-form-is-submitting-in-webflow/)
 - [How to pre-fill Webflow form input fields at page load](https://technotrampoline.com/articles/how-to-pre-fill-webflow-form-input-fields-at-page-load/)
 - [How to clear all fields of a Webflow form](https://technotrampoline.com/articles/how-to-clear-all-fields-of-a-webflow-form/)
+- [How to automatically disable a Webflow button or input](https://technotrampoline.com/articles/how-to-automatically-disable-a-webflow-button-or-input/)
   :::
 
 ## With Botpoison
