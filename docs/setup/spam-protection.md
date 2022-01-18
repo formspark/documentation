@@ -47,7 +47,7 @@ To stop using Botpoison, change your `Spam Protection` to `None`.
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://unpkg.com/@botpoison/browser"></script>
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
   </head>
   <body>
     <form

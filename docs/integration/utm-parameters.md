@@ -17,7 +17,7 @@ Formtrack is an open-source project hosted [here](https://github.com/formspark/f
 Add the Formtrack script.
 
 ```html
-<script src="https://unpkg.com/@formspark/formtrack"></script>
+<script src="https://unpkg.com/@formspark/formtrack" async></script>
 ```
 
 Add a `data-formtrack` attribute to your form element.

@@ -57,7 +57,7 @@ lang: en-US
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
 
-<script src="https://unpkg.com/@botpoison/browser"></script>
+<script src="https://unpkg.com/@botpoison/browser" async></script>
 
 <script type="text/javascript">
   $('form[action^="https://submit-form.com"]').each(function (i, el) {

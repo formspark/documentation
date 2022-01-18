@@ -37,7 +37,7 @@ axios.post("https://submit-form.com/your-form-id", {
   <head>
     <meta charset="UTF-8" />
     <title>Formspark | AJAX with Axios</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
   </head>
   <body>
     <script>
@@ -64,8 +64,8 @@ axios.post("https://submit-form.com/your-form-id", {
   <head>
     <meta charset="UTF-8" />
     <title>Formspark | AJAX with Axios and Botpoison</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/@botpoison/browser"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
   </head>
   <body>
     <script>
@@ -98,8 +98,8 @@ axios.post("https://submit-form.com/your-form-id", {
   <head>
     <meta charset="UTF-8" />
     <title>Formspark | AJAX with Axios and reCAPTCHA v2</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+    <script src="https://www.google.com/recaptcha/api.js" async></script>
   </head>
   <body>
     <div class="g-recaptcha" data-sitekey="your-site-key"></div>
@@ -165,7 +165,7 @@ axios.post("https://submit-form.com/your-form-id", {
   <head>
     <meta charset="UTF-8" />
     <title>Formspark | AJAX with Fetch and reCAPTCHA v2</title>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async></script>
   </head>
   <body>
     <div class="g-recaptcha" data-sitekey="your-site-key"></div>

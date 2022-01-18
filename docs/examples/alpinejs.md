@@ -16,8 +16,8 @@ Featured article: [Building an AJAX form with Alpine.js](https://technotrampolin
     <meta charset="UTF-8" />
     <title>Formspark | Alpine.js with Fetch</title>
     <script
-      defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
     ></script>
   </head>
   <body>
