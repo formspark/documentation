@@ -17,19 +17,19 @@ To activate this feature, create an input with any of the following names:
 - `_email.replyto`
 
 ```html
-<input type="email" name="mail" placeholder="Your email" />
+<input type="email" name="mail" placeholder="your@email.example" />
 ```
 
 ```html
-<input type="email" name="email" placeholder="Your email" />
+<input type="email" name="email" placeholder="your@email.example" />
 ```
 
 ```html
-<input type="text" name="_replyto" placeholder="Your email" />
+<input type="text" name="_replyto" placeholder="your@email.example" />
 ```
 
 ```html
-<input type="text" name="_email.replyto" placeholder="Your email" />
+<input type="text" name="_email.replyto" placeholder="your@email.example" />
 ```
 
 ::: warning
