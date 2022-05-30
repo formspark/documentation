@@ -39,7 +39,7 @@ The body of the POST request will looks as follows:
 - Your endpoint should accept POST requests.
 - Your endpoint should be able to parse a JSON object.
 - Your endpoint's url length should not exceed 512 characters.
-- You can use a service such as [requestcatcher.com](https://requestcatcher.com) to test the integration with your form.
+- You can use a service like [httphq.com](https://httphq.com) to preview what the webhook requests will look like.
 
 ## Removal
 
