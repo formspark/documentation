@@ -5,6 +5,10 @@ lang: en-US
 
 # Integromat
 
+:::tip
+We also have a dedicated [Make](/integration/make) integration.
+:::
+
 Connecting Formspark and Integromat takes only seconds.
 
 1. Add the Formspark integration to your Integromat account via [this link](https://www.integromat.com/en/apps/invite/139bc1347afadf0e97b8c53c18abd3fd).

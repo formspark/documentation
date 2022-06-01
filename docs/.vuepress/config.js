@@ -149,6 +149,7 @@ module.exports = {
           ["/integration/webhooks", "Webhooks"],
           ["/integration/utm-parameters", "UTM parameters"],
           ["/integration/zapier", "Zapier"],
+          ["/integration/make", "Make"],
           ["/integration/integromat", "Integromat"],
         ],
       },
