@@ -98,6 +98,14 @@ Your form is now protected by reCAPTCHA ✔.
 
 To stop using reCAPTCHA, change your `Captcha provider` to `None`.
 
+### HTML
+
+Make sure your form's `method` attribute is explicitly set to `POST`.
+
+```html
+<form method="POST">...</form>
+```
+
 ### AJAX
 
 If you're using AJAX, add the reCAPTCHA response to your submission body via the `g-recaptcha-response` property.
@@ -132,6 +140,14 @@ Formspark integrates with hCaptcha, an independent alternative to Google's reCAP
 Your form is now protected by hCaptcha ✔.
 
 To stop using hCaptcha, change your `Spam Protection` to `None`.
+
+### HTML
+
+Make sure your form's `method` attribute is explicitly set to `POST`.
+
+```html
+<form method="POST">...</form>
+```
 
 ### AJAX
 
