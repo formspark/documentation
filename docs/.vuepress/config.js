@@ -126,6 +126,7 @@ module.exports = {
         children: [
           ["/examples/ajax", "AJAX submissions"],
           ["/examples/alpinejs", "Alpine.js"],
+          ["/examples/framer", "Framer"],
           ["/examples/gatsby", "Gatsby"],
           ["/examples/gridsome", "Gridsome"],
           ["/examples/hugo", "Hugo"],
