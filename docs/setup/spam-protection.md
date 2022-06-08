@@ -34,8 +34,10 @@ Formspark integrates with Botpoison, an invisible, user-friendly anti-spam solut
 1. Go to [https://botpoison.com/start/](https://botpoison.com/start/).
 2. Create a new configuration.
 3. Integrate the `public key` on your website ([instructions](https://botpoison.com/documentation/getting-started/html/)).
-4. In your form's settings, select `Botpoison` under `Spam Protection`.
-5. Copy the `secret key`, paste it into the `Botpoison secret key` field.
+4. Copy the `secret key`.
+5. Open Formspark.
+6. In your form's settings, select `Botpoison` under `Spam Protection`.
+7. Paste the `secret key` into the `Botpoison secret key` field.
 
 Your form is now protected by Botpoison ✔.
 
@@ -89,10 +91,12 @@ Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 2. Navigate to the admin console.
 3. Create a new site.
 4. Make sure you select `reCAPTCHA v2`.
-5. Make sure your whitelist your website's domain.
+5. Make sure you whitelist your website's domain.
 6. Integrate the `site key` on your website ([instructions](https://developers.google.com/recaptcha/docs/display)).
-7. In your form's settings, select `Google reCAPTCHA v2` under `Spam Protection`.
-8. Copy the `secret key`, paste it into the `reCAPTCHA v2 secret key` field.
+7. Copy the `secret` key.
+8. Open Formspark.
+9. In your form's settings, select `Google reCAPTCHA v2` under `Spam Protection`.
+10. Paste the `secret key` into the `reCAPTCHA v2 secret key` field.
 
 Your form is now protected by reCAPTCHA ✔.
 
@@ -133,9 +137,11 @@ Formspark integrates with hCaptcha, an independent alternative to Google's reCAP
 ### Getting started
 
 1. Go to [https://www.hcaptcha.com/](https://www.hcaptcha.com/).
-1. Integrate the `site key` on your website.
-1. In your form's settings, select `hCaptcha` under `Spam Protection`.
-1. Copy the `secret key`, paste it into the `hCaptcha secret key` field.
+2. Create a new site.
+3. Integrate the `site key` on your website ([instructions](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage)). You can find your site key [here](https://dashboard.hcaptcha.com/sites).
+4. Copy the `secret key`. You can find your secret key [here](https://dashboard.hcaptcha.com/settings).
+5. In your form's settings, select `hCaptcha` under `Spam Protection`.
+6. Paste the `secret key` into the `hCaptcha secret key` field.
 
 Your form is now protected by hCaptcha ✔.
 
