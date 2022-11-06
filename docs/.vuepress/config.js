@@ -93,6 +93,7 @@ module.exports = {
           ["/customization/redirection", "Redirection"],
           ["/customization/direct-replies", "Direct replies"],
           ["/customization/email", "Email"],
+          ["/customization/custom-routing", "Custom routing"],
         ],
       },
       {
