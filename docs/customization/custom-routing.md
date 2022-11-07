@@ -18,7 +18,7 @@ Using this technique, you can use a drop-down to dynamically route submissions t
     <option value="hr">HR</option>
   </select>
 
-  <label for="department">Department</label>
+  <label for="message">Message</label>
   <textarea id="message" name="message" required></textarea>
   <button type="submit">Send</button>
 </form>
