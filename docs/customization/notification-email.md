@@ -1,9 +1,9 @@
 ---
-title: Email customizations
+title: Notification email
 lang: en-US
 ---
 
-# Email customizations
+# Notification email
 
 ## Subject
 

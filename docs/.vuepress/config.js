@@ -92,8 +92,8 @@ module.exports = {
         children: [
           ["/customization/feedback-page", "Feedback page"],
           ["/customization/redirection", "Redirection"],
+          ["/customization/notification-email", "Notification email"],
           ["/customization/direct-replies", "Direct replies"],
-          ["/customization/email", "Email"],
           ["/customization/custom-routing", "Custom routing"],
         ],
       },
