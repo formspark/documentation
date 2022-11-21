@@ -7,7 +7,8 @@ lang: en-US
 
 ## Fetch
 
-Featured article: [Building an AJAX form with Alpine.js](https://technotrampoline.com/articles/building-an-ajax-form-with-alpinejs/)
+Featured
+article: [Building an AJAX form with Alpine.js](https://technotrampoline.com/articles/building-an-ajax-form-with-alpinejs/)
 
 ```html
 <!DOCTYPE html>

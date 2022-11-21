@@ -5,7 +5,8 @@ lang: en-US
 
 # Slack
 
-Connecting Formspark and Slack takes only seconds and is the easiest way to post form submissions from a website to Slack.
+Connecting Formspark and Slack takes only seconds and is the easiest way to post form submissions from a website to
+Slack.
 
 1. Click the `Connect with Slack` link found in your form's settings.
 

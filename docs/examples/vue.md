@@ -8,7 +8,8 @@ lang: en-US
 ## vue-use-formspark
 
 :::tip
-Check out our official Vue composition API functions: [vue-use-formspark](https://github.com/formspark/vue-use-formspark).
+Check out our official Vue composition API
+functions: [vue-use-formspark](https://github.com/formspark/vue-use-formspark).
 :::
 
 ```vue
@@ -22,6 +23,7 @@ Check out our official Vue composition API functions: [vue-use-formspark](https:
 <script>
 import { ref } from "vue";
 import { useFormspark } from "@formspark/vue-use-formspark";
+
 export default {
   setup() {
     const message = ref("");
@@ -94,7 +96,8 @@ export default {
 
 ## petite-vue and Fetch
 
-Featured article: [Building an AJAX form with petite-vue](https://technotrampoline.com/articles/building-an-ajax-form-with-petite-vue/)
+Featured
+article: [Building an AJAX form with petite-vue](https://technotrampoline.com/articles/building-an-ajax-form-with-petite-vue/)
 
 ```html
 <!DOCTYPE html>

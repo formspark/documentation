@@ -7,7 +7,8 @@ lang: en-US
 
 Connecting Formspark and Make takes only seconds.
 
-1. Add the Formspark integration to your Make account via [this link](https://www.make.com/en/hq/app-invitation/e24b1114d4ac44bb0dbdb918a85b286a).
+1. Add the Formspark integration to your Make account
+   via [this link](https://www.make.com/en/hq/app-invitation/e24b1114d4ac44bb0dbdb918a85b286a).
 2. Open Make.
 3. Inside the scenario editor, create a new module and select `Formspark`.
 4. Select the `New Submission` trigger.

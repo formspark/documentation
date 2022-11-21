@@ -9,7 +9,8 @@ A workspace is a group of forms and can have one or several team members.
 
 Workspaces enable you to create isolated environments for your customers, companies, departments, products, etc...
 
-Additional user-created workspaces start with 0 submissions. All upgrades, bundles, and deals are per workspace.
+Note that additional user-created workspaces start with 0 submissions. All upgrades, bundles, and deals are per
+workspace.
 
 ## Steps
 

@@ -7,6 +7,8 @@ lang: en-US
 
 To manage your form's email notification settings, navigate to its `Settings` section.
 
+## Recipients
+
 - You can enable/disable email notifications for your workspace's team members.
 - You can add guests to send email notifications to people outside your workspace/organization.
 

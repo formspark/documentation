@@ -7,9 +7,11 @@ lang: en-US
 
 ## Uploadcare
 
-Create a free Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/), the free tier of Uploadcare gives you 3000 uploads per month
+Create a free Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/), the free tier of Uploadcare
+gives you 3000 uploads per month
 
-Want to upload non-image files? You can add a payment method to your Uploadcare account without having to leave their free plan.
+Want to upload non-image files? You can add a payment method to your Uploadcare account without having to leave their
+free plan.
 
 ### Steps
 

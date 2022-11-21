@@ -5,7 +5,8 @@ lang: en-US
 
 # WordPress
 
-WordPress integration is possible via [Custom HTML blocks](https://wordpress.com/support/wordpress-editor/blocks/custom-html-block/).
+WordPress integration is possible
+via [Custom HTML blocks](https://wordpress.com/support/wordpress-editor/blocks/custom-html-block/).
 
 1. Create a Custom HTML block.
 

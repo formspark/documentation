@@ -33,7 +33,8 @@ Formspark integrates with Botpoison, an invisible, user-friendly anti-spam solut
 
 1. Go to [https://botpoison.com/start/](https://botpoison.com/start/).
 2. Create a new configuration.
-3. Integrate the `public key` on your website ([instructions](https://botpoison.com/documentation/getting-started/html/)).
+3. Integrate the `public key` on your
+   website ([instructions](https://botpoison.com/documentation/getting-started/html/)).
 4. Copy the `secret key`.
 5. Open Formspark.
 6. In your form's settings, select `Botpoison` under `Spam Protection`.
@@ -138,7 +139,9 @@ Formspark integrates with hCaptcha, an independent alternative to Google's reCAP
 
 1. Go to [https://www.hcaptcha.com/](https://www.hcaptcha.com/).
 2. Create a new site.
-3. Integrate the `site key` on your website ([instructions](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage)). You can find your site key [here](https://dashboard.hcaptcha.com/sites).
+3. Integrate the `site key` on your
+   website ([instructions](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage)). You can find your site
+   key [here](https://dashboard.hcaptcha.com/sites).
 4. Copy the `secret key`. You can find your secret key [here](https://dashboard.hcaptcha.com/settings).
 5. In your form's settings, select `hCaptcha` under `Spam Protection`.
 6. Paste the `secret key` into the `hCaptcha secret key` field.

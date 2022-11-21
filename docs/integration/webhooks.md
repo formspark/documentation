@@ -9,7 +9,8 @@ Formspark can send webhook events that notify your application any time you rece
 
 ## Setup
 
-1. Define an endpoint on your server for receiving events, this route should listen for `POST` events and return a `200` status code.
+1. Define an endpoint on your server for receiving events, this route should listen for `POST` events and return a `200`
+   status code.
 2. Paste the endpoint into the `Webhook URL` field found in your form's settings.
 3. Submit to your form and verify your endpoint is receiving submissions successfully.
 

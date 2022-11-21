@@ -28,7 +28,8 @@ Checkboxes let a user select ZERO or MORE options of a limited number of choices
 
 The value of each checked choice will be forwarded.
 
-When unchecked, the browser does not send the input in the request, so a checkbox value will either be true, or the key will not exist at all.
+When unchecked, the browser does not send the input in the request, so a checkbox value will either be true, or the key
+will not exist at all.
 
 All choices should have a UNIQUE `name` attribute.
 

@@ -90,8 +90,8 @@ module.exports = {
         title: "Customization",
         collapsable: false,
         children: [
-          ["/customization/feedback-page", "Feedback page"],
           ["/customization/redirection", "Redirection"],
+          ["/customization/feedback-page", "Feedback page"],
           ["/customization/notification-email", "Notification email"],
           ["/customization/direct-replies", "Direct replies"],
           ["/customization/custom-routing", "Custom routing"],
@@ -159,7 +159,10 @@ module.exports = {
       {
         title: "Troubleshooting",
         collapsable: false,
-        children: [["/troubleshooting/email-reception", "Email reception"]],
+        children: [
+          ["/troubleshooting/common-issues", "Common issues"],
+          ["/troubleshooting/email-reception", "Email reception"],
+        ],
       },
     ],
   },

@@ -9,11 +9,13 @@ You can use AJAX to submit your forms.
 
 To do so, make a `GET` or `POST` request to your form endpoint (https://submit-form.com/your-form-id).
 
-Ensure that both the `Content-Type` and `Accept` headers are set to `application/json` (some HTTP libraries do this automatically).
+Ensure that both the `Content-Type` and `Accept` headers are set to `application/json` (some HTTP libraries do this
+automatically).
 
 We have included examples for: Axios, Fetch, jQuery and Javascript XHR.
 
-If you wish to include special fields and customizations, which require hidden fields such as `_email.subject` and `_email.from`, include them as a nested object in the payload:
+If you wish to include special fields and customizations, which require hidden fields such as `_email.subject`
+and `_email.from`, include them as a nested object in the payload:
 
 ```javascript
 axios.post("https://submit-form.com/your-form-id", {
