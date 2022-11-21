@@ -5,7 +5,7 @@ lang: en-US
 
 # Spam protection
 
-Every form falls victim to spam bots at some point, how you handle them can affect your customers.
+Every form falls victim to spambots at some point, how you handle them can affect your customers.
 
 Formspark offers the following solutions to prevent spam:
 

@@ -5,10 +5,6 @@ lang: en-US
 
 # Installation
 
-Set your HTML form's `action` attribute to your form's action URL.
-
-Your form's action URL is `https://submit-form.com/your-form-id`
-
 ```html
 <form action="https://submit-form.com/your-form-id">
   <input type="email" name="email" />
@@ -16,21 +12,17 @@ Your form's action URL is `https://submit-form.com/your-form-id`
 </form>
 ```
 
-Ensure all input, select and textarea elements inside your form have a `name` attribute, otherwise you will not receive the data filled in these fields.
+**1.** Set your HTML form's `action` attribute to your form's action URL.
 
-Make sure your form contains a button element of `type` "submit".
+Your form's unique action URL looks something like this: `https://submit-form.com/your-form-id`.
 
-::: warning
-Make sure you replace the placeholder form id with your own form id.
+**2.** Ensure all input, select and textarea elements inside your form have a `name` attribute, otherwise you will not receive the data filled in these fields.
 
-You can create own form id [here](https://dashboard.formspark.io).
-:::
+Input names starting with an underscore are reserved and will be hidden from the dashboard and notification emails.
 
-::: warning
-Input names starting with an underscore will be hidden from the dashboard and notification emails.
-:::
+**3.** Verify that your form contains a button element with the "submit" `type`.
 
-## Testing
+### Testing
 
 You can rapidly test your form payloads by submitting to https://submit-form.com/echo.
 
@@ -42,3 +34,7 @@ You can rapidly test your form payloads by submitting to https://submit-form.com
 ```
 
 ![Echo](../.vuepress/public/submit-echo.png)
+
+## JavaScript
+
+Formspark has excellent AJAX support, [learn more about it here](/examples/ajax).

@@ -50,7 +50,7 @@ You can submit an object by using the `name.property` syntax:
 To submit an array of objects:
 
 ```html
-<form action="https://submit-form.com/ooi35S5Z">
+<form action="https://submit-form.com/your-form-id">
   <input type="text" name="car[0].manufacturer" />
   <input type="text" name="car[0].color" />
 
