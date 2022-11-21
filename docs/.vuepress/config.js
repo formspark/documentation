@@ -101,14 +101,14 @@ module.exports = {
         title: "Dashboard",
         collapsable: false,
         children: [
+          ["/dashboard/inviting-team-members", "Inviting team members"],
+          ["/dashboard/additional-workspaces", "Additional workspaces"],
+          ["/dashboard/redeeming-vouchers", "Redeeming vouchers"],
           [
             "/dashboard/email-notification-settings",
             "Email notification settings",
           ],
-          ["/dashboard/inviting-team-members", "Inviting team members"],
-          ["/dashboard/additional-workspaces", "Additional workspaces"],
           ["/dashboard/exporting-submissions", "Exporting submissions"],
-          ["/dashboard/redeeming-vouchers", "Redeeming vouchers"],
         ],
       },
       {
