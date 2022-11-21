@@ -7,7 +7,8 @@ lang: en-US
 
 You can use JavaScript to dynamically select a form endpoint.
 
-Using this technique, you can use a drop-down to dynamically route submissions to a specific team, department, inbox, webhook, etc...
+Using this technique, you can use a drop-down to dynamically route submissions to a specific team, department, inbox,
+webhook, etc...
 
 ```html
 <form id="my-form" action="https://submit-form.com/sales-form-id" method="POST">

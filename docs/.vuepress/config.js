@@ -90,6 +90,7 @@ module.exports = {
         title: "Customization",
         collapsable: false,
         children: [
+          ["/customization/feedback-page", "Feedback page"],
           ["/customization/redirection", "Redirection"],
           ["/customization/direct-replies", "Direct replies"],
           ["/customization/email", "Email"],

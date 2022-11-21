@@ -55,4 +55,5 @@ Create a hidden input with the name `_email.template.footer` and the value `fals
 
 ## Custom templates
 
-[Check this page](/dashboard/email-notification-settings.html#custom-templates) to learn more about custom email templates.
+[Check this page](/dashboard/email-notification-settings.html#custom-templates) to learn more about custom email
+templates.
