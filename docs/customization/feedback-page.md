@@ -5,7 +5,7 @@ lang: en-US
 
 # Feedback page
 
-After submitting a form, the user will be redirected to a generic feedback page hosted by Formspark.
+After submitting a form, the user will be [redirected](/customization/redirection) to a generic feedback page hosted by Formspark.
 
 ![Feedback OK](../.vuepress/public/feedback-ok.png)
 

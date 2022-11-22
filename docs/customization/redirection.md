@@ -5,7 +5,7 @@ lang: en-US
 
 # Redirection
 
-After submitting a form, the user will be redirected to a generic feedback page hosted by Formspark.
+After submitting a form, the user will be redirected to a generic [feedback page](/customization/feedback-page) hosted by Formspark.
 
 This default behavior can be overridden in multiple ways.
 
