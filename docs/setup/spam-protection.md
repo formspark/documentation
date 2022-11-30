@@ -12,6 +12,7 @@ Formspark offers the following solutions to prevent spam:
 - [Botpoison](https://botpoison.com/) integration
 - [reCAPTCHA](https://www.google.com/recaptcha/about/) integration
 - [hCaptcha](https://www.hcaptcha.com/) integration
+- [Turnstile](https://www.cloudflare.com/products/turnstile/) integration
 - [Akismet](https://akismet.com/) integration
 - Honeypot technique
 
@@ -21,8 +22,7 @@ Formspark will not save submissions, send notifications or decrement your submis
 conditions are true:
 
 - The submission is empty
-- The Botpoison check was unsuccessful
-- The captcha verification was unsuccessful
+- The spam protection verification was unsuccessful
 - The submission contains a honeypot
 
 ## Botpoison
@@ -173,6 +173,28 @@ const body = {
 ### Recommended libraries
 
 - React: [react-hcaptcha](https://github.com/hCaptcha/react-hcaptcha)
+
+## Turnstile
+
+Formspark integrates with Turnstile, Cloudflare's smart CAPTCHA alternative.
+
+### Getting started
+
+1. Go to [https://www.cloudflare.com/products/turnstile](https://www.cloudflare.com/products/turnstile/).
+2. Create a new site.
+3. Integrate the `site key` on your
+   website ([instructions](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/)).
+4. Copy the `secret key`.
+5. In your form's settings, select `Turnstile` under `Spam Protection`.
+6. Paste the `secret key` into the `Turnstile secret key` field.
+
+Your form is now protected by Turnstile ✔.
+
+To stop using Turnstile, change your `Spam Protection` to `None`.
+
+### Recommended libraries
+
+- React: [react-turnstile](https://github.com/Le0Developer/react-turnstile)
 
 ## Akismet
 
