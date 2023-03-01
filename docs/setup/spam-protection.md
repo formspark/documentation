@@ -192,6 +192,18 @@ Your form is now protected by Turnstile ✔.
 
 To stop using Turnstile, change your `Spam Protection` to `None`.
 
+### AJAX
+
+If you're using AJAX, add the Turnstile response to your submission body via the `cf-turnstile-response` property.
+
+```javascript
+const body = {
+  email: "john.doe@example.com",
+  message: "Hello, World!",
+  "cf-turnstile-response": "...",
+};
+```
+
 ### Recommended libraries
 
 - React: [react-turnstile](https://github.com/Le0Developer/react-turnstile)
