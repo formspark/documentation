@@ -14,6 +14,7 @@ Formspark offers the following solutions to prevent spam:
 - [hCaptcha](https://www.hcaptcha.com/) integration
 - [Turnstile](https://www.cloudflare.com/products/turnstile/) integration
 - [Akismet](https://akismet.com/) integration
+- Custom spam words
 - Honeypot technique
 
 ![Spam protection](../.vuepress/public/spam-protection.png)
@@ -209,6 +210,12 @@ const body = {
 Formspark integrates with Akismet, a spam filtering service.
 
 This integration requires no additional setup, it is pre-activated for all accounts.
+
+## Custom spam words
+
+Custom spam words let you block submissions that contain specific words.
+
+You can specify a comma-separated list of (up to a 100) words in your form's settings, under `Custom spam words`.
 
 ## Honeypot
 
