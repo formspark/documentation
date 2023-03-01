@@ -18,8 +18,7 @@ Formspark offers the following solutions to prevent spam:
 
 ![Spam protection](../.vuepress/public/spam-protection.png)
 
-Formspark will not save submissions, send notifications or decrement your submission counter if any of the following
-conditions are true:
+Formspark will not save submissions, send notifications or decrement your submission counter if any of the following conditions are true:
 
 - The submission is empty
 - The spam protection verification was unsuccessful
@@ -139,9 +138,7 @@ Formspark integrates with hCaptcha, an independent alternative to Google's reCAP
 
 1. Go to [https://www.hcaptcha.com/](https://www.hcaptcha.com/).
 2. Create a new site.
-3. Integrate the `site key` on your
-   website ([instructions](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage)). You can find your site
-   key [here](https://dashboard.hcaptcha.com/sites).
+3. Integrate the `site key` on your website ([instructions](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage)). You can find your site key [here](https://dashboard.hcaptcha.com/sites).
 4. Copy the `secret key`. You can find your secret key [here](https://dashboard.hcaptcha.com/settings).
 5. In your form's settings, select `hCaptcha` under `Spam Protection`.
 6. Paste the `secret key` into the `hCaptcha secret key` field.
@@ -182,8 +179,7 @@ Formspark integrates with Turnstile, Cloudflare's smart CAPTCHA alternative.
 
 1. Go to [https://www.cloudflare.com/products/turnstile](https://www.cloudflare.com/products/turnstile/).
 2. Create a new site.
-3. Integrate the `site key` on your
-   website ([instructions](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/)).
+3. Integrate the `site key` on your website ([instructions](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/)).
 4. Copy the `secret key`.
 5. In your form's settings, select `Turnstile` under `Spam Protection`.
 6. Paste the `secret key` into the `Turnstile secret key` field.
@@ -222,8 +218,7 @@ While simple to implement, this technique is not the most effective.
 
 The honeypot technique is a simple-to-implement spam prevention solution.
 
-To enable this feature, add a field with the name `_honeypot` or `_gotcha` to your form and hide it with CSS (see
-example below). The submission will be silently ignored when a spam bot enters a value.
+To enable this feature, add a field with the name `_honeypot` or `_gotcha` to your form and hide it with CSS (see example below). The submission will be silently ignored when a spam bot enters a value.
 
 ```html
 <form action="https://submit-form.com/your-form-id">
