@@ -25,7 +25,7 @@ Create a hidden input with the name `_email.from`.
 <input type="hidden" name="_email.from" value="John Doe" />
 ```
 
-Only values with alphanumeric characters, spaces, dashes and underscores are allowed.
+The value must only contain alphanumeric characters, spaces, dashes and underscores.
 
 It is currently not possible to change the sender address.
 
