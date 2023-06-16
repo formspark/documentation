@@ -215,7 +215,11 @@ This integration requires no additional setup, it is pre-activated for all accou
 
 Custom spam words let you block submissions that contain specific words.
 
-You can specify a comma-separated list of (up to a 100) words in your form's settings, under `Custom spam words`.
+We scan all values in your form's submission body for the words you specify. If a word is found, the submission will be discarded as spam.
+
+You specify the comma-separated list of words in your form's settings, under `Custom spam words`.
+
+The total length of the list must not exceed 2,500 characters.
 
 ## Honeypot
 
