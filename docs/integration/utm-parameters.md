@@ -6,11 +6,9 @@ lang: en-US
 # UTM parameters
 
 Marketers use UTM parameters to track the effectiveness of online campaigns across traffic sources and publishing media.
-The parameters identify the campaign that refers traffic to a specific website and can be parsed by analytics tools and
-used to populate reports.
+The parameters identify the campaign that refers traffic to a specific website and can be parsed by analytics tools and used to populate reports.
 
-Copying these parameters and injecting them into your form submissions manually is tedious and error-prone, we built
-Formtrack to automate this integration.
+Copying these parameters and injecting them into your form submissions manually is tedious and error-prone, we built Formtrack to automate this process.
 
 ## Installation & usage
 
@@ -35,10 +33,26 @@ Formtrack will now automatically inject the supported parameters into your HTML 
 
 | Parameter    | Purpose                                                                                                                                                                | Example                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ref          | Identifies which site sent the traffic, not an official parameter.                                                                                                     |                                              |
+| ref          | Identifies which site sent the traffic, not an official parameter.                                                                                                     | ref=producthunt                              |
 | referrer     | Identifies which site sent the traffic, not an official parameter.                                                                                                     | referrer=producthunt                         |
 | utm_source   | Identifies which site sent the traffic, and is a required parameter.                                                                                                   | utm_source=google                            |
 | utm_medium   | Identifies what type of link was used, such as cost per click or email.                                                                                                | utm_medium=cpc                               |
 | utm_campaign | Identifies a specific product promotion or strategic campaign.                                                                                                         | utm_campaign=spring_sale                     |
 | utm_term     | Identifies search terms.                                                                                                                                               | utm_term=running+shoes                       |
 | utm_content  | Identifies what specifically was clicked to bring the user to the site, such as a banner ad or a text link. It is often used for A/B testing and content-targeted ads. | utm_content=logolink or utm_content=textlink |
+
+## Custom parameters
+
+You have the flexibility to define a list of custom parameters.
+
+Include a `data-formtrack-params` attribute within your form element, and populate it with a comma-separated list of the desired parameters.
+
+```html
+<form
+  action="https://submit-form.com"
+  data-formtrack
+  data-formtrack-params="custom_param_1,custom_param_2"
+>
+  ...
+</form>
+```
