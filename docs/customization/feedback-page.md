@@ -65,13 +65,16 @@ Supported values:
 
 Customizes the title of the success feedback page.
 
-Default value: "Your form has been submitted."
+Default value: "Your code has been successfully redeemed
+"
 
 ### `_feedback.success.message`
 
 Customizes the message of the success feedback page.
 
-Default value: _none_
+Default value: "Now you have to wait, within 24 hours you will receive an email from us with the account details and login details.
+
+Any questions? Contact us via the live chat."
 
 ### `_feedback.error.title`
 
