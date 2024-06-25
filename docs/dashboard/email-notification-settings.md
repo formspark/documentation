@@ -52,7 +52,7 @@ Handlebars.registerHelper("json", function (ctx) {
   if (typeof ctx === "object") {
     return new Handlebars.SafeString(JSON.stringify(ctx));
   }
-  return JSON.stringify(ctx);
+  return ctx;
 });
 ```
 
