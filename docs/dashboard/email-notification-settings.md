@@ -48,7 +48,31 @@ Stringifies a JSON object.
 ##### Implementation
 
 ```javascript
-Handlebars.registerHelper("json", function (context) {
-  return JSON.stringify(context);
+Handlebars.registerHelper("json", function (ctx) {
+  if (typeof ctx === "object") {
+    return new Handlebars.SafeString(JSON.stringify(ctx));
+  }
+  return JSON.stringify(ctx);
+});
+```
+
+#### formatNewlines
+
+Converts newlines in a string to `<br>` HTML tags.
+
+##### Usage
+
+```handlebars
+{{formatNewlines data.message}}
+```
+
+##### Implementation
+
+```javascript
+Handlebars.registerHelper("formatNewlines", function (ctx) {
+  if (typeof ctx === "string") {
+    return new Handlebars.SafeString(ctx.replace(/\r\n|\r|\n/g, "<br>"));
+  }
+  return ctx;
 });
 ```
