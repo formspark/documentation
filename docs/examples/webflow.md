@@ -14,6 +14,8 @@ lang: en-US
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
 
+<script src="https://unpkg.com/@formspark/formson"></script>
+
 <script type="text/javascript">
   $('form[action^="https://submit-form.com"]').each(function (i, el) {
     var form = $(el);
@@ -21,7 +23,7 @@ lang: en-US
       e.preventDefault();
       form = $(e.target);
       var action = form.attr("action");
-      var data = form.serialize();
+      var data = Formson.toJSON(new FormData(e.target));
       $.ajax({
         url: action,
         method: "POST",
@@ -57,6 +59,7 @@ lang: en-US
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
 
+<script src="https://unpkg.com/@formspark/formson"></script>
 <script src="https://unpkg.com/@botpoison/browser" async></script>
 
 <script type="text/javascript">
@@ -72,8 +75,8 @@ lang: en-US
       botpoison
         .challenge()
         .then(function (result) {
-          var data = form.serialize();
-          data += "&_botpoison=" + result.solution;
+          var data = Formson.toJSON(new FormData(e.target));
+          data["_botpoison"] = result.solution;
           $.ajax({
             url: action,
             method: "POST",
