@@ -40,4 +40,4 @@ You can rapidly test your form payloads by submitting to https://submit-form.com
 
 ## JavaScript
 
-Formspark has excellent AJAX support, [learn more about it here](/examples/ajax).
+Formspark has excellent AJAX support, [learn more about it here](/examples/ajax.html).

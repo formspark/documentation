@@ -61,7 +61,7 @@ automatically be inherited.
 
 This is only possible with JavaScript/AJAX.
 
-Formspark has excellent AJAX support, [learn more about it here](/examples/ajax).
+Formspark has excellent AJAX support, [learn more about it here](/examples/ajax.html).
 
 ### Returning to the same page (after leaving it)
 
