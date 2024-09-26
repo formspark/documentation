@@ -44,17 +44,39 @@ lang: en-US
 </script>
 ```
 
-:::tip
-**Webflow tips and tricks**
+## Redirect after submission
 
-- [How to submit Webflow forms to your own backend](https://technotrampoline.com/articles/how-to-submit-webflow-forms-to-your-own-backend/)
-- [How to disable the submit button while a form is submitting in Webflow](https://technotrampoline.com/articles/how-to-disable-the-submit-button-while-a-form-is-submitting-in-webflow/)
-- [How to pre-fill Webflow form input fields at page load](https://technotrampoline.com/articles/how-to-pre-fill-webflow-form-input-fields-at-page-load/)
-- [How to clear all fields of a Webflow form](https://technotrampoline.com/articles/how-to-clear-all-fields-of-a-webflow-form/)
-- [How to automatically disable a Webflow button or input](https://technotrampoline.com/articles/how-to-automatically-disable-a-webflow-button-or-input/)
-  :::
+```html
+<!-- Project Settings > Custom Code > Footer Code -->
 
-## With Botpoison
+<script src="https://unpkg.com/@formspark/formson"></script>
+
+<script type="text/javascript">
+  $('form[action^="https://submit-form.com"]').each(function (i, el) {
+    var form = $(el);
+    form.submit(function (e) {
+      e.preventDefault();
+      form = $(e.target);
+      var action = form.attr("action");
+      var data = Formson.toJSON(new FormData(e.target));
+      $.ajax({
+        url: action,
+        method: "POST",
+        data: data,
+        dataType: "json",
+        success: function () {
+          window.location.href = "https://your-website.com/thanks"; // Replace with your success URL
+        },
+        error: function () {
+          window.location.href = "https://your-website.com/error"; // Replace with your error URL
+        },
+      });
+    });
+  });
+</script>
+```
+
+## Botpoison spam protection
 
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
@@ -101,3 +123,14 @@ lang: en-US
   });
 </script>
 ```
+
+## Tips and tricks
+
+:::tip
+
+- [How to submit Webflow forms to your own backend](https://technotrampoline.com/articles/how-to-submit-webflow-forms-to-your-own-backend/)
+- [How to disable the submit button while a form is submitting in Webflow](https://technotrampoline.com/articles/how-to-disable-the-submit-button-while-a-form-is-submitting-in-webflow/)
+- [How to pre-fill Webflow form input fields at page load](https://technotrampoline.com/articles/how-to-pre-fill-webflow-form-input-fields-at-page-load/)
+- [How to clear all fields of a Webflow form](https://technotrampoline.com/articles/how-to-clear-all-fields-of-a-webflow-form/)
+- [How to automatically disable a Webflow button or input](https://technotrampoline.com/articles/how-to-automatically-disable-a-webflow-button-or-input/)
+  :::
