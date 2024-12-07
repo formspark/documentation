@@ -59,6 +59,7 @@ On this page you'll find tips, tricks and links to help you style your forms.
     <form action="https://submit-form.com/your-form-id">
       <label for="first-name" class="required">First name</label>
       <input id="first-name" name="first-name" type="text" required />
+      <input type="email" name="email" required />
       <label for="last-name">Last name</label>
       <input id="last-name" name="last-name" type="text" />
       <button type="submit">Submit</button>
