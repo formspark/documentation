@@ -21,13 +21,12 @@ You can customize the notification email template of a form.
 Formspark custom email templates use the [Handlebars](https://handlebarsjs.com/) templating language.
 
 ```handlebars
-
 <div style="text-align: left;">
     <strong>New submission:</strong>
     <div style="margin: 16px 0;">
-        <strong>First name</strong>: {{data.firstName}}</div>
-    <strong>Last name</strong>: {{data.lastName}}</div>
-</div>
+        <strong>First name</strong>: {{data.firstName}}
+    </div>
+    <strong>Last name</strong>: {{data.lastName}}
 </div>
 ```
 
