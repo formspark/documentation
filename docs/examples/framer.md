@@ -1,5 +1,5 @@
 ---
-title: framer
+title: Framer
 lang: en-US
 ---
 
