@@ -27,8 +27,9 @@ lang: en-US
       $.ajax({
         url: action,
         method: "POST",
-        data: data,
+        data: JSON.stringify(data),
         dataType: "json",
+        contentType: "application/json",
         success: function () {
           var parent = $(form.parent());
           parent.children("form").css("display", "none");
@@ -62,8 +63,9 @@ lang: en-US
       $.ajax({
         url: action,
         method: "POST",
-        data: data,
+        data: JSON.stringify(data),
         dataType: "json",
+        contentType: "application/json",
         success: function () {
           window.location.href = "https://your-website.com/thanks"; // Replace with your success URL
         },
@@ -102,8 +104,9 @@ lang: en-US
           $.ajax({
             url: action,
             method: "POST",
-            data: data,
+            data: JSON.stringify(data),
             dataType: "json",
+            contentType: "application/json",
             success: function () {
               var parent = $(form.parent());
               parent.children("form").css("display", "none");
