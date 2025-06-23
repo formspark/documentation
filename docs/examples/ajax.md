@@ -217,7 +217,7 @@ axios.post("https://submit-form.com/your-form-id", {
       xhr.send(
         JSON.stringify({
           message: "Hello, World!",
-        })
+        }),
       );
     </script>
   </body>
@@ -242,7 +242,7 @@ axios.post("https://submit-form.com/your-form-id", {
           message: "Hello, World",
         },
         null,
-        "json" // dataType must be set to json
+        "json", // dataType must be set to json
       )
         .then(function (response) {
           console.log(response);

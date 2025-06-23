@@ -127,6 +127,68 @@ lang: en-US
 </script>
 ```
 
+## Turnstile spam protection
+
+1. First, add a Turnstile widget element to your form:
+
+```html
+<div class="cf-turnstile" data-sitekey="your-site-key"></div>
+```
+
+2. Then add this code to `Project Settings > Custom Code > Footer Code`:
+
+```html
+<!-- Project Settings > Custom Code > Footer Code -->
+
+<script src="https://unpkg.com/@formspark/formson"></script>
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  defer
+></script>
+
+<script type="text/javascript">
+  $('form[action^="https://submit-form.com"]').each(function (i, el) {
+    var form = $(el);
+    form.submit(function (e) {
+      e.preventDefault();
+      form = $(e.target);
+      var action = form.attr("action");
+
+      // Get Turnstile response token
+      var turnstileResponse = turnstile.getResponse();
+      if (!turnstileResponse) {
+        // Show error if Turnstile not completed
+        var parent = $(form.parent());
+        parent.find(".w-form-fail").css("display", "block");
+        return;
+      }
+
+      var data = Formson.toJSON(new FormData(e.target));
+      data["cf-turnstile-response"] = turnstileResponse;
+
+      $.ajax({
+        url: action,
+        method: "POST",
+        data: JSON.stringify(data),
+        dataType: "json",
+        contentType: "application/json",
+        success: function () {
+          var parent = $(form.parent());
+          parent.children("form").css("display", "none");
+          parent.children(".w-form-done").css("display", "block");
+        },
+        error: function () {
+          var parent = $(form.parent());
+          parent.find(".w-form-fail").css("display", "block");
+          // Reset Turnstile on error
+          turnstile.reset();
+        },
+      });
+    });
+  });
+</script>
+```
+
 ## Tips and tricks
 
 :::tip
