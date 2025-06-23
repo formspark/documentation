@@ -141,10 +141,7 @@ lang: en-US
 <!-- Project Settings > Custom Code > Footer Code -->
 
 <script src="https://unpkg.com/@formspark/formson"></script>
-<script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  defer
-></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 
 <script type="text/javascript">
   $('form[action^="https://submit-form.com"]').each(function (i, el) {
