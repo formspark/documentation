@@ -52,14 +52,16 @@ Supported values:
 
 | Value | Language   |
 | ----- | ---------- |
+| "de"  | German     |
 | "en"  | English    |
-| "ru"  | Russian    |
 | "es"  | Spanish    |
-| "pt"  | Portuguese |
 | "fr"  | French     |
 | "it"  | Italian    |
-| "de"  | German     |
 | "nl"  | Dutch      |
+| "pl"  | Polish     |
+| "pt"  | Portuguese |
+| "ru"  | Russian    |
+| "uk"  | Ukrainian  |
 
 ### `_feedback.success.title`
 
