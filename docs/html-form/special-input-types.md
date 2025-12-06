@@ -14,13 +14,80 @@ Only the value of the checked choice will be forwarded.
 All choices should share the SAME `name` attribute.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
-  <input type="radio" name="color" value="blue" checked /> Blue
-  <input type="radio" name="color" value="red" /> Red
-  <input type="radio" name="color" value="green" /> Green
-  <button type="submit">Submit</button>
-</form>
-```
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enquiry Form</title>
+<style>
+  body{
+    font-family: Arial;
+    background:#f3f3f3;
+  }
+  .form-box{
+    width:380px;
+    background:#fff;
+    padding:25px;
+    margin:50px auto;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+  }
+  .form-box h2{
+    text-align:center;
+  }
+  label{
+    margin-top:10px;
+    display:block;
+  }
+  input, select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+  }
+  button{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    border:none;
+    background:#007bff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+  <h2>Enquiry Form</h2>
+
+  <form>
+
+    <label>First Name *</label>
+    <input type="text" name="firstname" required>
+
+    <label>Last Name *</label>
+    <input type="text" name="lastname" required>
+
+    <label>Email ID *</label>
+    <input type="email" name="email" required>
+
+    <label>Course Looking For *</label>
+    <select name="course" required>
+      <option value="">--Select--</option>
+      <option value="ug">UG</option>
+      <option value="pg">PG</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
 
 ## Checkbox
 
@@ -46,9 +113,79 @@ All choices should have a UNIQUE `name` attribute.
 A hidden field lets you include data that cannot be seen or modified by users when a form is submitted.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
-  <input type="hidden" name="website-version" value="1.0.0" />
-  <input type="text" name="name" />
-  <button type="submit">Submit</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enquiry Form</title>
+<style>
+  body{
+    font-family: Arial;
+    background:#f3f3f3;
+  }
+  .form-box{
+    width:380px;
+    background:#fff;
+    padding:25px;
+    margin:50px auto;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+  }
+  .form-box h2{
+    text-align:center;
+  }
+  label{
+    margin-top:10px;
+    display:block;
+  }
+  input, select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+  }
+  button{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    border:none;
+    background:#007bff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+  <h2>Enquiry Form</h2>
+
+  <form>
+
+    <label>First Name *</label>
+    <input type="text" name="firstname" required>
+
+    <label>Last Name *</label>
+    <input type="text" name="lastname" required>
+
+    <label>Email ID *</label>
+    <input type="email" name="email" required>
+
+    <label>Course Looking For *</label>
+    <select name="course" required>
+      <option value="">--Select--</option>
+      <option value="ug">UG</option>
+      <option value="pg">PG</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
 ```
