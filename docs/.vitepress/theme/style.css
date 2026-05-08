@@ -7,9 +7,3 @@
     --vp-sidebar-width: 360px;
   }
 }
-
-@media (min-width: 768px) {
-  .VPNavBarSearch .DocSearch-Button {
-    width: 240px;
-  }
-}
