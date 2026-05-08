@@ -26,7 +26,7 @@ Given the following form:
 </form>
 ```
 
-The body of the POST request will looks as follows:
+The body of the POST request will look as follows:
 
 ```json
 {

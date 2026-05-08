@@ -1,13 +1,35 @@
 ---
-title: Nuxt.js
+title: Nuxt
 lang: en-US
 ---
 
-# Nuxt.js
+# Nuxt
 
 ## Fetch
 
 ```vue
+<script setup>
+import { ref } from "vue";
+
+const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
+
+const message = ref("");
+
+const submitForm = async () => {
+  await $fetch(FORMSPARK_ACTION_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: {
+      message: message.value,
+    },
+  });
+  alert("Form submitted");
+};
+</script>
+
 <template>
   <form @submit.prevent="submitForm">
     <label>
@@ -17,31 +39,4 @@ lang: en-US
     <button type="submit">Submit</button>
   </form>
 </template>
-
-<script>
-const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
-
-export default {
-  data() {
-    return {
-      message: "",
-    };
-  },
-  methods: {
-    async submitForm() {
-      await fetch(FORMSPARK_ACTION_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          message: this.message,
-        }),
-      });
-      alert("Form submitted");
-    },
-  },
-};
-</script>
 ```

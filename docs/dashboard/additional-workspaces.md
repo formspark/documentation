@@ -14,7 +14,7 @@ workspace.
 
 ## Steps
 
-1. Press the `+` button to rhe right of your workspace
+1. Press the `+` button to the right of your workspace
 2. Fill the form and press `Create`
 
 ![New workspace](../.vuepress/public/new-workspace.png)

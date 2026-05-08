@@ -39,7 +39,7 @@ Create a hidden input with the name `_email.template.title`.
 <input type="hidden" name="_email.template.title" value="My Custom Title" />
 ```
 
-You can remove the title be setting the value to `false`.
+You can remove the title by setting the value to `false`.
 
 ```html
 <input type="hidden" name="_email.template.title" value="false" />

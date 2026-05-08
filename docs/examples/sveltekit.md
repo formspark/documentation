@@ -1,13 +1,27 @@
 ---
-title: Svelte
+title: SvelteKit
 lang: en-US
 ---
 
-# Svelte
+# SvelteKit
+
+## HTML form
+
+The simplest integration is a plain HTML form that posts directly to Formspark.
+No JavaScript is required.
+
+```svelte
+<!-- src/routes/contact/+page.svelte -->
+<form method="POST" action="https://submit-form.com/your-form-id">
+  <textarea name="message"></textarea>
+  <button type="submit">Send</button>
+</form>
+```
 
 ## Fetch
 
 ```svelte
+<!-- src/routes/contact/+page.svelte -->
 <script>
   const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
 
