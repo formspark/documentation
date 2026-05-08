@@ -13,49 +13,55 @@ functions: [vue-use-formspark](https://github.com/formspark/vue-use-formspark).
 :::
 
 ```vue
-<template>
-  <form @submit="onSubmit">
-    <textarea v-model="message" @input="onInput" />
-    <button type="submit" :disabled="submitting">Send</button>
-  </form>
-</template>
-
-<script>
+<script setup>
 import { ref } from "vue";
 import { useFormspark } from "@formspark/vue-use-formspark";
 
-export default {
-  setup() {
-    const message = ref("");
+const message = ref("");
 
-    const [submit, submitting] = useFormspark({
-      formId: "your-form-id",
-    });
+const [submit, submitting] = useFormspark({
+  formId: "your-form-id",
+});
 
-    const onInput = (e) => {
-      message.value = e.target.value;
-    };
-
-    const onSubmit = async (e) => {
-      e.preventDefault();
-      await submit({ message: message.value });
-      message.value = "";
-    };
-
-    return {
-      message,
-      onInput,
-      onSubmit,
-      submitting,
-    };
-  },
+const onSubmit = async () => {
+  await submit({ message: message.value });
+  message.value = "";
 };
 </script>
+
+<template>
+  <form @submit.prevent="onSubmit">
+    <textarea v-model="message" />
+    <button type="submit" :disabled="submitting">Send</button>
+  </form>
+</template>
 ```
 
 ## Fetch
 
 ```vue
+<script setup>
+import { ref } from "vue";
+
+const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
+
+const message = ref("");
+
+const submitForm = async () => {
+  await fetch(FORMSPARK_ACTION_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      message: message.value,
+    }),
+  });
+  alert("Form submitted");
+};
+</script>
+
 <template>
   <form @submit.prevent="submitForm">
     <label>
@@ -65,33 +71,6 @@ export default {
     <button type="submit">Submit</button>
   </form>
 </template>
-
-<script>
-const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
-
-export default {
-  data() {
-    return {
-      message: "",
-    };
-  },
-  methods: {
-    async submitForm() {
-      await fetch(FORMSPARK_ACTION_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          message: this.message,
-        }),
-      });
-      alert("Form submitted");
-    },
-  },
-};
-</script>
 ```
 
 ## petite-vue and Fetch

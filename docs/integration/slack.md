@@ -12,7 +12,7 @@ Slack.
 
    ![Connect with Slack](../.vuepress/public/connect-with-slack.png)
 
-2. Allow Formspark to access your slack workspace.
+2. Allow Formspark to access your Slack workspace.
 
    ![Connect with Slack](../.vuepress/public/allow-slack.png)
 

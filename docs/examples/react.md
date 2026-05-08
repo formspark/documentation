@@ -12,8 +12,8 @@ Check out our official React hooks: [use-formspark](https://github.com/formspark
 :::
 
 ```jsx
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import { useState } from "react";
+import { createRoot } from "react-dom/client";
 import { useFormspark } from "@formspark/use-formspark";
 
 const FORMSPARK_FORM_ID = "your-form-id";
@@ -41,14 +41,14 @@ const Application = () => {
   );
 };
 
-ReactDOM.render(<Application />, document.getElementById("root"));
+createRoot(document.getElementById("root")).render(<Application />);
 ```
 
 ## Fetch
 
 ```jsx
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import { useState } from "react";
+import { createRoot } from "react-dom/client";
 
 const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
 
@@ -78,5 +78,5 @@ const Application = () => {
   );
 };
 
-ReactDOM.render(<Application />, document.getElementById("root"));
+createRoot(document.getElementById("root")).render(<Application />);
 ```

@@ -67,14 +67,14 @@ Formspark has excellent AJAX support, [learn more about it here](/examples/ajax.
 
 ```html
 <!--
-1. If your form is hosted at "https:/my-website.com/newsletter.html"
+1. If your form is hosted at "https://my-website.com/newsletter.html"
 -->
 <form action="https://submit-form.com/your-form-id">
-  <!-- 2. Then you would set the "_redirect" to "https:/my-website.com/newsletter.html" -->
+  <!-- 2. Then you would set the "_redirect" to "https://my-website.com/newsletter.html" -->
   <input
     type="hidden"
     name="_redirect"
-    value="https:/my-website.com/newsletter.html"
+    value="https://my-website.com/newsletter.html"
   />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
