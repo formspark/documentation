@@ -12,7 +12,7 @@ To manage your form's email notification settings, navigate to its `Settings` se
 - You can enable/disable email notifications for your workspace's team members.
 - You can add guests to send email notifications to people outside your workspace/organization.
 
-![Email notification settings](../.vuepress/public/email-notification-settings.png)
+![Email notification settings](/email-notification-settings.png)
 
 ## Custom templates
 

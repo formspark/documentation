@@ -4,7 +4,7 @@ lang: en-US
 ---
 
 <div style="max-width: 350px; margin-left: auto; margin-right: auto;">
-    <img src="./.vuepress/public/illustration.svg" style="max-width: 350px;">
+    <img src="/illustration.svg" style="max-width: 350px;">
 </div>
 
 # About

@@ -13,4 +13,4 @@ You can easily export your data as JSON or CSV documents.
 2. Select the submissions you want to export
 3. Press `Export`
 
-![Export submissions](../.vuepress/public/export-submissions.png)
+![Export submissions](/export-submissions.png)

@@ -7,7 +7,7 @@ lang: en-US
 
 From your email inbox, you can directly reply to the person who submitted the form.
 
-![Direct replies](../.vuepress/public/direct-replies.png)
+![Direct replies](/direct-replies.png)
 
 To activate this feature, create an input with any of the following names:
 

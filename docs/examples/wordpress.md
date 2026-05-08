@@ -10,7 +10,7 @@ via [Custom HTML blocks](https://wordpress.com/support/wordpress-editor/blocks/c
 
 1. Create a Custom HTML block.
 
-![WordPress Custom HTML block](../.vuepress/public/wordpress-custom-html-block.png)
+![WordPress Custom HTML block](/wordpress-custom-html-block.png)
 
 2. Add the HTML of your form.
 

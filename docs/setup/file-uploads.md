@@ -50,7 +50,7 @@ the `data-public-key` attribute.
 
 Links to the uploaded files will now automatically be attached to your submissions.
 
-![Uploadcare submission](../.vuepress/public/uploadcare-submission.png)
+![Uploadcare submission](/uploadcare-submission.png)
 
 Final code:
 

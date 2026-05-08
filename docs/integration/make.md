@@ -20,4 +20,4 @@ Connecting Formspark and Make takes only seconds.
 
 [Check this page](/integration/webhooks) to learn more about webhooks.
 
-![Formspark with Make](../.vuepress/public/formspark-make-example.png)
+![Formspark with Make](/formspark-make-example.png)
