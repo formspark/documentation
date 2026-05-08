@@ -10,4 +10,4 @@ lang: en-US
 1. Open the `Settings` screen
 2. Enter your voucher and press `Redeem`
 
-![redeeming a voucher](../.vuepress/public/redeem-voucher.png)
+![redeeming a voucher](/redeem-voucher.png)

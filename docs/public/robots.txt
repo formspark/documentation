@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /debug.html
+
+Host: https://documentation.formspark.io
+Sitemap: https://documentation.formspark.io/sitemap.xml

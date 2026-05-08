@@ -7,7 +7,7 @@ lang: en-US
 
 After submitting a form, the user will be [redirected](/customization/redirection) to a generic feedback page hosted by Formspark.
 
-![Feedback OK](../.vuepress/public/feedback-ok.png)
+![Feedback OK](/feedback-ok.png)
 
 You can customize the look-and-feel and content of the default feedback page with the following reserved input names.
 
@@ -40,7 +40,7 @@ Default value: false
 </form>
 ```
 
-![Feedback dark mode](../.vuepress/public/feedback-dark-mode.png)
+![Feedback dark mode](/feedback-dark-mode.png)
 
 ### `_feedback.language`
 
@@ -101,4 +101,4 @@ Default value: "Please try again."
 </form>
 ```
 
-![Feedback OK custom title](../.vuepress/public/feedback-ok-custom-title.png)
+![Feedback OK custom title](/feedback-ok-custom-title.png)

@@ -9,7 +9,7 @@ lang: en-US
 2. Paste the action URL into Webflow's `action` field in the form element’s settings in the Designer.
 3. Copy-paste the code below into `Project Settings > Custom Code > Footer Code`.
 
-![Webflow action](../.vuepress/public/webflow-action.jpeg)
+![Webflow action](/webflow-action.jpeg)
 
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->

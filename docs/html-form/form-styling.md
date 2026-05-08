@@ -11,7 +11,7 @@ On this page you'll find tips, tricks and links to help you style your forms.
 
 ## Simple vertical layout
 
-![Simple vertical layout](../.vuepress/public/simple-vertical-layout.png)
+![Simple vertical layout](/simple-vertical-layout.png)
 
 ```html
 <!DOCTYPE html>
@@ -42,7 +42,7 @@ On this page you'll find tips, tricks and links to help you style your forms.
 
 ## Add an asterisk to required field labels
 
-![Required field label asterisk](../.vuepress/public/required-field-label-asterisk.png)
+![Required field label asterisk](/required-field-label-asterisk.png)
 
 ```html
 <!DOCTYPE html>

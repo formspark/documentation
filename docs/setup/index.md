@@ -36,7 +36,7 @@ You can rapidly test your form payloads by submitting to https://submit-form.com
 </form>
 ```
 
-![Echo](../.vuepress/public/submit-echo.png)
+![Echo](/submit-echo.png)
 
 ## JavaScript
 

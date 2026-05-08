@@ -22,26 +22,22 @@
   "bugs": {
     "url": "https://github.com/formspark/documentation/issues"
   },
+  "type": "module",
   "scripts": {
-    "build": "vuepress build docs",
-    "deploy": "aws s3 sync docs/.vuepress/dist s3://formspark-production-documentation-website --delete --acl public-read --region eu-west-1 && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\" --region eu-west-1",
-    "dev": "vuepress dev docs",
+    "build": "vitepress build docs",
+    "deploy": "aws s3 sync docs/.vitepress/dist s3://formspark-production-documentation-website --delete --acl public-read --region eu-west-1 && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\" --region eu-west-1",
+    "dev": "vitepress dev docs",
     "format": "prettier --write . --ignore-path .gitignore",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
-    "@sentry/browser": "^7.120.3",
-    "@sentry/integrations": "^7.55.2",
-    "@sentry/tracing": "^7.120.3",
-    "lyticus": "^1.0.45",
-    "vuepress-plugin-robots": "^1.0.1",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "@sentry/vue": "^10.0.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.10",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8",
-    "pretty-quick": "^3.3.1",
-    "vuepress": "^1.9.10"
+    "husky": "^9.0.0",
+    "prettier": "^3.0.0",
+    "pretty-quick": "^4.0.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.0"
   }
 }

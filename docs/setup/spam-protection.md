@@ -17,7 +17,7 @@ Formspark offers the following solutions to prevent spam:
 - Custom spam words
 - Honeypot technique
 
-![Spam protection](../.vuepress/public/spam-protection.png)
+![Spam protection](/spam-protection.png)
 
 Formspark will not save submissions, send notifications or decrement your submission counter if any of the following conditions are true:
 

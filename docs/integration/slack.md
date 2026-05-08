@@ -10,15 +10,15 @@ Slack.
 
 1. Click the `Connect with Slack` link found in your form's settings.
 
-   ![Connect with Slack](../.vuepress/public/connect-with-slack.png)
+   ![Connect with Slack](/connect-with-slack.png)
 
 2. Allow Formspark to access your Slack workspace.
 
-   ![Connect with Slack](../.vuepress/public/allow-slack.png)
+   ![Connect with Slack](/allow-slack.png)
 
 3. Update the `Slack channel` field found in your form's settings.
 
-   ![Connect with Slack](../.vuepress/public/update-slack-channel.png)
+   ![Connect with Slack](/update-slack-channel.png)
 
 4. Save your changes.
 
@@ -28,8 +28,8 @@ Connecting Formspark to a private channel requires 2 extra steps.
 
 1. Click the `Connect an app` link found in your private channel.
 
-   ![Connect slack app to private channel](../.vuepress/public/connect-slack-app-to-private-channel.png)
+   ![Connect slack app to private channel](/connect-slack-app-to-private-channel.png)
 
 2. Search for `Formspark` and press add.
 
-   ![Add Slack app to private channel](../.vuepress/public/add-slack-app-to-private-channel.png)
+   ![Add Slack app to private channel](/add-slack-app-to-private-channel.png)
