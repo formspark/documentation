@@ -7,6 +7,20 @@ lang: en-US
 
 Every form falls victim to spambots at some point, how you handle them can affect your customers.
 
+## Which should I pick?
+
+| Provider                                                    | Visitor experience | Pricing     | Strength |
+| ----------------------------------------------------------- | ------------------ | ----------- | -------- |
+| [Botpoison](https://botpoison.com/)                         | Invisible          | Free / paid | Strong   |
+| [Turnstile](https://www.cloudflare.com/products/turnstile/) | Invisible          | Free        | Strong   |
+| [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox           | Free        | Strong   |
+| [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox           | Free        | Strong   |
+| [Akismet](https://akismet.com/)                             | Invisible          | Included    | Medium   |
+| Custom spam words                                           | Invisible          | Included    | Low      |
+| Honeypot                                                    | Invisible          | Included    | Low      |
+
+If you're not sure, start with **Botpoison** or **Turnstile**: both are invisible to your visitors and require no interaction.
+
 Formspark offers the following solutions to prevent spam:
 
 - [Botpoison](https://botpoison.com/) integration
@@ -224,7 +238,7 @@ The total length of the list must not exceed 2,500 characters.
 ## Honeypot
 
 ::: warning
-While simple to implement, this technique is not the most effective.
+While simple to implement, this technique is not the most effective. Modern spam bots that execute JavaScript can detect hidden fields and skip them, bypassing the honeypot entirely. Pair it with another provider above for serious protection.
 :::
 
 The honeypot technique is a simple-to-implement spam prevention solution.

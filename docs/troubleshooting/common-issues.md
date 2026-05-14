@@ -30,3 +30,30 @@ Ensure that you are connected to the right workspace: [View My Workspaces](https
 
 Note that additional user-created workspaces start with 0 submissions. All upgrades, bundles, and deals are per
 workspace.
+
+## My AJAX request returns 200 but no submission shows up
+
+This is almost always a `Content-Type` / `Accept` header mismatch. When submitting JSON, both headers must be set to `application/json`:
+
+```javascript
+fetch("https://submit-form.com/your-form-id", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({ message: "Hello" }),
+});
+```
+
+Without those headers Formspark may treat the body as something other than JSON and silently discard it.
+
+## I'm receiving duplicate submissions
+
+Common causes:
+
+- The visitor pressed the back button after submitting and resubmitted the form on refresh.
+- The submit button was clicked multiple times before the request completed. Disable the button while the request is in flight.
+- Browser autofill / form-restore replayed the submission after a page reload.
+
+If you submit via AJAX, disable the button until the request resolves and reset the form on success. For full-page submissions, redirect away from the form on success to avoid resubmission on refresh.

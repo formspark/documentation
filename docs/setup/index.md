@@ -5,6 +5,10 @@ lang: en-US
 
 # Installation
 
+## Getting your form ID
+
+Every form in Formspark has its own action URL. To get one, sign in to the [Formspark dashboard](https://dashboard.formspark.io), create a new form, and copy its action URL from the form's `Setup` section. The URL ends with your form's unique ID.
+
 ## HTML
 
 ```html

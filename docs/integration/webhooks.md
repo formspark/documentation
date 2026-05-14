@@ -40,7 +40,12 @@ The body of the POST request will look as follows:
 - Your endpoint should accept POST requests.
 - Your endpoint should be able to parse a JSON object.
 - Your endpoint's url length should not exceed 512 characters.
-- You can use a service like [httphq.com](https://httphq.com) to preview what the webhook requests will look like.
+
+To preview what the webhook requests look like before pointing them at your own server, use a public inspection service such as [httphq.com](https://httphq.com). Paste the temporary URL it gives you into the `Webhook URL` field and submit your form once.
+
+## Signature verification
+
+Formspark does not currently sign webhook requests. Anyone who learns your endpoint URL can send requests to it, so do not rely on the request origin for authentication. If you need stronger guarantees, keep your endpoint URL secret, validate the submission body against an expected shape, or require a shared secret in your request handler.
 
 ## Removal
 

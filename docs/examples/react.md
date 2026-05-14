@@ -80,3 +80,50 @@ const Application = () => {
 
 createRoot(document.getElementById("root")).render(<Application />);
 ```
+
+## React Hook Form
+
+[React Hook Form](https://react-hook-form.com/) pairs nicely with `use-formspark` for validation and field state.
+
+```jsx
+import { useForm } from "react-hook-form";
+import { useFormspark } from "@formspark/use-formspark";
+
+const FORMSPARK_FORM_ID = "your-form-id";
+
+export default function ContactForm() {
+  const [submit, submitting] = useFormspark({ formId: FORMSPARK_FORM_ID });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    await submit(data);
+    reset();
+    alert("Form submitted");
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <label>
+        <span>Email</span>
+        <input type="email" {...register("email", { required: true })} />
+      </label>
+      {errors.email && <p>An email address is required.</p>}
+
+      <label>
+        <span>Message</span>
+        <textarea {...register("message", { required: true, minLength: 10 })} />
+      </label>
+      {errors.message && <p>Please write at least 10 characters.</p>}
+
+      <button type="submit" disabled={submitting}>
+        Send
+      </button>
+    </form>
+  );
+}
+```

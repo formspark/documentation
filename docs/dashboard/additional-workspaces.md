@@ -18,3 +18,7 @@ workspace.
 2. Fill the form and press `Create`
 
 ![New workspace](/new-workspace.png)
+
+## Moving a form to another workspace
+
+Forms cannot be moved between workspaces from the dashboard. If you need to transfer a form, [contact support](mailto:support@formspark.io) and we'll move it for you.

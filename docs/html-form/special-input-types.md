@@ -52,3 +52,35 @@ A hidden field lets you include data that cannot be seen or modified by users wh
   <button type="submit">Submit</button>
 </form>
 ```
+
+## Email, telephone, and URL
+
+These types are stored as plain strings on Formspark's side. Their value is that browsers validate the format and mobile keyboards switch to the appropriate layout.
+
+```html
+<input type="email" name="email" required />
+<input type="tel" name="phone" />
+<input type="url" name="website" />
+```
+
+## Number and range
+
+```html
+<input type="number" name="quantity" min="1" max="10" step="1" />
+<input type="range" name="satisfaction" min="0" max="10" />
+```
+
+## Date and color
+
+```html
+<input type="date" name="birthday" />
+<input type="color" name="brand-color" value="#707ee7" />
+```
+
+## File uploads
+
+::: warning
+`<input type="file">` does not work with Formspark directly. Browsers send file inputs as `multipart/form-data` and Formspark expects URL-encoded form data or JSON.
+
+To accept file uploads, use a storage provider such as Uploadcare and submit the resulting URL to Formspark. See [File uploads](/setup/file-uploads).
+:::
