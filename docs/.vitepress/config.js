@@ -136,8 +136,10 @@ export default {
         items: [
           { text: "AJAX submissions", link: "/examples/ajax" },
           { text: "Alpine.js", link: "/examples/alpinejs" },
+          { text: "Astro", link: "/examples/astro" },
           { text: "Framer", link: "/examples/framer" },
           { text: "Gatsby", link: "/examples/gatsby" },
+          { text: "HTMX", link: "/examples/htmx" },
           { text: "Hugo", link: "/examples/hugo" },
           { text: "Jekyll", link: "/examples/jekyll" },
           { text: "Next.js", link: "/examples/nextjs" },
@@ -154,6 +156,9 @@ export default {
       {
         text: "Integration",
         items: [
+          { text: "Airtable", link: "/integration/airtable" },
+          { text: "Google Sheets", link: "/integration/google-sheets" },
+          { text: "Notion", link: "/integration/notion" },
           { text: "Slack", link: "/integration/slack" },
           { text: "Webhooks", link: "/integration/webhooks" },
           { text: "UTM parameters", link: "/integration/utm-parameters" },
