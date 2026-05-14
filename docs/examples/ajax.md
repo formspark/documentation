@@ -7,28 +7,105 @@ lang: en-US
 
 You can use AJAX to submit your forms.
 
-To do so, make a `GET` or `POST` request to your form endpoint (https://submit-form.com/your-form-id).
+To do so, make a `POST` request to your form endpoint (https://submit-form.com/your-form-id).
 
 Ensure that both the `Content-Type` and `Accept` headers are set to `application/json` (some HTTP libraries do this
 automatically).
-
-We have included examples for: Axios, Fetch, jQuery and JavaScript XHR.
 
 If you wish to include special fields and customizations, which require hidden fields such as `_email.subject`
 and `_email.from`, include them as a nested object in the payload:
 
 ```javascript
-axios.post("https://submit-form.com/your-form-id", {
-  message: "Hello, World",
-  _email: {
-    from: "A Human Being",
-    subject: "A message awaits.",
-    template: {
-      title: false,
-      footer: false,
-    },
+fetch("https://submit-form.com/your-form-id", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
   },
+  body: JSON.stringify({
+    message: "Hello, World",
+    _email: {
+      from: "A Human Being",
+      subject: "A message awaits.",
+      template: {
+        title: false,
+        footer: false,
+      },
+    },
+  }),
 });
+```
+
+## Fetch
+
+The modern, dependency-free way to submit a form.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formspark | AJAX with Fetch</title>
+  </head>
+  <body>
+    <script>
+      async function submit() {
+        try {
+          const response = await fetch("https://submit-form.com/your-form-id", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              message: "Hello, World",
+            }),
+          });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          console.log("Submitted");
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      submit();
+    </script>
+  </body>
+</html>
+```
+
+## Fetch with reCAPTCHA v2
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formspark | AJAX with Fetch and reCAPTCHA v2</title>
+    <script src="https://www.google.com/recaptcha/api.js" async></script>
+  </head>
+  <body>
+    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+    <button id="send-button" type="button">Send</button>
+    <script>
+      document
+        .getElementById("send-button")
+        .addEventListener("click", async () => {
+          await fetch("https://submit-form.com/your-form-id", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              message: "Hello, World",
+              "g-recaptcha-response": grecaptcha.getResponse(),
+            }),
+          });
+        });
+    </script>
+  </body>
+</html>
 ```
 
 ## Axios
@@ -47,12 +124,8 @@ axios.post("https://submit-form.com/your-form-id", {
         .post("https://submit-form.com/your-form-id", {
           message: "Hello, World",
         })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (response) {
-          console.error(response);
-        });
+        .then((response) => console.log(response))
+        .catch((error) => console.error(error));
     </script>
   </body>
 </html>
@@ -80,12 +153,8 @@ axios.post("https://submit-form.com/your-form-id", {
             message: "Hello, World",
             _botpoison: solution,
           })
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (response) {
-            console.error(response);
-          });
+          .then((response) => console.log(response))
+          .catch((error) => console.error(error));
       });
     </script>
   </body>
@@ -107,99 +176,22 @@ axios.post("https://submit-form.com/your-form-id", {
     <div class="g-recaptcha" data-sitekey="your-site-key"></div>
     <button id="send-button" type="button">Send</button>
     <script>
-      document
-        .getElementById("send-button")
-        .addEventListener("click", function () {
-          axios
-            .post("https://submit-form.com/your-form-id", {
-              message: "Hello, World",
-              "g-recaptcha-response": grecaptcha.getResponse(),
-            })
-            .then(function (response) {
-              console.log(response);
-            })
-            .catch(function (response) {
-              console.error(response);
-            });
-        });
-    </script>
-  </body>
-</html>
-```
-
-## Fetch
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Formspark | AJAX with Fetch</title>
-  </head>
-  <body>
-    <script>
-      fetch("https://submit-form.com/your-form-id", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
+      document.getElementById("send-button").addEventListener("click", () => {
+        axios.post("https://submit-form.com/your-form-id", {
           message: "Hello, World",
-        }),
-      })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.error(error);
+          "g-recaptcha-response": grecaptcha.getResponse(),
         });
+      });
     </script>
   </body>
 </html>
 ```
 
-## Fetch with reCAPTCHA v2
+## Legacy
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Formspark | AJAX with Fetch and reCAPTCHA v2</title>
-    <script src="https://www.google.com/recaptcha/api.js" async></script>
-  </head>
-  <body>
-    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
-    <button id="send-button" type="button">Send</button>
-    <script>
-      document
-        .getElementById("send-button")
-        .addEventListener("click", function () {
-          fetch("https://submit-form.com/your-form-id", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              message: "Hello, World",
-              "g-recaptcha-response": grecaptcha.getResponse(),
-            }),
-          })
-            .then(function (response) {
-              console.log(response);
-            })
-            .catch(function (error) {
-              console.error(error);
-            });
-        });
-    </script>
-  </body>
-</html>
-```
+The patterns below still work, but we recommend Fetch for new code.
 
-## JavaScript XHR
+### JavaScript XHR
 
 ```html
 <!DOCTYPE html>
@@ -217,14 +209,14 @@ axios.post("https://submit-form.com/your-form-id", {
       xhr.send(
         JSON.stringify({
           message: "Hello, World!",
-        })
+        }),
       );
     </script>
   </body>
 </html>
 ```
 
-## jQuery
+### jQuery
 
 ```html
 <!DOCTYPE html>
@@ -242,14 +234,10 @@ axios.post("https://submit-form.com/your-form-id", {
           message: "Hello, World",
         },
         null,
-        "json" // dataType must be set to json
+        "json", // dataType must be set to json
       )
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (response) {
-          console.error(response);
-        });
+        .then((response) => console.log(response))
+        .catch((error) => console.error(error));
     </script>
   </body>
 </html>

@@ -13,3 +13,7 @@ When setting the `target` attribute to `_blank`, the form will be submitted in a
   <button type="submit">Subscribe</button>
 </form>
 ```
+
+::: warning
+Browsers may block the new tab if the submission isn't triggered by a direct user gesture (for example, a programmatic `form.submit()` call). On mobile, opening a new tab can interrupt the flow and feels broken to many users. Prefer staying on the same page with [AJAX](/examples/ajax) for a better experience.
+:::

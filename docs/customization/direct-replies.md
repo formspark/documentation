@@ -16,6 +16,10 @@ To activate this feature, create an input with any of the following names:
 - `_replyto`
 - `_email.replyto`
 
+::: tip
+Use `type="email"` so the browser validates the address before submission.
+:::
+
 ```html
 <input type="email" name="mail" placeholder="your@email.example" />
 ```

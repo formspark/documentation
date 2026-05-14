@@ -7,6 +7,20 @@ lang: en-US
 
 Every form falls victim to spambots at some point, how you handle them can affect your customers.
 
+## Which should I pick?
+
+| Provider                                                    | Visitor sees | Pricing     | Strength | Notes                                       |
+| ----------------------------------------------------------- | ------------ | ----------- | -------- | ------------------------------------------- |
+| [Botpoison](https://botpoison.com/)                         | Nothing      | Free / paid | Strong   | Recommended default.                        |
+| [Turnstile](https://www.cloudflare.com/products/turnstile/) | Nothing      | Free        | Strong   | Cloudflare's invisible challenge.           |
+| [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox     | Free        | Strong   | Privacy-friendly reCAPTCHA alternative.     |
+| [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox     | Free        | Strong   | Google's classic v2 checkbox.               |
+| [Akismet](https://akismet.com/)                             | Nothing      | Included    | Medium   | Pre-activated for every account.            |
+| Custom spam words                                           | Nothing      | Included    | Low      | Keyword blocklist on submission body.       |
+| Honeypot                                                    | Nothing      | Included    | Low      | Easy to bypass; pair with another provider. |
+
+If you're not sure, start with **Botpoison** or **Turnstile**: both are invisible to your visitors and require no interaction.
+
 Formspark offers the following solutions to prevent spam:
 
 - [Botpoison](https://botpoison.com/) integration
@@ -224,7 +238,7 @@ The total length of the list must not exceed 2,500 characters.
 ## Honeypot
 
 ::: warning
-While simple to implement, this technique is not the most effective.
+While simple to implement, this technique is not the most effective. Modern spam bots that execute JavaScript can detect hidden fields and skip them, bypassing the honeypot entirely. Pair it with another provider above for serious protection.
 :::
 
 The honeypot technique is a simple-to-implement spam prevention solution.

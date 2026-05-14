@@ -49,6 +49,7 @@ export default {
   ],
   themeConfig: {
     logo: "https://cdn.formspark.io/images/formspark/logos/formspark.svg",
+    outline: [2, 3],
     editLink: {
       pattern:
         "https://github.com/formspark/documentation/edit/master/docs/:path",
@@ -154,17 +155,21 @@ export default {
         ],
       },
       {
-        text: "Integration",
+        text: "Integrations",
         items: [
           { text: "Airtable", link: "/integration/airtable" },
           { text: "Google Sheets", link: "/integration/google-sheets" },
           { text: "Notion", link: "/integration/notion" },
           { text: "Slack", link: "/integration/slack" },
-          { text: "Webhooks", link: "/integration/webhooks" },
           { text: "UTM parameters", link: "/integration/utm-parameters" },
-          { text: "Zapier", link: "/integration/zapier" },
+          { text: "Webhooks", link: "/integration/webhooks" },
+        ],
+      },
+      {
+        text: "Automation",
+        items: [
           { text: "Make", link: "/integration/make" },
-          { text: "Integromat", link: "/integration/integromat" },
+          { text: "Zapier", link: "/integration/zapier" },
         ],
       },
       {

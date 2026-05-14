@@ -55,6 +55,10 @@ automatically be inherited.
 </form>
 ```
 
+::: tip
+`_redirect` is only used for full-page form submissions. When you submit via AJAX with `Accept: application/json`, Formspark returns a JSON response instead and `_redirect` is silently ignored. Handle the post-submission UX yourself in JavaScript.
+:::
+
 ## Preventing the redirect
 
 ### Staying on the same page (without leaving it)

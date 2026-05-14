@@ -5,6 +5,42 @@ lang: en-US
 
 # Nuxt
 
+## vue-use-formspark
+
+:::tip
+Check out our official Vue composition API
+functions: [vue-use-formspark](https://github.com/formspark/vue-use-formspark).
+:::
+
+```vue
+<script setup>
+import { ref } from "vue";
+import { useFormspark } from "@formspark/vue-use-formspark";
+
+const message = ref("");
+
+const [submit, submitting] = useFormspark({
+  formId: "your-form-id",
+});
+
+const onSubmit = async () => {
+  await submit({ message: message.value });
+  message.value = "";
+  alert("Form submitted");
+};
+</script>
+
+<template>
+  <form @submit.prevent="onSubmit">
+    <label>
+      <span>Message</span>
+      <textarea v-model="message" />
+    </label>
+    <button type="submit" :disabled="submitting">Send</button>
+  </form>
+</template>
+```
+
 ## Fetch
 
 ```vue
