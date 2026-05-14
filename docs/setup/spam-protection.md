@@ -7,20 +7,6 @@ lang: en-US
 
 Every form falls victim to spambots at some point, how you handle them can affect your customers.
 
-## Which should I pick?
-
-| Provider                                                    | Visitor experience | Pricing     | Strength |
-| ----------------------------------------------------------- | ------------------ | ----------- | -------- |
-| [Botpoison](https://botpoison.com/)                         | Invisible          | Free / paid | Strong   |
-| [Turnstile](https://www.cloudflare.com/products/turnstile/) | Invisible          | Free        | Strong   |
-| [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox           | Free        | Strong   |
-| [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox           | Free        | Strong   |
-| [Akismet](https://akismet.com/)                             | Invisible          | Included    | Medium   |
-| Custom spam words                                           | Invisible          | Included    | Low      |
-| Honeypot                                                    | Invisible          | Included    | Low      |
-
-If you're not sure, start with **Botpoison** or **Turnstile**: both are invisible to your visitors and require no interaction.
-
 Formspark offers the following solutions to prevent spam:
 
 - [Botpoison](https://botpoison.com/) integration
@@ -38,6 +24,20 @@ Formspark will not save submissions, send notifications or decrement your submis
 - The submission is empty
 - The spam protection verification was unsuccessful
 - The submission contains a honeypot
+
+## Which should I pick?
+
+| Provider                                                    | Visitor experience | Pricing     | Strength |
+| ----------------------------------------------------------- | ------------------ | ----------- | -------- |
+| [Botpoison](https://botpoison.com/)                         | Invisible          | Free / paid | Strong   |
+| [Turnstile](https://www.cloudflare.com/products/turnstile/) | Invisible          | Free        | Strong   |
+| [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox           | Free        | Strong   |
+| [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox           | Free        | Strong   |
+| [Akismet](https://akismet.com/)                             | Invisible          | Included    | Medium   |
+| Custom spam words                                           | Invisible          | Included    | Low      |
+| Honeypot                                                    | Invisible          | Included    | Low      |
+
+If you're not sure, start with **Botpoison** or **Turnstile**: both are invisible to your visitors and require no interaction.
 
 ## Botpoison
 

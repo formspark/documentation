@@ -11,13 +11,6 @@ Formspark stores a link to your uploaded file, not the file itself. You upload t
 
 The example below uses Uploadcare. Any provider that returns a public URL after upload will work the same way.
 
-## Alternatives to Uploadcare
-
-- [Cloudinary](https://cloudinary.com/) — image and video focused, generous free tier.
-- [Filestack](https://www.filestack.com/) — drop-in widget similar to Uploadcare.
-- [Bunny Storage](https://bunny.net/storage/) — cheap edge storage with a simple HTTP API.
-- [Amazon S3 pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) — generate an upload URL from your own backend, then submit the resulting file URL to Formspark.
-
 ## Uploadcare
 
 Create a free Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/), the free tier of Uploadcare
@@ -101,3 +94,10 @@ Final code:
   </body>
 </html>
 ```
+
+## Alternatives
+
+- [Cloudinary](https://cloudinary.com/) — image and video focused, generous free tier.
+- [Filestack](https://www.filestack.com/) — drop-in widget similar to Uploadcare.
+- [Bunny Storage](https://bunny.net/storage/) — cheap edge storage with a simple HTTP API.
+- [Amazon S3 pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) — generate an upload URL from your own backend, then submit the resulting file URL to Formspark.

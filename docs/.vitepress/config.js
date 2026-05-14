@@ -159,16 +159,11 @@ export default {
         items: [
           { text: "Airtable", link: "/integration/airtable" },
           { text: "Google Sheets", link: "/integration/google-sheets" },
+          { text: "Make", link: "/integration/make" },
           { text: "Notion", link: "/integration/notion" },
           { text: "Slack", link: "/integration/slack" },
           { text: "UTM parameters", link: "/integration/utm-parameters" },
           { text: "Webhooks", link: "/integration/webhooks" },
-        ],
-      },
-      {
-        text: "Automation",
-        items: [
-          { text: "Make", link: "/integration/make" },
           { text: "Zapier", link: "/integration/zapier" },
         ],
       },
