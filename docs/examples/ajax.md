@@ -74,6 +74,42 @@ The modern, dependency-free way to submit a form.
 </html>
 ```
 
+## Fetch with Botpoison
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formspark | AJAX with Fetch and Botpoison</title>
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
+  </head>
+  <body>
+    <script>
+      async function submit() {
+        const botpoison = new Botpoison({
+          publicKey: "your-public-key",
+        });
+        const { solution } = await botpoison.challenge();
+        await fetch("https://submit-form.com/your-form-id", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            message: "Hello, World",
+            _botpoison: solution,
+          }),
+        });
+      }
+
+      submit();
+    </script>
+  </body>
+</html>
+```
+
 ## Fetch with reCAPTCHA v2
 
 ```html
