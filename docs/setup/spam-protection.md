@@ -9,15 +9,15 @@ Every form falls victim to spambots at some point, how you handle them can affec
 
 ## Which should I pick?
 
-| Provider                                                    | Visitor sees | Pricing     | Strength | Notes                                       |
-| ----------------------------------------------------------- | ------------ | ----------- | -------- | ------------------------------------------- |
-| [Botpoison](https://botpoison.com/)                         | Nothing      | Free / paid | Strong   | Recommended default.                        |
-| [Turnstile](https://www.cloudflare.com/products/turnstile/) | Nothing      | Free        | Strong   | Cloudflare's invisible challenge.           |
-| [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox     | Free        | Strong   | Privacy-friendly reCAPTCHA alternative.     |
-| [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox     | Free        | Strong   | Google's classic v2 checkbox.               |
-| [Akismet](https://akismet.com/)                             | Nothing      | Included    | Medium   | Pre-activated for every account.            |
-| Custom spam words                                           | Nothing      | Included    | Low      | Keyword blocklist on submission body.       |
-| Honeypot                                                    | Nothing      | Included    | Low      | Easy to bypass; pair with another provider. |
+| Provider                                                    | Visitor experience | Pricing     | Strength |
+| ----------------------------------------------------------- | ------------------ | ----------- | -------- |
+| [Botpoison](https://botpoison.com/)                         | Invisible          | Free / paid | Strong   |
+| [Turnstile](https://www.cloudflare.com/products/turnstile/) | Invisible          | Free        | Strong   |
+| [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox           | Free        | Strong   |
+| [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox           | Free        | Strong   |
+| [Akismet](https://akismet.com/)                             | Invisible          | Included    | Medium   |
+| Custom spam words                                           | Invisible          | Included    | Low      |
+| Honeypot                                                    | Invisible          | Included    | Low      |
 
 If you're not sure, start with **Botpoison** or **Turnstile**: both are invisible to your visitors and require no interaction.
 
