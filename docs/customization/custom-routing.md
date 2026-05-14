@@ -10,8 +10,6 @@ You can use JavaScript to dynamically select a form endpoint.
 Using this technique, you can use a drop-down to dynamically route submissions to a specific team, department, inbox,
 webhook, etc...
 
-## At runtime
-
 ```html
 <form id="my-form" action="https://submit-form.com/sales-form-id" method="POST">
   <label for="department">Department</label>
@@ -43,28 +41,4 @@ webhook, etc...
     document.getElementById("my-form").action = action;
   };
 </script>
-```
-
-## At build time
-
-If your form lives on a static site and the destination only depends on the page (not on a user choice), set the `action` at build time so no JavaScript is needed.
-
-### Hugo
-
-```html
-<!-- layouts/_default/contact.html -->
-<form action="https://submit-form.com/{{ .Site.Params.formspark_form_id }}">
-  <textarea name="message"></textarea>
-  <button type="submit">Send</button>
-</form>
-```
-
-### Jekyll
-
-```html
-<!-- _layouts/contact.html -->
-<form action="https://submit-form.com/{{ site.formspark_form_id }}">
-  <textarea name="message"></textarea>
-  <button type="submit">Send</button>
-</form>
 ```
