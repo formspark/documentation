@@ -36,44 +36,11 @@ Formspark custom email templates use the [Handlebars](https://handlebarsjs.com/)
 
 The following custom Handlebars helpers have been registered for you:
 
-#### json
-
-Stringifies a JSON object.
-
-##### Usage
-
-```handlebars
-{{json data}}
-```
-
-##### Implementation
-
-```javascript
-Handlebars.registerHelper("json", function (ctx) {
-  if (typeof ctx === "object") {
-    return new Handlebars.SafeString(JSON.stringify(ctx));
-  }
-  return ctx;
-});
-```
-
-#### formatNewlines
-
-Converts newlines in a string to `<br>` HTML tags.
-
-##### Usage
-
-```handlebars
-{{formatNewlines data.message}}
-```
-
-##### Implementation
-
-```javascript
-Handlebars.registerHelper("formatNewlines", function (ctx) {
-  if (typeof ctx === "string") {
-    return new Handlebars.SafeString(ctx.replace(/\r\n|\r|\n/g, "<br>"));
-  }
-  return ctx;
-});
-```
+| Name                          | Description                                                                                                                                            | Example usage                                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `capitalize`                  | Capitalizes the first character of a string and lowercases the rest.                                                                                   | `{{capitalize "hello world"}}` → `Hello world`                                                                                     |
+| `nl2br`                       | Converts newlines in a string into `<br>` HTML tags, so line breaks display correctly in HTML.                                                         | `{{nl2br user.comment}}` → `Line one<br>Line two`                                                                                  |
+| `pluralize`                   | Returns the singular or plural form of a word based on a count. Optionally accepts a custom plural form.                                               | `{{pluralize 1 "item"}}` → `1 item`<br>`{{pluralize 3 "item"}}` → `3 items`<br>`{{pluralize 2 "child" "children"}}` → `2 children` |
+| `stringify`                   | Serializes a value to a JSON string. Supports optional indentation for pretty-printing.                                                                | `{{stringify data}}` → `{"name":"Alice","age":30}`<br>`{{stringify data indent=2}}` → pretty-printed JSON                          |
+| `switch` / `case` / `default` | Block helper for matching a value against multiple cases. Renders the content of the matching `case` block, or the `default` block if no case matches. | `{{#switch type}}{{#case "a"}}A{{/case}}{{#case "b"}}B{{/case}}{{#default}}Other{{/default}}{{/switch}}`                           |
+| `titleCase`                   | Capitalizes the first letter of every word in a string.                                                                                                | `{{titleCase "hello world from the team"}}` → `Hello World From The Team`                                                          |
