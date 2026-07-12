@@ -41,15 +41,6 @@ Replies to an autoresponse go to your form's first notification recipient, so a 
 
 Every autoresponse includes a footer identifying the form it was sent on behalf of, along with an unsubscribe link. Recipients who unsubscribe stop receiving autoresponses; the footer cannot be removed.
 
-## Sending limits
-
-To protect recipients and email deliverability, autoresponses are subject to daily limits:
-
-- at most 200 autoresponses per form per day,
-- at most 1,000 autoresponses per workspace per day.
-
-Submissions beyond these limits are stored and delivered to you as usual; only the autoresponse is skipped.
-
 ## Content policy
 
 The rendered autoresponse is automatically checked before every send. Autoresponses that classify as spam are not sent, and repeated detections disable the autoresponder for the workspace. Use the autoresponder for transactional confirmations, not for marketing or bulk email.
