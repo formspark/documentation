@@ -43,8 +43,8 @@ Every autoresponse includes a footer identifying the form it was sent on behalf 
 
 ## Content policy
 
-The rendered autoresponse is automatically checked before every send. Autoresponses that classify as spam are not sent, and repeated detections disable the autoresponder for the workspace. Use the autoresponder for transactional confirmations, not for marketing or bulk email.
+Use the autoresponder for transactional confirmations, not for marketing or bulk email.
 
 ::: warning
-Spam-flagged submissions never trigger an autoresponse, and neither do submissions blocked by your form's spam protection.
+Spam-flagged submissions never trigger an autoresponse.
 :::
