@@ -111,6 +111,10 @@ export default {
             link: "/dashboard/email-notification-settings",
           },
           {
+            text: "Autoresponder",
+            link: "/dashboard/autoresponder",
+          },
+          {
             text: "Exporting submissions",
             link: "/dashboard/exporting-submissions",
           },
