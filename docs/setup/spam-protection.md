@@ -13,9 +13,10 @@ Formspark offers the following solutions to prevent spam:
 - [reCAPTCHA](https://www.google.com/recaptcha/about/) integration
 - [hCaptcha](https://www.hcaptcha.com/) integration
 - [Turnstile](https://www.cloudflare.com/products/turnstile/) integration
-- [Akismet](https://akismet.com/) integration
 - Custom spam words
 - Honeypot technique
+
+On top of whichever of these you enable, every submission is also screened by our [automatic spam filtering](#automatic-spam-filtering).
 
 ![Spam protection](/spam-protection.png)
 
@@ -33,7 +34,6 @@ Formspark will not save submissions, send notifications or decrement your submis
 | [Turnstile](https://www.cloudflare.com/products/turnstile/) | Invisible          | Free        | Strong   |
 | [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox           | Free        | Strong   |
 | [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox           | Free        | Strong   |
-| [Akismet](https://akismet.com/)                             | Invisible          | Included    | Medium   |
 | Custom spam words                                           | Invisible          | Included    | Low      |
 | Honeypot                                                    | Invisible          | Included    | Low      |
 
@@ -219,11 +219,11 @@ const body = {
 
 - React: [react-turnstile](https://github.com/Le0Developer/react-turnstile)
 
-## Akismet
+## Automatic spam filtering
 
-Formspark integrates with Akismet, a spam filtering service.
+On top of any provider you choose, Formspark automatically screens every submission for spam. This runs on all forms, requires no setup, and is invisible to your visitors.
 
-This integration requires no additional setup, it is pre-activated for all accounts.
+The filtering is powered by [OOPSpam](https://www.oopspam.com/). Because it runs automatically, there is nothing to configure, and it complements the provider you select above rather than replacing it.
 
 ## Custom spam words
 
