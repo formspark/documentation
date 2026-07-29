@@ -17,8 +17,7 @@ List endpoints return a page and a cursor:
 }
 ```
 
-Branch on `hasMore`. When it is `true`, pass `nextCursor` back as
-`startingAfter` to get the following page:
+Branch on `hasMore`. While it is `true`, pass `nextCursor` back as `startingAfter`:
 
 ```sh
 curl "https://api.formspark.io/public/v1/forms/FORM_ID/submissions?limit=50&startingAfter=CURSOR" \
@@ -27,19 +26,7 @@ curl "https://api.formspark.io/public/v1/forms/FORM_ID/submissions?limit=50&star
 
 `limit` accepts 1 to 100 and defaults to 25.
 
-## Why cursors rather than page numbers
-
-Submissions arrive while you are reading them. With page numbers, a submission
-that arrives between two requests shifts everything down, so you see one row
-twice and miss another. A cursor points at a position in the list rather than
-counting from the start, so a walk stays correct no matter what arrives during
-it.
-
-## Treat cursors as opaque
-
-A cursor is a string to hand back, not a value to construct or decode. Its
-contents will change. A cursor this API did not issue is rejected with a
-`validation_error` rather than quietly restarting from the beginning.
+Treat a cursor as a string to hand back. Its contents will change, and a cursor this API did not issue is rejected.
 
 ## Walking every submission
 
@@ -55,6 +42,4 @@ while : ; do
 done
 ```
 
-Workspaces and forms are returned in the same envelope, but are not paginated
-today: `hasMore` is always `false` for them. Branching on `hasMore` rather than
-special-casing those endpoints means your code keeps working if that changes.
+Workspaces and forms use the same envelope, so branching on `hasMore` works everywhere.

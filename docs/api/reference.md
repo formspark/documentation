@@ -5,15 +5,15 @@ lang: en-US
 
 # Reference
 
-Base URL `https://api.formspark.io/public/v1`. Every request needs an
-`Authorization: Bearer` header. The machine-readable description is at
-[`/openapi.json`](https://api.formspark.io/public/v1/openapi.json).
+Base URL `https://api.formspark.io/public/v1`. Every request needs an `Authorization: Bearer` header. The machine-readable description is at [`/openapi.json`](https://api.formspark.io/public/v1/openapi.json).
+
+Responses contain a form's settings and its notification emails. Its captcha secret keys, Slack token and Zapier key are available in the dashboard.
 
 ## Token
 
 ### `GET /me`
 
-Describes the current token. No scope required.
+Describes the current token. Works with any token.
 
 ## Workspaces
 
@@ -48,8 +48,7 @@ Scope: `forms:read`.
 
 ### `POST /forms`
 
-Creates a form, applying any settings sent alongside it. `workspaceId` and
-`name` are required; everything else is optional. Scope: `forms:write`.
+Creates a form, applying any settings sent with it. `workspaceId` and `name` are required. Scope: `forms:write`.
 
 ```sh
 curl -X POST https://api.formspark.io/public/v1/forms \
@@ -62,7 +61,7 @@ curl -X POST https://api.formspark.io/public/v1/forms \
   }'
 ```
 
-The response contains the form's `id`. That id is what your HTML form posts to:
+The response contains the form's `id`, which is what your HTML form posts to:
 
 ```html
 <form action="https://submit-form.com/FORM_ID" method="POST">
@@ -73,9 +72,7 @@ The response contains the form's `id`. That id is what your HTML form posts to:
 
 ### `PATCH /forms/{formId}`
 
-Applies **only the fields present in the body**. Anything you leave out keeps
-its current value, so renaming a form cannot disturb its spam protection or its
-notification emails. Scope: `forms:write`.
+Applies the fields present in the body. Fields you leave out keep their current value. Scope: `forms:write`.
 
 ```sh
 curl -X PATCH https://api.formspark.io/public/v1/forms/FORM_ID \
@@ -84,11 +81,7 @@ curl -X PATCH https://api.formspark.io/public/v1/forms/FORM_ID \
   -d '{"name":"Contact us"}'
 ```
 
-Sending `null` for a field clears it. Omitting it leaves it alone. The two are
-different on purpose.
-
-`notificationEmails` is replaced wholesale when present, so send the complete
-list you want rather than just the additions.
+Send `null` to clear a field. Send `notificationEmails` as the complete list you want, since it replaces the existing one.
 
 ### `DELETE /forms/{formId}`
 
@@ -100,7 +93,7 @@ Deletes the form and its submissions. Scope: `forms:write`.
 
 Newest first, [cursor paginated](./pagination). Scope: `submissions:read`.
 
-Query parameters: `limit` (1-100, default 25), `startingAfter`, `search`.
+Query parameters: `limit` (1 to 100, default 25), `startingAfter`, `search`.
 
 ```sh
 curl "https://api.formspark.io/public/v1/forms/FORM_ID/submissions?limit=50" \
@@ -115,12 +108,4 @@ The same, across every form in the workspace. Scope: `submissions:read`.
 
 Scope: `submissions:write`.
 
-Submissions rejected as spam cannot be deleted; they expire on their own. Trying
-returns `409` with the code `conflict`.
-
-## What is not returned
-
-A form's third-party credentials, meaning its Botpoison, reCAPTCHA, hCaptcha and
-Turnstile secret keys, its Slack token and its Zapier key, are never included in
-API responses. They are readable in the dashboard only, so a leaked API token
-cannot become access to your other accounts.
+Submissions rejected as spam expire on their own. Deleting one returns `409`.

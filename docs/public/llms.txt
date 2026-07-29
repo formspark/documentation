@@ -2,16 +2,16 @@
 
 > A form backend. You point an HTML form at a URL and Formspark stores the
 > submissions, emails you about them, and forwards them to your other tools.
-> There is no form builder: you bring your own HTML.
+> You bring your own HTML.
 
-Two separate surfaces, and confusing them is the usual mistake:
+Two surfaces:
 
 - **submit-form.com** receives submissions from browsers. No credentials.
-- **api.formspark.io** creates and manages forms. Always needs a token.
+- **api.formspark.io** creates and manages forms. Needs a token.
 
 ## Receiving submissions
 
-Point a form at its id. That is the whole integration:
+Point a form at its id:
 
 ```html
 <form action="https://submit-form.com/YOUR_FORM_ID" method="POST">
@@ -21,22 +21,22 @@ Point a form at its id. That is the whole integration:
 </form>
 ```
 
-Every field needs a `name`, or its value is not submitted. Submitting with
-`Accept: application/json` returns JSON instead of redirecting.
+Give every field a `name`, or its value is not submitted. Submit with
+`Accept: application/json` to receive JSON instead of a redirect.
 
-Control fields are sent in the body, prefixed with an underscore. They are
-**not** form settings and cannot be configured through the API or dashboard:
+Control fields go in the body, prefixed with an underscore. They are set per
+submission, not on the form:
 
-- `_redirect` — where to send the visitor afterwards
-- `_error` — where to send them if something fails
-- `_append` — append the submission id to the redirect
-- `_email.subject`, `_email.from`, `_email.replyto` — override the notification
-- `_honeypot`, `_gotcha` — spam traps, always active
+- `_redirect` sends the visitor to a URL afterwards
+- `_error` sends them somewhere else if something fails
+- `_append` appends the submission id to the redirect
+- `_email.subject`, `_email.from`, `_email.replyto` override the notification
+- `_honeypot`, `_gotcha` are spam traps, always active
 
 ## Managing forms
 
-Base URL `https://api.formspark.io/public/v1`. Authenticate with a token created
-at https://dashboard.formspark.io/account/api-tokens:
+Base URL `https://api.formspark.io/public/v1`. Authenticate with a token from
+https://dashboard.formspark.io/account/api-tokens:
 
 ```sh
 curl https://api.formspark.io/public/v1/me \
@@ -60,16 +60,17 @@ Endpoints: `GET /me`, `GET|POST /workspaces`, `PATCH /workspaces/{id}`,
 `GET /forms/{id}/submissions`, `GET /workspaces/{id}/submissions`,
 `DELETE /submissions/{id}`.
 
-Things worth knowing before you write against it:
+Notes for writing against it:
 
-- `PATCH` applies only the fields you send. Omitting a field preserves it;
-  sending `null` clears it.
+- `PATCH` applies the fields you send and keeps the rest. Send `null` to clear
+  a field.
 - Submissions are cursor paginated. Branch on `hasMore`, pass `nextCursor` as
   `startingAfter`, treat cursors as opaque.
-- Errors are `application/problem+json`. Branch on `code`, not on wording.
-- `POST` is not idempotent. Do not blindly retry a create.
+- Errors are `application/problem+json`. Branch on `code`.
+- Check whether a `POST` landed before retrying it.
 - Scopes: `workspaces:read|write`, `forms:read|write`, `submissions:read|write`.
-- A form's captcha secrets, Slack token and Zapier key are never returned.
+- Form settings come back on the form. Captcha secret keys, the Slack token and
+  the Zapier key live in the dashboard.
 
 OpenAPI 3.1: https://api.formspark.io/public/v1/openapi.json
 
