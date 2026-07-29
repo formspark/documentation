@@ -121,6 +121,16 @@ export default {
         ],
       },
       {
+        text: "API",
+        items: [
+          { text: "Overview", link: "/api/" },
+          { text: "API tokens", link: "/api/api-tokens" },
+          { text: "Reference", link: "/api/reference" },
+          { text: "Pagination", link: "/api/pagination" },
+          { text: "Errors", link: "/api/errors" },
+        ],
+      },
+      {
         text: "HTML form",
         items: [
           { text: "Form validation", link: "/html-form/form-validation" },
