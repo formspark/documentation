@@ -1,0 +1,85 @@
+# Formspark
+
+> A form backend. You point an HTML form at a URL and Formspark stores the
+> submissions, emails you about them, and forwards them to your other tools.
+> You bring your own HTML.
+
+Two surfaces:
+
+- **submit-form.com** receives submissions from browsers. No credentials.
+- **api.formspark.io** creates and manages forms. Needs a token.
+
+## Receiving submissions
+
+Point a form at its id:
+
+```html
+<form action="https://submit-form.com/YOUR_FORM_ID" method="POST">
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+  <button type="submit">Send</button>
+</form>
+```
+
+Give every field a `name`, or its value is not submitted. Submit with
+`Accept: application/json` to receive JSON instead of a redirect.
+
+Control fields go in the body, prefixed with an underscore. They are set per
+submission, not on the form:
+
+- `_redirect` sends the visitor to a URL afterwards
+- `_error` sends them somewhere else if something fails
+- `_append` appends the submission id to the redirect
+- `_email.subject`, `_email.from`, `_email.replyto` override the notification
+- `_honeypot`, `_gotcha` are spam traps, always active
+
+## Managing forms
+
+Base URL `https://api.formspark.io/public/v1`. Authenticate with a token from
+https://dashboard.formspark.io/account/api-tokens:
+
+```sh
+curl https://api.formspark.io/public/v1/me \
+  -H "Authorization: Bearer $FORMSPARK_TOKEN"
+```
+
+Create a form and read what arrives:
+
+```sh
+curl -X POST https://api.formspark.io/public/v1/forms \
+  -H "Authorization: Bearer $FORMSPARK_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"workspaceId":"WORKSPACE_ID","name":"Contact","notificationEmails":["you@example.com"]}'
+
+curl "https://api.formspark.io/public/v1/forms/FORM_ID/submissions?limit=50" \
+  -H "Authorization: Bearer $FORMSPARK_TOKEN"
+```
+
+Endpoints: `GET /me`, `GET|POST /workspaces`, `PATCH /workspaces/{id}`,
+`GET|POST /forms`, `GET|PATCH|DELETE /forms/{id}`,
+`GET /forms/{id}/submissions`, `GET /workspaces/{id}/submissions`,
+`DELETE /submissions/{id}`.
+
+Notes for writing against it:
+
+- `PATCH` applies the fields you send and keeps the rest. Send `null` to clear
+  a field.
+- Submissions are cursor paginated. Branch on `hasMore`, pass `nextCursor` as
+  `startingAfter`, treat cursors as opaque.
+- Errors are `application/problem+json`. Branch on `code`.
+- Check whether a `POST` landed before retrying it.
+- Scopes: `workspaces:read|write`, `forms:read|write`, `submissions:read|write`.
+- Form settings come back on the form. Captcha secret keys, the Slack token and
+  the Zapier key live in the dashboard.
+
+OpenAPI 3.1: https://api.formspark.io/public/v1/openapi.json
+
+## Documentation
+
+- [Installation](https://documentation.formspark.io/setup/): getting a form id
+- [Spam protection](https://documentation.formspark.io/setup/spam-protection)
+- [Redirection](https://documentation.formspark.io/customization/redirection)
+- [Feedback page](https://documentation.formspark.io/customization/feedback-page)
+- [Webhooks](https://documentation.formspark.io/integration/webhooks)
+- [API](https://documentation.formspark.io/api/)
+- [Framework examples](https://documentation.formspark.io/examples/react)
