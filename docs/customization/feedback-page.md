@@ -14,7 +14,7 @@ You can customize the look-and-feel and content of the default feedback page wit
 ### `_feedback.whitelabel`
 
 Removes all Formspark branding from the feedback page.
-You need an upgraded workspace to unlock this feature.
+You need an [upgraded workspace](/troubleshooting/limits-and-plans) to unlock this feature; on a free workspace the flag is ignored.
 
 Default value: false
 

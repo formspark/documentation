@@ -35,8 +35,10 @@ submission, not on the form:
 
 ## Managing forms
 
-Base URL `https://api.formspark.io/public/v1`. Authenticate with a token from
-https://dashboard.formspark.io/account/api-tokens:
+Base URL `https://api.formspark.io/public/v1`. The API is available on
+upgraded workspaces; `GET /me` and `GET /workspaces` stay open on any plan,
+and a free workspace answers `403` `upgrade_required`. Authenticate with a
+token from https://dashboard.formspark.io/account/api-tokens:
 
 ```sh
 curl https://api.formspark.io/public/v1/me \
@@ -73,6 +75,15 @@ Notes for writing against it:
   the Zapier key live in the dashboard.
 
 OpenAPI 3.1: https://api.formspark.io/public/v1/openapi.json
+
+## Plans and limits
+
+One free workspace per account with 250 submissions, 10 forms, and 5 team
+members. Upgrading a workspace is a $25 one-time payment for 50,000
+submissions (no expiry, no subscription), 100 forms, unlimited team members,
+the autoresponder, feedback-page branding removal, and the REST API.
+Everything is per workspace. Details:
+https://documentation.formspark.io/troubleshooting/limits-and-plans
 
 ## Documentation
 

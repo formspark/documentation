@@ -9,6 +9,8 @@ You can invite members to your workspace to create forms and view submission as 
 
 When you invite team members to join your Formspark workspace, they will receive a confirmation email.
 
+Free workspaces include 5 team members. Upgraded workspaces have no practical member limit. See [limits and plans](/troubleshooting/limits-and-plans).
+
 :::tip
 You can send invitations to users who still need to create a Formspark account or to those who already have one.
 :::

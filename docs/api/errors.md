@@ -60,6 +60,12 @@ Also returned for a `startingAfter` cursor this API did not issue.
 
 A plan limit stopped the request. Free workspaces hold 10 forms, paid ones hold 100.
 
+## Upgrade required
+
+`403` · `upgrade_required`
+
+The API is available on upgraded workspaces, and the request touched a free one. The `workspaceId` extension names it. Upgrade that workspace, or point the request at an upgraded one. See [limits and plans](/troubleshooting/limits-and-plans).
+
 ## Conflict
 
 `409` · `conflict`

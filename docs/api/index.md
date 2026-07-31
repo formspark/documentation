@@ -7,6 +7,8 @@ lang: en-US
 
 The Formspark API lets you create forms, change their settings, and read their submissions from your own code.
 
+The API is available on upgraded workspaces. Listing your workspaces and reading your own token stay open on any plan, so a client can always discover which workspace qualifies. See [limits and plans](/troubleshooting/limits-and-plans).
+
 ## Base URL
 
 ```
