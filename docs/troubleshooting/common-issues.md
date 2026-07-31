@@ -29,7 +29,7 @@ Ensure that you are signed in with the correct email address.
 Ensure that you are connected to the right workspace: [View My Workspaces](https://dashboard.formspark.io/workspaces).
 
 Note that additional user-created workspaces start with 0 submissions. All upgrades, bundles, and deals are per
-workspace.
+workspace. See [limits and plans](/troubleshooting/limits-and-plans).
 
 ## My AJAX request returns 200 but no submission shows up
 

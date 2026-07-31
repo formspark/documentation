@@ -121,16 +121,6 @@ export default {
         ],
       },
       {
-        text: "API",
-        items: [
-          { text: "Overview", link: "/api/" },
-          { text: "API tokens", link: "/api/api-tokens" },
-          { text: "Reference", link: "/api/reference" },
-          { text: "Pagination", link: "/api/pagination" },
-          { text: "Errors", link: "/api/errors" },
-        ],
-      },
-      {
         text: "HTML form",
         items: [
           { text: "Form validation", link: "/html-form/form-validation" },
@@ -182,11 +172,25 @@ export default {
         ],
       },
       {
+        text: "API",
+        items: [
+          { text: "Overview", link: "/api/" },
+          { text: "API tokens", link: "/api/api-tokens" },
+          { text: "Reference", link: "/api/reference" },
+          { text: "Pagination", link: "/api/pagination" },
+          { text: "Errors", link: "/api/errors" },
+        ],
+      },
+      {
         text: "Troubleshooting",
         items: [
           {
             text: "Common issues",
             link: "/troubleshooting/common-issues",
+          },
+          {
+            text: "Limits and plans",
+            link: "/troubleshooting/limits-and-plans",
           },
           {
             text: "Email reception",
