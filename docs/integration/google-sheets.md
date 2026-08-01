@@ -5,31 +5,31 @@ lang: en-US
 
 # Google Sheets
 
-Formspark does not connect to Google Sheets directly. The recommended path is to use Zapier or Make as a bridge. For developers, a Google Apps Script webhook is also an option.
+Formspark can send every submission from your form straight into a Google Sheets spreadsheet, created automatically and kept up to date.
 
-## Via Zapier
+Google Sheets is available on all paid workspaces.
 
-1. Set up the Formspark [Zapier integration](/integration/zapier).
-2. In your Zap, select `New Submission` as the trigger.
-3. Add `Google Sheets` as the action and choose `Create Spreadsheet Row`.
-4. Map your form fields to the matching spreadsheet columns.
+## Connecting
 
-## Via Make
+1. Open your form's settings and find the `Google Sheets` card under `Integrations`.
+2. Click `Connect Google Sheets` and sign in with the Google account that should own the spreadsheet.
+3. Approve the requested access. Formspark only requests permission to the spreadsheets it creates itself, not the rest of your Google Drive.
+4. Formspark creates a new spreadsheet named after your form and starts sending submissions to it.
 
-1. Set up the Formspark [Make integration](/integration/make).
-2. In your scenario, select `Formspark` → `New Submission` as the trigger.
-3. Add a `Google Sheets` → `Add a Row` module.
-4. Map your form fields to the matching spreadsheet columns.
+You do not pick an existing spreadsheet: Formspark always creates a new one.
 
-The free tier of both Zapier and Make is sufficient for typical low-volume contact forms.
+## What gets sent
 
-## Via webhook (Google Apps Script)
+Each submission is appended as a new row. The header row starts with `Submitted at`, followed by one column per field name your form submits. If a later submission includes a field the sheet has not seen before, Formspark adds a new column for it; existing columns and rows are never reordered or rewritten.
 
-If you'd rather skip a third-party automation tool, you can deploy a Google Apps Script as a web app and use its URL as your form's webhook.
+## If syncing pauses
 
-1. Open your spreadsheet and go to `Extensions` → `Apps Script`.
-2. Write a `doPost(e)` function that appends `e.postData.contents` to the active sheet.
-3. Deploy the script as a web app with access set to `Anyone`.
-4. Paste the deployment URL into your form's `Webhook URL` field.
+::: warning
+If a connection keeps failing, for example because the spreadsheet was deleted, Formspark pauses syncing for that form. Retry from the card, or reconnect if the spreadsheet itself is gone.
+:::
 
-[Check this page](/integration/webhooks) to learn more about webhooks.
+## Disconnecting
+
+Click `Disconnect Google Sheets` in the same card to stop sending submissions. Disconnecting does not delete the spreadsheet, it stays in your Google Drive with whatever rows were already added; Formspark simply stops writing to it.
+
+To send submissions to a different spreadsheet, disconnect and connect again. This creates a new spreadsheet, it does not reuse the old one.

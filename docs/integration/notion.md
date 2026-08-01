@@ -5,22 +5,31 @@ lang: en-US
 
 # Notion
 
-Formspark does not connect to Notion directly. The recommended path is to use Zapier or Make as a bridge.
+Formspark can send every submission from your form straight into a Notion database, created automatically inside a page you share during setup.
 
-## Via Zapier
+Notion is available on all paid workspaces.
 
-1. Set up the Formspark [Zapier integration](/integration/zapier).
-2. In your Zap, select `New Submission` as the trigger.
-3. Add `Notion` as the action and choose `Create Database Item`.
-4. Map your form fields to the matching Notion database properties.
+## Connecting
 
-## Via Make
+1. Open your form's settings and find the `Notion` card under `Integrations`.
+2. Click `Connect Notion` and sign in to the Notion workspace you want to use.
+3. On Notion's own consent screen, select the page you want to share with Formspark, then confirm access.
+4. Formspark creates a new database as a child of the page you shared and starts sending submissions to it.
 
-1. Set up the Formspark [Make integration](/integration/make).
-2. In your scenario, select `Formspark` → `New Submission` as the trigger.
-3. Add a `Notion` → `Create a Database Item` module.
-4. Map your form fields to the matching Notion database properties.
+You do not pick an existing database: Formspark always creates a new one, as a child of whichever page you shared.
 
-## A note on direct webhooks
+## What gets sent
 
-It is possible to point your form's `Webhook URL` directly at Notion's API, but Notion enforces a 3-requests-per-second rate limit and returns submission errors that need to be retried. Zapier and Make handle this for you, so we recommend going through one of them unless you are comfortable building your own retry layer.
+Each submission becomes a new entry in the database, with one property per field name your form submits.
+
+## If no page is shared
+
+::: warning
+Sharing a page happens on Notion's own consent screen, not in a Formspark setting: Formspark cannot create a database anywhere you have not explicitly shared with it. If you get through the consent screen without selecting a page, the connection fails. Reconnect from your form's settings and make sure you select a page to share before confirming.
+:::
+
+## Disconnecting
+
+Click `Disconnect Notion` in the same card to stop sending submissions. Disconnecting does not delete the database or the page it lives in, they stay in your Notion workspace with whatever entries were already added; Formspark simply stops writing to it.
+
+To send submissions to a different page, disconnect and connect again, and share a different page this time.
