@@ -11,8 +11,8 @@ Notion is available on all paid workspaces.
 
 ## Connecting
 
-1. Open your form's settings and find the `Notion` card under `Integrations`.
-2. Click `Connect Notion` and sign in to the Notion workspace you want to use.
+1. Open your form's settings and find the `Notion` row under `Integrations`.
+2. Click `Connect`, then `Connect Notion`, and sign in to the Notion workspace you want to use.
 3. On Notion's own consent screen, select the page you want to share with Formspark, then confirm access.
 4. Formspark creates a new database as a child of the page you shared and starts sending submissions to it.
 
@@ -22,7 +22,11 @@ Notion's consent screen lets you share more than one page. If you do, Formspark 
 
 ## What gets sent
 
-Each submission becomes a new entry in the database, with one property per field name your form submits.
+Each submission becomes a new entry in the database, with one property per field name your form submits. A field your form has not sent before is added to the database the first time it appears, so the database keeps up as a form changes.
+
+Alongside your own fields, every database carries two properties Formspark fills in: `Submission`, the entry's title, and `Submitted at`, the submission time as a date you can sort and filter on.
+
+Values are stored as text, so a Notion property never tries to interpret a submitted value. Very long values are truncated.
 
 ## If no page is shared
 
@@ -34,10 +38,10 @@ Sharing a page happens on Notion's own consent screen, not in a Formspark settin
 
 Submissions are never lost when Notion is unreachable. Formspark keeps the submission and retries it in the background, oldest first, so a temporary Notion outage catches up on its own once it clears.
 
-If the retries keep failing, or if the Notion workspace has revoked access, the `Notion` card shows a sync error and stops trying. Use `Retry sync` on the card once the cause is fixed, or reconnect if access was revoked.
+If the retries keep failing, or if the Notion workspace has revoked access, the `Notion` row shows a sync error and stops trying. Open the row with `Configure` and use `Retry sync` once the cause is fixed, or reconnect if access was revoked.
 
 ## Disconnecting
 
-Click `Disconnect Notion` in the same card to stop sending submissions. Disconnecting does not delete the database or the page it lives in, they stay in your Notion workspace with whatever entries were already added; Formspark simply stops writing to it.
+Open the `Notion` row with `Configure` and click `Disconnect Notion` to stop sending submissions. Disconnecting does not delete the database or the page it lives in, they stay in your Notion workspace with whatever entries were already added; Formspark simply stops writing to it.
 
 To send submissions to a different page, disconnect and connect again, and share a different page this time.
