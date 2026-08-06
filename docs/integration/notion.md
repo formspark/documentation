@@ -18,6 +18,8 @@ Notion is available on all paid workspaces.
 
 You do not pick an existing database: Formspark always creates a new one, as a child of whichever page you shared.
 
+Notion's consent screen lets you share more than one page. If you do, Formspark uses the one you edited most recently as the parent, so share only the page you want the database to live in.
+
 ## What gets sent
 
 Each submission becomes a new entry in the database, with one property per field name your form submits.
@@ -27,6 +29,12 @@ Each submission becomes a new entry in the database, with one property per field
 ::: warning
 Sharing a page happens on Notion's own consent screen, not in a Formspark setting: Formspark cannot create a database anywhere you have not explicitly shared with it. If you get through the consent screen without selecting a page, the connection fails. Reconnect from your form's settings and make sure you select a page to share before confirming.
 :::
+
+## If a submission does not arrive
+
+Submissions are never lost when Notion is unreachable. Formspark keeps the submission and retries it in the background, oldest first, so a temporary Notion outage catches up on its own once it clears.
+
+If the retries keep failing, or if the Notion workspace has revoked access, the `Notion` card shows a sync error and stops trying. Use `Retry sync` on the card once the cause is fixed, or reconnect if access was revoked.
 
 ## Disconnecting
 
