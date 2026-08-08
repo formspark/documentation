@@ -43,6 +43,8 @@ const onSubmit = async () => {
 
 ## Fetch
 
+`$fetch` is Nuxt's built-in HTTP client, so the body is passed as an object rather than a JSON string.
+
 ```vue
 <script setup>
 import { ref } from "vue";

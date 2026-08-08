@@ -7,7 +7,7 @@ lang: en-US
 
 The autoresponder automatically sends a confirmation email to the person who submitted your form.
 
-The autoresponder is available on all paid workspaces.
+The autoresponder is available on [upgraded workspaces](/troubleshooting/limits-and-plans).
 
 ## Enabling the autoresponder
 

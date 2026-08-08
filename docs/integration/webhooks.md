@@ -21,7 +21,7 @@ Given the following form:
 ```html
 <form action="https://submit-form.com/your-form-id">
   <input type="text" name="email" />
-  <textarea name="description" />
+  <textarea name="message"></textarea>
   <button type="submit">Send</button>
 </form>
 ```
@@ -39,7 +39,7 @@ The body of the POST request will look as follows:
 
 - Your endpoint should accept POST requests.
 - Your endpoint should be able to parse a JSON object.
-- Your endpoint's url length should not exceed 512 characters.
+- Your endpoint's URL should not exceed 512 characters.
 
 To preview what the webhook requests look like before pointing them at your own server, use a public inspection service such as [httphq.com](https://httphq.com). Paste the temporary URL it gives you into the `Webhook URL` field and submit your form once.
 

@@ -8,10 +8,16 @@ lang: en-US
 You can use JavaScript to dynamically select a form endpoint.
 
 Using this technique, you can use a drop-down to dynamically route submissions to a specific team, department, inbox,
-webhook, etc...
+webhook, etc.
+
+Each option points at a form of its own, so create one form per destination and swap in its action URL below.
 
 ```html
-<form id="my-form" action="https://submit-form.com/sales-form-id" method="POST">
+<form
+  id="my-form"
+  action="https://submit-form.com/your-sales-form-id"
+  method="POST"
+>
   <label for="department">Department</label>
   <select id="department" onchange="onChange(this)">
     <option value="sales" selected>Sales</option>
@@ -29,13 +35,13 @@ webhook, etc...
     let action;
     switch (event.value) {
       case "sales":
-        action = "https://submit-form.com/sales-form-id";
+        action = "https://submit-form.com/your-sales-form-id";
         break;
       case "marketing":
-        action = "https://submit-form.com/marketing-form-id";
+        action = "https://submit-form.com/your-marketing-form-id";
         break;
       case "hr":
-        action = "https://submit-form.com/hr-form-id";
+        action = "https://submit-form.com/your-hr-form-id";
         break;
     }
     document.getElementById("my-form").action = action;

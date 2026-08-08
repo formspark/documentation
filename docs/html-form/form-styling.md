@@ -189,4 +189,4 @@ When you submit via AJAX, you control the post-submission UI yourself. A common 
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Pico CSS](https://picocss.com/) — minimal, semantic, no classes required.
+- [Pico CSS](https://picocss.com/): minimal, semantic, no classes required.

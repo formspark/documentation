@@ -38,7 +38,7 @@ Use the `multiple` attribute to specify whether multiple options can be selected
 ```
 
 ::: tip
-When a `multiple` select has nothing selected, the field is omitted from the submission entirely — the key will not appear in your data.
+When a `multiple` select has nothing selected, the field is omitted from the submission entirely, so the key will not appear in your data.
 :::
 
 ## Grouped options

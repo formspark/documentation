@@ -47,7 +47,7 @@ https://api.formspark.io/public/v1/openapi.json
 
 ## Versioning
 
-The version is in the path. Within `v1`, new optional fields and new endpoints can appear at any time, so ignore fields you do not recognise. Changes that would break a working integration ship as a new version.
+The version is in the path. Within `v1`, new optional fields and new endpoints can appear at any time, so ignore fields you do not recognize. Changes that would break a working integration ship as a new version.
 
 ## Retries
 

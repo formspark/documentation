@@ -5,7 +5,7 @@ lang: en-US
 
 # Inviting team members
 
-You can invite members to your workspace to create forms and view submission as a team.
+You can invite members to your workspace to create forms and view submissions as a team.
 
 When you invite team members to join your Formspark workspace, they will receive a confirmation email.
 
