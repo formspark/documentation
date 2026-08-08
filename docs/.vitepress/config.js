@@ -141,6 +141,7 @@ export default {
         items: [
           { text: "AJAX submissions", link: "/examples/ajax" },
           { text: "Alpine.js", link: "/examples/alpinejs" },
+          { text: "Analog", link: "/examples/analog" },
           { text: "Angular", link: "/examples/angular" },
           { text: "Astro", link: "/examples/astro" },
           { text: "Eleventy", link: "/examples/eleventy" },
@@ -155,6 +156,8 @@ export default {
           { text: "Qwik", link: "/examples/qwik" },
           { text: "React", link: "/examples/react" },
           { text: "React Native", link: "/examples/react-native" },
+          { text: "Remix", link: "/examples/remix" },
+          { text: "SolidStart", link: "/examples/solidstart" },
           { text: "Svelte", link: "/examples/svelte" },
           { text: "SvelteKit", link: "/examples/sveltekit" },
           { text: "VitePress", link: "/examples/vitepress" },
