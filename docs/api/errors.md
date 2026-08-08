@@ -78,4 +78,4 @@ The resource cannot be changed that way. Deleting a submission that was quaranti
 
 `500` · `internal_error`
 
-Something broke on our side. These are reported to us automatically. If one is reproducible, [let us know](https://formspark.io/support/contact).
+Something broke on our side. These are reported to us automatically. If one is reproducible, [let us know](https://dashboard.formspark.io/support/contact).

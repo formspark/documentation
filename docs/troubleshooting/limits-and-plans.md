@@ -9,19 +9,19 @@ Every Formspark account starts with one free workspace. Upgrading is a one-time 
 
 ## What each plan includes
 
-|                             | Free      | Upgraded                                                      |
-| --------------------------- | --------- | ------------------------------------------------------------- |
-| Submissions                 | 250       | 50,000 per bundle                                             |
-| Forms                       | 10        | 100                                                           |
-| Team members                | 5         | Unlimited                                                     |
-| Submission archive          | Forever   | Forever                                                       |
-| Spam protection             | Included  | Included                                                      |
-| Webhooks, Slack and Zapier  | Included  | Included                                                      |
-| Exports                     | Included  | Included                                                      |
-| Autoresponder               | No        | [Included](/dashboard/autoresponder)                          |
-| Removing Formspark branding | No        | [Included](/customization/feedback-page#_feedback-whitelabel) |
-| REST API                    | No        | [Included](/api/)                                             |
-| Support                     | Community | Customer assistance team                                      |
+|                             | Free      | Upgraded                                                     |
+| --------------------------- | --------- | ------------------------------------------------------------ |
+| Submissions                 | 250       | 50,000 per bundle                                            |
+| Forms                       | 10        | 100                                                          |
+| Team members                | 5         | Unlimited                                                    |
+| Submission archive          | Forever   | Forever                                                      |
+| Spam protection             | Included  | Included                                                     |
+| Webhooks, Slack and Zapier  | Included  | Included                                                     |
+| Exports                     | Included  | Included                                                     |
+| Autoresponder               | No        | [Included](/dashboard/autoresponder)                         |
+| Removing Formspark branding | No        | [Included](/customization/feedback-page#feedback-whitelabel) |
+| REST API                    | No        | [Included](/api/)                                            |
+| Support                     | Community | Customer assistance team                                     |
 
 ## How submissions are counted
 
