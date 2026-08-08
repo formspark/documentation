@@ -9,7 +9,7 @@ Failures are returned as [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) prob
 
 ```json
 {
-  "type": "https://documentation.formspark.io/api/errors#insufficient-scope",
+  "type": "https://documentation.formspark.io/api/errors.html#insufficient-scope",
   "title": "Insufficient scope",
   "status": 403,
   "detail": "This token has forms:read; forms:write is required.",
@@ -19,6 +19,8 @@ Failures are returned as [RFC 9457](https://www.rfc-editor.org/rfc/rfc9457) prob
 ```
 
 Branch on `code`. It is stable, while `detail` is written for a human reading a log and its wording can change. Some errors add fields of their own, such as `requiredScope` above.
+
+`type` points at the section for that code on this page: the code with its underscores replaced by hyphens, as an anchor.
 
 ## Invalid token
 
@@ -70,7 +72,7 @@ The API is available on upgraded workspaces, and the request touched a free one.
 
 `409` · `conflict`
 
-The resource cannot be changed that way. Deleting a submission rejected as spam returns this, since those expire on their own.
+The resource cannot be changed that way. Deleting a submission that was quarantined as spam returns this: quarantined submissions expire on their own and cannot be deleted early.
 
 ## Internal error
 

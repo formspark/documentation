@@ -7,7 +7,7 @@ lang: en-US
 
 Formspark can send every submission from your form straight into a Notion database, created automatically inside a page you share during setup.
 
-Notion is available on all paid workspaces.
+Notion is available on [upgraded workspaces](/troubleshooting/limits-and-plans).
 
 ## Connecting
 

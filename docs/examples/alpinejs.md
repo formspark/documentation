@@ -74,7 +74,7 @@ article: [Building an AJAX form with Alpine.js](https://technotrampoline.com/art
 
 ## With success and error states
 
-Tracks three states (`idle`, `success`, `error`) so you can show a thank-you message on success or an inline error on failure without leaving the page.
+Tracks the submission state (`idle`, `loading`, `success`, `error`) so you can show a thank-you message on success or an inline error on failure without leaving the page.
 
 ```html
 <!DOCTYPE html>

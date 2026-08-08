@@ -59,9 +59,9 @@ Create a hidden input with the name `_email.template.footer` and the value `fals
 
 You can go beyond these options and design the notification email in a visual template editor, built in partnership with [Postcraft](https://postcraft.io/).
 
-[Check this page](/dashboard/email-notification-settings.html#custom-templates) to learn more about custom email
+[Check this page](/dashboard/email-notification-settings#custom-templates) to learn more about custom email
 templates.
 
 ## Autoresponder
 
-Notification emails go to you; the [autoresponder](/dashboard/autoresponder.html) sends a confirmation email to the person who submitted your form.
+Notification emails go to you; the [autoresponder](/dashboard/autoresponder) sends a confirmation email to the person who submitted your form.

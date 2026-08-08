@@ -5,7 +5,7 @@ lang: en-US
 
 # Form validation
 
-We recommend using HTML5's built-in validation. It is very rich these days, and has good browser support.
+We recommend using HTML5's built-in validation. It is rich and has good browser support.
 
 ::: warning
 Formspark performs no server-side validation. Validate your inputs client-side before submission to avoid storing malformed data.

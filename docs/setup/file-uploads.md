@@ -13,8 +13,8 @@ The example below uses Uploadcare. Any provider that returns a public URL after 
 
 ## Uploadcare
 
-Create a free Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/), the free tier of Uploadcare
-gives you 3000 uploads per month
+Create a free Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/). Their free tier gives you 3000
+uploads per month.
 
 Want to upload non-image files? You can add a payment method to your Uploadcare account without having to leave their
 free plan.
@@ -44,7 +44,7 @@ the `data-public-key` attribute.
 
 ```html
 <!-- Photo -->
-<label for="photo">Name</label>
+<label for="photo">Photo</label>
 <input
   type="hidden"
   id="photo"
@@ -80,7 +80,7 @@ Final code:
       <input type="text" id="name" name="name" placeholder="Name" required="" />
 
       <!-- Photo -->
-      <label for="photo">Name</label>
+      <label for="photo">Photo</label>
       <input
         type="hidden"
         id="photo"
@@ -97,7 +97,7 @@ Final code:
 
 ## Alternatives
 
-- [Cloudinary](https://cloudinary.com/) — image and video focused, generous free tier.
-- [Filestack](https://www.filestack.com/) — drop-in widget similar to Uploadcare.
-- [Bunny Storage](https://bunny.net/storage/) — cheap edge storage with a simple HTTP API.
-- [Amazon S3 pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) — generate an upload URL from your own backend, then submit the resulting file URL to Formspark.
+- [Cloudinary](https://cloudinary.com/): image and video focused, generous free tier.
+- [Filestack](https://www.filestack.com/): drop-in widget similar to Uploadcare.
+- [Bunny Storage](https://bunny.net/storage/): cheap edge storage with a simple HTTP API.
+- [Amazon S3 pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html): generate an upload URL from your own backend, then submit the resulting file URL to Formspark.

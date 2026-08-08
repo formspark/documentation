@@ -7,7 +7,7 @@ lang: en-US
 
 Formspark can send every submission from your form straight into a Google Sheets spreadsheet, created automatically and kept up to date.
 
-Google Sheets is available on all paid workspaces.
+Google Sheets is available on [upgraded workspaces](/troubleshooting/limits-and-plans).
 
 ## Connecting
 
