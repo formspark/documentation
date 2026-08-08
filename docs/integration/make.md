@@ -13,7 +13,7 @@ Connecting Formspark and Make takes only seconds.
 3. Inside the scenario editor, create a new module and select `Formspark`.
 4. Select the `New Submission` trigger.
 5. Select or create a webhook.
-6. Copy the webhook URL (example: https://hook.region.make.com/0123456789)
+6. Copy the webhook URL (example: `https://hook.region.make.com/0123456789`)
 7. Open Formspark
 8. Paste the webhook URL into the `Webhook URL` field found in your form's settings.
 9. Send a test submission to your form.

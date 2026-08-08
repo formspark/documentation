@@ -57,4 +57,4 @@ Retry a write only after checking whether it landed: a repeated `POST` creates a
 
 ## Rate limits
 
-Requests are limited per IP address. Sustained bursts from one address are blocked for a period. If you are planning something high-volume, [get in touch](https://formspark.io/support/contact) first.
+Requests are limited per IP address. Sustained bursts from one address are blocked for a period. If you are planning something high-volume, [get in touch](https://dashboard.formspark.io/support/contact) first.
