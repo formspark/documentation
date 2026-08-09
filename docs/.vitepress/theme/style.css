@@ -14,13 +14,14 @@
   }
 }
 
-/* A not-found page keeps the has-sidebar class of whatever path was asked for,
-   so the layout reserves --vp-sidebar-width, but renders no sidebar to fill it
-   and the message ends up that far right of centre. Reclaim the reservation
-   wherever the not-found view is what is being shown.
+/* The not-found view inherits the has-sidebar class from the requested path but
+   renders no sidebar, so the space that class reserves has to be reclaimed for
+   the content to sit centred. Zero the inline padding as a pair: has-sidebar
+   sets a left inset for the sidebar and a right one for the outline, and
+   clearing only one leaves the content off centre by half the other.
 
-   Both class names are needed: the rule this overrides is .VPContent.has-sidebar,
-   which carries the same specificity, and it is bundled after this file. */
+   Keep both class names: this overrides .VPContent.has-sidebar, which has equal
+   specificity and is bundled after this file, so a shorter selector loses. */
 .VPContent.has-sidebar:has(.NotFound) {
-  padding-left: 0;
+  padding-inline: 0;
 }
