@@ -21,7 +21,11 @@ Add the Formtrack script.
 Add a `data-formtrack` attribute to your form element.
 
 ```html
-<form action="https://submit-form.com/your-form-id" data-formtrack>
+<form
+  action="https://submit-form.com/your-form-id"
+  method="POST"
+  data-formtrack
+>
   <input type="text" name="message" />
   <button type="submit">Send</button>
 </form>
@@ -50,6 +54,7 @@ Include a `data-formtrack-params` attribute within your form element, and popula
 ```html
 <form
   action="https://submit-form.com/your-form-id"
+  method="POST"
   data-formtrack
   data-formtrack-params="custom_param_1,custom_param_2"
 >

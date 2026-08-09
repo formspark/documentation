@@ -27,7 +27,11 @@ On this page you'll find tips, tricks and links to help you style your forms.
     </style>
   </head>
   <body>
-    <form class="vertical-form" action="https://submit-form.com/your-form-id">
+    <form
+      class="vertical-form"
+      action="https://submit-form.com/your-form-id"
+      method="POST"
+    >
       <label for="first-name">First name</label>
       <input id="first-name" name="first-name" type="text" />
       <label for="last-name">Last name</label>
@@ -67,7 +71,11 @@ Pair every input with a `<label for>`, give focused fields a visible outline, an
   }
 </style>
 
-<form class="accessible-form" action="https://submit-form.com/your-form-id">
+<form
+  class="accessible-form"
+  action="https://submit-form.com/your-form-id"
+  method="POST"
+>
   <label for="email">Email</label>
   <input id="email" name="email" type="email" required />
 
@@ -84,6 +92,7 @@ Pair every input with a `<label for>`, give focused fields a visible outline, an
 <form
   class="mx-auto flex max-w-md flex-col gap-3"
   action="https://submit-form.com/your-form-id"
+  method="POST"
 >
   <label for="email" class="font-semibold">Email</label>
   <input
@@ -128,7 +137,7 @@ Pair every input with a `<label for>`, give focused fields a visible outline, an
     </style>
   </head>
   <body>
-    <form action="https://submit-form.com/your-form-id">
+    <form action="https://submit-form.com/your-form-id" method="POST">
       <label for="first-name" class="required">First name</label>
       <input id="first-name" name="first-name" type="text" required />
       <label for="last-name">Last name</label>
@@ -144,7 +153,7 @@ Pair every input with a `<label for>`, give focused fields a visible outline, an
 When you submit via AJAX, you control the post-submission UI yourself. A common pattern is to swap the form for a thank-you message on success and show an inline error on failure.
 
 ```html
-<form id="contact" action="https://submit-form.com/your-form-id">
+<form id="contact" action="https://submit-form.com/your-form-id" method="POST">
   <label for="message">Message</label>
   <textarea id="message" name="message" required></textarea>
   <button type="submit">Send</button>

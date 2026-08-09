@@ -19,7 +19,7 @@ Formspark can send webhook events that notify your application any time you rece
 Given the following form:
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="text" name="email" />
   <textarea name="message"></textarea>
   <button type="submit">Send</button>

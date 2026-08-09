@@ -22,7 +22,7 @@ Formspark performs no server-side validation. Validate your inputs client-side b
 The `required` attribute is a boolean attribute. When present, it specifies that an input field must be filled out before submitting the form.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="email" name="email" required />
   <textarea name="message" required></textarea>
   <button type="submit">Send</button>
@@ -60,7 +60,7 @@ The `title` attribute is shown by the browser when the pattern fails.
 Use `setCustomValidity` to replace the default browser message.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="email" name="email" id="email" required />
   <button type="submit">Send</button>
 </form>

@@ -24,7 +24,7 @@ free plan.
 Start with a simple Formspark form.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <!-- Name -->
   <label for="name">Name</label>
   <input type="text" id="name" name="name" placeholder="Name" required="" />
@@ -74,7 +74,7 @@ Final code:
     <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
   </head>
   <body>
-    <form action="https://submit-form.com/your-form-id">
+    <form action="https://submit-form.com/your-form-id" method="POST">
       <!-- Name -->
       <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Name" required="" />

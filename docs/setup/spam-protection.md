@@ -115,7 +115,7 @@ Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 
 Your form is now protected by reCAPTCHA ✔.
 
-To stop using reCAPTCHA, change your `Captcha provider` to `None`.
+To stop using reCAPTCHA, change your `Spam Protection` to `None`.
 
 ### HTML
 
@@ -172,7 +172,7 @@ Make sure your form's `method` attribute is explicitly set to `POST`.
 
 ### AJAX
 
-If you're using AJAX, add the hCAPTCHA response to your submission body via the `h-captcha-response` property.
+If you're using AJAX, add the hCaptcha response to your submission body via the `h-captcha-response` property.
 
 ```javascript
 const body = {
@@ -233,7 +233,7 @@ We scan all values in your form's submission body for the words you specify. If 
 
 You specify the comma-separated list of words in your form's settings, under `Custom spam words`.
 
-The total length of the list must not exceed 2,500 characters.
+The total length of the list must not exceed 2,560 characters.
 
 ## Honeypot
 
@@ -246,7 +246,7 @@ The honeypot technique is a simple-to-implement spam prevention solution.
 To enable this feature, add a field with the name `_honeypot` or `_gotcha` to your form and hide it with CSS (see example below). The submission will be silently ignored when a spam bot enters a value.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input
     type="checkbox"
     name="_honeypot"
@@ -264,7 +264,7 @@ To enable this feature, add a field with the name `_honeypot` or `_gotcha` to yo
 Instead of using `_honeypot` or `_gotcha`, you can specify your own honeypot name in your form's settings.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input
     type="checkbox"
     name="Paste your custom honeypot here"
