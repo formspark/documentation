@@ -29,6 +29,7 @@ flight and show your own confirmation.
 import { Component, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
+import { finalize } from "rxjs";
 
 const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
 
@@ -54,18 +55,26 @@ export class ContactFormComponent {
 
   onSubmit() {
     this.form.disable();
-    this.http.post(FORMSPARK_ACTION_URL, this.form.value).subscribe({
-      complete: () => {
-        this.form.enable();
-        this.form.reset();
-      },
-    });
+    this.http
+      .post(FORMSPARK_ACTION_URL, this.form.value, {
+        headers: { Accept: "application/json" },
+      })
+      .pipe(finalize(() => this.form.enable()))
+      .subscribe({
+        next: () => this.form.reset(),
+      });
   }
 }
 ```
 
-`HttpClient` sets `Content-Type: application/json` for an object body and
-Formspark replies with JSON, so nothing else needs configuring.
+`HttpClient` sets `Content-Type: application/json` for an object body, but it
+sends no `Accept` header of its own. Ask for `application/json` explicitly:
+without it Formspark answers a submission with a redirect to the feedback page
+rather than JSON, which `HttpClient` then fails to parse.
+
+`finalize` re-enables the form whether the request succeeds or fails. A plain
+`complete` callback never runs on error, which would leave the form disabled for
+good.
 
 Remember to provide `HttpClient` in your application bootstrap:
 

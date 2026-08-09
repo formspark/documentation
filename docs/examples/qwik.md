@@ -8,7 +8,7 @@ lang: en-US
 ## routeAction$
 
 `routeAction$` runs on the server, so the submission works before the page has
-hydrated and your form id is never exposed to the browser.
+hydrated and keeps working with JavaScript disabled.
 
 ```tsx
 import { component$ } from "@builder.io/qwik";
@@ -51,7 +51,10 @@ export default component$(() => {
 
 ## Fetch
 
-If you would rather submit from the browser, use a `$` handler and a signal.
+If you would rather submit from the browser, use a `$` handler and a signal. The
+action URL ends up in the client bundle here, which is no different from a plain
+HTML form: a form id identifies a form, it does not authorize anything, so it is
+safe to ship to the browser.
 
 ```tsx
 import { component$, useSignal, $ } from "@builder.io/qwik";
