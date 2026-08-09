@@ -5,9 +5,14 @@ lang: en-US
 
 # VitePress
 
-VitePress renders pages on the server at build time, so a form that submits
-with `fetch` has to be wrapped in `<ClientOnly>` to avoid a hydration
-mismatch.
+VitePress renders pages at build time and hydrates them in the browser. A form
+whose markup does not depend on anything browser-specific renders the same in
+both passes, so it needs no special handling — the `fetch` only runs once the
+visitor submits.
+
+Reach for `<ClientOnly>` only when a component reads something that exists in
+the browser alone, such as `window`, `localStorage` or the current URL, while it
+is setting up or rendering.
 
 ## Theme component
 
@@ -41,15 +46,13 @@ const onSubmit = async () => {
 </script>
 
 <template>
-  <ClientOnly>
-    <form @submit.prevent="onSubmit">
-      <label>
-        <span>Message</span>
-        <textarea v-model="message"></textarea>
-      </label>
-      <button type="submit" :disabled="submitting">Send</button>
-    </form>
-  </ClientOnly>
+  <form @submit.prevent="onSubmit">
+    <label>
+      <span>Message</span>
+      <textarea v-model="message"></textarea>
+    </label>
+    <button type="submit" :disabled="submitting">Send</button>
+  </form>
 </template>
 ```
 

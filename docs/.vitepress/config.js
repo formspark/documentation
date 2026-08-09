@@ -1,57 +1,49 @@
+import { sidebar } from "./sidebar.js";
+
+const SITE_URL = "https://documentation.formspark.io";
+const TITLE = "Formspark Documentation";
+const CDN = "https://cdn.formspark.io/images/formspark/logos";
+
+const meta = (entries) =>
+  Object.entries(entries).map(([key, content]) => [
+    "meta",
+    // og:* is an Open Graph property, everything else is a plain meta name.
+    { [key.startsWith("og:") ? "property" : "name"]: key, content },
+  ]);
+
 export default {
   lang: "en-US",
-  title: "Formspark Documentation",
+  title: TITLE,
   description: "Formspark documentation",
-  cleanUrls: true,
+  // The bucket serves the built files by exact key and rewrites nothing, so
+  // only .html paths and directory indexes resolve. Keep this false unless the
+  // hosting gains an extensionless rewrite: with it on, every deep link and
+  // sitemap entry misses, and the CloudFront error page answers with the home
+  // page under the requested page's title instead of a visible failure.
+  cleanUrls: false,
   sitemap: {
-    hostname: "https://documentation.formspark.io",
+    hostname: SITE_URL,
   },
   head: [
-    [
-      "link",
-      {
-        rel: "icon",
-        href: "https://cdn.formspark.io/images/formspark/logos/formspark.ico",
-      },
-    ],
-    [
-      "meta",
-      {
-        property: "og:title",
-        content: "Formspark Documentation",
-      },
-    ],
-    [
-      "meta",
-      {
-        property: "og:url",
-        content: "https://documentation.formspark.io",
-      },
-    ],
-    [
-      "meta",
-      {
-        property: "og:image",
-        content:
-          "https://cdn.formspark.io/images/formspark/logos/formspark--1200x630.png",
-      },
-    ],
-    ["meta", { property: "og:image:type", content: "image/png" }],
-    ["meta", { property: "og:image:width", content: "1200" }],
-    ["meta", { property: "og:image:height", content: "630" }],
-    ["meta", { name: "theme-color", content: "#707ee7" }],
-    ["meta", { name: "mobile-web-app-capable", content: "yes" }],
-    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
-    ],
+    ["link", { rel: "icon", href: `${CDN}/formspark.ico` }],
+    ...meta({
+      "og:title": TITLE,
+      "og:url": SITE_URL,
+      "og:image": `${CDN}/formspark--1200x630.png`,
+      "og:image:type": "image/png",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "theme-color": "#707ee7",
+      "mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-status-bar-style": "black",
+    }),
   ],
   themeConfig: {
-    logo: "https://cdn.formspark.io/images/formspark/logos/formspark.svg",
+    logo: `${CDN}/formspark.svg`,
     outline: [2, 3],
-    // The stock copy is a paraphrased Lao Tzu quote that says nothing about
-    // what went wrong or what to do next.
+    // Overrides the theme's stock copy, which offers a proverb rather than the
+    // two things a visitor here needs: why the page is missing, and where to go.
     notFound: {
       title: "Page not found",
       quote:
@@ -73,149 +65,6 @@ export default {
     search: {
       provider: "local",
     },
-    sidebar: [
-      {
-        text: "Introduction",
-        items: [{ text: "About", link: "/" }],
-      },
-      {
-        text: "Setup",
-        items: [
-          { text: "Installation", link: "/setup/" },
-          { text: "Spam protection", link: "/setup/spam-protection" },
-          { text: "File uploads", link: "/setup/file-uploads" },
-          { text: "Arrays and objects", link: "/setup/arrays-and-objects" },
-        ],
-      },
-      {
-        text: "Customization",
-        items: [
-          { text: "Redirection", link: "/customization/redirection" },
-          { text: "Feedback page", link: "/customization/feedback-page" },
-          {
-            text: "Notification email",
-            link: "/customization/notification-email",
-          },
-          { text: "Direct replies", link: "/customization/direct-replies" },
-          { text: "Custom routing", link: "/customization/custom-routing" },
-        ],
-      },
-      {
-        text: "Dashboard",
-        items: [
-          {
-            text: "Inviting team members",
-            link: "/dashboard/inviting-team-members",
-          },
-          {
-            text: "Additional workspaces",
-            link: "/dashboard/additional-workspaces",
-          },
-          {
-            text: "Redeeming vouchers",
-            link: "/dashboard/redeeming-vouchers",
-          },
-          {
-            text: "Email notification settings",
-            link: "/dashboard/email-notification-settings",
-          },
-          {
-            text: "Autoresponder",
-            link: "/dashboard/autoresponder",
-          },
-          {
-            text: "Exporting submissions",
-            link: "/dashboard/exporting-submissions",
-          },
-        ],
-      },
-      {
-        text: "HTML form",
-        items: [
-          { text: "Form validation", link: "/html-form/form-validation" },
-          { text: "Form styling", link: "/html-form/form-styling" },
-          {
-            text: "Special input types",
-            link: "/html-form/special-input-types",
-          },
-          { text: "Drop-down list", link: "/html-form/drop-down-list" },
-          {
-            text: "Submit in different tab",
-            link: "/html-form/submit-in-different-tab",
-          },
-        ],
-      },
-      {
-        text: "Examples",
-        items: [
-          { text: "AJAX submissions", link: "/examples/ajax" },
-          { text: "Alpine.js", link: "/examples/alpinejs" },
-          { text: "Analog", link: "/examples/analog" },
-          { text: "Angular", link: "/examples/angular" },
-          { text: "Astro", link: "/examples/astro" },
-          { text: "Eleventy", link: "/examples/eleventy" },
-          { text: "Framer", link: "/examples/framer" },
-          { text: "Gatsby", link: "/examples/gatsby" },
-          { text: "HTMX", link: "/examples/htmx" },
-          { text: "Hugo", link: "/examples/hugo" },
-          { text: "Jekyll", link: "/examples/jekyll" },
-          { text: "Next.js", link: "/examples/nextjs" },
-          { text: "Nuxt", link: "/examples/nuxtjs" },
-          { text: "Preact", link: "/examples/preact" },
-          { text: "Qwik", link: "/examples/qwik" },
-          { text: "React", link: "/examples/react" },
-          { text: "React Native", link: "/examples/react-native" },
-          { text: "Remix", link: "/examples/remix" },
-          { text: "SolidStart", link: "/examples/solidstart" },
-          { text: "Svelte", link: "/examples/svelte" },
-          { text: "SvelteKit", link: "/examples/sveltekit" },
-          { text: "VitePress", link: "/examples/vitepress" },
-          { text: "Vue", link: "/examples/vue" },
-          { text: "Webflow", link: "/examples/webflow" },
-          { text: "WordPress", link: "/examples/wordpress" },
-        ],
-      },
-      {
-        text: "Integrations",
-        items: [
-          { text: "Overview", link: "/integration/" },
-          { text: "Airtable", link: "/integration/airtable" },
-          { text: "Google Sheets", link: "/integration/google-sheets" },
-          { text: "Make", link: "/integration/make" },
-          { text: "Notion", link: "/integration/notion" },
-          { text: "Slack", link: "/integration/slack" },
-          { text: "UTM parameters", link: "/integration/utm-parameters" },
-          { text: "Webhooks", link: "/integration/webhooks" },
-          { text: "Zapier", link: "/integration/zapier" },
-        ],
-      },
-      {
-        text: "API",
-        items: [
-          { text: "Overview", link: "/api/" },
-          { text: "API tokens", link: "/api/api-tokens" },
-          { text: "Reference", link: "/api/reference" },
-          { text: "Pagination", link: "/api/pagination" },
-          { text: "Errors", link: "/api/errors" },
-        ],
-      },
-      {
-        text: "Troubleshooting",
-        items: [
-          {
-            text: "Common issues",
-            link: "/troubleshooting/common-issues",
-          },
-          {
-            text: "Limits and plans",
-            link: "/troubleshooting/limits-and-plans",
-          },
-          {
-            text: "Email reception",
-            link: "/troubleshooting/email-reception",
-          },
-        ],
-      },
-    ],
+    sidebar,
   },
 };

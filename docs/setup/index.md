@@ -12,7 +12,7 @@ Every form in Formspark has its own action URL. To get one, sign in to the [Form
 ## HTML
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
 </form>
@@ -34,7 +34,7 @@ Input names starting with an underscore are reserved and will be hidden from the
 You can rapidly test your form payloads by submitting to https://submit-form.com/echo.
 
 ```html
-<form action="https://submit-form.com/echo">
+<form action="https://submit-form.com/echo" method="POST">
   <input type="text" name="message" />
   <button type="submit">Send</button>
 </form>

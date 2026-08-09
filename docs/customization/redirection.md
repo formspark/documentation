@@ -16,7 +16,7 @@ This default behavior can be overridden in multiple ways.
 3. Set the value to the URL you want to redirect users to.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input
     type="hidden"
     name="_redirect"
@@ -48,7 +48,7 @@ automatically be inherited.
 3. Set the value to the URL you want to redirect users to.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="hidden" name="_error" value="https://your-website.com/error" />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
@@ -73,7 +73,7 @@ Formspark has excellent AJAX support, [learn more about it here](/examples/ajax)
 <!--
 1. If your form is hosted at "https://my-website.com/newsletter.html"
 -->
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <!-- 2. Then you would set the "_redirect" to "https://my-website.com/newsletter.html" -->
   <input
     type="hidden"

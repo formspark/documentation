@@ -17,8 +17,8 @@ lang: en-US
 ## I cannot find my forms
 
 1. Ensure that you are signed in with the correct email address.
-2. Ensure that you are connected to the right workspace: [View My Workspaces](https://dashboard.formspark.io/workspaces)
-   .
+2. Ensure that you are connected to the right workspace:
+   [View My Workspaces](https://dashboard.formspark.io/workspaces).
 
 ## I cannot find my workspace
 

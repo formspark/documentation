@@ -15,13 +15,12 @@ Connect them from the **Integrations** section of your form's settings in the
 
 ## Collect submissions in a document
 
-Formspark creates the document for you and keeps appending to it. Rows sync on
-a schedule, so a submission appears shortly after it arrives rather than
-instantly.
+Formspark creates the document for you and keeps appending to it.
 
 - [Google Sheets](./google-sheets) — a spreadsheet, one row per submission
 - [Notion](./notion) — a database, one page per submission
-- [Airtable](./airtable) — a base, through Make
+
+Both need an [upgraded workspace](/troubleshooting/limits-and-plans).
 
 ## Get notified in chat
 
@@ -32,6 +31,13 @@ instantly.
 - [Webhooks](./webhooks) — an HTTP request to a URL of your choice
 - [Zapier](./zapier) — thousands of apps, no code needed
 - [Make](./make) — visual scenarios, no code needed
+
+## Reach a tool Formspark does not connect to directly
+
+Zapier and Make bridge submissions to anything they support, so a tool without
+its own Formspark integration is usually still reachable.
+
+- [Airtable](./airtable) — a base, through Zapier or Make
 
 ## Enrich what you collect
 

@@ -95,9 +95,23 @@ Deletes the form and its submissions. Scope: `forms:write`.
 
 `POST /forms` and `PATCH /forms/{formId}` accept a form's settings, with a few restrictions. Anything the API rejects comes back as a [`validation_error`](./errors#validation-error).
 
+Beyond the three settings described below, a form carries these fields. Each of them accepts `null` to clear it, except `name`, which a form always has.
+
+| Field             | Type                    |
+| ----------------- | ----------------------- |
+| `name`            | string, 128 characters  |
+| `description`     | string, 512 characters  |
+| `technology`      | string, 128 characters  |
+| `slackChannel`    | string, 128 characters  |
+| `customHoneypot`  | string, 128 characters  |
+| `customSpamWords` | string, 2560 characters |
+| `emailThreading`  | boolean                 |
+
+`customHoneypot` and `customSpamWords` are the API side of the settings described under [spam protection](/setup/spam-protection#custom-spam-words).
+
 #### `spamProtection`
 
-Accepts one of four values:
+Accepts one of four providers, or `null` to require no challenge at all:
 
 | Value                 | Provider     |
 | --------------------- | ------------ |
@@ -112,11 +126,11 @@ The provider's secret key is not part of the API. Store it in the dashboard firs
 
 #### `webhookUrl`
 
-Must be an `http` or `https` URL. See [webhooks](/integration/webhooks).
+Must be an `http` or `https` URL, and must resolve to a public address when Formspark calls it, so an endpoint on `localhost` or a private network is rejected. See [webhooks](/integration/webhooks).
 
 #### `notificationEmails`
 
-A form accepts at most 10 notification emails. Since the list you send replaces the existing one, read the current list back first if you are adding to it rather than replacing it.
+A form accepts at most 100 notification emails, each at most 128 characters. Since the list you send replaces the existing one, read the current list back first if you are adding to it rather than replacing it.
 
 ## Submissions
 
@@ -139,4 +153,4 @@ The same, across every form in the workspace. Scope: `submissions:read`.
 
 Scope: `submissions:write`.
 
-Submissions rejected as spam expire on their own and cannot be deleted early. Deleting one returns a [`conflict`](./errors#conflict).
+Submissions quarantined as spam expire on their own and cannot be deleted early. Deleting one returns a [`conflict`](./errors#conflict).

@@ -19,7 +19,7 @@ You need an [upgraded workspace](/troubleshooting/limits-and-plans) to unlock th
 Default value: false
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="hidden" name="_feedback.whitelabel" value="true" />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
@@ -33,7 +33,7 @@ Toggles dark mode.
 Default value: false
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="hidden" name="_feedback.dark" value="true" />
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
@@ -90,7 +90,7 @@ Default value: "Please try again."
 ### Example
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input
     type="hidden"
     name="_feedback.success.title"

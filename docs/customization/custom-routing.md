@@ -31,20 +31,17 @@ Each option points at a form of its own, so create one form per destination and 
 </form>
 
 <script>
-  onChange = function (event) {
-    let action;
-    switch (event.value) {
-      case "sales":
-        action = "https://submit-form.com/your-sales-form-id";
-        break;
-      case "marketing":
-        action = "https://submit-form.com/your-marketing-form-id";
-        break;
-      case "hr":
-        action = "https://submit-form.com/your-hr-form-id";
-        break;
-    }
-    document.getElementById("my-form").action = action;
+  const FORM_IDS = {
+    sales: "your-sales-form-id",
+    marketing: "your-marketing-form-id",
+    hr: "your-hr-form-id",
   };
+
+  function onChange(select) {
+    const formId = FORM_IDS[select.value];
+    if (!formId) return;
+    document.getElementById("my-form").action =
+      "https://submit-form.com/" + formId;
+  }
 </script>
 ```
