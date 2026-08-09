@@ -50,6 +50,15 @@ export default {
   themeConfig: {
     logo: "https://cdn.formspark.io/images/formspark/logos/formspark.svg",
     outline: [2, 3],
+    // The stock copy is a paraphrased Lao Tzu quote that says nothing about
+    // what went wrong or what to do next.
+    notFound: {
+      title: "Page not found",
+      quote:
+        "This page may have moved, or the link that brought you here may be out of date. Search above, or start from the documentation home.",
+      linkLabel: "Go to the documentation home",
+      linkText: "Documentation home",
+    },
     editLink: {
       pattern:
         "https://github.com/formspark/documentation/edit/master/docs/:path",
@@ -169,6 +178,7 @@ export default {
       {
         text: "Integrations",
         items: [
+          { text: "Overview", link: "/integration/" },
           { text: "Airtable", link: "/integration/airtable" },
           { text: "Google Sheets", link: "/integration/google-sheets" },
           { text: "Make", link: "/integration/make" },
