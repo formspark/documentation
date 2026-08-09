@@ -1,0 +1,146 @@
+// The documentation's navigation tree. Every page belongs to exactly one
+// group, and a group's order is the order a reader is expected to need it.
+export const sidebar = [
+  {
+    text: "Introduction",
+    items: [{ text: "About", link: "/" }],
+  },
+  {
+    text: "Setup",
+    items: [
+      { text: "Installation", link: "/setup/" },
+      { text: "Spam protection", link: "/setup/spam-protection" },
+      { text: "File uploads", link: "/setup/file-uploads" },
+      { text: "Arrays and objects", link: "/setup/arrays-and-objects" },
+    ],
+  },
+  {
+    text: "Customization",
+    items: [
+      { text: "Redirection", link: "/customization/redirection" },
+      { text: "Feedback page", link: "/customization/feedback-page" },
+      {
+        text: "Notification email",
+        link: "/customization/notification-email",
+      },
+      { text: "Direct replies", link: "/customization/direct-replies" },
+      { text: "Custom routing", link: "/customization/custom-routing" },
+    ],
+  },
+  {
+    text: "Dashboard",
+    items: [
+      {
+        text: "Inviting team members",
+        link: "/dashboard/inviting-team-members",
+      },
+      {
+        text: "Additional workspaces",
+        link: "/dashboard/additional-workspaces",
+      },
+      {
+        text: "Redeeming vouchers",
+        link: "/dashboard/redeeming-vouchers",
+      },
+      {
+        text: "Email notification settings",
+        link: "/dashboard/email-notification-settings",
+      },
+      {
+        text: "Autoresponder",
+        link: "/dashboard/autoresponder",
+      },
+      {
+        text: "Exporting submissions",
+        link: "/dashboard/exporting-submissions",
+      },
+    ],
+  },
+  {
+    text: "HTML form",
+    items: [
+      { text: "Form validation", link: "/html-form/form-validation" },
+      { text: "Form styling", link: "/html-form/form-styling" },
+      {
+        text: "Special input types",
+        link: "/html-form/special-input-types",
+      },
+      { text: "Drop-down list", link: "/html-form/drop-down-list" },
+      {
+        text: "Submit in different tab",
+        link: "/html-form/submit-in-different-tab",
+      },
+    ],
+  },
+  {
+    text: "Examples",
+    items: [
+      { text: "AJAX submissions", link: "/examples/ajax" },
+      { text: "Alpine.js", link: "/examples/alpinejs" },
+      { text: "Analog", link: "/examples/analog" },
+      { text: "Angular", link: "/examples/angular" },
+      { text: "Astro", link: "/examples/astro" },
+      { text: "Eleventy", link: "/examples/eleventy" },
+      { text: "Framer", link: "/examples/framer" },
+      { text: "Gatsby", link: "/examples/gatsby" },
+      { text: "HTMX", link: "/examples/htmx" },
+      { text: "Hugo", link: "/examples/hugo" },
+      { text: "Jekyll", link: "/examples/jekyll" },
+      { text: "Next.js", link: "/examples/nextjs" },
+      { text: "Nuxt", link: "/examples/nuxtjs" },
+      { text: "Preact", link: "/examples/preact" },
+      { text: "Qwik", link: "/examples/qwik" },
+      { text: "React", link: "/examples/react" },
+      { text: "React Native", link: "/examples/react-native" },
+      { text: "Remix", link: "/examples/remix" },
+      { text: "SolidStart", link: "/examples/solidstart" },
+      { text: "Svelte", link: "/examples/svelte" },
+      { text: "SvelteKit", link: "/examples/sveltekit" },
+      { text: "VitePress", link: "/examples/vitepress" },
+      { text: "Vue", link: "/examples/vue" },
+      { text: "Webflow", link: "/examples/webflow" },
+      { text: "WordPress", link: "/examples/wordpress" },
+    ],
+  },
+  {
+    text: "Integrations",
+    items: [
+      { text: "Overview", link: "/integration/" },
+      { text: "Airtable", link: "/integration/airtable" },
+      { text: "Google Sheets", link: "/integration/google-sheets" },
+      { text: "Make", link: "/integration/make" },
+      { text: "Notion", link: "/integration/notion" },
+      { text: "Slack", link: "/integration/slack" },
+      { text: "UTM parameters", link: "/integration/utm-parameters" },
+      { text: "Webhooks", link: "/integration/webhooks" },
+      { text: "Zapier", link: "/integration/zapier" },
+    ],
+  },
+  {
+    text: "API",
+    items: [
+      { text: "Overview", link: "/api/" },
+      { text: "API tokens", link: "/api/api-tokens" },
+      { text: "Reference", link: "/api/reference" },
+      { text: "Pagination", link: "/api/pagination" },
+      { text: "Errors", link: "/api/errors" },
+    ],
+  },
+  {
+    text: "Troubleshooting",
+    items: [
+      {
+        text: "Common issues",
+        link: "/troubleshooting/common-issues",
+      },
+      {
+        text: "Limits and plans",
+        link: "/troubleshooting/limits-and-plans",
+      },
+      {
+        text: "Email reception",
+        link: "/troubleshooting/email-reception",
+      },
+    ],
+  },
+];
