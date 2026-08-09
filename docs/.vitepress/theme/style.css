@@ -13,3 +13,11 @@
     width: 240px;
   }
 }
+
+/* A not-found page keeps the has-sidebar class of whatever path was asked for,
+   so the layout reserves --vp-sidebar-width, but renders no sidebar to fill it
+   and the message ends up that far right of centre. Reclaim the reservation
+   wherever the not-found view is what is being shown. */
+.VPContent:has(.NotFound) {
+  padding-left: 0;
+}
