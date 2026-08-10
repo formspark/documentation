@@ -24,6 +24,21 @@ lang: en-US
 
 Ensure that you are signed in with the correct email address.
 
+## I want to delete my account
+
+You can do this yourself, under
+[Settings → Delete account](https://dashboard.formspark.io/account/delete).
+
+It removes the workspaces you are the only member of, along with their forms
+and submissions, and takes your address off every form that notifies it. Your
+sign-in is kept so you can come back later, and it cannot be undone. See
+[account settings](/dashboard/account-settings#deleting-your-account) for what
+is removed, what is kept, and what to do if you are the only administrator of a
+shared workspace.
+
+To delete a single workspace rather than your whole account, open that
+workspace's settings instead.
+
 ## My workspace suddenly seems to be out of submissions
 
 Ensure that you are connected to the right workspace: [View My Workspaces](https://dashboard.formspark.io/workspaces).

@@ -54,6 +54,10 @@ export const sidebar = [
         text: "Exporting submissions",
         link: "/dashboard/exporting-submissions",
       },
+      {
+        text: "Account settings",
+        link: "/dashboard/account-settings",
+      },
     ],
   },
   {
