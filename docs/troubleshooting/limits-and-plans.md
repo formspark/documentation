@@ -40,3 +40,7 @@ Upgrades, bundles, and deals apply to a single workspace. Additional user-create
 ## Team members
 
 Free workspaces include 5 team members. Upgraded workspaces have no practical member limit. Members who joined before a limit applied always keep their access; limits only affect new invitations. See [inviting team members](/dashboard/inviting-team-members).
+
+## How quickly Zapier sees a submission
+
+Zapier checks Formspark for new submissions on a schedule of its own. Upgraded workspaces are answered every time, so a submission reaches your Zap as quickly as Zapier asks for it. Free workspaces are answered at most once every 15 minutes, so a submission can take that long to arrive. No submission is lost either way. See [Zapier](/integration/zapier#how-often-zapier-checks-for-submissions).
