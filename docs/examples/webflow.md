@@ -11,15 +11,6 @@ lang: en-US
 
 ![Webflow action](/webflow-action.jpeg)
 
-::: warning
-Each code block on this page is complete on its own, and they are alternatives rather than
-additions. Use exactly one.
-
-Every block binds its own submit handler to the same form, so pasting two of them submits the form
-twice. The copy without spam protection sends no challenge token, Formspark rejects it, and Webflow
-paints the error state over a submission that actually succeeded.
-:::
-
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
 
