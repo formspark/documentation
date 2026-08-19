@@ -7,9 +7,18 @@ lang: en-US
 
 1. Copy your form's action URL.
 2. Paste the action URL into Webflow's `action` field in the form element’s settings in the Designer.
-3. Copy-paste the code below into `Project Settings > Custom Code > Footer Code`.
+3. Copy-paste one of the code blocks below into `Project Settings > Custom Code > Footer Code`.
 
 ![Webflow action](/webflow-action.jpeg)
+
+::: warning
+Each code block on this page is complete on its own, and they are alternatives rather than
+additions. Use exactly one.
+
+Every block binds its own submit handler to the same form, so pasting two of them submits the form
+twice. The copy without spam protection sends no challenge token, Formspark rejects it, and Webflow
+paints the error state over a submission that actually succeeded.
+:::
 
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
@@ -47,6 +56,9 @@ lang: en-US
 
 ## Redirect after submission
 
+Replaces the first code block on this page: it redirects instead of showing Webflow's success and
+error states.
+
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
 
@@ -79,6 +91,9 @@ lang: en-US
 ```
 
 ## Botpoison spam protection
+
+Replaces the first code block on this page. Use this one on its own when the form has Botpoison
+enabled.
 
 ```html
 <!-- Project Settings > Custom Code > Footer Code -->
@@ -128,6 +143,9 @@ lang: en-US
 ```
 
 ## Turnstile spam protection
+
+Replaces the first code block on this page. Use this one on its own when the form has Turnstile
+enabled.
 
 1. First, add a Turnstile widget element to your form:
 
