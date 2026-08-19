@@ -9,15 +9,19 @@ lang: en-US
 Formspark stores a link to your uploaded file, not the file itself. You upload the file to a third-party storage provider and Formspark records the resulting URL with the submission.
 :::
 
-The example below uses Uploadcare. Any provider that returns a public URL after upload will work the same way.
+The examples below use Uploadcare and Cloudinary. Any provider that returns a public URL after upload will work the same way.
 
 ## Uploadcare
 
-Create a free Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/). Their free tier gives you 3000
-uploads per month.
+Create an Uploadcare account at [https://uploadcare.com/](https://uploadcare.com/).
 
-Want to upload non-image files? You can add a payment method to your Uploadcare account without having to leave their
-free plan.
+::: warning
+Uploadcare's free plan is metered in operations, not uploads, and an operation covers uploading,
+image transformations, video processing and document conversion alike. The allowance is small enough
+that a busy form will pass it, and the cheapest paid plan is a significant step up. Check
+[their pricing](https://uploadcare.com/pricing/) against your expected volume before you commit, and
+see [Cloudinary](#cloudinary) below for another option.
+:::
 
 ### Steps
 
@@ -95,9 +99,67 @@ Final code:
 </html>
 ```
 
+## Cloudinary
+
+[Cloudinary](https://cloudinary.com/) offers an upload widget that works the same way: the visitor
+uploads, and you put the resulting URL into a hidden field that Formspark records.
+
+### Steps
+
+Create an [unsigned upload preset](https://cloudinary.com/documentation/upload_presets) in your
+Cloudinary console. Unsigned is what lets the browser upload without a server-side signature, so the
+preset should restrict what it accepts.
+
+Add the widget script to the `head` of your HTML file.
+
+```html
+<script
+  src="https://upload-widget.cloudinary.com/latest/global/all.js"
+  type="text/javascript"
+></script>
+```
+
+Add a hidden input to hold the URL, and a button that opens the widget.
+
+```html
+<!-- Photo -->
+<input type="hidden" id="photo" name="photo" />
+<button type="button" id="upload-widget">Upload a photo</button>
+```
+
+Wire the widget up so a successful upload writes its URL into that input.
+
+```html
+<script type="text/javascript">
+  var widget = cloudinary.createUploadWidget(
+    {
+      cloudName: "your-cloud-name",
+      uploadPreset: "your-unsigned-upload-preset",
+    },
+    function (error, result) {
+      if (!error && result && result.event === "success") {
+        document.getElementById("photo").value = result.info.secure_url;
+      }
+    },
+  );
+
+  document
+    .getElementById("upload-widget")
+    .addEventListener("click", function () {
+      widget.open();
+    });
+</script>
+```
+
+The submitted `photo` field now carries the uploaded file's URL.
+
+::: tip
+Give the button `type="button"`. A button inside a form defaults to `type="submit"`, so without it
+opening the widget submits the form instead.
+:::
+
 ## Alternatives
 
-- [Cloudinary](https://cloudinary.com/): image and video focused, generous free tier.
 - [Filestack](https://www.filestack.com/): drop-in widget similar to Uploadcare.
 - [Bunny Storage](https://bunny.net/storage/): cheap edge storage with a simple HTTP API.
 - [Amazon S3 pre-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html): generate an upload URL from your own backend, then submit the resulting file URL to Formspark.
