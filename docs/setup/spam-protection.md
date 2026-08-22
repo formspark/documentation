@@ -16,7 +16,7 @@ Formspark offers the following solutions to prevent spam:
 - Custom spam words
 - Honeypot technique
 
-On top of whichever of these you enable, every submission is also screened by our [automatic spam filtering](#automatic-spam-filtering).
+On top of whichever of these you enable, every submission is screened by our [automatic spam filtering](#automatic-spam-filtering), unless you switch it off for that form.
 
 ![Spam protection](/spam-protection.png)
 
@@ -221,9 +221,20 @@ const body = {
 
 ## Automatic spam filtering
 
-On top of any provider you choose, Formspark automatically screens every submission for spam. This runs on all forms, requires no setup, and is invisible to your visitors.
+On top of any provider you choose, Formspark screens every submission for spam. It is on for every new form, requires no setup, and is invisible to your visitors.
 
-The filtering is powered by [OOPSpam](https://www.oopspam.com/). Because it runs automatically, there is nothing to configure, and it complements the provider you select above rather than replacing it.
+The filtering is powered by [OOPSpam](https://www.oopspam.com/). It complements the provider you select above rather than replacing it.
+
+### Switching it off
+
+Under `Spam protection` in your form's settings, open `Automatic filter` and turn off `Screen submissions for spam`.
+
+Two things change for that form when you do:
+
+- Every submission is delivered, including the ones the filter would have held back. Each of those counts against your submission quota, where a filtered submission costs you nothing.
+- Filtered submissions no longer appear under `Spam`, which is where you would otherwise recover one the filter judged wrongly.
+
+Your honeypot, custom spam words and chosen provider are unaffected and keep running.
 
 ## Custom spam words
 
