@@ -132,6 +132,105 @@ Must be an `http` or `https` URL, and must resolve to a public address when Form
 
 A form accepts at most 100 notification emails, each at most 128 characters. Since the list you send replaces the existing one, read the current list back first if you are adding to it rather than replacing it.
 
+## Templates
+
+A form carries two email templates: the `notification` template lays out the email
+your recipients get, and the `autoresponder` template is the reply sent to whoever
+submitted the form. Both are addressed by the form and the kind.
+
+A form without a template uses the default layout, and reading one returns
+[`not_found`](./errors#not-found).
+
+### `GET /forms/{formId}/templates/{kind}`
+
+Scope: `forms:read`.
+
+```json
+{
+  "kind": "autoresponder",
+  "mode": "code",
+  "code": "<p>Thanks {{data.firstName}}</p>",
+  "updatedAt": "2026-09-17T10:04:00.000Z",
+  "paused": false
+}
+```
+
+### `PUT /forms/{formId}/templates/{kind}`
+
+Writes the body, creating the template if the form has none. Scope: `forms:write`.
+
+```sh
+curl -X PUT https://api.formspark.io/public/v1/forms/your-form-id/templates/autoresponder \
+  -H "Authorization: Bearer $FORMSPARK_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"code":"<p style=\"font-size:16px\">Thanks {{data.firstName}}</p>"}'
+```
+
+### `DELETE /forms/{formId}/templates/{kind}`
+
+Scope: `forms:write`. Notifications go back to the default layout.
+
+### `POST /forms/{formId}/templates/{kind}/preview`
+
+Renders the template the way the delivered email is rendered, and sends nothing.
+Scope: `forms:read`.
+
+```sh
+curl -X POST https://api.formspark.io/public/v1/forms/your-form-id/templates/autoresponder/preview \
+  -H "Authorization: Bearer $FORMSPARK_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"data":{"firstName":"Ada","email":"ada@example.com"}}'
+```
+
+The response holds the `html` and the `text` alternative. Send `data` to choose
+what it renders against. Leave it out and the form's own example data is used.
+
+### Writing a template
+
+`code` is HTML with [Handlebars](https://handlebarsjs.com/) placeholders. The
+submission is reachable under `data`, so a field named `firstName` is
+<code v-pre>{{data.firstName}}</code>. It accepts at most 262144 characters.
+
+Style it with inline `style` attributes. The API sends no separate stylesheet, and
+mail clients treat a `<style>` block inconsistently.
+
+A template that did not compile comes back as
+[`template_invalid`](./errors#template-invalid), with an `errors` array naming
+what is wrong. The check runs before anything is stored, so a form that already
+had a working template keeps it.
+
+### Templates built in the visual editor
+
+`mode` tells you how a template is laid out. `visual` means someone built it in the
+template editor, and `code` means it was written as code.
+
+::: warning
+Writing code to a `visual` template replaces its layout, and the template editor
+cannot rebuild it afterwards. Read the template first if you are not sure which one
+you are pointing at.
+:::
+
+### Switching the autoresponder on
+
+The autoresponder has no separate switch. Writing an `autoresponder` template turns
+it on, and deleting that template turns it off. It is available on
+[upgraded workspaces](/troubleshooting/limits-and-plans), so writing one for a free
+workspace returns [`upgrade_required`](./errors#upgrade-required).
+
+`paused` reports whether our content check has stopped the template sending. It is
+`null` for a `notification` template, which is not content checked.
+
+::: warning
+A paused autoresponder sends nothing, and the write that paused it still answers
+`200`. Check `paused` after every write.
+:::
+
+The check reads the template on its own, with no submission filled in. Marketing
+phrasing and bare links are what usually trip it, so prefer a short confirmation and
+a link with an anchor rather than a naked URL. Rewriting the template has it scored
+again. If it stays paused,
+[get in touch](https://dashboard.formspark.io/support/contact).
+
 ## Submissions
 
 ### `GET /forms/{formId}/submissions`

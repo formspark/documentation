@@ -15,6 +15,8 @@ To enable the autoresponder for a form, navigate to its `Settings` section and c
 
 The template is designed in a visual editor, built in partnership with [Postcraft](https://postcraft.io/). Add your own copy and imagery, and include a recap of the submitted data.
 
+You can also write the template from your own code, without opening the dashboard at all. See [templates](/api/reference#templates) in the API reference.
+
 ## Who receives the autoresponse
 
 Formspark determines the recipient from your form's submission data. The first of the following fields that contains a valid email address is used:

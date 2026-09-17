@@ -56,6 +56,23 @@ The request body or query string is invalid. An `errors` array names the fields:
 
 Also returned for a `startingAfter` cursor this API did not issue.
 
+## Template invalid
+
+`400` · `template_invalid`
+
+An [email template](./reference#templates) you sent could not be compiled. An
+`errors` array names what is wrong, one entry per problem:
+
+```json
+{
+  "code": "template_invalid",
+  "detail": "The template could not be compiled.",
+  "errors": ["syntax-error: {{#if}} was never closed"]
+}
+```
+
+Nothing was stored, so a form that already had a template still has it.
+
 ## Quota exceeded
 
 `403` · `quota_exceeded`
@@ -73,6 +90,14 @@ The API is available on upgraded workspaces, and the request touched a free one.
 `409` · `conflict`
 
 The resource cannot be changed that way. Deleting a submission that was quarantined as spam returns this: quarantined submissions expire on their own and cannot be deleted early.
+
+## Upstream unavailable
+
+`503` · `upstream_unavailable`
+
+A service this operation depends on could not be reached. Only the
+[template endpoints](./reference#templates) return this, because only they call one.
+Nothing was changed, and the request is safe to retry after a pause.
 
 ## Internal error
 
