@@ -7,7 +7,7 @@ lang: en-US
 
 You can invite members to your workspace to create forms and view submissions as a team. Each member has a role that decides what they can change.
 
-When you invite team members to join your Formspark workspace, they will receive a confirmation email. The link in it works once and expires after 7 days.
+When you invite team members to join your Formspark workspace, they will receive an invitation email. The link in it works once and expires after 7 days.
 
 Free workspaces include 5 team members. Upgraded workspaces have no practical member limit. See [limits and plans](/troubleshooting/limits-and-plans).
 
@@ -26,7 +26,7 @@ You can send invitations to users who still need to create a Formspark account o
 
 ## Pending invitations
 
-Invitations nobody has accepted yet are listed under `Pending invitations` on the `Members` screen, with the days they have left.
+Invitations nobody has accepted yet are listed under `Pending invitations` on the `Members` screen, with the number of days before each one expires.
 
 - Press `Resend` to email a fresh link. The old link stops working.
 - Press `Revoke` to take an invitation back. Its link stops working.
@@ -56,8 +56,7 @@ A _viewer_ reads and nothing else. They cannot change a setting, break an
 integration or delete anything, so you can give a client access to their own
 submissions without giving them the rest of the workspace.
 
-An _editor_ builds and maintains forms. This is the role every existing member
-already had.
+An _editor_ builds and maintains forms.
 
 Only an _admin_ can invite another admin, or resend and revoke an admin
 invitation. A workspace always keeps at least one admin.
