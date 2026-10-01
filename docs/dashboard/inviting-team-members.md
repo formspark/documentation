@@ -22,7 +22,7 @@ You can send invitations to users who still need to create a Formspark account o
 3. Choose their role
 4. Press `Send invitation`
 
-![Workspace section](/invite-team-member.png)
+![Invite a member form](/invite-team-member.png)
 
 ## Pending invitations
 
