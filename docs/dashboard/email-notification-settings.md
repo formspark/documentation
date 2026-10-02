@@ -14,6 +14,12 @@ To manage your form's email notification settings, navigate to its `Settings` se
 
 ![Email notification settings](/email-notification-settings.png)
 
+## Threading
+
+Email threading is on by default, so your mail client groups a form's notifications into one conversation.
+
+Turn it off to receive each submission as a separate email.
+
 ## Custom templates
 
 You can customize the notification email template of a form.
