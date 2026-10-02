@@ -36,8 +36,8 @@ sign-in is kept so you can come back later, and it cannot be undone. See
 is removed, what is kept, and what to do if you are the only administrator of a
 shared workspace.
 
-To delete a single workspace rather than your whole account, open that
-workspace's settings instead.
+To delete a single workspace rather than your whole account, see
+[deleting a workspace](/dashboard/additional-workspaces#deleting-a-workspace).
 
 ## My workspace suddenly seems to be out of submissions
 

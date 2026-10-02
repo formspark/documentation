@@ -9,8 +9,9 @@ Settings that belong to you rather than to one of your workspaces. Open them
 from the avatar menu in the dashboard, or go straight to
 [your settings](https://dashboard.formspark.io/account/api-tokens).
 
-Workspace settings, including billing, team members and deleting a single
-workspace, live with the workspace instead.
+Workspace settings, including billing, team members and
+[deleting a single workspace](/dashboard/additional-workspaces#deleting-a-workspace),
+live with the workspace instead.
 
 ## API tokens
 

@@ -22,3 +22,24 @@ workspace. See [limits and plans](/troubleshooting/limits-and-plans).
 ## Moving a form to another workspace
 
 Forms cannot be moved between workspaces from the dashboard. If you need to transfer a form, [contact support](mailto:support@formspark.io) and we'll move it for you.
+
+## Deleting a workspace
+
+Only an admin can delete a workspace. See
+[roles](/dashboard/inviting-team-members#roles).
+
+1. Open the workspace's `Settings` screen
+2. Press `Delete workspace`
+3. Type the workspace's name to confirm, then press `Delete workspace`
+
+Deletion cannot be undone, so export anything you want to keep first. See
+[exporting submissions](/dashboard/exporting-submissions).
+
+- Its forms, submissions, notification settings and integrations are removed
+  for everyone in it. Forms posting to it stop accepting submissions.
+- Its members lose access, and links in its pending invitations stop working.
+- Submissions bought for it are not refunded, since bundles belong to the
+  workspace.
+
+You can delete a workspace that other people use, and your last workspace too.
+A workspace you create afterwards starts with 0 submissions.
