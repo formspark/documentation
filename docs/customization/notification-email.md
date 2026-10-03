@@ -55,6 +55,8 @@ Create a hidden input with the name `_email.template.footer` and the value `fals
 <input type="hidden" name="_email.template.footer" value="false" />
 ```
 
+Guests always see a short footer. It says who added their address and links to stop the emails.
+
 ## Custom templates
 
 You can go beyond these options and design the notification email in a visual template editor, built in partnership with [Postcraft](https://postcraft.io/).

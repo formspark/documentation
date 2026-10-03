@@ -26,6 +26,8 @@ You can customize the notification email template of a form.
 
 Templates are designed in a visual editor, built in partnership with [Postcraft](https://postcraft.io/).
 
+Team members receive the template exactly as you designed it. Guests see a short footer below it, with a link to stop the emails.
+
 Dynamic values in a template use the [Handlebars](https://handlebarsjs.com/) templating language.
 
 ```handlebars
