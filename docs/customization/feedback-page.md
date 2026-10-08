@@ -46,22 +46,9 @@ Default value: false
 
 Customizes the language of the feedback page.
 
-Default value: "en"
+Default value: the value of [`_language`](/customization/language) when set, otherwise "en"
 
-Supported values:
-
-| Value | Language   |
-| ----- | ---------- |
-| "de"  | German     |
-| "en"  | English    |
-| "es"  | Spanish    |
-| "fr"  | French     |
-| "it"  | Italian    |
-| "nl"  | Dutch      |
-| "pl"  | Polish     |
-| "pt"  | Portuguese |
-| "ru"  | Russian    |
-| "uk"  | Ukrainian  |
+See [Language](/customization/language#supported-values) for the supported values. Prefer `_language`, which also translates the autoresponder.
 
 ### `_feedback.success.title`
 

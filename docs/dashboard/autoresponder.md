@@ -43,6 +43,12 @@ Replies to an autoresponse go to your form's first notification recipient, so a 
 
 Every autoresponse includes a footer identifying the form it was sent on behalf of, along with an unsubscribe link. Recipients who unsubscribe stop receiving autoresponses; the footer cannot be removed.
 
+## Language
+
+The subject and the footer are in English by default. Add a hidden `_language` field to send them in your visitor's language. See [Language](/customization/language) for the supported values.
+
+The body is your own template, so write it in the language you want.
+
 ## Content policy
 
 Use the autoresponder for transactional confirmations, not for marketing or bulk email.
