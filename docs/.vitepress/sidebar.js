@@ -19,6 +19,7 @@ export const sidebar = [
     items: [
       { text: "Redirection", link: "/customization/redirection" },
       { text: "Feedback page", link: "/customization/feedback-page" },
+      { text: "Language", link: "/customization/language" },
       {
         text: "Notification email",
         link: "/customization/notification-email",
