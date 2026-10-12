@@ -33,18 +33,21 @@ It does not translate:
 
 ## Supported values
 
-| Value | Language   |
-| ----- | ---------- |
-| "de"  | German     |
-| "en"  | English    |
-| "es"  | Spanish    |
-| "fr"  | French     |
-| "it"  | Italian    |
-| "nl"  | Dutch      |
-| "pl"  | Polish     |
-| "pt"  | Portuguese |
-| "ru"  | Russian    |
-| "uk"  | Ukrainian  |
+| Value | Language           |
+| ----- | ------------------ |
+| "de"  | German             |
+| "en"  | English            |
+| "es"  | Spanish            |
+| "fr"  | French             |
+| "it"  | Italian            |
+| "ja"  | Japanese           |
+| "ko"  | Korean             |
+| "nl"  | Dutch              |
+| "pl"  | Polish             |
+| "pt"  | Portuguese         |
+| "ru"  | Russian            |
+| "uk"  | Ukrainian          |
+| "zh"  | Simplified Chinese |
 
 Any other value falls back to English.
 
