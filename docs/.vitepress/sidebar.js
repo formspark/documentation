@@ -101,7 +101,7 @@ export const sidebar = [
       { text: "Qwik", link: "/examples/qwik" },
       { text: "React", link: "/examples/react" },
       { text: "React Native", link: "/examples/react-native" },
-      { text: "Remix", link: "/examples/remix" },
+      { text: "React Router (Remix)", link: "/examples/remix" },
       { text: "SolidStart", link: "/examples/solidstart" },
       { text: "Svelte", link: "/examples/svelte" },
       { text: "SvelteKit", link: "/examples/sveltekit" },
