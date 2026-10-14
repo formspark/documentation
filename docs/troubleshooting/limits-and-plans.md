@@ -35,10 +35,6 @@ Submission bundles do not expire. Buy one when you need it, spend it at your pac
 
 Formspark does not cut you off at exactly zero. There is a small buffer past the end of your submissions, and recent submissions that arrive beyond it are held back rather than discarded. You find them under `Overflow` in your form's submissions. Purchasing a new bundle releases the held submissions straight into your inbox. Past a further limit, new submissions are discarded rather than held.
 
-## Purchases and invoices
-
-Workspace admins find every purchase, with its invoice or receipt, in the workspace's `Settings`, under `Billing` in `Purchases`. See [purchases and invoices](/dashboard/purchases) for adding business details and for what a refund takes back.
-
 ## Everything is per workspace
 
 Upgrades, bundles, and deals apply to a single workspace. Additional user-created workspaces start with 0 submissions and can be upgraded separately. See [additional workspaces](/dashboard/additional-workspaces).
