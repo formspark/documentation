@@ -9,7 +9,7 @@ You can invite members to your workspace to create forms and view submissions as
 
 When you invite team members to join your Formspark workspace, they will receive an invitation email. The link in it works once and expires after 7 days.
 
-Free workspaces include 5 team members. Upgraded workspaces have no practical member limit. See [limits and plans](/troubleshooting/limits-and-plans).
+Free workspaces include 5 team members. Upgraded workspaces hold up to 50. See [limits and plans](/troubleshooting/limits-and-plans).
 
 :::tip
 You can send invitations to users who still need to create a Formspark account or to those who already have one.
@@ -45,11 +45,13 @@ Every member is an _admin_, an _editor_ or a _viewer_.
 | Delete forms and submissions        | Yes   | Yes    | No     |
 | Connect and disconnect integrations | Yes   | Yes    | No     |
 | Change spam protection              | Yes   | Yes    | No     |
+| Redeem a voucher                    | Yes   | Yes    | No     |
 | Invite a member                     | Yes   | Yes    | No     |
 | Resend or revoke an invitation      | Yes   | Yes    | No     |
 | Change a member's role              | Yes   | No     | No     |
 | Remove a member                     | Yes   | No     | No     |
 | Leave the workspace                 | Yes   | Yes    | Yes    |
+| See purchases and invoices          | Yes   | No     | No     |
 | Delete the workspace                | Yes   | No     | No     |
 
 A _viewer_ reads and nothing else. They cannot change a setting, break an
@@ -60,6 +62,9 @@ An _editor_ builds and maintains forms.
 
 Only an _admin_ can invite another admin, or resend and revoke an admin
 invitation. A workspace always keeps at least one admin.
+
+An admin cannot be removed from the workspace. To remove one, change their role
+first.
 
 :::tip
 Choose the role when you send the invitation. You can change it later from the

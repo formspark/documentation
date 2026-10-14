@@ -6,7 +6,7 @@ lang: en-US
 # File uploads
 
 ::: tip
-Formspark stores a link to your uploaded file, not the file itself. You upload the file to a third-party storage provider and Formspark records the resulting URL with the submission.
+Formspark stores a link to your uploaded file, not the file itself. You upload the file to a third-party storage provider and Formspark records the resulting URL with the submission. A submission that carries the file itself is rejected with a `400` error.
 :::
 
 The examples below use Uploadcare and Cloudinary. Any provider that returns a public URL after upload will work the same way.

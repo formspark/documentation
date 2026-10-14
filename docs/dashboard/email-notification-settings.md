@@ -5,12 +5,14 @@ lang: en-US
 
 # Email notification settings
 
-To manage your form's email notification settings, navigate to its `Settings` section.
+To manage your form's email notification settings, open its `Settings` section and expand `Notifications` under `Emails`.
 
 ## Recipients
 
 - You can enable/disable email notifications for your workspace's team members.
 - You can add guests to send email notifications to people outside your workspace/organization.
+
+A guest receives a confirmation email first, and nothing else until they accept it. The recipient list shows a guest who has not accepted yet as pending.
 
 ![Email notification settings](/email-notification-settings.png)
 
@@ -26,7 +28,9 @@ You can customize the notification email template of a form.
 
 Templates are designed in a visual editor, built in partnership with [Postcraft](https://postcraft.io/).
 
-Team members receive the template exactly as you designed it. Guests see a short footer below it, with a link to stop the emails.
+A custom template goes out exactly as you designed it to every recipient, team member or guest. Formspark adds no footer and no unsubscribe link, so when a guest asks to stop receiving it, remove them from the recipients.
+
+Every custom template passes a content check. If the check pauses yours, the form sends no notifications and its settings say so. Contact support to have it reviewed, or press `Revert to default` to go back to the default template.
 
 Dynamic values in a template use the [Handlebars](https://handlebarsjs.com/) templating language.
 

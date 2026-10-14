@@ -8,23 +8,19 @@ lang: en-US
 Connecting Formspark and Slack takes only seconds and is the easiest way to post form submissions from a website to
 Slack.
 
-1. Click the `Connect with Slack` link found in your form's settings.
-
-   ![Connect with Slack](/connect-with-slack.png)
-
+1. Open your form's settings, find the `Slack` row under `Integrations`, and click `Connect`.
 2. Allow Formspark to access your Slack workspace.
 
    ![Connect with Slack](/allow-slack.png)
 
-3. Update the `Slack channel` field found in your form's settings.
+3. Back in your form's settings, open the `Slack` row with `Configure` and enter the channel name in the `Channel` field, for example `marketing-notifications`. A leading `#` is fine.
+4. Click `Save`.
 
-   ![Connect with Slack](/update-slack-channel.png)
-
-4. Save your changes.
+To stop posting submissions, open the `Slack` row with `Configure`, click `Disconnect`, and confirm with `Disconnect Slack`.
 
 ## Private channels
 
-Connecting Formspark to a private channel requires 2 extra steps.
+Formspark can post to any public channel without being added to it. Connecting Formspark to a private channel requires 2 extra steps.
 
 1. Click the `Connect an app` link found in your private channel.
 

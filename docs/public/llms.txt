@@ -29,8 +29,10 @@ submission, not on the form:
 
 - `_redirect` sends the visitor to a URL afterwards
 - `_error` sends them somewhere else if something fails
-- `_append` appends the submission id to the redirect
+- `_append` set to `false` stops the submission's fields being appended to
+  the redirect URL
 - `_email.subject`, `_email.from`, `_email.replyto` override the notification
+- `_language` picks the language of the feedback page and autoresponder
 - `_honeypot`, `_gotcha` are spam traps, always active
 
 ## Managing forms
@@ -59,13 +61,14 @@ curl "https://api.formspark.io/public/v1/forms/FORM_ID/submissions?limit=50" \
 
 Endpoints: `GET /me`, `GET|POST /workspaces`, `PATCH /workspaces/{id}`,
 `GET|POST /forms`, `GET|PATCH|DELETE /forms/{id}`,
-`GET /forms/{id}/submissions`, `GET /workspaces/{id}/submissions`,
-`DELETE /submissions/{id}`.
+`GET|PUT|DELETE /forms/{id}/templates/{kind}`,
+`POST /forms/{id}/templates/{kind}/preview`, `GET /forms/{id}/submissions`,
+`GET /workspaces/{id}/submissions`, `DELETE /submissions/{id}`.
 
 Notes for writing against it:
 
 - `PATCH` applies the fields you send and keeps the rest. Send `null` to clear
-  a field.
+  a field, except the booleans, which take `true` or `false`.
 - Submissions are cursor paginated. Branch on `hasMore`, pass `nextCursor` as
   `startingAfter`, treat cursors as opaque.
 - Errors are `application/problem+json`. Branch on `code`.
@@ -80,8 +83,9 @@ OpenAPI 3.1: https://api.formspark.io/public/v1/openapi.json
 
 One free workspace per account with 250 submissions, 10 forms, and 5 team
 members. Upgrading a workspace is a $25 one-time payment for 50,000
-submissions (no expiry, no subscription), 100 forms, unlimited team members,
-the autoresponder, feedback-page branding removal, and the REST API.
+submissions (no expiry, no subscription), 100 forms, 50 team members, the
+autoresponder, Google Sheets, Notion, feedback-page branding removal, and the
+REST API.
 Everything is per workspace. Details:
 https://documentation.formspark.io/troubleshooting/limits-and-plans
 

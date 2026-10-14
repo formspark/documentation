@@ -14,7 +14,10 @@ lang: en-US
   </head>
   <body>
     <h1>{{ .Title }}</h1>
-    <form action="https://submit-form.com/{{ .Site.Params.formspark_form_id }}">
+    <form
+      action="https://submit-form.com/{{ .Site.Params.formspark_form_id }}"
+      method="POST"
+    >
       <textarea name="message"></textarea>
       <button type="submit">Submit</button>
     </form>
@@ -34,7 +37,10 @@ formspark_form_id = "your-form-id"
 
 ```html
 <!-- layouts/partials/contact-form.html -->
-<form action="https://submit-form.com/{{ .Site.Params.formspark_form_id }}">
+<form
+  action="https://submit-form.com/{{ .Site.Params.formspark_form_id }}"
+  method="POST"
+>
   <label for="message">Message</label>
   <textarea id="message" name="message" required></textarea>
   <button type="submit">Send</button>

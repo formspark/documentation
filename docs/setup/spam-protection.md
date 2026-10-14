@@ -20,11 +20,23 @@ On top of whichever of these you enable, every submission is screened by our [au
 
 ![Spam protection](/spam-protection.png)
 
-Formspark will not save submissions, send notifications or decrement your submission counter if any of the following conditions are true:
+Formspark will not deliver a submission to your inbox, send notifications or decrement your submission counter if any of the following conditions are true:
 
 - The submission is empty
-- The spam protection verification was unsuccessful
+- The challenge verification was unsuccessful
 - The submission contains a honeypot
+- The submission contains one of your custom spam words
+- The automatic filter flags the submission as spam
+
+An empty submission is discarded. Every other rejected submission is kept for you to review. See [rejected submissions](#rejected-submissions).
+
+## Rejected submissions
+
+A submission rejected as spam lands under `Spam` instead of `Inbox`. Open your form's `Submissions` and switch the view to `Spam` to see it. Hover its `Spam` tag to see what rejected it.
+
+Rejected submissions stay there for up to 30 days. To recover one, use `Mark as non-spam`: it moves to your inbox and counts against your submission quota.
+
+Your visitor sees an error for a rejected submission. A plain HTML form shows the error page, or your error redirect if you set one. An AJAX request answers `403` with `Rejected by spam protection`.
 
 ## Which should I pick?
 
@@ -51,12 +63,12 @@ Formspark integrates with Botpoison, an invisible, user-friendly anti-spam solut
    website ([instructions](https://botpoison.com/documentation/getting-started/html/)).
 4. Copy the `secret key`.
 5. Open Formspark.
-6. In your form's settings, select `Botpoison` under `Spam Protection`.
+6. In your form's settings, under `Spam protection`, open `Challenge` and select `Botpoison` as the `Provider`.
 7. Paste the `secret key` into the `Botpoison secret key` field.
 
 Your form is now protected by Botpoison ✔.
 
-To stop using Botpoison, change your `Spam Protection` to `None`.
+To stop using Botpoison, set the `Provider` under `Challenge` back to `None`.
 
 ### Example
 
@@ -110,12 +122,12 @@ Formspark integrates with Google's reCAPTCHA v2 "I'm not a robot" checkbox.
 6. Integrate the `site key` on your website ([instructions](https://developers.google.com/recaptcha/docs/display)).
 7. Copy the `secret` key.
 8. Open Formspark.
-9. In your form's settings, select `Google reCAPTCHA v2` under `Spam Protection`.
+9. In your form's settings, under `Spam protection`, open `Challenge` and select `reCAPTCHA v2` as the `Provider`.
 10. Paste the `secret key` into the `reCAPTCHA v2 secret key` field.
 
 Your form is now protected by reCAPTCHA ✔.
 
-To stop using reCAPTCHA, change your `Spam Protection` to `None`.
+To stop using reCAPTCHA, set the `Provider` under `Challenge` back to `None`.
 
 ### HTML
 
@@ -155,12 +167,12 @@ Formspark integrates with hCaptcha, an independent alternative to Google's reCAP
 2. Create a new site.
 3. Integrate the `site key` on your website ([instructions](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage)). You can find your site key [here](https://dashboard.hcaptcha.com/sites).
 4. Copy the `secret key`. You can find your secret key [here](https://dashboard.hcaptcha.com/settings).
-5. In your form's settings, select `hCaptcha` under `Spam Protection`.
+5. In your form's settings, under `Spam protection`, open `Challenge` and select `hCaptcha` as the `Provider`.
 6. Paste the `secret key` into the `hCaptcha secret key` field.
 
 Your form is now protected by hCaptcha ✔.
 
-To stop using hCaptcha, change your `Spam Protection` to `None`.
+To stop using hCaptcha, set the `Provider` under `Challenge` back to `None`.
 
 ### HTML
 
@@ -196,12 +208,12 @@ Formspark integrates with Turnstile, Cloudflare's smart CAPTCHA alternative.
 2. Create a new site.
 3. Integrate the `site key` on your website ([instructions](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/)).
 4. Copy the `secret key`.
-5. In your form's settings, select `Turnstile` under `Spam Protection`.
+5. In your form's settings, under `Spam protection`, open `Challenge` and select `Turnstile` as the `Provider`.
 6. Paste the `secret key` into the `Turnstile secret key` field.
 
 Your form is now protected by Turnstile ✔.
 
-To stop using Turnstile, change your `Spam Protection` to `None`.
+To stop using Turnstile, set the `Provider` under `Challenge` back to `None`.
 
 ### AJAX
 
@@ -223,7 +235,7 @@ const body = {
 
 On top of any provider you choose, Formspark screens every submission for spam. It is on for every new form, requires no setup, and is invisible to your visitors.
 
-The filtering is powered by [OOPSpam](https://www.oopspam.com/). It complements the provider you select above rather than replacing it.
+The filtering is powered by Botpoison Classify, and you do not need a Botpoison account for it. It complements the challenge you select above rather than replacing it.
 
 ### Switching it off
 
@@ -240,9 +252,11 @@ Your honeypot, custom spam words and chosen provider are unaffected and keep run
 
 Custom spam words let you block submissions that contain specific words.
 
-We scan all values in your form's submission body for the words you specify. If a word is found, the submission will be discarded as spam.
+We scan the fields your visitor filled in for the words you specify. Matching ignores case and also finds a word inside a longer one. If a word is found, the submission is rejected as spam.
 
-You specify the comma-separated list of words in your form's settings, under `Custom spam words`.
+Fields your visitor did not write are skipped: control fields such as `_redirect`, challenge responses such as `g-recaptcha-response`, and tracking fields such as UTM tags (`utm_source`) and ad click ids (`gclid`, `fbclid`).
+
+You specify the comma-separated list of words in your form's settings, under `Spam protection` in `Spam words`.
 
 The total length of the list must not exceed 2,560 characters.
 
@@ -254,7 +268,7 @@ While simple to implement, this technique is not the most effective. Modern spam
 
 The honeypot technique is a simple-to-implement spam prevention solution.
 
-To enable this feature, add a field with the name `_honeypot` or `_gotcha` to your form and hide it with CSS (see example below). The submission will be silently ignored when a spam bot enters a value.
+To enable this feature, add a field with the name `_honeypot` or `_gotcha` to your form and hide it with CSS (see example below). When a spam bot enters a value, the submission is rejected as spam.
 
 ```html
 <form action="https://submit-form.com/your-form-id" method="POST">
@@ -272,7 +286,7 @@ To enable this feature, add a field with the name `_honeypot` or `_gotcha` to yo
 
 ## Custom honeypot
 
-Instead of using `_honeypot` or `_gotcha`, you can specify your own honeypot name in your form's settings.
+Besides `_honeypot` and `_gotcha`, you can specify your own honeypot name in your form's settings, under `Spam protection` in `Honeypot`. Enter it in the `Custom field name` field. The name must match your field's `name` exactly, including case.
 
 ```html
 <form action="https://submit-form.com/your-form-id" method="POST">

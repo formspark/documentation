@@ -13,7 +13,7 @@ Every Formspark account starts with one free workspace. Upgrading is a one-time 
 | --------------------------- | --------- | ------------------------------------------------------------ |
 | Submissions                 | 250       | 50,000 per bundle                                            |
 | Forms                       | 10        | 100                                                          |
-| Team members                | 5         | Unlimited                                                    |
+| Team members                | 5         | 50                                                           |
 | Submission archive          | Forever   | Forever                                                      |
 | Spam protection             | Included  | Included                                                     |
 | Webhooks, Slack and Zapier  | Included  | Included                                                     |
@@ -21,6 +21,8 @@ Every Formspark account starts with one free workspace. Upgrading is a one-time 
 | Autoresponder               | No        | [Included](/dashboard/autoresponder)                         |
 | Removing Formspark branding | No        | [Included](/customization/feedback-page#feedback-whitelabel) |
 | REST API                    | No        | [Included](/api/)                                            |
+| Google Sheets               | No        | [Included](/integration/google-sheets)                       |
+| Notion                      | No        | [Included](/integration/notion)                              |
 | Support                     | Community | Customer assistance team                                     |
 
 ## How submissions are counted
@@ -31,7 +33,11 @@ Submission bundles do not expire. Buy one when you need it, spend it at your pac
 
 ## Running out of submissions
 
-Formspark does not cut you off at exactly zero. There is a small buffer past the end of your submissions, and recent submissions that arrive beyond it are held back rather than discarded. Purchasing a new bundle releases the held submissions straight into your inbox.
+Formspark does not cut you off at exactly zero. There is a small buffer past the end of your submissions, and recent submissions that arrive beyond it are held back rather than discarded. You find them under `Overflow` in your form's submissions. Purchasing a new bundle releases the held submissions straight into your inbox. Past a further limit, new submissions are discarded rather than held.
+
+## Purchases and invoices
+
+Workspace admins find every purchase, with its invoice or receipt, in the workspace's `Settings`, under `Billing` in `Purchases`. See [purchases and invoices](/dashboard/purchases) for adding business details and for what a refund takes back.
 
 ## Everything is per workspace
 
@@ -39,7 +45,7 @@ Upgrades, bundles, and deals apply to a single workspace. Additional user-create
 
 ## Team members
 
-Free workspaces include 5 team members. Upgraded workspaces have no practical member limit. Members who joined before a limit applied always keep their access; limits only affect new invitations. See [inviting team members](/dashboard/inviting-team-members).
+Free workspaces include 5 team members, and upgraded workspaces include 50. Members who joined before a limit applied always keep their access; limits only affect new invitations. See [inviting team members](/dashboard/inviting-team-members).
 
 ## How quickly Zapier sees a submission
 

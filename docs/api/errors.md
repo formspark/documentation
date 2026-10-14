@@ -38,7 +38,7 @@ The token is valid but lacks the scope this operation needs. `requiredScope` nam
 
 `404` · `not_found`
 
-The resource does not exist, or it belongs to another account.
+The resource does not exist, or it belongs to another account. A change your [role](/dashboard/inviting-team-members#roles) does not allow, such as a viewer updating a form, is answered the same way.
 
 ## Validation error
 
@@ -77,7 +77,7 @@ Nothing was stored, so a form that already had a template still has it.
 
 `403` · `quota_exceeded`
 
-A plan limit stopped the request. Free workspaces hold 10 forms, paid ones hold 100.
+A limit stopped the request, such as the number of forms a workspace holds or the recipients a form notifies. Free workspaces hold 10 forms, paid ones hold 100.
 
 ## Upgrade required
 

@@ -80,7 +80,7 @@ These types are stored as plain strings on Formspark's side. Their value is that
 ## File uploads
 
 ::: warning
-`<input type="file">` does not work with Formspark directly. Browsers send file inputs as `multipart/form-data` and Formspark expects URL-encoded form data or JSON.
+`<input type="file">` does not work with Formspark directly. Formspark accepts `multipart/form-data` submissions, but only their text fields: a submission that carries a file is rejected with a `400` error.
 
 To accept file uploads, use a storage provider such as Uploadcare and submit the resulting URL to Formspark. See [File uploads](/setup/file-uploads).
 :::

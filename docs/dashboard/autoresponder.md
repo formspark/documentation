@@ -11,7 +11,7 @@ The autoresponder is available on [upgraded workspaces](/troubleshooting/limits-
 
 ## Enabling the autoresponder
 
-To enable the autoresponder for a form, navigate to its `Settings` section and create an autoresponder template.
+To enable the autoresponder for a form, open its `Settings` section, expand `Autoresponder` under `Emails` and press `Create template`. Creating the template turns replies on, and deleting it turns them off.
 
 The template is designed in a visual editor, built in partnership with [Postcraft](https://postcraft.io/). Add your own copy and imagery, and include a recap of the submitted data.
 
@@ -19,17 +19,20 @@ You can also write the template from your own code, without opening the dashboar
 
 ## Who receives the autoresponse
 
-Formspark determines the recipient from your form's submission data. The first of the following fields that contains a valid email address is used:
+Formspark determines the recipient from your form's submission data. It reads the first of the following fields that the submission fills in:
 
 1. `_replyto`
 2. `mail`
 3. `email`
+4. `_email.replyto`
+
+`mail` and `email` match in any case, so a field named `Email` works too.
 
 ```html
 <input type="email" name="email" />
 ```
 
-If the submission contains no valid email address in these fields, no autoresponse is sent.
+If none of these fields is filled in, or the value found is not a valid email address, no autoresponse is sent.
 
 ::: tip
 The same fields also set the reply-to address of your own notification emails, so a form that supports direct replies already works with the autoresponder.
@@ -41,7 +44,9 @@ Replies to an autoresponse go to your form's first notification recipient, so a 
 
 ## Footer and unsubscribe
 
-Every autoresponse includes a footer identifying the form it was sent on behalf of, along with an unsubscribe link. Recipients who unsubscribe stop receiving autoresponses; the footer cannot be removed.
+Every autoresponse ends with a footer you cannot remove. It tells the recipient they received the confirmation because they submitted a form on your site, and names that site (or the form, when the site is unknown). It also offers an unsubscribe link to anyone who did not submit it.
+
+Recipients who unsubscribe stop receiving autoresponses.
 
 ## Language
 
@@ -56,3 +61,5 @@ Use the autoresponder for transactional confirmations, not for marketing or bulk
 ::: warning
 Spam-flagged submissions never trigger an autoresponse.
 :::
+
+Every autoresponder template passes a content check. If the check pauses yours, the `Autoresponder` row says so and no replies are sent. Submissions are still stored. Contact support to have the template reviewed.

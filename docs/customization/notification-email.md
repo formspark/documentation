@@ -25,7 +25,7 @@ Create a hidden input with the name `_email.from`.
 <input type="hidden" name="_email.from" value="John Doe" />
 ```
 
-The value must only contain alphanumeric characters, spaces, dashes and underscores.
+The value cannot contain `@`, `<` or `>`. A value that breaks this rule is ignored, and the email is sent as "Formspark Notifications".
 
 It is currently not possible to change the sender address.
 
@@ -47,7 +47,7 @@ You can remove the title by setting the value to `false`.
 
 ## Template footer
 
-You can remove the footer from the notification email template.
+You can remove the footer and the Formspark logo from the notification email template.
 
 Create a hidden input with the name `_email.template.footer` and the value `false`.
 
@@ -55,7 +55,9 @@ Create a hidden input with the name `_email.template.footer` and the value `fals
 <input type="hidden" name="_email.template.footer" value="false" />
 ```
 
-Guests always see a short footer. It says who added their address and links to stop the emails.
+Guests keep a short footer whatever this field says. It names the workspace that added their address and links to stop the emails.
+
+The title and footer options shape the default template. A [custom template](#custom-templates) is sent exactly as you designed it, with no footer for anyone.
 
 ## Custom templates
 

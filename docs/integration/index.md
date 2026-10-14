@@ -17,31 +17,33 @@ Connect them from the **Integrations** section of your form's settings in the
 
 Formspark creates the document for you and keeps appending to it.
 
-- [Google Sheets](./google-sheets) — a spreadsheet, one row per submission
-- [Notion](./notion) — a database, one page per submission
+- [Google Sheets](./google-sheets): a spreadsheet, one row per submission
+- [Notion](./notion): a database, one page per submission
 
-Both need an [upgraded workspace](/troubleshooting/limits-and-plans).
+Both need an [upgraded workspace](/troubleshooting/limits-and-plans). If the
+workspace goes back to the free plan, they pause and keep their settings, and
+they resume once the workspace is upgraded again.
 
 ## Get notified in chat
 
-- [Slack](./slack) — post every submission to a channel
+- [Slack](./slack): post every submission to a channel
 
 ## Send submissions to your own code
 
-- [Webhooks](./webhooks) — an HTTP request to a URL of your choice
-- [Zapier](./zapier) — thousands of apps, no code needed
-- [Make](./make) — visual scenarios, no code needed
+- [Webhooks](./webhooks): an HTTP request to a URL of your choice
+- [Zapier](./zapier): thousands of apps, no code needed
+- [Make](./make): visual scenarios, no code needed
 
 ## Reach a tool Formspark does not connect to directly
 
 Zapier and Make bridge submissions to anything they support, so a tool without
 its own Formspark integration is usually still reachable.
 
-- [Airtable](./airtable) — a base, through Zapier or Make
+- [Airtable](./airtable): a base, through Zapier or Make
 
 ## Enrich what you collect
 
-- [UTM parameters](./utm-parameters) — record the campaign a submitter came
+- [UTM parameters](./utm-parameters): record the campaign a submitter came
   from
 
 ## Related
