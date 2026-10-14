@@ -10,12 +10,14 @@ A workspace is a group of forms and can have one or several team members.
 Workspaces enable you to create isolated environments for your customers, companies, departments, products, etc.
 
 Note that additional user-created workspaces start with 0 submissions. All upgrades, bundles, and deals are per
-workspace. See [limits and plans](/troubleshooting/limits-and-plans).
+workspace. See [limits and plans](/troubleshooting/limits-and-plans). Each workspace lists its own
+[purchases and invoices](/dashboard/purchases).
 
 ## Steps
 
-1. Press the `+` button to the right of your workspace
-2. Fill the form and press `Create`
+1. Press the switch button to the right of your workspace's name
+2. Press `Create workspace`
+3. Fill in a name and press `Create`
 
 ![New workspace](/new-workspace.png)
 
@@ -29,7 +31,7 @@ Only an admin can delete a workspace. See
 [roles](/dashboard/inviting-team-members#roles).
 
 1. Open the workspace's `Settings` screen
-2. Press `Delete workspace`
+2. Under `Danger zone`, press `Delete` on the `Delete workspace` row
 3. Type the workspace's name to confirm, then press `Delete workspace`
 
 Deletion cannot be undone, so export anything you want to keep first. See

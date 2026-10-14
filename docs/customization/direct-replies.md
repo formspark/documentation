@@ -16,6 +16,8 @@ To activate this feature, create an input with any of the following names:
 - `_replyto`
 - `_email.replyto`
 
+`mail` and `email` match in any case, so a field named `Email` works too. The underscore names must be spelled exactly as shown.
+
 ::: tip
 Use `type="email"` so the browser validates the address before submission.
 :::

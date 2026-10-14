@@ -67,10 +67,10 @@ export class ContactFormComponent {
 }
 ```
 
-`HttpClient` sets `Content-Type: application/json` for an object body, but it
-sends no `Accept` header of its own. Ask for `application/json` explicitly:
-without it Formspark answers a submission with a redirect to the feedback page
-rather than JSON, which `HttpClient` then fails to parse.
+`HttpClient` sets `Content-Type: application/json` for an object body. The
+explicit `Accept: application/json` header makes Formspark answer with JSON.
+A request that asks for HTML instead gets a redirect to the feedback page,
+which `HttpClient` cannot parse.
 
 `finalize` re-enables the form whether the request succeeds or fails. A plain
 `complete` callback never runs on error, which would leave the form disabled for

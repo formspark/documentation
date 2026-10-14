@@ -17,6 +17,7 @@ Whitelisting us will make sure that messages from our addresses are always accep
 
 Our sending email addresses are:
 
+- `autoresponder@formspark.io`
 - `noreply@formspark.io`
 - `notifications@formspark.io`
 - `support@formspark.io`

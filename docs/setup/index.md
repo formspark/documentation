@@ -7,7 +7,7 @@ lang: en-US
 
 ## Getting your form ID
 
-Every form in Formspark has its own action URL. To get one, sign in to the [Formspark dashboard](https://dashboard.formspark.io), create a new form, and copy its action URL from the form's `Setup` section. The URL ends with your form's unique ID.
+Every form in Formspark has its own action URL. To get one, sign in to the [Formspark dashboard](https://dashboard.formspark.io) and create a new form. The form opens on its `How-to` tab, which shows the action URL in a setup guide for your stack. The URL ends with your form's unique ID.
 
 ## HTML
 
@@ -25,7 +25,7 @@ Your form's unique action URL looks something like this: `https://submit-form.co
 **2.** Ensure all input, select and textarea elements inside your form have a `name` attribute, otherwise you will not
 receive the data filled in these fields.
 
-Input names starting with an underscore are reserved and will be hidden from the dashboard and notification emails.
+Input names starting with an underscore are reserved for control fields such as `_redirect`. Formspark does not store them with the submission, so they never appear in the dashboard or in notification emails.
 
 **3.** Verify that your form contains a button element with the "submit" `type`.
 

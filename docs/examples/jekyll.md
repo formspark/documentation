@@ -12,7 +12,10 @@ lang: en-US
 layout: default
 ---
 
-<form action="https://submit-form.com/{{ site.formspark_form_id }}">
+<form
+  action="https://submit-form.com/{{ site.formspark_form_id }}"
+  method="POST"
+>
   <textarea name="message"></textarea>
   <button type="submit">Submit</button>
 </form>
@@ -29,7 +32,10 @@ formspark_form_id: your-form-id
 
 ```html
 <!-- _includes/contact-form.html -->
-<form action="https://submit-form.com/{{ site.formspark_form_id }}">
+<form
+  action="https://submit-form.com/{{ site.formspark_form_id }}"
+  method="POST"
+>
   <label for="message">Message</label>
   <textarea id="message" name="message" required></textarea>
   <button type="submit">Send</button>

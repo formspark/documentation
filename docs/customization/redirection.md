@@ -27,6 +27,8 @@ This default behavior can be overridden in multiple ways.
 </form>
 ```
 
+The value can also be a path, such as `/thanks`. Formspark resolves it against the page the form was submitted from, the way a link on that page would. Only `http` and `https` addresses are followed; anything else sends the visitor to the default feedback page.
+
 By default, Formspark appends the submission's entries to the custom redirect URL (to its search string).
 This enables you to personalize your page with user-submitted data.
 

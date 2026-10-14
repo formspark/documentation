@@ -36,6 +36,15 @@ fetch("https://submit-form.com/your-form-id", {
 });
 ```
 
+## Response
+
+With `Accept: application/json`, Formspark answers an accepted submission with a `200` status and the submitted
+fields as a JSON object. It answers a rejected submission with an error status and a short plain-text
+message: `403` when spam protection rejects it, and `402` when the workspace is out of submissions.
+
+Without that `Accept` header, Formspark treats the request as a browser form post and answers with a redirect
+to the feedback page or to your `_redirect` URL.
+
 ## Fetch
 
 The modern, dependency-free way to submit a form.

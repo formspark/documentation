@@ -40,6 +40,10 @@ export const sidebar = [
         link: "/dashboard/additional-workspaces",
       },
       {
+        text: "Purchases and invoices",
+        link: "/dashboard/purchases",
+      },
+      {
         text: "Redeeming vouchers",
         link: "/dashboard/redeeming-vouchers",
       },

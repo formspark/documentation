@@ -7,7 +7,7 @@ lang: en-US
 
 VitePress renders pages at build time and hydrates them in the browser. A form
 whose markup does not depend on anything browser-specific renders the same in
-both passes, so it needs no special handling — the `fetch` only runs once the
+both passes, so it needs no special handling. The `fetch` only runs once the
 visitor submits.
 
 Reach for `<ClientOnly>` only when a component reads something that exists in

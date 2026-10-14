@@ -15,7 +15,7 @@ via [Custom HTML blocks](https://wordpress.com/support/wordpress-editor/blocks/c
 2. Add the HTML of your form.
 
 ```html
-<form action="https://submit-form.com/your-form-id">
+<form action="https://submit-form.com/your-form-id" method="POST">
   <input type="email" name="email" />
   <button type="submit">Subscribe</button>
 </form>

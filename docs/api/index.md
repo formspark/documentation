@@ -33,7 +33,8 @@ A token reaches every workspace you are a member of, limited to its [scopes](./a
   "name": "CI",
   "scopes": ["forms:read", "submissions:read"],
   "expiresAt": "2027-01-14T00:00:00.000Z",
-  "lastUsedAt": "2026-07-29T09:12:44.000Z"
+  "lastUsedAt": "2026-07-29T09:12:44.000Z",
+  "createdAt": "2026-07-01T08:30:00.000Z"
 }
 ```
 

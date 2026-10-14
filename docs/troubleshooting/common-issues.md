@@ -13,6 +13,10 @@ lang: en-US
 - Are you using some form of spam protection? Temporarily disable the protection, if you are able to submit without it
   then you probably need to double-check your integration.
   Step-by-step instructions can be found [here](/setup/spam-protection).
+- Check the `Spam` view of your form's submissions. A submission rejected by your spam protection or the
+  automatic filter lands there instead of your inbox. See [rejected submissions](/setup/spam-protection#rejected-submissions).
+- Has your workspace run out of submissions? See
+  [running out of submissions](/troubleshooting/limits-and-plans#running-out-of-submissions).
 
 ## I cannot find my forms
 
@@ -62,6 +66,21 @@ fetch("https://submit-form.com/your-form-id", {
 ```
 
 Without those headers Formspark may treat the body as something other than JSON and silently discard it.
+
+## My request returns an error status
+
+These are the statuses an AJAX request with `Accept: application/json` can receive, with the text Formspark sends back:
+
+- `400` with `Send form data to this URL to submit a form`: the request carried no data. This is what you see when you
+  open your form's URL in a browser. Submit your form instead, or test with the [echo endpoint](/setup/#testing).
+- `400` with `file uploads are not supported, only text fields`: the submission carried a file. See
+  [file uploads](/setup/file-uploads).
+- `400` with `invalid JSON, only supports object and array`: the body is not a JSON object or array.
+- `402` with `Workspace is out of submissions`: see
+  [running out of submissions](/troubleshooting/limits-and-plans#running-out-of-submissions).
+- `403` with `Rejected by spam protection`: see [rejected submissions](/setup/spam-protection#rejected-submissions).
+- `404` with `This form does not exist anymore`: the form ID in your URL does not match a form. Copy the action URL
+  again from your form's `How-to` tab.
 
 ## I'm receiving the same notification several times
 

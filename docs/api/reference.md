@@ -95,19 +95,22 @@ Deletes the form and its submissions. Scope: `forms:write`.
 
 `POST /forms` and `PATCH /forms/{formId}` accept a form's settings, with a few restrictions. Anything the API rejects comes back as a [`validation_error`](./errors#validation-error).
 
-Beyond the three settings described below, a form carries these fields. Each of them accepts `null` to clear it, except `name`, which a form always has.
+Beyond the three settings described below, a form carries these fields. The strings accept `null` to clear them, except `name`, which a form always has. The booleans take `true` or `false`.
 
-| Field             | Type                    |
-| ----------------- | ----------------------- |
-| `name`            | string, 128 characters  |
-| `description`     | string, 512 characters  |
-| `technology`      | string, 128 characters  |
-| `slackChannel`    | string, 128 characters  |
-| `customHoneypot`  | string, 128 characters  |
-| `customSpamWords` | string, 2560 characters |
-| `emailThreading`  | boolean                 |
+| Field                 | Type                    |
+| --------------------- | ----------------------- |
+| `name`                | string, 128 characters  |
+| `description`         | string, 512 characters  |
+| `technology`          | string, 128 characters  |
+| `slackChannel`        | string, 128 characters  |
+| `customHoneypot`      | string, 128 characters  |
+| `customSpamWords`     | string, 2560 characters |
+| `emailThreading`      | boolean                 |
+| `automaticSpamFilter` | boolean                 |
 
 `customHoneypot` and `customSpamWords` are the API side of the settings described under [spam protection](/setup/spam-protection#custom-spam-words).
+
+`automaticSpamFilter` is on unless you switch it off. Switched off, the form stores every submission the filter would have held back, and each one counts against the workspace's quota. See [automatic spam filtering](/setup/spam-protection#automatic-spam-filtering).
 
 #### `spamProtection`
 
@@ -120,13 +123,13 @@ Accepts one of four providers, or `null` to require no challenge at all:
 | `HCAPTCHA`            | hCaptcha     |
 | `TURNSTILE`           | Turnstile    |
 
-No other value is accepted, and the automatic spam filtering that screens every submission is not configurable.
+No other value is accepted. The automatic spam filtering is switched separately, with `automaticSpamFilter`.
 
 The provider's secret key is not part of the API. Store it in the dashboard first, then switch the form over: selecting a provider whose secret key is not already stored is rejected. See [spam protection](/setup/spam-protection).
 
 #### `webhookUrl`
 
-Must be an `http` or `https` URL, and must resolve to a public address when Formspark calls it, so an endpoint on `localhost` or a private network is rejected. See [webhooks](/integration/webhooks).
+Must be an `http` or `https` URL of at most 512 characters, and must resolve to a public address when Formspark calls it, so an endpoint on `localhost` or a private network is rejected. See [webhooks](/integration/webhooks).
 
 #### `notificationEmails`
 
@@ -168,7 +171,7 @@ curl -X PUT https://api.formspark.io/public/v1/forms/your-form-id/templates/auto
 
 ### `DELETE /forms/{formId}/templates/{kind}`
 
-Scope: `forms:write`. Notifications go back to the default layout.
+Scope: `forms:write`. Deleting the `notification` template sends notifications in the default layout again. Deleting the `autoresponder` template turns replies off.
 
 ### `POST /forms/{formId}/templates/{kind}/preview`
 
@@ -217,27 +220,27 @@ it on, and deleting that template turns it off. It is available on
 [upgraded workspaces](/troubleshooting/limits-and-plans), so writing one for a free
 workspace returns [`upgrade_required`](./errors#upgrade-required).
 
-`paused` reports whether our content check has stopped the template sending. It is
-`null` for a `notification` template, which is not content checked.
+### Paused templates
+
+`paused` reports whether our content check has stopped the template sending. Both
+kinds are checked.
 
 ::: warning
-A paused autoresponder sends nothing, and the write that paused it still answers
-`200`. Check `paused` after every write.
+A paused `autoresponder` template sends no replies, and a paused `notification`
+template sends no notifications at all. Submissions are still stored. The write that
+paused it still answers `200`, so check `paused` after every write.
 :::
 
-The check reads the template on its own, with no submission filled in. Marketing
-phrasing and bare links are what usually trip it, so prefer a short confirmation and
-a link with an anchor rather than a naked URL. Rewriting the template has it scored
-again. If it stays paused,
-[get in touch](https://dashboard.formspark.io/support/contact).
+Writing the template checks the new version before the response returns. If it stays
+paused, [get in touch](https://dashboard.formspark.io/support/contact).
 
 ## Submissions
 
 ### `GET /forms/{formId}/submissions`
 
-Newest first, [cursor paginated](./pagination). Scope: `submissions:read`.
+Newest first, [cursor paginated](./pagination). Spam and deleted submissions are not included. Scope: `submissions:read`.
 
-Query parameters: `limit` (1 to 100, default 25), `startingAfter`, `search`.
+Query parameters: `limit` (1 to 100, default 25), `startingAfter`, `search` (at most 256 characters).
 
 ```sh
 curl "https://api.formspark.io/public/v1/forms/your-form-id/submissions?limit=50" \

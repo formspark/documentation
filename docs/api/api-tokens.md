@@ -13,6 +13,8 @@ The token is shown once, when you create it. Store it somewhere safe. If you los
 
 A token belongs to you and reaches every workspace you are a member of. Its scopes decide what it may do there. Give a token the least it needs.
 
+A token never does more than your [role](/dashboard/inviting-team-members#roles) allows. In a workspace where you are a viewer, it can read but not change anything.
+
 | Scope               | Allows                                 |
 | ------------------- | -------------------------------------- |
 | `workspaces:read`   | List workspaces and read their details |
@@ -28,7 +30,7 @@ Billing, team management, workspace deletion and token management stay in the da
 
 ## Expiry
 
-Tokens expire after 90 days by default. Choose `Never` for something unattended, and rotate it yourself.
+Tokens expire after 90 days by default. You can also choose 30 days, 1 year, or `Never` for something unattended, which you then rotate yourself.
 
 ## Revocation
 
