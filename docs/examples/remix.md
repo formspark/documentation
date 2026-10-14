@@ -1,9 +1,13 @@
 ---
-title: Remix
+title: React Router (Remix)
 lang: en-US
 ---
 
-# Remix
+# React Router (Remix)
+
+Remix v2 continues as React Router in framework mode. Remix v2 apps upgrade to
+React Router v7 with the [official upgrade guide](https://reactrouter.com/upgrading/remix).
+The examples below work on React Router v7 and later.
 
 ## Route action
 
@@ -12,8 +16,7 @@ hydrated and keeps working with JavaScript disabled.
 
 ```jsx
 // app/routes/contact.jsx
-import { redirect } from "@remix-run/node";
-import { Form } from "@remix-run/react";
+import { Form, redirect } from "react-router";
 
 const FORMSPARK_ACTION_URL = "https://submit-form.com/your-form-id";
 
@@ -43,8 +46,24 @@ export default function ContactPage() {
 }
 ```
 
-Remix's `<Form>` submits without a full page load once hydrated, and falls back
+React Router's `<Form>` submits without a full page load once hydrated, and falls back
 to a normal browser submission before that.
+
+### Registering the route
+
+Framework mode reads its routes from `app/routes.ts`. Add the contact route
+there, or use `flatRoutes()` from `@react-router/fs-routes` to keep file-based
+routing.
+
+```ts
+// app/routes.ts
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
+
+export default [
+  index("routes/home.jsx"),
+  route("contact", "routes/contact.jsx"),
+] satisfies RouteConfig;
+```
 
 ### Disabling the button while submitting
 
@@ -52,7 +71,7 @@ to a normal browser submission before that.
 
 ```jsx
 // app/routes/contact.jsx
-import { Form, useNavigation } from "@remix-run/react";
+import { Form, useNavigation } from "react-router";
 
 export default function ContactPage() {
   const navigation = useNavigation();
