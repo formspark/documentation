@@ -14,6 +14,7 @@ Formspark offers the following solutions to prevent spam:
 - [hCaptcha](https://www.hcaptcha.com/) integration
 - [Turnstile](https://www.cloudflare.com/products/turnstile/) integration
 - Custom spam words
+- Allowed domains
 - Honeypot technique
 
 On top of whichever of these you enable, every submission is screened by our [automatic spam filtering](#automatic-spam-filtering), unless you switch it off for that form.
@@ -26,6 +27,7 @@ Formspark will not deliver a submission to your inbox, send notifications or dec
 - The challenge verification was unsuccessful
 - The submission contains a honeypot
 - The submission contains one of your custom spam words
+- The submission was sent from a site that is not on your allowed domains
 - The automatic filter flags the submission as spam
 
 An empty submission is discarded. Every other rejected submission is kept for you to review. See [rejected submissions](#rejected-submissions).
@@ -47,6 +49,7 @@ Your visitor sees an error for a rejected submission. A plain HTML form shows th
 | [hCaptcha](https://www.hcaptcha.com/)                       | Checkbox           | Free        | Strong   |
 | [reCAPTCHA](https://www.google.com/recaptcha/about/)        | Checkbox           | Free        | Strong   |
 | Custom spam words                                           | Invisible          | Included    | Low      |
+| Allowed domains                                             | Invisible          | Included    | Low      |
 | Honeypot                                                    | Invisible          | Included    | Low      |
 
 If you're not sure, start with **Botpoison** or **Turnstile**: both are invisible to your visitors and require no interaction.
@@ -259,6 +262,15 @@ Fields your visitor did not write are skipped: control fields such as `_redirect
 You specify the comma-separated list of words in your form's settings, under `Spam protection` in `Spam words`.
 
 The total length of the list must not exceed 2,560 characters.
+
+## Allowed domains
+
+List the sites your form lives on, and submissions sent from anywhere else are rejected as spam. Set it in your form's settings, under `Spam protection` in `Allowed domains`. It is off until you add a domain.
+
+- Each domain also covers its subdomains: `example.com` allows `www.example.com` and `shop.example.com`.
+- You can paste a full address. `https://www.example.com/contact` is saved as `example.com`.
+- Submissions sent from a server, or by a tool such as `curl`, are rejected, because they do not say which site they come from.
+- To test on your own machine, add `localhost` to the list.
 
 ## Honeypot
 
