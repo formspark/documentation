@@ -15,6 +15,8 @@ lang: en-US
   Step-by-step instructions can be found [here](/setup/spam-protection).
 - Check the `Spam` view of your form's submissions. A submission rejected by your spam protection or the
   automatic filter lands there instead of your inbox. See [rejected submissions](/setup/spam-protection#rejected-submissions).
+- Have you set [allowed domains](/setup/spam-protection#allowed-domains)? Submissions from any other site, from
+  `localhost`, or from a server land in `Spam`.
 - Has your workspace run out of submissions? See
   [running out of submissions](/troubleshooting/limits-and-plans#running-out-of-submissions).
 
