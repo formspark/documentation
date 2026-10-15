@@ -41,7 +41,7 @@ Formspark only calls your webhook for submissions it accepts. A submission rejec
 
 ## Delivery
 
-Formspark makes one attempt per submission and does not retry a failed one. A delivery fails when your endpoint:
+A delivery fails when your endpoint:
 
 - answers with a status code outside the `2xx` range,
 - does not answer within 5 seconds, or
@@ -49,17 +49,27 @@ Formspark makes one attempt per submission and does not retry a failed one. A de
 
 Formspark does not follow redirects, so a `3xx` answer counts as a failure. Use the final URL of your endpoint.
 
-The URL must be a public `http` or `https` address.
+The URL must be a public `http` or `https` address. Your webhook receives only submissions that arrive after its URL is saved.
+
+## Retries
+
+A failed delivery is retried every 5 minutes, in order, until it gets through. Submissions that arrive meanwhile wait behind it, so your endpoint always receives them in the order they were sent.
+
+A retry can deliver a submission your endpoint already handled. Every request carries two headers to help with that:
+
+- `Formspark-Submission-Id`: the same for every attempt at one submission. Skip one you have already seen.
+- `Formspark-Timestamp`: when the request was sent, in Unix seconds.
+
+A submission rescued from `Spam` is not delivered.
 
 ## Delivery status
 
-The `Webhook` row in your form's settings shows how the last delivery went:
+The `Webhook` row in your form's settings shows how delivery is going:
 
 - `Never called`: Formspark has not called the webhook yet.
 - `Active`: the last delivery succeeded.
-- `Last call failed`: the last delivery failed. The row shows the reason next to the URL, for example the status code your endpoint answered with.
-
-A failed delivery is not sent again, but the submission is still in your dashboard.
+- `Retrying`: a delivery failed and is being retried. The row shows the reason next to the URL.
+- `Paused`: deliveries failed for about a day, so Formspark stopped trying. Fix your endpoint, then use `Retry now`. Delivery resumes from the first submission that did not arrive.
 
 ## Testing and troubleshooting
 
