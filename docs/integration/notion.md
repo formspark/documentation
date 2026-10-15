@@ -40,7 +40,7 @@ Sharing a page happens on Notion's own consent screen, not in a Formspark settin
 
 Submissions are never lost when Notion is unreachable. Formspark retries every 5 minutes, in order, and the `Notion` row shows `Retrying` until it catches up.
 
-After about a day of failures, or if the Notion workspace has revoked access, the row shows `Paused` and Formspark stops trying. Open the row with `Configure` and use `Retry now` once the cause is fixed. Delivery resumes from the first submission that did not arrive. Reconnect instead if access was revoked.
+After about a day of failures, or if the Notion workspace has revoked access, the row shows `Paused`, Formspark stops trying, and your workspace admins get an email. Open the row with `Configure` and use `Retry now` once the cause is fixed. Delivery resumes from the first submission that did not arrive. Reconnect instead if access was revoked.
 
 ## If your workspace goes back to the free plan
 

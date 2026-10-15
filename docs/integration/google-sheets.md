@@ -27,7 +27,7 @@ Each submission is appended as a new row. The header row starts with `Submitted 
 Submissions are never lost when Google Sheets is unreachable. Formspark retries every 5 minutes, in order, and the `Google Sheets` row shows `Retrying` until it catches up.
 
 ::: warning
-After about a day of failures, for example because the spreadsheet was deleted or access was revoked, the row shows `Paused` and Formspark stops trying. Open the row with `Configure` and use `Retry now` once the cause is fixed. Delivery resumes from the first submission that did not arrive. Reconnect instead if the spreadsheet itself is gone.
+After about a day of failures, for example because the spreadsheet was deleted or access was revoked, the row shows `Paused`, Formspark stops trying, and your workspace admins get an email. Open the row with `Configure` and use `Retry now` once the cause is fixed. Delivery resumes from the first submission that did not arrive. Reconnect instead if the spreadsheet itself is gone.
 :::
 
 ## If your workspace goes back to the free plan

@@ -69,7 +69,7 @@ The `Webhook` row in your form's settings shows how delivery is going:
 - `Never called`: Formspark has not called the webhook yet.
 - `Active`: the last delivery succeeded.
 - `Retrying`: a delivery failed and is being retried. The row shows the reason next to the URL.
-- `Paused`: deliveries failed for about a day, so Formspark stopped trying. Fix your endpoint, then use `Retry now`. Delivery resumes from the first submission that did not arrive.
+- `Paused`: deliveries failed for about a day, so Formspark stopped trying and emailed your workspace admins. Fix your endpoint, then use `Retry now`. Delivery resumes from the first submission that did not arrive.
 
 ## Testing and troubleshooting
 
