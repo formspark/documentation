@@ -38,16 +38,16 @@ Sharing a page happens on Notion's own consent screen, not in a Formspark settin
 
 ## If a submission does not arrive
 
-Submissions are never lost when Notion is unreachable. Formspark keeps the submission and retries it in the background, oldest first, so a temporary Notion outage catches up on its own once it clears. While it catches up, the `Notion` row shows `Syncing`.
+Submissions are never lost when Notion is unreachable. Formspark retries every 5 minutes, in order, and the `Notion` row shows `Retrying` until it catches up.
 
-If the retries keep failing, or if the Notion workspace has revoked access, the `Notion` row shows `Sync error` and stops trying. Open the row with `Configure` and use `Retry sync` once the cause is fixed, or reconnect if access was revoked.
+After about a day of failures, or if the Notion workspace has revoked access, the row shows `Paused`, Formspark stops trying, and your workspace admins get an email. Open the row with `Configure` and use `Retry now` once the cause is fixed. Delivery resumes from the first submission that did not arrive. Reconnect instead if access was revoked.
 
 ## If your workspace goes back to the free plan
 
-Formspark pauses sending submissions to the database and keeps the connection as it is. Sending resumes once the workspace is upgraded again, so you do not need to reconnect.
+Formspark pauses sending submissions to the database and keeps the connection as it is. Once the workspace is upgraded again, the submissions that arrived meanwhile are sent on their own.
 
 ## Disconnecting
 
 Open the `Notion` row with `Configure`, click `Disconnect`, and confirm with `Disconnect Notion`. Disconnecting does not delete the database or the page it lives in. They stay in your Notion workspace with whatever entries were already added; Formspark simply stops writing to them.
 
-To send submissions to a different page, disconnect and connect again, and share a different page this time.
+To send submissions to a different page, disconnect and connect again, and share a different page this time. A new connection receives only submissions that arrive after it is made.

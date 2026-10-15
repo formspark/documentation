@@ -24,18 +24,18 @@ Each submission is appended as a new row. The header row starts with `Submitted 
 
 ## If a submission does not arrive
 
-Submissions are never lost when Google Sheets is unreachable. Formspark keeps the submission and retries it in the background, oldest first. While it catches up, the `Google Sheets` row shows `Syncing`.
+Submissions are never lost when Google Sheets is unreachable. Formspark retries every 5 minutes, in order, and the `Google Sheets` row shows `Retrying` until it catches up.
 
 ::: warning
-If the retries keep failing, for example because the spreadsheet was deleted or access was revoked, the row shows `Sync error` and Formspark stops trying. Open the row with `Configure` and use `Retry sync` once the cause is fixed, or reconnect if the spreadsheet itself is gone.
+After about a day of failures, for example because the spreadsheet was deleted or access was revoked, the row shows `Paused`, Formspark stops trying, and your workspace admins get an email. Open the row with `Configure` and use `Retry now` once the cause is fixed. Delivery resumes from the first submission that did not arrive. Reconnect instead if the spreadsheet itself is gone.
 :::
 
 ## If your workspace goes back to the free plan
 
-Formspark pauses sending submissions to the spreadsheet and keeps the connection as it is. Sending resumes once the workspace is upgraded again, so you do not need to reconnect.
+Formspark pauses sending submissions to the spreadsheet and keeps the connection as it is. Once the workspace is upgraded again, the submissions that arrived meanwhile are sent on their own.
 
 ## Disconnecting
 
 Open the `Google Sheets` row with `Configure`, click `Disconnect`, and confirm with `Disconnect Google Sheets`. Disconnecting does not delete the spreadsheet. It stays in your Google Drive with whatever rows were already added; Formspark simply stops writing to it.
 
-To send submissions to a different spreadsheet, disconnect and connect again. This creates a new spreadsheet, it does not reuse the old one.
+To send submissions to a different spreadsheet, disconnect and connect again. This creates a new spreadsheet, it does not reuse the old one. A new connection receives only submissions that arrive after it is made.
