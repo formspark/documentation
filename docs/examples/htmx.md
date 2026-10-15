@@ -1,18 +1,18 @@
 ---
-title: HTMX
+title: htmx
 lang: en-US
 ---
 
-# HTMX
+# htmx
 
-Formspark returns a JSON response (when `Accept: application/json` is set), so we use `hx-swap="none"` to prevent HTMX from replacing the form with the response, and show a thank-you message via `hx-on::after-request`.
+Formspark returns a JSON response (when `Accept: application/json` is set), so we use `hx-swap="none"` to prevent htmx from replacing the form with the response, and show a thank-you message via `hx-on::after-request`.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Formspark | HTMX</title>
+    <title>Formspark | htmx</title>
     <script src="https://unpkg.com/htmx.org@2"></script>
     <script src="https://unpkg.com/htmx-ext-json-enc@2"></script>
   </head>
