@@ -81,7 +81,38 @@ To preview what the webhook requests look like before pointing them at your own 
 
 ## Signature verification
 
-Formspark does not currently sign webhook requests. Anyone who learns your endpoint URL can send requests to it, so do not rely on the request origin for authentication. If you need stronger guarantees, keep your endpoint URL secret, validate the submission body against an expected shape, or require a shared secret in your request handler.
+Turn on `Sign deliveries` in the `Webhook` row to prove each request comes from Formspark. Copy the secret it shows into your endpoint.
+
+Every request then carries a `Formspark-Signature` header: `v1=` followed by a hex HMAC-SHA256 of the `Formspark-Timestamp` header, a dot, and the raw request body, keyed with your secret. Compute the same value and compare. Reject a request whose timestamp is more than a few minutes old.
+
+```js
+import crypto from "node:crypto";
+
+const verify = (secret, timestamp, rawBody, signature) => {
+  const expected =
+    "v1=" +
+    crypto
+      .createHmac("sha256", secret)
+      .update(`${timestamp}.${rawBody}`)
+      .digest("hex");
+  return (
+    signature.length === expected.length &&
+    crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))
+  );
+};
+```
+
+```python
+import hashlib, hmac
+
+def verify(secret, timestamp, raw_body, signature):
+    digest = hmac.new(secret.encode(), f"{timestamp}.{raw_body}".encode(), hashlib.sha256)
+    return hmac.compare_digest(signature, "v1=" + digest.hexdigest())
+```
+
+Use the body exactly as received, before any JSON parsing.
+
+`Rotate secret` replaces the secret at once. Deliveries fail until your endpoint uses the new one, then the queued ones arrive.
 
 ## Removal
 
