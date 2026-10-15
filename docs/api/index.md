@@ -46,6 +46,25 @@ The API is described by an OpenAPI 3.1 document, which you can use to generate a
 https://api.formspark.io/public/v1/openapi.json
 ```
 
+## Using the API from an AI agent
+
+An agent such as Claude or Cursor can use the API the same way your code does. Give it two things:
+
+1. An API token with only the [scopes](./api-tokens) it needs, for example `forms:read` and `submissions:read` to answer questions about your submissions.
+2. The OpenAPI document above, which describes every endpoint it can call.
+
+For example, to list a workspace's forms and read one form's latest submissions:
+
+```sh
+curl "https://api.formspark.io/public/v1/forms?workspaceId=<workspace-id>" \
+  -H "Authorization: Bearer fsk_live_..."
+
+curl "https://api.formspark.io/public/v1/forms/<form-id>/submissions" \
+  -H "Authorization: Bearer fsk_live_..."
+```
+
+Treat the token like a password. Revoke it from the dashboard once the agent no longer needs it.
+
 ## Versioning
 
 The version is in the path. Within `v1`, new optional fields and new endpoints can appear at any time, so ignore fields you do not recognize. Changes that would break a working integration ship as a new version.
