@@ -38,6 +38,6 @@
     "prettier": "^3.0.0",
     "pretty-quick": "^4.0.0",
     "vitepress": "^1.6.4",
-    "vue": "^3.5.0"
+    "vue": "^3.5.44"
   }
 }
