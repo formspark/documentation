@@ -48,9 +48,13 @@ Every autoresponse ends with a footer you cannot remove. It tells the recipient 
 
 Recipients who unsubscribe stop receiving autoresponses.
 
+## Subject
+
+Set a subject line in the template to replace the default one. It can include the submitted data, such as the visitor's name. A subject that comes out empty, because the fields it names were not filled in, falls back to the default.
+
 ## Language
 
-The subject and the footer are in English by default. Add a hidden `_language` field to send them in your visitor's language. See [Language](/customization/language) for the supported values.
+The default subject and the footer are in English. Add a hidden `_language` field to send them in your visitor's language. See [Language](/customization/language) for the supported values. A subject you set in the template is sent as you wrote it, whatever the language.
 
 The body is your own template, so write it in the language you want.
 

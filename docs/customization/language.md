@@ -5,7 +5,7 @@ lang: en-US
 
 # Language
 
-Formspark writes a few things to your visitors itself: the feedback page they see after submitting, and the subject and footer of the [autoresponder](/dashboard/autoresponder). By default these are in English.
+Formspark writes a few things to your visitors itself: the feedback page they see after submitting, and the default subject and the footer of the [autoresponder](/dashboard/autoresponder). By default these are in English.
 
 Add a hidden `_language` field to show them in your visitor's language:
 
@@ -21,10 +21,10 @@ A multilingual site can set the value per page, so each visitor gets their own l
 
 ## What `_language` translates
 
-| Where                                         | What                                                  |
-| --------------------------------------------- | ----------------------------------------------------- |
-| [Feedback page](/customization/feedback-page) | The default title and message                         |
-| [Autoresponder](/dashboard/autoresponder)     | The subject, and the footer with its unsubscribe link |
+| Where                                         | What                                                          |
+| --------------------------------------------- | ------------------------------------------------------------- |
+| [Feedback page](/customization/feedback-page) | The default title and message                                 |
+| [Autoresponder](/dashboard/autoresponder)     | The default subject, and the footer with its unsubscribe link |
 
 It does not translate:
 

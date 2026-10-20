@@ -34,6 +34,8 @@ Every custom template passes a content check. If the check pauses yours, the for
 
 Dynamic values in a template use the [Handlebars](https://handlebarsjs.com/) templating language.
 
+A template can also set the email's subject line, with the same dynamic values as the body. An `_email.subject` field in the submission takes precedence over it.
+
 ```handlebars
 <div style="text-align: left;">
   <strong>New submission:</strong>
