@@ -153,6 +153,7 @@ Scope: `forms:read`.
   "kind": "autoresponder",
   "mode": "code",
   "code": "<p>Thanks {{data.firstName}}</p>",
+  "subject": "Thanks for writing, {{data.firstName}}",
   "updatedAt": "2026-09-17T10:04:00.000Z",
   "paused": false
 }
@@ -160,7 +161,9 @@ Scope: `forms:read`.
 
 ### `PUT /forms/{formId}/templates/{kind}`
 
-Writes the body, creating the template if the form has none. Scope: `forms:write`.
+Writes the body, the [subject line](#subject-line) or both, creating the template
+if the form has none. A field you leave out keeps its current value, and creating a
+template needs `code`. Scope: `forms:write`.
 
 ```sh
 curl -X PUT https://api.formspark.io/public/v1/forms/your-form-id/templates/autoresponder \
@@ -185,7 +188,8 @@ curl -X POST https://api.formspark.io/public/v1/forms/your-form-id/templates/aut
   -d '{"data":{"firstName":"Ada","email":"ada@example.com"}}'
 ```
 
-The response holds the `html` and the `text` alternative. Send `data` to choose
+The response holds the `html`, the `text` alternative and the rendered `subject`,
+which is `null` when the template has none. Send `data` to choose
 what it renders against. Leave it out and the form's own example data is used.
 
 ### Writing a template
@@ -201,6 +205,24 @@ A template that did not compile comes back as
 [`template_invalid`](./errors#template-invalid), with an `errors` array naming
 what is wrong. The check runs before anything is stored, so a form that already
 had a working template keeps it.
+
+### Subject line
+
+`subject` sets the email's subject line, with the same placeholders as the body:
+<code v-pre>"Thanks for writing, {{data.firstName}}"</code>. It accepts at most 998
+characters. Send `null` or an empty string to clear it.
+
+A template without a subject uses the default one. So does a subject that renders
+empty, for example when every field it names is missing from the submission. A
+subject longer than 200 characters once rendered is cut short.
+
+On the `notification` template, an [`_email.subject`](/customization/notification-email#subject)
+field in the submission takes precedence over the template's subject. On the
+`autoresponder` template, the subject replaces the default in every
+[language](/customization/language).
+
+Send `subject` without `code` to change only the subject. The body stays as it is,
+so a template built in the visual editor keeps its layout.
 
 ### Templates built in the visual editor
 

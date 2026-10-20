@@ -15,6 +15,9 @@ Create a hidden input with the name `_email.subject`.
 <input type="hidden" name="_email.subject" value="You have a new message!" />
 ```
 
+A [custom template](#custom-templates) can carry its own subject line instead. When
+the submission also has an `_email.subject` field, that field takes precedence.
+
 ## Sender name
 
 You can change the name of the sender of the notification email.
