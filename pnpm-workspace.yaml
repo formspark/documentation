@@ -1,0 +1,9 @@
+# esbuild needs no install script: it loads a prebuilt binary from a
+# platform-specific optional dependency. The production build holds this true.
+allowBuilds:
+  esbuild: false
+
+# vitepress 1 declares vite 5, whose dev server carries advisories that vite
+# 6.4.4 fixes. vitepress builds on vite 6, so the floor holds the tree there.
+overrides:
+  vite: ^6.4.4

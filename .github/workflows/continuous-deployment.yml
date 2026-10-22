@@ -11,16 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: "24"
-          cache: "npm"
-      - name: Install npm dependencies
-        run: npm ci
+          node-version-file: ".tool-versions"
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Build for production
-        run: npm run build
+        run: pnpm build
+      # `pnpm deploy` is a built-in pnpm command, so the script needs `run`.
       - name: Deploy build
-        run: npm run deploy
+        run: pnpm run deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
