@@ -4,6 +4,6 @@ allowBuilds:
   esbuild: false
 
 # vitepress 1 declares vite 5, whose dev server carries advisories that vite
-# 6.4.4 fixes. vitepress builds on vite 6, so the floor holds the tree there.
+# 6.4.5 fixes. vitepress builds on vite 6, so the floor holds the tree there.
 overrides:
-  vite: ^6.4.4
+  vite: ^6.4.5
