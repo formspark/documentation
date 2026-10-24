@@ -8,9 +8,7 @@ on:
 
 jobs:
   deploy:
-    # The AWS role trusts this repository's production environment and nothing
-    # else, and the environment accepts master only. The role's ARN is the
-    # repository variable AWS_DEPLOY_ROLE_ARN.
+    # The only environment the AWS role (vars.AWS_DEPLOY_ROLE_ARN) trusts.
     environment: production
     permissions:
       contents: read
