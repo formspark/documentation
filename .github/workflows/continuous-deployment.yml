@@ -8,11 +8,18 @@ on:
 
 jobs:
   deploy:
+    # The AWS role trusts this repository's production environment and nothing
+    # else, and the environment accepts master only. The role's ARN is the
+    # repository variable AWS_DEPLOY_ROLE_ARN.
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version-file: ".tool-versions"
           cache: pnpm
@@ -20,9 +27,11 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build for production
         run: pnpm build
+      - name: Assume the deploy role
+        uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: eu-west-1
       # `pnpm deploy` is a built-in pnpm command, so the script needs `run`.
       - name: Deploy build
         run: pnpm run deploy
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
