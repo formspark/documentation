@@ -29,7 +29,7 @@
     "dev": "vitepress dev docs",
     "format": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore",
     "prepare": "husky",
-    "test": "node --test scripts/sentry-privacy.test.mjs"
+    "test": "node --test"
   },
   "dependencies": {
     "@sentry/vue": "^10.70.0"
