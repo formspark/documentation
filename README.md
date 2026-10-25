@@ -26,7 +26,9 @@ runs it after `vitepress build`.
 
 Every page carries a `title` and a `description` of 70 to 160 characters in its
 frontmatter, and appears once in `docs/.vitepress/sidebar.js`. The build turns
-them into the page's canonical link, Open Graph tags and JSON-LD.
+them into the page's canonical link, Open Graph tags and JSON-LD. The build also
+renders each page's Open Graph image, its title on a branded card, into
+`docs/.vitepress/dist/og/`.
 
 ## Markdown for agents
 

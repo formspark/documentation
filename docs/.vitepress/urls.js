@@ -17,3 +17,7 @@ export const linkPath = (link) => (link.endsWith("/") ? link : `${link}.html`);
 
 // The Markdown copy of a page sits next to its HTML, under the source's name.
 export const markdownUrl = (relativePath) => `${SITE_URL}/${relativePath}`;
+
+// Where the build writes a page's Open Graph image.
+export const ogImagePath = (relativePath) =>
+  `/og/${relativePath.replace(/\.md$/, ".png")}`;

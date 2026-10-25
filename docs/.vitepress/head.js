@@ -1,5 +1,12 @@
 import { sidebar } from "./sidebar.js";
-import { linkPath, markdownUrl, pagePath, pageUrl, SITE_URL } from "./urls.js";
+import {
+  linkPath,
+  markdownUrl,
+  ogImagePath,
+  pagePath,
+  pageUrl,
+  SITE_URL,
+} from "./urls.js";
 
 export const SITE_TITLE = "Formspark Documentation";
 export const CDN = "https://cdn.formspark.io/images/formspark/logos";
@@ -38,6 +45,7 @@ export function pageHead({ pageData, title, description }) {
       "og:title": title,
       "og:description": description,
       "og:url": url,
+      "og:image": SITE_URL + ogImagePath(pageData.relativePath),
     }),
     [
       "script",
@@ -53,7 +61,7 @@ export function pageHead({ pageData, title, description }) {
 
 // Where a page sits in the sidebar: its group, and the group's first page,
 // which stands in for the group since groups have no page of their own.
-function sidebarPlace(relativePath) {
+export function sidebarPlace(relativePath) {
   const path = pagePath(relativePath);
   for (const group of sidebar) {
     if (group.items.some(({ link }) => linkPath(link) === path)) {
@@ -88,6 +96,7 @@ export function structuredData(pageData, description) {
     headline: title,
     description,
     url: pageUrl(relativePath),
+    image: SITE_URL + ogImagePath(relativePath),
     inLanguage: "en-US",
     publisher: ORGANIZATION,
     isPartOf: { "@id": `${SITE_URL}/#website` },

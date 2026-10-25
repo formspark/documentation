@@ -1,5 +1,6 @@
 import { CDN, meta, pageHead, SITE_TITLE } from "./head.js";
 import { writeMarkdownCopies } from "./markdown-copies.js";
+import { writeOgImages } from "./og-images.js";
 import { sidebar } from "./sidebar.js";
 import { SITE_URL } from "./urls.js";
 
@@ -20,7 +21,6 @@ export default {
     ["link", { rel: "icon", href: `${CDN}/formspark.ico` }],
     ...meta({
       "og:site_name": SITE_TITLE,
-      "og:image": `${CDN}/formspark--1200x630.png`,
       "og:image:type": "image/png",
       "og:image:width": "1200",
       "og:image:height": "630",
@@ -32,7 +32,10 @@ export default {
     }),
   ],
   transformHead: pageHead,
-  buildEnd: ({ outDir }) => writeMarkdownCopies(outDir),
+  async buildEnd({ outDir }) {
+    writeMarkdownCopies(outDir);
+    await writeOgImages(outDir);
+  },
   themeConfig: {
     logo: `${CDN}/formspark.svg`,
     outline: [2, 3],
