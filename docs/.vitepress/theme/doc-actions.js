@@ -1,5 +1,5 @@
 // The address of a page's Markdown copy and the prompt that hands the page to
-// a coding agent. The DocActions buttons use them, and the tests import them.
+// a coding agent, for the DocActions buttons.
 
 import { SITE_URL } from "../urls.js";
 
