@@ -61,10 +61,10 @@ if (!response.ok) throw new Error(await response.text());
 ```
 
 An accepted submission answers `200` with the submitted fields as JSON. A
-rejected one answers with a status and a short plain-text message: `400` for an
-empty body, a file, or JSON that is not an object or array, `402` when the
-workspace is out of submissions, `403` when spam protection rejects it, and
-`404` when the form id matches no form.
+rejected one answers with a status and a short plain-text message: `400` for a
+file or for JSON that is not an object or array, `402` when the workspace is
+out of submissions, `403` when spam protection rejects it, and `404` when the
+form id matches no form. An empty `POST` is accepted and stores nothing.
 
 ## Control fields
 
@@ -76,7 +76,8 @@ stored with it. In JSON, nest them as objects, such as
   one when something fails. `_append` set to `false` stops the fields being
   appended to the redirect URL.
 - `_email.subject`, `_email.from` and `_email.replyto` shape the notification
-  email. A field named `email` or `mail` also sets its reply-to address.
+  email. A field named `email`, `mail` or `_replyto` also sets its reply-to
+  address.
 - `_language` picks the language of the feedback page and the autoresponder.
 - `_feedback.*` fields customize the feedback page.
 - `_honeypot` and `_gotcha` are spam traps: hide the field with CSS, and a
