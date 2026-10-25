@@ -38,7 +38,9 @@ its HTML (`setup/index.md` beside `setup/index.html`) and joins every page into
 `pnpm run deploy` uploads `.md` files with a `text/markdown` content type.
 
 `docs/public/skills/formspark/SKILL.md` is an Agent Skill for integrating
-Formspark. Keep the skill's facts in step with the pages it summarizes.
+Formspark. Each page's `Copy Markdown` button copies its Markdown copy, and
+`Copy for agents` copies a prompt that points an agent at the copy and the skill.
+Keep the skill's facts in step with the pages it summarizes.
 
 ## Error reporting
 
