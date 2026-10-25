@@ -1,5 +1,6 @@
 ---
 title: Svelte
+description: "Submit a form to Formspark from a Svelte 5 component with Fetch, using $state runes to hold the message and disable the button while sending."
 lang: en-US
 ---
 

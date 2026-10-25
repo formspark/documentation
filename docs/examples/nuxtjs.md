@@ -1,5 +1,6 @@
 ---
 title: Nuxt
+description: "Connect a Nuxt app to Formspark with the vue-use-formspark composition API, or with a Fetch request that submits the form as JSON."
 lang: en-US
 ---
 

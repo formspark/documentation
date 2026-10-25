@@ -1,5 +1,6 @@
 ---
 title: Account settings
+description: "Manage the settings that belong to your Formspark account: create and revoke API tokens, and delete your account and what it removes."
 lang: en-US
 ---
 

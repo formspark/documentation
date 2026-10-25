@@ -1,5 +1,6 @@
 ---
 title: Preact
+description: "Connect a Preact app to Formspark with Fetch and hooks from preact/hooks, or with the use-formspark React hooks under preact/compat."
 lang: en-US
 ---
 

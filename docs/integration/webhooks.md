@@ -1,5 +1,6 @@
 ---
 title: Webhooks
+description: "Receive every accepted Formspark submission as a JSON POST to your endpoint, with the payload format, delivery rules, retries and signatures."
 lang: en-US
 ---
 

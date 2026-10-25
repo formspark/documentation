@@ -1,5 +1,6 @@
 ---
 title: Common issues
+description: "Fixes for common Formspark problems: missing submissions, forms or workspaces, error statuses, repeated notifications and duplicate submissions."
 lang: en-US
 ---
 

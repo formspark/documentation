@@ -1,5 +1,6 @@
 ---
 title: SolidStart
+description: "Connect a SolidStart app to Formspark with a plain HTML form that works before hydration, or with Fetch and Solid signals."
 lang: en-US
 ---
 

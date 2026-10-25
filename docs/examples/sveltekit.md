@@ -1,5 +1,6 @@
 ---
 title: SvelteKit
+description: "Connect a SvelteKit app to Formspark with a plain HTML form that needs no JavaScript, or with a Fetch request that submits JSON."
 lang: en-US
 ---
 

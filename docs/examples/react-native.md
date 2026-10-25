@@ -1,5 +1,6 @@
 ---
 title: React Native
+description: "Submit a form from a React Native app to Formspark with the use-formspark hooks or a Fetch request that sends the fields as JSON."
 lang: en-US
 ---
 

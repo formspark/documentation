@@ -87,15 +87,24 @@ submissions (no expiry, no subscription), 100 forms, 50 team members, the
 autoresponder, Google Sheets, Notion, feedback-page branding removal, and the
 REST API.
 Everything is per workspace. Details:
-https://documentation.formspark.io/troubleshooting/limits-and-plans
+https://documentation.formspark.io/troubleshooting/limits-and-plans.md
+
+## Agent skill
+
+An Agent Skill that teaches a coding agent to integrate Formspark:
+https://documentation.formspark.io/skills/formspark/SKILL.md
 
 ## Documentation
 
-- [Installation](https://documentation.formspark.io/setup/): getting a form id
-- [Spam protection](https://documentation.formspark.io/setup/spam-protection)
-- [Redirection](https://documentation.formspark.io/customization/redirection)
-- [Feedback page](https://documentation.formspark.io/customization/feedback-page)
-- [Language](https://documentation.formspark.io/customization/language): `_language` for the feedback page and autoresponder
-- [Webhooks](https://documentation.formspark.io/integration/webhooks)
-- [API](https://documentation.formspark.io/api/)
-- [Framework examples](https://documentation.formspark.io/examples/react)
+The links below are Markdown copies of the pages. For the HTML page,
+replace `.md` with `.html`, or drop `index.md`. Every page in one file:
+https://documentation.formspark.io/llms-full.txt
+
+- [Installation](https://documentation.formspark.io/setup/index.md): getting a form id
+- [Spam protection](https://documentation.formspark.io/setup/spam-protection.md)
+- [Redirection](https://documentation.formspark.io/customization/redirection.md)
+- [Feedback page](https://documentation.formspark.io/customization/feedback-page.md)
+- [Language](https://documentation.formspark.io/customization/language.md): `_language` for the feedback page and autoresponder
+- [Webhooks](https://documentation.formspark.io/integration/webhooks.md)
+- [API](https://documentation.formspark.io/api/index.md)
+- [Framework examples](https://documentation.formspark.io/examples/react.md)

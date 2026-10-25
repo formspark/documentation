@@ -1,5 +1,6 @@
 ---
 title: Pagination
+description: "Formspark API list endpoints are cursor paginated. Branch on hasMore, pass nextCursor as startingAfter, and treat cursors as opaque strings."
 lang: en-US
 ---
 

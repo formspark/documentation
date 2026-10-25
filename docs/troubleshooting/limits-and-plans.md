@@ -1,5 +1,6 @@
 ---
 title: Limits and plans
+description: "Formspark plans and limits: the free workspace, the one-time upgrade, how submissions are counted, overflow, and per-workspace limits."
 lang: en-US
 ---
 

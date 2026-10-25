@@ -1,5 +1,6 @@
 ---
 title: Email reception
+description: "Not receiving Formspark emails? Check your spam folder and add the Formspark sending addresses to your safe sender list."
 lang: en-US
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Redeeming vouchers
+description: "Redeem a voucher to add submissions to a Formspark workspace from the Billing section of its settings. Admins and editors can redeem one."
 lang: en-US
 ---
 

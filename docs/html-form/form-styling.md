@@ -1,5 +1,6 @@
 ---
 title: Form styling
+description: "Style Formspark forms with your own HTML and CSS: a vertical layout, an accessible form, Tailwind CSS, required field asterisks and AJAX states."
 lang: en-US
 ---
 

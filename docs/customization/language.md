@@ -1,5 +1,6 @@
 ---
 title: Language
+description: "Set the _language field to translate the feedback page and the autoresponder's default subject and footer into one of 13 supported languages."
 lang: en-US
 ---
 

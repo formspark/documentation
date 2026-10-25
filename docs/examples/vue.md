@@ -1,5 +1,6 @@
 ---
 title: Vue
+description: "Connect a Vue app to Formspark with the vue-use-formspark composition API, a Fetch request, or petite-vue with Fetch."
 lang: en-US
 ---
 

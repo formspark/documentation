@@ -7,3 +7,7 @@ allowBuilds:
 # 6.4.5 fixes. vitepress builds on vite 6, so the floor holds the tree there.
 overrides:
   vite: ^6.4.5
+
+  # satori pins fflate 0.7.3, whose unzipSync can loop on a malformed ZIP64
+  # archive. 0.7.5 fixes it within the same minor line.
+  fflate: ^0.7.5

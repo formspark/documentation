@@ -1,5 +1,6 @@
 ---
 title: Autoresponder
+description: "Send submitters an automatic confirmation email on upgraded workspaces: create the template, pick the recipient field, and set a subject."
 lang: en-US
 ---
 

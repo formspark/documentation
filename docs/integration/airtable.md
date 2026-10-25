@@ -1,5 +1,6 @@
 ---
 title: Airtable
+description: "Send Formspark submissions to Airtable through Zapier or Make: trigger on a new submission and map form fields to Airtable columns."
 lang: en-US
 ---
 

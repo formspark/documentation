@@ -1,5 +1,6 @@
 ---
 title: Jekyll
+description: "Add a Formspark form to a Jekyll site inline, or as a reusable include that reads the form id from _config.yml."
 lang: en-US
 ---
 

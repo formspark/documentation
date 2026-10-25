@@ -1,5 +1,6 @@
 ---
 title: Angular
+description: "Connect an Angular app to Formspark with a template-driven HTML form, or a reactive form that submits JSON through HttpClient."
 lang: en-US
 ---
 

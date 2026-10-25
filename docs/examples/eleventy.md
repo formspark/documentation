@@ -1,5 +1,6 @@
 ---
 title: Eleventy
+description: "Add a Formspark form to an Eleventy site inline, or as a reusable Nunjucks include that reads the form id from a global data file."
 lang: en-US
 ---
 

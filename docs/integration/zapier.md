@@ -1,5 +1,6 @@
 ---
 title: Zapier
+description: "Connect Formspark to Zapier with your form's key, and learn how often Zapier checks for submissions on free and upgraded workspaces."
 lang: en-US
 ---
 

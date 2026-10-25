@@ -1,5 +1,6 @@
 ---
 title: About
+description: "Formspark is a form backend for static sites. Point any HTML form at a URL to store submissions, get email notifications and forward data to your tools."
 lang: en-US
 ---
 

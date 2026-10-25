@@ -24,20 +24,24 @@
   },
   "type": "module",
   "scripts": {
-    "build": "pnpm test && vitepress build docs",
-    "deploy": "aws s3 sync docs/.vitepress/dist s3://formspark-documentation-website --delete --region eu-west-1 && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\" --region eu-west-1",
+    "build": "pnpm test && vitepress build docs && pnpm test:site",
+    "deploy": "aws s3 sync docs/.vitepress/dist s3://formspark-documentation-website --delete --region eu-west-1 --exclude '*.md' && aws s3 sync docs/.vitepress/dist s3://formspark-documentation-website --delete --region eu-west-1 --exclude '*' --include '*.md' --content-type 'text/markdown; charset=utf-8' && aws cloudfront create-invalidation --distribution-id E85HAKX4CBCUB --paths \"/*\" --region eu-west-1",
     "dev": "vitepress dev docs",
     "format": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore",
     "prepare": "husky",
-    "test": "node --test"
+    "test": "node --test",
+    "test:site": "node --test \"tests/site/*.mjs\""
   },
   "dependencies": {
     "@sentry/vue": "^10.70.0"
   },
   "devDependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
     "husky": "^9.0.0",
     "prettier": "^3.0.0",
     "pretty-quick": "^4.0.0",
+    "satori": "^0.63.2",
     "vitepress": "^1.6.4",
     "vue": "^3.5.44"
   },

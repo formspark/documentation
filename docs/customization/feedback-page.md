@@ -1,5 +1,6 @@
 ---
 title: Feedback page
+description: "Customize the hosted feedback page with _feedback fields: dark mode, language, success and error titles and messages, and branding removal."
 lang: en-US
 ---
 

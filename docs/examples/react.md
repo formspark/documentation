@@ -1,5 +1,6 @@
 ---
 title: React
+description: "Connect a React app to Formspark with the use-formspark hooks, a plain Fetch request, or React Hook Form, each submitting the form as JSON."
 lang: en-US
 ---
 

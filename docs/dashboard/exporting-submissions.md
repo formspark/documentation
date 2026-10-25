@@ -1,5 +1,6 @@
 ---
 title: Exporting submissions
+description: "Export selected submissions as JSON or CSV, or export everything a form received over a period of time from its Exports section."
 lang: en-US
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Qwik
+description: "Connect a Qwik app to Formspark with a server-side routeAction$, or submit from the browser with Fetch, a $ handler and a signal."
 lang: en-US
 ---
 

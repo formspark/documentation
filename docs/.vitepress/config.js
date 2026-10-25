@@ -1,19 +1,12 @@
+import { CDN, meta, pageHead, SITE_TITLE } from "./head.js";
+import { writeMarkdownCopies } from "./markdown-copies.js";
+import { writeOgImages } from "./og-images.js";
 import { sidebar } from "./sidebar.js";
-
-const SITE_URL = "https://documentation.formspark.io";
-const TITLE = "Formspark Documentation";
-const CDN = "https://cdn.formspark.io/images/formspark/logos";
-
-const meta = (entries) =>
-  Object.entries(entries).map(([key, content]) => [
-    "meta",
-    // og:* is an Open Graph property, everything else is a plain meta name.
-    { [key.startsWith("og:") ? "property" : "name"]: key, content },
-  ]);
+import { SITE_URL } from "./urls.js";
 
 export default {
   lang: "en-US",
-  title: TITLE,
+  title: SITE_TITLE,
   description: "Formspark documentation",
   // The bucket serves the built files by exact key and rewrites nothing, so
   // only .html paths and directory indexes resolve. Keep this false unless the
@@ -27,18 +20,22 @@ export default {
   head: [
     ["link", { rel: "icon", href: `${CDN}/formspark.ico` }],
     ...meta({
-      "og:title": TITLE,
-      "og:url": SITE_URL,
-      "og:image": `${CDN}/formspark--1200x630.png`,
+      "og:site_name": SITE_TITLE,
       "og:image:type": "image/png",
       "og:image:width": "1200",
       "og:image:height": "630",
+      "twitter:card": "summary_large_image",
       "theme-color": "#707ee7",
       "mobile-web-app-capable": "yes",
       "apple-mobile-web-app-capable": "yes",
       "apple-mobile-web-app-status-bar-style": "black",
     }),
   ],
+  transformHead: pageHead,
+  async buildEnd({ outDir }) {
+    writeMarkdownCopies(outDir);
+    await writeOgImages(outDir);
+  },
   themeConfig: {
     logo: `${CDN}/formspark.svg`,
     outline: [2, 3],

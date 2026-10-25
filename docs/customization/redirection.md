@@ -1,5 +1,6 @@
 ---
 title: Redirection
+description: "Send visitors to your own page after a submission with _redirect, choose an error page with _error, and stop appended fields with _append."
 lang: en-US
 ---
 

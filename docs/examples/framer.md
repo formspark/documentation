@@ -1,5 +1,6 @@
 ---
 title: Framer
+description: "Connect a Framer site to Formspark by following the official Framer guide on adding Formspark to the forms on your website."
 lang: en-US
 ---
 

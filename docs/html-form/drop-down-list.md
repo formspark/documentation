@@ -1,5 +1,6 @@
 ---
 title: Drop-down list
+description: "Submit drop-down lists to Formspark with select, multiple selection and optgroup, and suggest values for a text input with a datalist."
 lang: en-US
 ---
 

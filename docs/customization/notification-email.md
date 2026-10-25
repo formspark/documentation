@@ -1,5 +1,6 @@
 ---
 title: Notification email
+description: "Change the notification email's subject, sender name, title, button and footer with hidden _email fields, or send a custom template."
 lang: en-US
 ---
 

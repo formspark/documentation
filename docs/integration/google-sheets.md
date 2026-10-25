@@ -1,5 +1,6 @@
 ---
 title: Google Sheets
+description: "Send every Formspark submission to a new Google Sheets spreadsheet on upgraded workspaces, with retries, pausing and disconnection explained."
 lang: en-US
 ---
 

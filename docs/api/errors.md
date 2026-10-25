@@ -1,5 +1,6 @@
 ---
 title: API errors
+description: "Formspark API errors are RFC 9457 problem details in application/problem+json. Each stable error code, its status and how to handle it."
 lang: en-US
 ---
 

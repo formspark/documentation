@@ -1,5 +1,6 @@
 ---
 title: File uploads
+description: "Formspark stores links, not files. Upload files to Uploadcare or Cloudinary from your form and submit the resulting public URL with it."
 lang: en-US
 ---
 

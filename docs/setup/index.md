@@ -1,5 +1,6 @@
 ---
 title: Installation
+description: "Get your form's action URL, point an HTML form at submit-form.com, give every field a name, and test payloads against the echo endpoint."
 lang: en-US
 ---
 

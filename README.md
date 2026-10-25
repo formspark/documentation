@@ -10,8 +10,8 @@ Source of the Formspark documentation website.
 
 Use the Node version in `.tool-versions` and the pnpm version in `package.json`.
 Install dependencies with `pnpm install --frozen-lockfile`, then run `pnpm dev`.
-`pnpm build` tests the privacy filter and builds the site into
-`docs/.vitepress/dist`.
+`pnpm build` runs the tests, builds the site into
+`docs/.vitepress/dist` and checks the result.
 
 ## Tests
 
@@ -19,6 +19,28 @@ Install dependencies with `pnpm install --frozen-lockfile`, then run `pnpm dev`.
 suite mirrors the theme module's name: `tests/sentry-privacy.test.mjs` covers
 `docs/.vitepress/theme/sentry-privacy.js`. Pull requests run the same production
 build as the deployment workflow.
+
+`pnpm test:site` checks the built site in `docs/.vitepress/dist`, so its suites
+under `tests/site/` have no `.test` suffix and `pnpm test` skips them. The build
+runs it after `vitepress build`.
+
+Every page carries a `title` and a `description` of 70 to 160 characters in its
+frontmatter, and appears once in `docs/.vitepress/sidebar.js`. The build turns
+them into the page's canonical link, Open Graph tags and JSON-LD. The build also
+renders each page's Open Graph image, its title on a branded card, into
+`docs/.vitepress/dist/og/`.
+
+## Markdown for agents
+
+The build copies each page's Markdown source, without its frontmatter, next to
+its HTML (`setup/index.md` beside `setup/index.html`) and joins every page into
+`llms-full.txt`. `docs/public/llms.txt` is written by hand and links the copies.
+`pnpm run deploy` uploads `.md` files with a `text/markdown` content type.
+
+`docs/public/skills/formspark/SKILL.md` is an Agent Skill for integrating
+Formspark. Each page's `Copy Markdown` button copies its Markdown copy, and
+`Copy for agents` copies a prompt that points an agent at the copy and the skill.
+Keep the skill's facts in step with the pages it summarizes.
 
 ## Error reporting
 
