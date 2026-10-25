@@ -1,13 +1,10 @@
-import { meta, pageHead } from "./head.js";
+import { CDN, meta, pageHead, SITE_TITLE } from "./head.js";
 import { sidebar } from "./sidebar.js";
 import { SITE_URL } from "./urls.js";
 
-const TITLE = "Formspark Documentation";
-const CDN = "https://cdn.formspark.io/images/formspark/logos";
-
 export default {
   lang: "en-US",
-  title: TITLE,
+  title: SITE_TITLE,
   description: "Formspark documentation",
   // The bucket serves the built files by exact key and rewrites nothing, so
   // only .html paths and directory indexes resolve. Keep this false unless the
@@ -21,7 +18,7 @@ export default {
   head: [
     ["link", { rel: "icon", href: `${CDN}/formspark.ico` }],
     ...meta({
-      "og:site_name": TITLE,
+      "og:site_name": SITE_TITLE,
       "og:image": `${CDN}/formspark--1200x630.png`,
       "og:image:type": "image/png",
       "og:image:width": "1200",

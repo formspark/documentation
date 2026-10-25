@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readPages } from "../docs/.vitepress/pages.js";
 import { sidebar } from "../docs/.vitepress/sidebar.js";
-import { pagePath } from "../docs/.vitepress/urls.js";
+import { linkPath, pagePath } from "../docs/.vitepress/urls.js";
 
 // Pages reachable by link only, outside the navigation.
 const UNLISTED = ["integration/integromat.md"];
