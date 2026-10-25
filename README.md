@@ -37,6 +37,11 @@ its HTML (`setup/index.md` beside `setup/index.html`) and joins every page into
 `llms-full.txt`. `docs/public/llms.txt` is written by hand and links the copies.
 `pnpm run deploy` uploads `.md` files with a `text/markdown` content type.
 
+`docs/public/skills/formspark/SKILL.md` is an Agent Skill for integrating
+Formspark, and the `Copy for agents` button on each page copies a prompt that
+points an agent at the page's Markdown copy and the skill. Keep the skill's
+facts in step with the pages it summarizes.
+
 ## Error reporting
 
 Sentry reports browser errors through the theme's privacy filter. Reports keep

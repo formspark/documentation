@@ -20,7 +20,7 @@ function served(url) {
 const documentationLinks = (text) =>
   [
     ...text.matchAll(/https:\/\/documentation\.formspark\.io[^\s)>\]"'`]*/g),
-  ].map(([url]) => url);
+  ].map(([url]) => url.replace(/[.,;:]+$/, ""));
 
 describe("Markdown copies", () => {
   for (const { relativePath } of readPages()) {
@@ -34,7 +34,11 @@ describe("Markdown copies", () => {
     });
   }
 
-  for (const file of ["llms.txt", "llms-full.txt"]) {
+  for (const file of [
+    "llms.txt",
+    "llms-full.txt",
+    "skills/formspark/SKILL.md",
+  ]) {
     it(`resolves every documentation link in ${file}`, () => {
       const links = documentationLinks(read(file));
       assert.ok(links.length > 0);

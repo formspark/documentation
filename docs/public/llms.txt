@@ -89,6 +89,11 @@ REST API.
 Everything is per workspace. Details:
 https://documentation.formspark.io/troubleshooting/limits-and-plans.md
 
+## Agent skill
+
+An Agent Skill that teaches a coding agent to integrate Formspark:
+https://documentation.formspark.io/skills/formspark/SKILL.md
+
 ## Documentation
 
 The links below are Markdown copies of the pages. For the HTML page,
