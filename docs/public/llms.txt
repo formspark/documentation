@@ -87,15 +87,15 @@ submissions (no expiry, no subscription), 100 forms, 50 team members, the
 autoresponder, Google Sheets, Notion, feedback-page branding removal, and the
 REST API.
 Everything is per workspace. Details:
-https://documentation.formspark.io/troubleshooting/limits-and-plans
+https://documentation.formspark.io/troubleshooting/limits-and-plans.html
 
 ## Documentation
 
 - [Installation](https://documentation.formspark.io/setup/): getting a form id
-- [Spam protection](https://documentation.formspark.io/setup/spam-protection)
-- [Redirection](https://documentation.formspark.io/customization/redirection)
-- [Feedback page](https://documentation.formspark.io/customization/feedback-page)
-- [Language](https://documentation.formspark.io/customization/language): `_language` for the feedback page and autoresponder
-- [Webhooks](https://documentation.formspark.io/integration/webhooks)
+- [Spam protection](https://documentation.formspark.io/setup/spam-protection.html)
+- [Redirection](https://documentation.formspark.io/customization/redirection.html)
+- [Feedback page](https://documentation.formspark.io/customization/feedback-page.html)
+- [Language](https://documentation.formspark.io/customization/language.html): `_language` for the feedback page and autoresponder
+- [Webhooks](https://documentation.formspark.io/integration/webhooks.html)
 - [API](https://documentation.formspark.io/api/)
-- [Framework examples](https://documentation.formspark.io/examples/react)
+- [Framework examples](https://documentation.formspark.io/examples/react.html)
