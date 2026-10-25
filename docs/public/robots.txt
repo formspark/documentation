@@ -1,7 +1,35 @@
+# A crawler obeys only the most specific group that names it, so every
+# named group repeats the rules of the * group.
 User-agent: *
 Allow: /
 Disallow: /404.html
-Disallow: /debug.html
 
-Host: https://documentation.formspark.io
+User-agent: GPTBot
+Allow: /
+Disallow: /404.html
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /404.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /404.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /404.html
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /404.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /404.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /404.html
+
 Sitemap: https://documentation.formspark.io/sitemap.xml
