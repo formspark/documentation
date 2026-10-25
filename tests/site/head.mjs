@@ -1,5 +1,3 @@
-// Checks the built site, so it runs after `vitepress build`, not with
-// `pnpm test`. See the build script in package.json.
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readPages } from "../../docs/.vitepress/pages.js";
