@@ -1,10 +1,11 @@
 // The address of a page's Markdown copy and the prompt that hands the page to
-// a coding agent. The DocActions buttons use them, and the tests import them.
+// a coding agent, for the DocActions buttons.
+
+import { SITE_URL } from "../urls.js";
 
 const PRODUCT = "Formspark";
-const SITE_ORIGIN = "https://documentation.formspark.io";
 const SITE_BASE = "/";
-const SKILL_URL = `${SITE_ORIGIN}/skills/formspark/SKILL.md`;
+const SKILL_URL = `${SITE_URL}/skills/formspark/SKILL.md`;
 
 // The site path of a page's Markdown copy: the page's source path under the
 // site's base, so a directory index is its index.md. Characters a URL path
@@ -14,7 +15,7 @@ export function markdownPathFor(relativePath) {
 }
 
 export function markdownUrlFor(relativePath) {
-  return `${SITE_ORIGIN}${markdownPathFor(relativePath)}`;
+  return `${SITE_URL}${markdownPathFor(relativePath)}`;
 }
 
 export function agentPrompt(title, markdownUrl) {

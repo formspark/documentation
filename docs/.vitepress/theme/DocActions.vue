@@ -12,8 +12,8 @@ const FEEDBACK_MS = 2000;
 
 const { page, frontmatter } = useData();
 const markdownPath = computed(() => markdownPathFor(page.value.relativePath));
-// The title VitePress resolved for the page, which a build hook can set for a
-// page whose front matter is shared by many.
+// The title VitePress resolved for the page, from its frontmatter or else its
+// first heading.
 const title = computed(() => page.value.title || frontmatter.value.title);
 
 const panelId = useId();

@@ -22,7 +22,7 @@ const documentationLinks = (text) =>
     ...text.matchAll(/https:\/\/documentation\.formspark\.io[^\s)>\]"'`]*/g),
   ].map(([url]) => url.replace(/[.,;:]+$/, ""));
 
-describe("Markdown copies", () => {
+describe("built Markdown copies", () => {
   for (const { relativePath } of readPages()) {
     it(`publishes ${relativePath} and links it from the page`, () => {
       assert.doesNotMatch(read(relativePath), /^---\n/);
