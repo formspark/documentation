@@ -12,7 +12,9 @@ const FEEDBACK_MS = 2000;
 
 const { page, frontmatter } = useData();
 const markdownPath = computed(() => markdownPathFor(page.value.relativePath));
-const title = computed(() => frontmatter.value.title || page.value.title);
+// The title VitePress resolved for the page, which a build hook can set for a
+// page whose front matter is shared by many.
+const title = computed(() => page.value.title || frontmatter.value.title);
 
 const panelId = useId();
 const root = ref(null);
@@ -109,74 +111,99 @@ onBeforeUnmount(() => {
 
 <template>
   <div ref="root" class="doc-actions" @keydown.escape="onEscape">
-    <div class="split">
-      <button type="button" class="action" @click="copyMarkdown">
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          width="14"
-          height="14"
-          aria-hidden="true"
+    <div class="bar">
+      <div class="split">
+        <button type="button" class="action" @click="copyMarkdown">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="14"
+            height="14"
+            aria-hidden="true"
+          >
+            <rect x="9" y="9" width="12" height="12" rx="2" />
+            <path
+              d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"
+            />
+          </svg>
+          <span class="labels">
+            <span v-bind="label('markdown', false)">Copy Markdown</span>
+            <span v-bind="label('markdown', true)">Copied</span>
+          </span>
+        </button>
+        <button
+          ref="toggle"
+          type="button"
+          class="action toggle"
+          aria-label="More copy options"
+          :aria-expanded="String(open)"
+          :aria-controls="panelId"
+          @click="open = !open"
         >
-          <rect x="9" y="9" width="12" height="12" rx="2" />
-          <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" />
-        </svg>
-        <span class="labels">
-          <span v-bind="label('markdown', false)">Copy Markdown</span>
-          <span v-bind="label('markdown', true)">Copied</span>
-        </span>
-      </button>
-      <button
-        ref="toggle"
-        type="button"
-        class="action toggle"
-        aria-label="More copy options"
-        :aria-expanded="String(open)"
-        :aria-controls="panelId"
-        @click="open = !open"
-      >
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          width="14"
-          height="14"
-          aria-hidden="true"
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="14"
+            height="14"
+            aria-hidden="true"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+      </div>
+      <div v-show="open" :id="panelId" class="panel">
+        <button type="button" class="item" @click="copyPrompt">
+          <span class="labels">
+            <span v-bind="label('prompt', false)">Copy for agents</span>
+            <span v-bind="label('prompt', true)">Copied</span>
+          </span>
+        </button>
+        <a
+          class="item"
+          :href="markdownPath"
+          target="_blank"
+          rel="noopener"
+          @click="close()"
         >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
-      </button>
-    </div>
-    <div v-show="open" :id="panelId" class="panel">
-      <button type="button" class="item" @click="copyPrompt">
-        <span class="labels">
-          <span v-bind="label('prompt', false)">Copy for agents</span>
-          <span v-bind="label('prompt', true)">Copied</span>
-        </span>
-      </button>
-      <a
-        class="item"
-        :href="markdownPath"
-        target="_blank"
-        rel="noopener"
-        @click="close()"
-      >
-        View as Markdown <span aria-hidden="true">↗</span>
-      </a>
+          View as Markdown <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </div>
     <span class="visually-hidden" aria-live="polite">{{ status }}</span>
   </div>
 </template>
 
 <style scoped>
-/* Floats beside the page's first line, the H1, so the heading keeps its place
-   and wraps around the buttons when the column is narrow. */
+/* Below 640px the buttons take a row of their own above the H1. From 640px
+   they sit in the H1's first line, which the global rule below keeps clear.
+   A float would do the same for a plain page, but any content that forms its
+   own layout box, such as an API operation, would then narrow beside it for
+   its whole height. */
 .doc-actions {
-  position: relative;
-  z-index: 1;
-  float: right;
-  margin: 4px 0 12px 16px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
   -webkit-user-select: none;
   user-select: none;
+}
+
+.bar {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 640px) {
+  .doc-actions {
+    position: relative;
+    height: 0;
+    margin: 0;
+  }
+
+  .bar {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
 }
 
 /* The outline belongs to the wrapper and the fills stay inside it, so no
@@ -285,5 +312,15 @@ onBeforeUnmount(() => {
 .action:focus-visible {
   outline-offset: -2px;
   border-radius: 7px;
+}
+</style>
+
+<style>
+/* Room for the buttons beside a page's H1. Only a heading the page's Markdown
+   writes is padded; a heading a component renders lays itself out. */
+@media (min-width: 640px) {
+  .vp-doc > div > h1 {
+    padding-right: 200px;
+  }
 }
 </style>
