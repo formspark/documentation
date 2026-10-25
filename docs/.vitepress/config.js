@@ -1,4 +1,5 @@
 import { CDN, meta, pageHead, SITE_TITLE } from "./head.js";
+import { writeMarkdownCopies } from "./markdown-copies.js";
 import { sidebar } from "./sidebar.js";
 import { SITE_URL } from "./urls.js";
 
@@ -31,6 +32,7 @@ export default {
     }),
   ],
   transformHead: pageHead,
+  buildEnd: ({ outDir }) => writeMarkdownCopies(outDir),
   themeConfig: {
     logo: `${CDN}/formspark.svg`,
     outline: [2, 3],

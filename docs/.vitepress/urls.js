@@ -14,3 +14,6 @@ export const pageUrl = (relativePath) => SITE_URL + pagePath(relativePath);
 // The site path a sidebar link points at, since sidebar links leave out the
 // .html suffix that VitePress adds when it renders them.
 export const linkPath = (link) => (link.endsWith("/") ? link : `${link}.html`);
+
+// The Markdown copy of a page sits next to its HTML, under the source's name.
+export const markdownUrl = (relativePath) => `${SITE_URL}/${relativePath}`;

@@ -5,12 +5,21 @@ import { existsSync, readFileSync } from "node:fs";
 const DOCS = new URL("../docs/", import.meta.url);
 const SITE = "https://documentation.formspark.io";
 
+// Files the build writes that have no source of their own.
+const GENERATED = ["/llms-full.txt"];
+
 // The bucket serves files by exact key, so a link resolves only when the
-// build writes a file at that key: a page from its Markdown source, or a
-// file copied from docs/public.
+// build writes a file at that key: a page or its Markdown copy from the
+// page's source, or a file copied from docs/public.
 function sourceFor(pathname) {
   if (pathname.endsWith("/")) return `${pathname.slice(1)}index.md`;
   if (pathname.endsWith(".html")) return pathname.slice(1, -5) + ".md";
+  if (
+    pathname.endsWith(".md") &&
+    existsSync(new URL(pathname.slice(1), DOCS))
+  ) {
+    return pathname.slice(1);
+  }
   return `public${pathname}`;
 }
 
@@ -26,6 +35,7 @@ describe("llms.txt", () => {
 
   for (const pathname of links) {
     it(`resolves ${SITE}${pathname}`, () => {
+      if (GENERATED.includes(pathname)) return;
       const source = sourceFor(pathname);
       assert.ok(existsSync(new URL(source, DOCS)), `no docs/${source}`);
     });

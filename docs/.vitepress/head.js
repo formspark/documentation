@@ -1,5 +1,5 @@
 import { sidebar } from "./sidebar.js";
-import { linkPath, pagePath, pageUrl, SITE_URL } from "./urls.js";
+import { linkPath, markdownUrl, pagePath, pageUrl, SITE_URL } from "./urls.js";
 
 export const SITE_TITLE = "Formspark Documentation";
 export const CDN = "https://cdn.formspark.io/images/formspark/logos";
@@ -26,6 +26,14 @@ export function pageHead({ pageData, title, description }) {
   const url = pageUrl(pageData.relativePath);
   return [
     ["link", { rel: "canonical", href: url }],
+    [
+      "link",
+      {
+        rel: "alternate",
+        type: "text/markdown",
+        href: markdownUrl(pageData.relativePath),
+      },
+    ],
     ...meta({
       "og:title": title,
       "og:description": description,

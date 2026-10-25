@@ -28,6 +28,13 @@ Every page carries a `title` and a `description` of 70 to 160 characters in its
 frontmatter, and appears once in `docs/.vitepress/sidebar.js`. The build turns
 them into the page's canonical link, Open Graph tags and JSON-LD.
 
+## Markdown for agents
+
+The build copies each page's Markdown source, without its frontmatter, next to
+its HTML (`setup/index.md` beside `setup/index.html`) and joins every page into
+`llms-full.txt`. `docs/public/llms.txt` is written by hand and links the copies.
+`pnpm run deploy` uploads `.md` files with a `text/markdown` content type.
+
 ## Error reporting
 
 Sentry reports browser errors through the theme's privacy filter. Reports keep
