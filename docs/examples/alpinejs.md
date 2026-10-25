@@ -1,5 +1,6 @@
 ---
 title: Alpine.js
+description: "Submit a form to Formspark from Alpine.js with Fetch, and track idle, loading, success and error states to show a thank-you message in place."
 lang: en-US
 ---
 

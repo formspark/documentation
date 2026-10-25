@@ -1,5 +1,6 @@
 ---
 title: Custom routing
+description: "Route submissions to different teams, departments or inboxes by switching the form's action URL with JavaScript when a drop-down changes."
 lang: en-US
 ---
 

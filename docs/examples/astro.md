@@ -1,5 +1,6 @@
 ---
 title: Astro
+description: "Add a Formspark form to an Astro site as a plain HTML form with zero JavaScript, or submit it with Fetch from a script block without a reload."
 lang: en-US
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: htmx
+description: "Submit a form to Formspark with htmx: request JSON, keep the form in place with hx-swap none, and show a thank-you message after the request."
 lang: en-US
 ---
 

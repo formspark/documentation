@@ -1,5 +1,6 @@
 ---
 title: WordPress
+description: "Add a Formspark form to a WordPress site with a Custom HTML block that holds a form posting to your Formspark action URL."
 lang: en-US
 ---
 

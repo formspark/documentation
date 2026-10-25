@@ -1,5 +1,6 @@
 ---
 title: Ghost
+description: "Add a Formspark form to a Ghost site with an HTML card in a post or page, or with a page template in a custom theme."
 lang: en-US
 ---
 

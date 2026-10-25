@@ -1,5 +1,6 @@
 ---
 title: Purchases and invoices
+description: "Find every purchase and its invoice in the workspace's Billing settings, and add a company name, address and VAT number for a business invoice."
 lang: en-US
 ---
 

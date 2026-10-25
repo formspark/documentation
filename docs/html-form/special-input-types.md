@@ -1,5 +1,6 @@
 ---
 title: Special input types
+description: "How radio buttons, checkboxes, hidden fields and email, tel, URL, number, range, date and color inputs submit their values to Formspark."
 lang: en-US
 ---
 

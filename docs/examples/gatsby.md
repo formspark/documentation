@@ -1,5 +1,6 @@
 ---
 title: Gatsby
+description: "Connect a Gatsby site to Formspark with a plain HTML form, the use-formspark React hooks, or a Fetch request that submits JSON."
 lang: en-US
 ---
 

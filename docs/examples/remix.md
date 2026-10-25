@@ -1,5 +1,6 @@
 ---
 title: React Router (Remix)
+description: "Connect a React Router app in framework mode (formerly Remix) to Formspark with a server-side route action, or with the use-formspark hooks."
 lang: en-US
 ---
 

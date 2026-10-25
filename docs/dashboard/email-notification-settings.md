@@ -1,5 +1,6 @@
 ---
 title: Email notification settings
+description: "Choose who receives a form's notification emails, add guest recipients, turn threading on or off, and design custom Handlebars templates."
 lang: en-US
 ---
 

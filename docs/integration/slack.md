@@ -1,5 +1,6 @@
 ---
 title: Slack
+description: "Post Formspark submissions to a Slack channel: connect your Slack workspace, name the channel, and add the Formspark app to private channels."
 lang: en-US
 ---
 

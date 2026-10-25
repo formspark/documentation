@@ -10,8 +10,8 @@ Source of the Formspark documentation website.
 
 Use the Node version in `.tool-versions` and the pnpm version in `package.json`.
 Install dependencies with `pnpm install --frozen-lockfile`, then run `pnpm dev`.
-`pnpm build` tests the privacy filter and builds the site into
-`docs/.vitepress/dist`.
+`pnpm build` runs the tests, builds the site into
+`docs/.vitepress/dist` and checks the result.
 
 ## Tests
 
@@ -19,6 +19,14 @@ Install dependencies with `pnpm install --frozen-lockfile`, then run `pnpm dev`.
 suite mirrors the theme module's name: `tests/sentry-privacy.test.mjs` covers
 `docs/.vitepress/theme/sentry-privacy.js`. Pull requests run the same production
 build as the deployment workflow.
+
+`pnpm test:site` checks the built site in `docs/.vitepress/dist`, so its suites
+under `tests/site/` have no `.test` suffix and `pnpm test` skips them. The build
+runs it after `vitepress build`.
+
+Every page carries a `title` and a `description` of 70 to 160 characters in its
+frontmatter, and appears once in `docs/.vitepress/sidebar.js`. The build turns
+them into the page's canonical link and Open Graph tags.
 
 ## Error reporting
 

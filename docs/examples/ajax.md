@@ -1,5 +1,6 @@
 ---
 title: AJAX submissions
+description: "Submit forms to Formspark with AJAX: send JSON with Accept: application/json using Fetch, Axios, XHR or jQuery, with Botpoison and reCAPTCHA."
 lang: en-US
 ---
 

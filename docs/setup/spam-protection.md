@@ -1,5 +1,6 @@
 ---
 title: Spam protection
+description: "Block spam with Botpoison, reCAPTCHA, hCaptcha, Turnstile, custom spam words, allowed domains or a honeypot, and review rejected submissions."
 lang: en-US
 ---
 

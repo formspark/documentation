@@ -1,5 +1,6 @@
 ---
 title: Make
+description: "Connect Formspark to Make: add the Formspark app, create a New Submission trigger, and paste its webhook URL into your form's settings."
 lang: en-US
 ---
 

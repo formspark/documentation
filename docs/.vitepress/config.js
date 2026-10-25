@@ -1,15 +1,9 @@
+import { meta, pageHead } from "./head.js";
 import { sidebar } from "./sidebar.js";
+import { SITE_URL } from "./urls.js";
 
-const SITE_URL = "https://documentation.formspark.io";
 const TITLE = "Formspark Documentation";
 const CDN = "https://cdn.formspark.io/images/formspark/logos";
-
-const meta = (entries) =>
-  Object.entries(entries).map(([key, content]) => [
-    "meta",
-    // og:* is an Open Graph property, everything else is a plain meta name.
-    { [key.startsWith("og:") ? "property" : "name"]: key, content },
-  ]);
 
 export default {
   lang: "en-US",
@@ -27,18 +21,19 @@ export default {
   head: [
     ["link", { rel: "icon", href: `${CDN}/formspark.ico` }],
     ...meta({
-      "og:title": TITLE,
-      "og:url": SITE_URL,
+      "og:site_name": TITLE,
       "og:image": `${CDN}/formspark--1200x630.png`,
       "og:image:type": "image/png",
       "og:image:width": "1200",
       "og:image:height": "630",
+      "twitter:card": "summary_large_image",
       "theme-color": "#707ee7",
       "mobile-web-app-capable": "yes",
       "apple-mobile-web-app-capable": "yes",
       "apple-mobile-web-app-status-bar-style": "black",
     }),
   ],
+  transformHead: pageHead,
   themeConfig: {
     logo: `${CDN}/formspark.svg`,
     outline: [2, 3],

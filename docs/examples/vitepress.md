@@ -1,5 +1,6 @@
 ---
 title: VitePress
+description: "Add a Formspark form to a VitePress site as a registered theme component, or as a plain HTML form written straight into a Markdown page."
 lang: en-US
 ---
 

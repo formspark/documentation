@@ -1,5 +1,6 @@
 ---
 title: Analog
+description: "Connect an Analog page to Formspark with a plain HTML form posting to your action URL, or with Fetch to keep the visitor on the page."
 lang: en-US
 ---
 

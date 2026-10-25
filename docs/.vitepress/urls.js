@@ -1,0 +1,12 @@
+export const SITE_URL = "https://documentation.formspark.io";
+
+// The site path a page's source builds to. cleanUrls is off, so a page is
+// served at its .html file and a directory index at the directory itself.
+export function pagePath(relativePath) {
+  if (relativePath === "index.md" || relativePath.endsWith("/index.md")) {
+    return `/${relativePath.slice(0, -"index.md".length)}`;
+  }
+  return `/${relativePath.replace(/\.md$/, ".html")}`;
+}
+
+export const pageUrl = (relativePath) => SITE_URL + pagePath(relativePath);

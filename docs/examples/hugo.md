@@ -1,5 +1,6 @@
 ---
 title: Hugo
+description: "Add a Formspark form to a Hugo site inline, or as a reusable partial that reads the form id from your site configuration."
 lang: en-US
 ---
 

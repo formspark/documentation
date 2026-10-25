@@ -1,5 +1,6 @@
 ---
 title: Notion
+description: "Send every Formspark submission to a new Notion database on upgraded workspaces, with property types, retries and the shared page explained."
 lang: en-US
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Additional workspaces
+description: "Create additional workspaces to separate forms by customer or project, ask support to move a form, and delete a workspace you no longer need."
 lang: en-US
 ---
 

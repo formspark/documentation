@@ -1,5 +1,6 @@
 ---
 title: Submit in different tab
+description: "Submit a Formspark form in a new browser tab with the target attribute set to _blank, and how browsers on desktop and mobile handle it."
 lang: en-US
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Integrations overview
+description: "Overview of Formspark integrations: Google Sheets, Notion, Slack, webhooks, Zapier and Make, and how to reach tools without a direct integration."
 lang: en-US
 ---
 

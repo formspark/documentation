@@ -1,5 +1,6 @@
 ---
 title: Working with arrays and objects
+description: "Submit arrays and nested objects to Formspark with the name[index] and name.property field syntax, from an HTML form or a JSON request."
 lang: en-US
 ---
 

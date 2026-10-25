@@ -1,5 +1,6 @@
 ---
 title: Inviting team members
+description: "Invite team members to a Formspark workspace, resend or revoke pending invitations, and choose between the admin, editor and viewer roles."
 lang: en-US
 ---
 

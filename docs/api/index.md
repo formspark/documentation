@@ -1,5 +1,6 @@
 ---
 title: API overview
+description: "The Formspark REST API creates forms, changes their settings and reads submissions. Base URL, bearer token authentication, OpenAPI and agents."
 lang: en-US
 ---
 

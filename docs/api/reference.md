@@ -1,5 +1,6 @@
 ---
 title: API reference
+description: "Reference for every Formspark API endpoint: the token, workspaces, forms, email templates and submissions, with scopes and request examples."
 lang: en-US
 ---
 

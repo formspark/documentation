@@ -1,5 +1,6 @@
 ---
 title: Direct replies
+description: "Reply to submitters from your inbox: a field named mail, email, _replyto or _email.replyto sets the reply-to of the notification email."
 lang: en-US
 ---
 

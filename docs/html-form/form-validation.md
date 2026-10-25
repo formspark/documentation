@@ -1,5 +1,6 @@
 ---
 title: Form validation
+description: "Formspark performs no server-side validation. Validate inputs in the browser with HTML5 required, minlength, maxlength and pattern attributes."
 lang: en-US
 ---
 
