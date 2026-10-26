@@ -8,7 +8,7 @@ lang: en-US
 
 Base URL `https://api.formspark.io/public/v1`. Every request needs an `Authorization: Bearer` header. The machine-readable description is at [`/openapi.json`](https://api.formspark.io/public/v1/openapi.json).
 
-Responses contain a form's settings and its notification emails. Captcha secret keys, the Slack token and the Zapier key are never returned; they stay in the dashboard.
+Responses contain a form's settings and its notification emails. Captcha secret keys can be written but are never returned. The Slack token and the Zapier key are never returned either.
 
 ## Token
 
@@ -126,7 +126,18 @@ Accepts one of four providers, or `null` to require no challenge at all:
 
 No other value is accepted. The automatic spam filtering is switched separately, with `automaticSpamFilter`.
 
-The provider's secret key is not part of the API. Store it in the dashboard first, then switch the form over: selecting a provider whose secret key is not already stored is rejected. See [spam protection](/setup/spam-protection).
+Each provider needs its secret key on the form. Send it in the same request or an earlier one, in `botpoisonSecretKey`, `recaptchaV2SecretKey`, `hCaptchaSecretKey` or `turnstileSecretKey`. A key is write-only: it is stored and never returned. Each form stores its own key, so send the same key to every form that uses it.
+
+```json
+{
+  "spamProtection": "TURNSTILE",
+  "turnstileSecretKey": "0x4AAAAAAA..."
+}
+```
+
+Selecting a provider without its key is rejected, and so is removing the key while the form uses it. See [spam protection](/setup/spam-protection).
+
+If your own server verifies the challenge before it submits, leave `spamProtection` off. A challenge response works only once, so Formspark could not verify it again.
 
 #### `webhookUrl`
 

@@ -270,7 +270,7 @@ List the sites your form lives on, and submissions sent from anywhere else are r
 
 - Each domain also covers its subdomains: `example.com` allows `www.example.com` and `shop.example.com`.
 - You can paste a full address. `https://www.example.com/contact` is saved as `example.com`.
-- Submissions sent from a server, or by a tool such as `curl`, are rejected, because they do not say which site they come from.
+- Submissions sent from a server, or by a tool such as `curl`, are rejected unless they send an `Origin` header naming one of your domains, such as `Origin: https://example.com`.
 - To test on your own machine, add `localhost` to the list.
 
 ## Honeypot
