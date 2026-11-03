@@ -4,6 +4,10 @@ import { readPages } from "./pages.js";
 import { sidebar } from "./sidebar.js";
 import { linkPath, markdownUrl, pagePath, SITE_URL } from "./urls.js";
 
+const HTML_EXTENSION = /\.html$/;
+const FILE_EXTENSION = /\.\w+$/;
+const RELATIVE_LINK = /\]\((\.{0,2}\/[^)\s]*)\)/g;
+
 // Points a site-relative link in a page at an absolute address, so the copy
 // still works once it leaves the site. Links to other pages go to their
 // Markdown copies, links to images and other files stay as they are.
@@ -11,8 +15,8 @@ function absoluteLink(target, relativePath) {
   const url = new URL(target, markdownUrl(relativePath));
   if (url.pathname.endsWith("/")) url.pathname += "index.md";
   else if (url.pathname.endsWith(".html"))
-    url.pathname = url.pathname.replace(/\.html$/, ".md");
-  else if (!/\.\w+$/.test(url.pathname)) url.pathname += ".md";
+    url.pathname = url.pathname.replace(HTML_EXTENSION, ".md");
+  else if (!FILE_EXTENSION.test(url.pathname)) url.pathname += ".md";
   return url.href;
 }
 
@@ -21,7 +25,7 @@ export function markdownCopy({ relativePath, body }) {
     body
       .trim()
       .replace(
-        /\]\((\.{0,2}\/[^)\s]*)\)/g,
+        RELATIVE_LINK,
         (_, target) => `](${absoluteLink(target, relativePath)})`,
       ) + "\n"
   );

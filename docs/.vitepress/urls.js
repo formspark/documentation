@@ -1,3 +1,5 @@
+const MARKDOWN_EXTENSION = /\.md$/;
+
 export const SITE_URL = "https://documentation.formspark.io";
 
 // The site path a page's source builds to. cleanUrls is off, so a page is
@@ -6,7 +8,7 @@ export function pagePath(relativePath) {
   if (relativePath === "index.md" || relativePath.endsWith("/index.md")) {
     return `/${relativePath.slice(0, -"index.md".length)}`;
   }
-  return `/${relativePath.replace(/\.md$/, ".html")}`;
+  return `/${relativePath.replace(MARKDOWN_EXTENSION, ".html")}`;
 }
 
 export const pageUrl = (relativePath) => SITE_URL + pagePath(relativePath);
@@ -20,4 +22,4 @@ export const markdownUrl = (relativePath) => `${SITE_URL}/${relativePath}`;
 
 // Where the build writes a page's Open Graph image.
 export const ogImagePath = (relativePath) =>
-  `/og/${relativePath.replace(/\.md$/, ".png")}`;
+  `/og/${relativePath.replace(MARKDOWN_EXTENSION, ".png")}`;
