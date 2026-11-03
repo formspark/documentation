@@ -1,3 +1,5 @@
+const QUERY_OR_FRAGMENT = /[?#][\s\S]*$/;
+
 const ERROR_TYPES = new Set([
   "Error",
   "TypeError",
@@ -39,7 +41,7 @@ export function sanitizeSentryEvent(event) {
         },
         stacktrace: exception.stacktrace && {
           frames: exception.stacktrace.frames?.map((frame) => ({
-            filename: frame.filename?.replace(/[?#][\s\S]*$/, ""),
+            filename: frame.filename?.replace(QUERY_OR_FRAGMENT, ""),
             function: frame.function,
             module: frame.module,
             lineno: frame.lineno,
