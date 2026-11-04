@@ -44,6 +44,13 @@ describe("markdownCopy", () => {
     assert.equal(copy(body), `${body}\n`);
   });
 
+  it("rewrites every link in the body on each call", () => {
+    const body = "[Setup](/setup/) and [Errors](/api/errors)";
+    const expected = `[Setup](${SITE}/setup/index.md) and [Errors](${SITE}/api/errors.md)\n`;
+    assert.equal(copy(body), expected);
+    assert.equal(copy(body), expected);
+  });
+
   it("trims the body to end in one newline", () => {
     assert.equal(copy("\n# Errors\n\n\n"), "# Errors\n");
   });
