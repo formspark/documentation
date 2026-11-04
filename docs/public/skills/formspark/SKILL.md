@@ -65,7 +65,8 @@ rejected one answers with a status and a short plain-text message: `400` for a
 file or for JSON that is not an object or array, `402` when the workspace is
 out of submissions, `403` when spam protection rejects it, `404` when the
 form id matches no form, `413` for a body over 1 MB, and `415` for a content
-type other than JSON, URL-encoded or multipart form data. An empty `POST` is accepted and stores nothing.
+type other than JSON, URL-encoded or multipart form data. An empty `POST` is
+accepted and stores nothing.
 
 ## Control fields
 
