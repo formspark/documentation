@@ -24,4 +24,4 @@ Contact forms, newsletter signups, lead capture, surveys, feedback widgets, RSVP
 
 Formspark is not a drag-and-drop form builder. You bring your own HTML; Formspark stores submissions, sends notifications, and forwards data to your tools.
 
-Don't have an account yet? [Sign up for free!](https://dashboard.formspark.io).
+Don't have an account yet? [Sign up for free](https://dashboard.formspark.io).

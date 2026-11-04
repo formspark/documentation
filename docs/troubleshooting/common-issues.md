@@ -68,7 +68,7 @@ fetch("https://submit-form.com/your-form-id", {
 });
 ```
 
-Without those headers Formspark may treat the body as something other than JSON and silently discard it.
+Without `Content-Type`, a browser sends the body as `text/plain`, which Formspark refuses with a `415`.
 
 ## My request returns an error status
 
@@ -84,6 +84,13 @@ These are the statuses an AJAX request with `Accept: application/json` can recei
 - `403` with `Rejected by spam protection`: see [rejected submissions](/setup/spam-protection#rejected-submissions).
 - `404` with `This form does not exist anymore`: the form ID in your URL does not match a form. Copy the action URL
   again from your form's `How-to` tab.
+- `413` with `Payload Too Large`: the submission is over 1 MB.
+- `415` with `unsupported content type, send JSON, URL-encoded or multipart form data`: send JSON or form data, not
+  `text/plain`.
+
+## Accented characters arrive garbled
+
+Add `<meta charset="UTF-8">` to your page.
 
 ## I'm receiving the same notification several times
 
@@ -102,6 +109,9 @@ Duplicates come from one of two places, and they need different fixes. Check the
 submitted content first: a real visitor sending twice looks like a genuine
 enquiry, while a burst of many identical copies seconds apart is almost always a
 bot.
+
+Formspark already ignores an exact copy sent by the same visitor within 60
+seconds.
 
 ### Duplicates from a real visitor
 
