@@ -56,6 +56,8 @@ The URL must be a public `http` or `https` address. Your webhook receives only s
 
 A failed delivery is retried every 5 minutes, in order, until it gets through. Submissions that arrive meanwhile wait behind it, so your endpoint always receives them in the order they were sent.
 
+After three consecutive retries return HTTP `410 Gone`, Formspark pauses delivery and emails your workspace admins. Other failures, including HTTP `404 Not Found`, keep the usual retry window of about a day. A successful delivery or any failure other than HTTP `410` resets the consecutive `410` count.
+
 A retry can deliver a submission your endpoint already handled. Every request carries two headers to help with that:
 
 - `Formspark-Submission-Id`: the same for every attempt at one submission. Skip one you have already seen.
@@ -70,7 +72,7 @@ The `Webhook` row in your form's settings shows how delivery is going:
 - `Never called`: Formspark has not called the webhook yet.
 - `Active`: the last delivery succeeded.
 - `Retrying`: a delivery failed and is being retried. The row shows the reason next to the URL.
-- `Paused`: deliveries failed for about a day, so Formspark stopped trying and emailed your workspace admins. Fix your endpoint, then use `Retry now`. Delivery resumes from the first submission that did not arrive.
+- `Paused`: deliveries failed for about a day, or three consecutive retries returned HTTP `410 Gone`. Formspark stopped trying and emailed your workspace admins. Fix your endpoint, then use `Retry now`. Delivery resumes from the first submission that did not arrive.
 
 ## Testing and troubleshooting
 
