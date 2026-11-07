@@ -95,7 +95,7 @@ Add `<meta charset="UTF-8">` to your page.
 ## I'm receiving the same notification several times
 
 Formspark sends one notification per accepted submission. Several identical
-emails therefore means the form was submitted several times, not that one
+emails therefore mean the form was submitted several times, not that one
 notification was sent again.
 
 Open the form in your dashboard and compare the timestamps. Duplicate
@@ -107,7 +107,7 @@ how many arrived, see
 
 Duplicates come from one of two places, and they need different fixes. Check the
 submitted content first: a real visitor sending twice looks like a genuine
-enquiry, while a burst of many identical copies seconds apart is almost always a
+inquiry, while a burst of many identical copies seconds apart is almost always a
 bot.
 
 Formspark already ignores an exact copy sent by the same visitor within 60

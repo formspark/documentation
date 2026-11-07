@@ -4,18 +4,11 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { readPages } from "../../docs/.vitepress/pages.js";
 import { markdownUrl, SITE_URL } from "../../docs/.vitepress/urls.js";
-import { builtHead, DIST } from "./built.js";
+import { builtHead, DIST, distFile } from "./built.js";
 
 const read = (file) => readFileSync(join(DIST, file), "utf8");
 
-// The file in dist that answers a documentation URL, as the bucket would.
-function served(url) {
-  const { pathname } = new URL(url);
-  return join(
-    DIST,
-    pathname.endsWith("/") ? `${pathname}index.html` : pathname,
-  );
-}
+const served = (url) => distFile(new URL(url).pathname);
 
 const documentationLinks = (text) =>
   [

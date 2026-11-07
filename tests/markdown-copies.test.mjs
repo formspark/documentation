@@ -1,6 +1,9 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { markdownCopy } from "../docs/.vitepress/markdown-copies.js";
+import {
+  markdownCopy,
+  readingOrder,
+} from "../docs/.vitepress/markdown-copies.js";
 
 const SITE = "https://documentation.formspark.io";
 const copy = (body, relativePath = "api/errors.md") =>
@@ -53,5 +56,35 @@ describe("markdownCopy", () => {
 
   it("trims the body to end in one newline", () => {
     assert.equal(copy("\n# Errors\n\n\n"), "# Errors\n");
+  });
+});
+
+describe("readingOrder", () => {
+  const order = (...paths) =>
+    readingOrder(paths.map((relativePath) => ({ relativePath }))).map(
+      ({ relativePath }) => relativePath,
+    );
+
+  it("sorts pages in sidebar order", () => {
+    assert.deepEqual(
+      order("api/errors.md", "setup/spam-protection.md", "setup/index.md"),
+      ["setup/index.md", "setup/spam-protection.md", "api/errors.md"],
+    );
+  });
+
+  it("puts a page missing from the sidebar last", () => {
+    assert.deepEqual(order("drafts/unlisted.md", "index.md"), [
+      "index.md",
+      "drafts/unlisted.md",
+    ]);
+  });
+
+  it("leaves the given list as it is", () => {
+    const pages = [
+      { relativePath: "api/errors.md" },
+      { relativePath: "index.md" },
+    ];
+    readingOrder(pages);
+    assert.equal(pages[0].relativePath, "api/errors.md");
   });
 });
