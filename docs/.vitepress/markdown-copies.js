@@ -32,7 +32,7 @@ export function markdownCopy({ relativePath, body }) {
 }
 
 // Sidebar order first, so the full text reads in the order a person would.
-function readingOrder(pages) {
+export function readingOrder(pages) {
   const order = sidebar.flatMap((group) =>
     group.items.map(({ link }) => linkPath(link)),
   );
