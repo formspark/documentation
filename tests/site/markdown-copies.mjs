@@ -3,17 +3,23 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { readPages } from "../../docs/.vitepress/pages.js";
-import { markdownUrl, SITE_URL } from "../../docs/.vitepress/urls.js";
+import { sidebar } from "../../docs/.vitepress/sidebar.js";
+import { markdownUrl } from "../../docs/.vitepress/urls.js";
 import { builtHead, DIST, distFile } from "./built.js";
+
+const DOCUMENTATION_LINK =
+  /https:\/\/documentation\.formspark\.io[^\s)>\]"'`]*/g;
+const TRAILING_PUNCTUATION = /[.,;:]+$/;
+const SOURCE_LINE = /^Source: (\S+)$/gm;
 
 const read = (file) => readFileSync(join(DIST, file), "utf8");
 
 const served = (url) => distFile(new URL(url).pathname);
 
 const documentationLinks = (text) =>
-  [
-    ...text.matchAll(/https:\/\/documentation\.formspark\.io[^\s)>\]"'`]*/g),
-  ].map(([url]) => url.replace(/[.,;:]+$/, ""));
+  [...text.matchAll(DOCUMENTATION_LINK)].map(([url]) =>
+    url.replace(TRAILING_PUNCTUATION, ""),
+  );
 
 describe("built Markdown copies", () => {
   for (const { relativePath } of readPages()) {
@@ -40,7 +46,36 @@ describe("built Markdown copies", () => {
     });
   }
 
-  it("starts llms-full.txt with the home page", () => {
-    assert.ok(read("llms-full.txt").includes(`Source: ${SITE_URL}/index.md\n`));
+  it("publishes sidebar pages first and unlisted pages last in llms-full.txt", () => {
+    const sources = [...read("llms-full.txt").matchAll(SOURCE_LINE)].map(
+      ([, url]) => url,
+    );
+    const expected = sidebar.flatMap(({ items }) =>
+      items.map(({ link }) =>
+        markdownUrl(`${link.slice(1)}${link.endsWith("/") ? "index" : ""}.md`),
+      ),
+    );
+    assert.deepEqual(sources.slice(0, expected.length), expected);
+    assert.ok(
+      sources.slice(expected.length).every((url) => !expected.includes(url)),
+    );
+    assert.deepEqual(
+      sources.toSorted(),
+      readPages()
+        .map(({ relativePath }) => markdownUrl(relativePath))
+        .sort(),
+    );
+  });
+
+  it("includes each published Markdown copy in llms-full.txt", () => {
+    const full = read("llms-full.txt");
+    for (const { relativePath } of readPages()) {
+      assert.ok(
+        full.includes(
+          `Source: ${markdownUrl(relativePath)}\n\n${read(relativePath)}`,
+        ),
+        `${relativePath} differs from its entry in llms-full.txt`,
+      );
+    }
   });
 });
