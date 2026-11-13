@@ -1,4 +1,5 @@
 import { CDN, meta, pageHead, SITE_TITLE } from "./head.js";
+import { imageDimensions } from "./image-size.js";
 import { writeMarkdownCopies } from "./markdown-copies.js";
 import { writeOgImages } from "./og-images.js";
 import { sidebar } from "./sidebar.js";
@@ -16,6 +17,13 @@ export default {
   cleanUrls: false,
   sitemap: {
     hostname: SITE_URL,
+  },
+  // Every Markdown image loads lazily, so a screenshot further down a page
+  // does not compete with the text a reader came for on a slow connection,
+  // and states its size, so the page keeps its place while it loads.
+  markdown: {
+    image: { lazyLoading: true },
+    config: (md) => md.use(imageDimensions),
   },
   head: [
     ["link", { rel: "icon", href: `${CDN}/formspark.ico` }],
