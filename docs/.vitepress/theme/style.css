@@ -1,5 +1,8 @@
 :root {
   --vp-sidebar-width: 320px;
+  /* The smallest target a finger hits reliably. Theme controls a phone relies
+     on reach it, through their own height or the hit area below. */
+  --fs-tap-target: 44px;
 }
 
 @media (min-width: 1440px) {
@@ -24,4 +27,36 @@
    specificity and is bundled after this file, so a shorter selector loses. */
 .VPContent.has-sidebar:has(.NotFound) {
   padding-inline: 0;
+}
+
+/* The site title is long enough that, with the search and menu buttons beside
+   it, the bar outgrows a 320px screen and pushes the menu button off the edge.
+   On phones the title may shrink and wrap onto a second line instead. */
+@media (max-width: 767px) {
+  .VPNavBar .container > .title {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .VPNavBarTitle .title span {
+    white-space: normal;
+    line-height: 1.25;
+  }
+}
+
+/* A hit area for a control that is only as tall as its label but sits in a
+   bar that must not grow: an invisible box centred on the label reaches the
+   tap target. The local nav's "On this page" button needs it at every width,
+   and the menu button beside it from 768px, where it loses its padding. On a
+   control already taller than the target the box sits inside it, unseen. */
+.VPLocalNavOutlineDropdown > button,
+.VPLocalNav .menu {
+  position: relative;
+}
+
+.VPLocalNavOutlineDropdown > button::before,
+.VPLocalNav .menu::before {
+  content: "";
+  position: absolute;
+  inset: calc((100% - var(--fs-tap-target)) / 2) 0;
 }

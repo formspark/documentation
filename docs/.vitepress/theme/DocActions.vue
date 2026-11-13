@@ -302,6 +302,24 @@ onBeforeUnmount(() => {
   background-color: var(--vp-c-default-soft);
 }
 
+/* On phones, where the buttons have a row of their own, and on any touch
+   screen, every control grows to the theme's tap target. The wrapper's 1px
+   borders make up the rest. A mouse keeps the compact size. */
+@media (max-width: 639px), (pointer: coarse) {
+  .action {
+    line-height: calc(var(--fs-tap-target) - 2px);
+  }
+
+  .toggle {
+    min-width: var(--fs-tap-target);
+    justify-content: center;
+  }
+
+  .item {
+    line-height: var(--fs-tap-target);
+  }
+}
+
 .action:focus-visible,
 .item:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
